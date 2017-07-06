@@ -1,0 +1,49 @@
+From broconno at ucsc.edu  Mon Jul 25 14:49:18 2016
+From: broconno at ucsc.edu (Brian O'Connor)
+Date: Mon, 25 Jul 2016 11:49:18 -0700
+Subject: [DOCKTESTERS] next meeting?
+Message-ID: <E2C417D1-FF6A-4F24-866A-EA966984A0B2@ucsc.edu>
+
+Hi,
+
+Is there another meeting scheduled for the PCAWG testing group?  I?d like to give a tutorial on calling the workflows we have in Dockstore in order to help move the testing process forward.
+
+Brian
+
+From francis at oicr.on.ca  Mon Jul 25 15:03:46 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 25 Jul 2016 19:03:46 +0000
+Subject: [DOCKTESTERS] next meeting?
+In-Reply-To: <E2C417D1-FF6A-4F24-866A-EA966984A0B2@ucsc.edu>
+References: <E2C417D1-FF6A-4F24-866A-EA966984A0B2@ucsc.edu>
+Message-ID: <6230FA9F-4DEA-4931-9C62-877905994D14@oicr.on.ca>
+
+Sorry all,
+
+I've been out of the picture for last few weeks, taking care of my partner Jennie with cancer and surgery. I'm off for another's week (using up my weeks of vacation) and I will try and renter workforce, and hope to manage this important working group.
+
+In the next few days I will send out a doodle poll for a 2 hr conf call that I hope all (very few of us) can attend, so we can get things going for the important testing. If our tests fail, docker container people will have work to do!
+
+I hope we can do this important job. If you can suggest a few more dock tester members (from your respective groups, or others you think already in the PCAWG family that could help), that would be great -- please pass me their names.
+
+More later in next few days,
+
+All the best,
+
+Francis
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+On Jul 25, 2016, at 14:49, Brian O'Connor <broconno at ucsc.edu<mailto:broconno at ucsc.edu>> wrote:
+
+Hi,
+
+Is there another meeting scheduled for the PCAWG testing group?  I?d like to give a tutorial on calling the workflows we have in Dockstore in order to help move the testing process forward.
+
+Brian
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20160725/6a613cc2/attachment.html>
+

@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Help request: get donor file information from ICGC DCC programmatically
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20request%3A%20get%20donor%20file%20information%20from%0A%20ICGC%20DCC%20programmatically&In-Reply-To=%3CCA%2Bdx8mbrjGtanjgHo2x9yHmzez%2BeR4TDWvwVhCWFJOhkPRda2g%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000316.html">
+   <LINK REL="Next"  HREF="000321.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Help request: get donor file information from ICGC DCC programmatically</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20request%3A%20get%20donor%20file%20information%20from%0A%20ICGC%20DCC%20programmatically&In-Reply-To=%3CCA%2Bdx8mbrjGtanjgHo2x9yHmzez%2BeR4TDWvwVhCWFJOhkPRda2g%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Help request: get donor file information from ICGC DCC programmatically">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Mon Apr 17 06:39:51 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000316.html">[DOCKTESTERS] Help request: get donor file information from ICGC	DCC programmatically
+</A></li>
+        <LI>Next message: <A HREF="000321.html">[DOCKTESTERS] Help request: get donor file information from ICGC DCC programmatically
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#320">[ date ]</a>
+              <a href="thread.html#320">[ thread ]</a>
+              <a href="subject.html#320">[ subject ]</a>
+              <a href="author.html#320">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Jonas, Denis, and Dusan,
+
+Jonas, the release_may2016 file you mention does indeed have some of the
+GNOS ids we would need but not all unfortunately. For instance the
+consensus vcf file is not there it seems.
+
+Denis, Dusan. I think I figured out how to do this. I download the full tsv
+export with
+
+curl -X GET --header 'Accept: text/tsv' '
+<A HREF="https://dcc.icgc.org/api/v1/repository/files/export?filters=%7B%7D">https://dcc.icgc.org/api/v1/repository/files/export?filters=%7B%7D</A>'
+
+get all the files for a donor and the for each file I download the
+associated json info with
+
+curl -X GET --header 'Accept: application/json' &quot;
+<A HREF="https://dcc.icgc.org/api/v1/repository/files/$file">https://dcc.icgc.org/api/v1/repository/files/$file</A>&quot;
+
+There I can find the file name along with the ID's I need to download it.
+
+Best
+
+Miguel
+
+On Wed, Apr 12, 2017 at 5:38 PM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> As I understand it, there is an API for the portal
+</I>&gt;<i> <A HREF="http://docs.icgc.org/portal/api-endpoints/#/">http://docs.icgc.org/portal/api-endpoints/#/</A>
+</I>&gt;<i>
+</I>&gt;<i> I'm going to also forward this to Dusan who may be able to point you at a
+</I>&gt;<i> more specific endpoint to use or in the correct direction.
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> *From:* docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>
+</I>&gt;<i> &lt;docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&gt; on behalf of
+</I>&gt;<i> Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;<i> *Sent:* April 11, 2017 1:01:14 PM
+</I>&gt;<i> *To:* <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>; Junjun Zhang
+</I>&gt;<i> *Subject:* [DOCKTESTERS] Help request: get donor file information from
+</I>&gt;<i> ICGC DCC programmatically
+</I>&gt;<i>
+</I>&gt;<i> Dear friends,
+</I>&gt;<i>
+</I>&gt;<i> For our upcoming testing work on the filters I think we will be using the
+</I>&gt;<i> SNV and SV files that where submitted from the different providers and
+</I>&gt;<i> comparing with the resulting final VCFs. To access these I was planning to
+</I>&gt;<i> use GNOS or the ICGC client, for which we will need to specify the &quot;Object
+</I>&gt;<i> ID&quot; or &quot;Submitted Bundle ID&quot; that are found in the file pages of ICGC (e.g
+</I>&gt;<i> <A HREF="https://dcc.icgc.org/repositories/files/FI384359">https://dcc.icgc.org/repositories/files/FI384359</A>). For the normal and
+</I>&gt;<i> tumor BAMS and for the consensus VCF I was going to the site manually and
+</I>&gt;<i> extracting them, but it is tedious and error prone, and it's the only
+</I>&gt;<i> really manual thing in the scripts. It will be great to automate it.
+</I>&gt;<i>
+</I>&gt;<i> Is there a programmatic way to find all the files for a donor, with the
+</I>&gt;<i> names, and then access for any of them the &quot;Object ID&quot; and &quot;Submitted
+</I>&gt;<i> Bundle ID&quot;?
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170417/375b6e1e/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170417/375b6e1e/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000316.html">[DOCKTESTERS] Help request: get donor file information from ICGC	DCC programmatically
+</A></li>
+	<LI>Next message: <A HREF="000321.html">[DOCKTESTERS] Help request: get donor file information from ICGC DCC programmatically
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#320">[ date ]</a>
+              <a href="thread.html#320">[ thread ]</a>
+              <a href="subject.html#320">[ subject ]</a>
+              <a href="author.html#320">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

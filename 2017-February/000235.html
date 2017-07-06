@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS]  BWA-Mem validation of HCC1143. 95% matches, 3.6% miss-matches, and 1.3% soft-matches
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%20BWA-Mem%20validation%20of%20HCC1143.%2095%25%20matches%2C%0A%203.6%25%20miss-matches%2C%20and%201.3%25%20soft-matches&In-Reply-To=%3CCA%2Bdx8maQHrC6wzhUyJmZnbMTEWycoieJBLH5TLj96TvsJap-7w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000228.html">
+   <LINK REL="Next"  HREF="000236.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS]  BWA-Mem validation of HCC1143. 95% matches, 3.6% miss-matches, and 1.3% soft-matches</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%20BWA-Mem%20validation%20of%20HCC1143.%2095%25%20matches%2C%0A%203.6%25%20miss-matches%2C%20and%201.3%25%20soft-matches&In-Reply-To=%3CCA%2Bdx8maQHrC6wzhUyJmZnbMTEWycoieJBLH5TLj96TvsJap-7w%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS]  BWA-Mem validation of HCC1143. 95% matches, 3.6% miss-matches, and 1.3% soft-matches">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Tue Feb 14 09:30:43 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000228.html">[DOCKTESTERS] Summary of validation of	Dockers	Sanger	and	DKFZ(+Delly)
+</A></li>
+        <LI>Next message: <A HREF="000236.html">[DOCKTESTERS] BWA-Mem validation of HCC1143. 95% matches, 3.6% miss-matches, and 1.3% soft-matches
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#235">[ date ]</a>
+              <a href="thread.html#235">[ thread ]</a>
+              <a href="subject.html#235">[ subject ]</a>
+              <a href="author.html#235">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear colleagues,
+
+I'm very happy to say that the BWA-Mem pipeline finished for the HCC1143
+data.
+
+I think what solved the problem was setting the headers to the unaligned
+BAM files. I'm currently trying it out with the DO35937 donor, but its too
+early to say if its working or not.
+
+To compare BAM files I've followed some advice that I found on the internet
+<A HREF="https://www.biostars.org/p/166221/.">https://www.biostars.org/p/166221/.</A> I will detail them a bit below because
+I would like some advice as to how appropriate the approach is, but first
+here are the numbers:
+
+*Lines*: 74264390
+*Matches*: 70565742
+*Misses*: 2693687
+*Soft*: 1004961
+
+
+Which means *95% matches, 3.6% miss-matches, and 1.3% soft-matches*.
+Matches are when the chromosome and position are the same, soft-matches are
+when they are not the same but the position from one of the alignments is
+included in the list of alternative positions for the other alignment (e.g
+XA:Z:15,-102516528,76M,0), and misses are the rest.
+
+Here is the detailed process from the start. The comparison script is here
+<A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_bwa_bam.sh">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_bwa_bam.sh</A>
+
+1) Un-align tumor and normal BAM files, retaining the original aligned BAM
+files
+2) Run BWA-Mem wich produces a file called HCC1143.merged_output.bam with
+alignments from both tumor and normal
+3) use samtools to extract the entries, limited for the first in pair (?),
+cut the read-name, chromosome, position (??) and extra information (for
+additional alignments) and sort them. We do this for the original files and
+for the BWA-Mem merged_output file, but separating tumor and normal entries
+(marked with the codes 'tumor' and 'normal', I believe from the headers I
+set when un-aligning them)
+4) join the lines by read-name, separately for the tumor and normal pairs
+of files, and check for matches
+
+I've two questions:
+(?) Is it OK to select only the first in pair, its what the guy in the
+example did, and it did simplify the code without repeated read-names
+(??) I guess its OK to only check chromosome and position, the cigar would
+be necessarily the same.
+
+Best regards
+
+Miguel
+
+On Mon, Jan 16, 2017 at 3:24 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+wrote:
+
+&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> Let me summarize the status of the testing for Sanger and DKFZ. The
+</I>&gt;<i> validation has been run for two donors for each workflow: DO50311 DO52140
+</I>&gt;<i>
+</I>&gt;<i> Sanger:
+</I>&gt;<i> ----------
+</I>&gt;<i>
+</I>&gt;<i> Sanger call only somatic variants. The results are *identical for Indels
+</I>&gt;<i> and SVs* but *almost identical for SNV.MNV and CNV*. The discrepancies
+</I>&gt;<i> are reproducible (on the same machine at least), i.e. the same are found
+</I>&gt;<i> after running the workflow a second time.
+</I>&gt;<i>
+</I>&gt;<i> DKFZ:
+</I>&gt;<i> ---------
+</I>&gt;<i> DKFZ cals somatic and germline variants, except germline CNVs. For both
+</I>&gt;<i> germline and somatic variants the results are *identical for SNV.MNV and
+</I>&gt;<i> Indels* but with *large discrepancies for SV and CNV*.
+</I>&gt;<i>
+</I>&gt;<i> Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+</I>&gt;<i> investigating this issue I believe.
+</I>&gt;<i>
+</I>&gt;<i> BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+</I>&gt;<i> Demeulemeester. Denis I believe is investigating this problem further. I
+</I>&gt;<i> haven't had the chance to investigate this much myself.
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ---------------------
+</I>&gt;<i> RESULTS
+</I>&gt;<i> ---------------------
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-253-35-14</A>:~/DockerTest-Miguel$ cat results.txt
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 51087
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 26469
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 231
+</I>&gt;<i> Extra: 44
+</I>&gt;<i>     - Example: 10:20596800:N:&lt;TRA&gt;,10:56066821:N:&lt;TRA&gt;,11:16776092:N:&lt;TRA&gt;
+</I>&gt;<i> Missing: 48
+</I>&gt;<i>     - Example: 10:119704959:N:&lt;INV&gt;,10:131163
+</I>&gt;<i> 22:N:&lt;TRA&gt;,10:47063485:N:&lt;TRA&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 731
+</I>&gt;<i> Extra: 213
+</I>&gt;<i>     - Example: 10:132510034:N:&lt;DEL&gt;,10:205968
+</I>&gt;<i> 01:N:&lt;NEUTRAL&gt;,10:47674883:N:&lt;NEUTRAL&gt;
+</I>&gt;<i> Missing: 190
+</I>&gt;<i>     - Example: 10:100891940:N:&lt;NEUTRAL&gt;,10:10
+</I>&gt;<i> 4975905:N:&lt;NEUTRAL&gt;,10:119704960:N:&lt;NEUTRAL&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.snv.mnv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 3850992
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.indel for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 709060
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.sv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 1393
+</I>&gt;<i> Extra: 231
+</I>&gt;<i>     - Example: 10:134319313:N:&lt;DEL&gt;,10:134948976:N:&lt;DEL&gt;,10:19996638:N:&lt;
+</I>&gt;<i> DEL&gt;
+</I>&gt;<i> Missing: 615
+</I>&gt;<i>     - Example: 10:101851839:N:&lt;TRA&gt;,10:101851884:N:&lt;TRA&gt;,10:10745225:N:&lt;
+</I>&gt;<i> DUP&gt;
+</I>&gt;<i>
+</I>&gt;<i> File not found /mnt/1TB/work/DockerTest-Migue
+</I>&gt;<i> l/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 37160
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 19347
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 72
+</I>&gt;<i> Extra: 23
+</I>&gt;<i>     - Example: 10:132840774:N:&lt;DEL&gt;,11:382520
+</I>&gt;<i> 19:N:&lt;TRA&gt;,11:47700673:N:&lt;TRA&gt;
+</I>&gt;<i> Missing: 61
+</I>&gt;<i>     - Example: 10:134749140:N:&lt;DEL&gt;,11:179191:N:&lt;TRA&gt;,11:38252005:N:&lt;TRA&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 275
+</I>&gt;<i> Extra: 94
+</I>&gt;<i>     - Example: 1:106505931:N:&lt;LOH&gt;,1:109068899:N:&lt;DEL&gt;,1:109359995:N:&lt;DEL&gt;
+</I>&gt;<i> Missing: 286
+</I>&gt;<i>     - Example: 10:88653561:N:&lt;LOH&gt;,11:179192:N:&lt;LOH&gt;,11:38252006:N:&lt;LOH&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.snv.mnv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 3833896
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.indel for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 706572
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.sv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 1108
+</I>&gt;<i> Extra: 1116
+</I>&gt;<i>     - Example: 10:102158308:N:&lt;DEL&gt;,10:104645247:N:&lt;DEL&gt;,10:105097522:N:&lt;
+</I>&gt;<i> DEL&gt;
+</I>&gt;<i> Missing: 2908
+</I>&gt;<i>     - Example: 10:100107032:N:&lt;TRA&gt;,10:100107151:N:&lt;TRA&gt;,10:102158345:N:&lt;
+</I>&gt;<i> DEL&gt;
+</I>&gt;<i>
+</I>&gt;<i> File not found /mnt/1TB/work/DockerTest-Migue
+</I>&gt;<i> l/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 156299
+</I>&gt;<i> Extra: 1
+</I>&gt;<i>     - Example: Y:58885197:A:G
+</I>&gt;<i> Missing: 14
+</I>&gt;<i>     - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 812487
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 260
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 138
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 87234
+</I>&gt;<i> Extra: 5
+</I>&gt;<i>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+</I>&gt;<i> Missing: 7
+</I>&gt;<i>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 803986
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 6
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 36
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 2
+</I>&gt;<i>     - Example: 10:11767915:T:&lt;CNV&gt;,10:11779907:G:&lt;CNV&gt;
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170214/3e30d00d/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170214/3e30d00d/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000228.html">[DOCKTESTERS] Summary of validation of	Dockers	Sanger	and	DKFZ(+Delly)
+</A></li>
+	<LI>Next message: <A HREF="000236.html">[DOCKTESTERS] BWA-Mem validation of HCC1143. 95% matches, 3.6% miss-matches, and 1.3% soft-matches
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#235">[ date ]</a>
+              <a href="thread.html#235">[ thread ]</a>
+              <a href="subject.html#235">[ subject ]</a>
+              <a href="author.html#235">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS]  BWA-Mem update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%20BWA-Mem%20update&In-Reply-To=%3C0B22ECBD-2187-41D9-9EA8-C8AC98B39425%40crick.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000267.html">
+   <LINK REL="Next"  HREF="000276.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS]  BWA-Mem update</H1>
+    <B>Jonas Demeulemeester</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%20BWA-Mem%20update&In-Reply-To=%3C0B22ECBD-2187-41D9-9EA8-C8AC98B39425%40crick.ac.uk%3E"
+       TITLE="[DOCKTESTERS]  BWA-Mem update">Jonas.Demeulemeester at crick.ac.uk
+       </A><BR>
+    <I>Wed Mar 22 13:56:32 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000267.html">[DOCKTESTERS] Thanks!
+</A></li>
+        <LI>Next message: <A HREF="000276.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#275">[ date ]</a>
+              <a href="thread.html#275">[ thread ]</a>
+              <a href="subject.html#275">[ subject ]</a>
+              <a href="author.html#275">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+A brief update on the BWA-Mem docker tests.
+I prepared normal + tumor lane-level unaligned bams for DO503011 and ran the BWA-Mem workflow for normal and tumor seperately.
+Doing the comparison however, I am still getting 3% of reads that are aligned differently (see below for a few examples).
+However, when checking the headers of the original and newly mapped bam files (attached) I noticed that the original is mapped using a different version of BWA and SeqWare.
+I&#8217;m hoping the mapping differences can be ascribed to this.
+
+Is there a list available somewhere detailing which samples were mapped using which versions?
+That way we could select a relevant test sample without having to sort through the headers of all different bams.
+
+Best wishes,
+Jonas
+
+
+
+
+
+newly aligned:
+
+ID flag chr pos
+HS2000-1012_275:7:1101:17411:15403 99 3 112743126
+HS2000-1012_275:7:1101:17411:15403 147 3 112743376
+HS2000-1012_275:7:1101:11883:83640 99 16 28672999
+HS2000-1012_275:7:1101:11883:83640 147 16 28673223
+HS2000-1012_275:7:1101:16576:28476 163 GL000238.1 21309
+HS2000-1012_275:7:1101:16576:28476 83 GL000238.1 21664
+
+vs the original:
+
+ID flag chr pos
+HS2000-1012_275:7:1101:17411:15403 99 8 54944243
+HS2000-1012_275:7:1101:17411:15403 147 8 54944493
+HS2000-1012_275:7:1101:11883:83640 163 16 28464362
+HS2000-1012_275:7:1101:11883:83640 83 16 28464586
+HS2000-1012_275:7:1101:16576:28476 99 12 6124549
+HS2000-1012_275:7:1101:16576:28476 147 12 6124903
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>
+W: www.crick.ac.uk
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/ec583391/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/ec583391/attachment-0001.html</A>&gt;
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: new.header.normal.bam.txt
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/ec583391/attachment-0002.txt">https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/ec583391/attachment-0002.txt</A>&gt;
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: orig.header.normal.bam.txt
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/ec583391/attachment-0003.txt">https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/ec583391/attachment-0003.txt</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000267.html">[DOCKTESTERS] Thanks!
+</A></li>
+	<LI>Next message: <A HREF="000276.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#275">[ date ]</a>
+              <a href="thread.html#275">[ thread ]</a>
+              <a href="subject.html#275">[ subject ]</a>
+              <a href="author.html#275">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,719 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3CCA%2Bdx8ma3aKAkKKmXH8fPaQHMUT96u3QGe-o2gCBkhLdXcUwTng%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000119.html">
+   <LINK REL="Next"  HREF="000121.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3CCA%2Bdx8ma3aKAkKKmXH8fPaQHMUT96u3QGe-o2gCBkhLdXcUwTng%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Sat Oct 15 02:52:19 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000119.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</A></li>
+        <LI>Next message: <A HREF="000121.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Just to clarify Denis, the BAS file was not present in the download of the
+donor data, while it was present in the download of the test data. That is
+as much as I observed, and this matched Keiran comment that a missing BAS
+file was consistent with the pindel error.I have no idea of what the
+workflow was doing so as far as I know the BAS could have been created
+correctly and the error was something else.
+
+Best regards
+
+On Sat, Oct 15, 2016 at 12:20 AM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> Adam, to summarise:
+</I>&gt;<i> My observations seem to match yours, the bas file and input bams are
+</I>&gt;<i> generated inside the Docker container with the test data. However, Miguel
+</I>&gt;<i> has observed that something else seems to be happening with DO50311 that
+</I>&gt;<i> looks like the bas file being missing. I'm currently running that donor to
+</I>&gt;<i> see if I can extract more information and determine what is occurring.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> *From:* Adam Struck [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">strucka at ohsu.edu</A>]
+</I>&gt;<i> *Sent:* October 14, 2016 6:10 PM
+</I>&gt;<i> *To:* Denis Yuen; Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> *Cc:* <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> *Subject:* Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH
+</I>&gt;<i> teleconference
+</I>&gt;<i>
+</I>&gt;<i> Hi Denis,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Sorry, to chime in late.  The bas file and input BAMs should be getting
+</I>&gt;<i> colocalized already (see below). Where are these files ending up when you
+</I>&gt;<i> run the workflow?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Inputs are symlinked to the OUTDIR.
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/adamstruck/CGP-Somatic-Docker/blob/">https://github.com/adamstruck/CGP-Somatic-Docker/blob/</A>
+</I>&gt;<i> develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L1035-L1039
+</I>&gt;<i> &lt;<A HREF="http://redir.aspx?REF=wh2FSjXBBWFHO3yilLgUKx-6F_t0RKTuNfMfdozuKfqyzCQcf_TTCAFodHRwczovL2dpdGh1Yi5jb20vYWRhbXN0cnVjay9DR1AtU29tYXRpYy1Eb2NrZXIvYmxvYi9kZXZlbG9wL3NyYy9tYWluL2phdmEvaW8vc2Vxd2FyZS9wYW5jYW5jZXIvQ2dwU29tYXRpY0NvcmUuamF2YSNMMTAzNS1MMTAzOQ..">http://redir.aspx?REF=wh2FSjXBBWFHO3yilLgUKx-6F_t0RKTuNfMfdozuKfqyzCQcf_TTCAFodHRwczovL2dpdGh1Yi5jb20vYWRhbXN0cnVjay9DR1AtU29tYXRpYy1Eb2NrZXIvYmxvYi9kZXZlbG9wL3NyYy9tYWluL2phdmEvaW8vc2Vxd2FyZS9wYW5jYW5jZXIvQ2dwU29tYXRpY0NvcmUuamF2YSNMMTAzNS1MMTAzOQ..</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Bas files are written to OUTDIR
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/adamstruck/CGP-Somatic-Docker/blob/">https://github.com/adamstruck/CGP-Somatic-Docker/blob/</A>
+</I>&gt;<i> develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L769-L780
+</I>&gt;<i> &lt;<A HREF="http://redir.aspx?REF=QDWzSA3Tp4IrlbNbPM9uuOnAh88WrTGLO9-dh7ITegiyzCQcf_TTCAFodHRwczovL2dpdGh1Yi5jb20vYWRhbXN0cnVjay9DR1AtU29tYXRpYy1Eb2NrZXIvYmxvYi9kZXZlbG9wL3NyYy9tYWluL2phdmEvaW8vc2Vxd2FyZS9wYW5jYW5jZXIvQ2dwU29tYXRpY0NvcmUuamF2YSNMNzY5LUw3ODA.">http://redir.aspx?REF=QDWzSA3Tp4IrlbNbPM9uuOnAh88WrTGLO9-dh7ITegiyzCQcf_TTCAFodHRwczovL2dpdGh1Yi5jb20vYWRhbXN0cnVjay9DR1AtU29tYXRpYy1Eb2NrZXIvYmxvYi9kZXZlbG9wL3NyYy9tYWluL2phdmEvaW8vc2Vxd2FyZS9wYW5jYW5jZXIvQ2dwU29tYXRpY0NvcmUuamF2YSNMNzY5LUw3ODA.</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I have now run 25 donors worth of data (from PRAD-UK) through this
+</I>&gt;<i> workflow using the WDL descriptor and the cromwell engine on the CCC
+</I>&gt;<i> platform without an issue.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -Adam
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *From: *&lt;docktesters-bounces+strucka=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ohsu.edu at lists.icgc.org</A>&gt; on behalf
+</I>&gt;<i> of Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;
+</I>&gt;<i> *Date: *Friday, October 14, 2016 at 2:55 PM
+</I>&gt;<i> *To: *Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt;
+</I>&gt;<i> *Cc: *&quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> *Subject: *Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH
+</I>&gt;<i> teleconference
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> Just as a heads-up for the end-of-week in this thread.
+</I>&gt;<i>
+</I>&gt;<i> &gt; RUN cpanm --mirror <A HREF="http://cpan.metacpan.org">http://cpan.metacpan.org</A>
+</I>&gt;<i> &lt;<A HREF="http://redir.aspx?REF=RQAmkB4bpbTDWerytcYROM04Roxwq8hEC0yi66bgidOyzCQcf_TTCAFodHRwczovL3dlYm1haWwub2ljci5vbi5jYS9vd2EvcmVkaXIuYXNweD9SRUY9ZWlKOHNnNUF6S1dEbXlmNVB5ZW9zN0preG9zOGFVcl9KMFRNVTQ2RHJ3WnlqVUUzZV9UVENBRm9kSFJ3T2k4dlkzQmhiaTV0WlhSaFkzQmhiaTV2Y21jLg..">http://redir.aspx?REF=RQAmkB4bpbTDWerytcYROM04Roxwq8hEC0yi66bgidOyzCQcf_TTCAFodHRwczovL3dlYm1haWwub2ljci5vbi5jYS9vd2EvcmVkaXIuYXNweD9SRUY9ZWlKOHNnNUF6S1dEbXlmNVB5ZW9zN0preG9zOGFVcl9KMFRNVTQ2RHJ3WnlqVUUzZV9UVENBRm9kSFJ3T2k4dlkzQmhiaTV0WlhSaFkzQmhiaTV2Y21jLg..</A>&gt;
+</I>&gt;<i> -l $OPT File::ShareDir File::ShareDir::Install Bio::Root::<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Version at 1.006924</A>
+</I>&gt;<i> Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i>
+</I>&gt;<i> This got me on the right track, I actually needed the following syntax
+</I>&gt;<i>
+</I>&gt;<i> RUN cpanm --mirror <A HREF="https://cpan.metacpan.org">https://cpan.metacpan.org</A> -l $OPT File::ShareDir File::ShareDir::Install CJFIELDS/BioPerl-1.6.924.tar.gz Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> However, it looks like making the suggested change breaks the workflow
+</I>&gt;<i> when attempting to run with the test data. In short, the bas file is
+</I>&gt;<i> definitely being generated inside the Docker container. Moving it to the
+</I>&gt;<i> suggested location breaks the workflow later.
+</I>&gt;<i>
+</I>&gt;<i> I'm currently attempting to run the donor DO50311 to see if I can get
+</I>&gt;<i> more insight into what is going on.
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> *From:* Keiran Raine [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>]
+</I>&gt;<i> *Sent:* October 12, 2016 2:09 PM
+</I>&gt;<i> *To:* Denis Yuen
+</I>&gt;<i> *Cc:* <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> *Subject:* Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH
+</I>&gt;<i> teleconference
+</I>&gt;<i>
+</I>&gt;<i> Hi Denis,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> You've hit an issue that only has occurred in the last few weeks for us
+</I>&gt;<i> also.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> BioPerl released a new version (first in ~20 months) that split the
+</I>&gt;<i> repository moving a whole section into a different package.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The fix would be to force the first install of BioPerl to a specific
+</I>&gt;<i> version.  Modify line 25/26 of the Dockerfile from:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> RUN cpanm --mirror <A HREF="http://cpan.metacpan.org">http://cpan.metacpan.org</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i> -l $OPT File::ShareDir File::ShareDir::Install Bio::Root::Version
+</I>&gt;<i> Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> to
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> RUN cpanm --mirror <A HREF="http://cpan.metacpan.org">http://cpan.metacpan.org</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i> -l $OPT File::ShareDir File::ShareDir::Install Bio::Root::<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Version at 1.006924</A>
+</I>&gt;<i> Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thankfully something I could identify immediately.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i>
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i>
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;<i>
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 12 Oct 2016, at 17:04, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> Keiran, I'm having trouble rebuilding the Sanger docker container in what
+</I>&gt;<i> I think is an unrelated section.
+</I>&gt;<i> Has anything changed about the build dependencies (for example, if there
+</I>&gt;<i> is a floating version that changed over time)?
+</I>&gt;<i> I'm attaching the build log from the Dockerfile and the log from inside
+</I>&gt;<i> the container.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> *From:* docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt; [docktesters-bounces+denis.
+</I>&gt;<i> yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;] on behalf
+</I>&gt;<i> of Denis Yuen [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;]
+</I>&gt;<i> *Sent:* October 12, 2016 10:59 AM
+</I>&gt;<i> *To:* Keiran Raine
+</I>&gt;<i> *Cc:* <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i> *Subject:* Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH
+</I>&gt;<i> teleconference
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> While that would have been a good explanation, unfortunately, it doesn't
+</I>&gt;<i> seem to be the case.
+</I>&gt;<i> In the CWL file ( <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-</A>
+</I>&gt;<i> Docker/blob/develop/Dockstore.cwl &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt; ) , the
+</I>&gt;<i> bam files are described like
+</I>&gt;<i>
+</I>&gt;<i> inputs:
+</I>&gt;<i>
+</I>&gt;<i>   tumor:
+</I>&gt;<i>
+</I>&gt;<i>     type: File
+</I>&gt;<i>
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>
+</I>&gt;<i>       position: 1
+</I>&gt;<i>
+</I>&gt;<i>       prefix: --tumor
+</I>&gt;<i>
+</I>&gt;<i>     secondaryFiles:
+</I>&gt;<i>
+</I>&gt;<i>     - .bai
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>   refFrom:
+</I>&gt;<i>
+</I>&gt;<i>     type: File
+</I>&gt;<i>
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>
+</I>&gt;<i>       position: 3
+</I>&gt;<i>
+</I>&gt;<i>       prefix: --refFrom
+</I>&gt;<i>
+</I>&gt;<i>   bbFrom:
+</I>&gt;<i>
+</I>&gt;<i>     type: File
+</I>&gt;<i>
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>
+</I>&gt;<i>       position: 4
+</I>&gt;<i>
+</I>&gt;<i>       prefix: --bbFrom
+</I>&gt;<i>
+</I>&gt;<i>   normal:
+</I>&gt;<i>
+</I>&gt;<i>     type: File
+</I>&gt;<i>
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>
+</I>&gt;<i>       position: 2
+</I>&gt;<i>
+</I>&gt;<i>       prefix: --normal
+</I>&gt;<i>
+</I>&gt;<i>     secondaryFiles:
+</I>&gt;<i>
+</I>&gt;<i>     - .bai
+</I>&gt;<i>
+</I>&gt;<i> The type of File (as opposed to directory) means that while the bam and
+</I>&gt;<i> bai files are individually mounted into the docker container while it runs,
+</I>&gt;<i> the bas files never were. If Miguel has the &quot;docker run&quot; output from the
+</I>&gt;<i> run (should just be in the stdout of the run), we should be able to verify
+</I>&gt;<i> this by looking at what gets mounted into the container at runtime.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> *From:* Keiran Raine [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;]
+</I>&gt;<i> *Sent:* October 12, 2016 10:49 AM
+</I>&gt;<i> *To:* Denis Yuen
+</I>&gt;<i> *Cc:* Miguel Vazquez; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i> *Subject:* Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH
+</I>&gt;<i> teleconference
+</I>&gt;<i>
+</I>&gt;<i> Hi Denis,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I expect when you unpack the the test data the BAS files exist in the
+</I>&gt;<i> archive in that area so the fact it runs the out of that step to a
+</I>&gt;<i> different location isn't detected.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i>
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i>
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;<i>
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 12 Oct 2016, at 15:36, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i> I can make the modification, I'll run it through the test data and that
+</I>&gt;<i> should finish in roughly a day.
+</I>&gt;<i> In the meantime though, I am puzzled. Why would an issue like this affect
+</I>&gt;<i> a donor dataset, but not the test data?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i>
+</I>&gt;<i> *From:* docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt; [docktesters-bounces+
+</I>&gt;<i> denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;] on
+</I>&gt;<i> behalf of Keiran Raine [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;]
+</I>&gt;<i> *Sent:* October 12, 2016 6:16 AM
+</I>&gt;<i> *To:* Miguel Vazquez
+</I>&gt;<i> *Cc:* <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i> *Subject:* Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH
+</I>&gt;<i> teleconference
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> This is assuming that it is possible to write to the location the BAM are
+</I>&gt;<i> in.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I think Denis would be best placed to make the minor modification as I
+</I>&gt;<i> don't know the process they are using for build and deploy of the images (I
+</I>&gt;<i> made modifications and then handed over for CWL).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i>
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i>
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;<i>
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 12 Oct 2016, at 10:37, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> [The rest of the list where out of the loop for this part of the
+</I>&gt;<i> conversation, I'm putting them back in. In short, the Sanger pipeline
+</I>&gt;<i> produces the BAS file but not co-located with the BAM]
+</I>&gt;<i>
+</I>&gt;<i> Hi Keiran,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Would it be possible then to change this and try again? what needs to
+</I>&gt;<i> happen? I guess you'll need to change the code and a new docker image be
+</I>&gt;<i> produced. Would this be our best alternative?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Tue, Oct 11, 2016 at 4:07 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> In the original version we didn't do this step, if we have write access it
+</I>&gt;<i> can be made to do that
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i>
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i>
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;<i>
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 11 Oct 2016, at 13:49, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi Keiran,
+</I>&gt;<i>
+</I>&gt;<i> If the BAS and BAM files need to be collocated, why is it not created next
+</I>&gt;<i> to the BAM file?
+</I>&gt;<i>
+</I>&gt;<i> Would it not be better if it read
+</I>&gt;<i>
+</I>&gt;<i> private Job basFileBaseJob(int tumourCount, String sampleBam, String
+</I>&gt;<i> process, int index) {
+</I>&gt;<i>
+</I>&gt;<i> Job thisJob = prepTimedJob(tumourCount, &quot;basFileGenerate&quot;, process,
+</I>&gt;<i> index);
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> File f = new File(sampleBam);
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> thisJob.getCommand()
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> .addArgument(getWorkflowBaseDir()+ &quot;/bin/wrapper.sh&quot;)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> .addArgument(installBase)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> .addArgument(&quot;bam_stats&quot;)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> .addArgument(&quot;-i &quot; + sampleBam)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> .addArgument(&quot;-o &quot; + sampleBam + &quot;.bas&quot;)
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> return thisJob;
+</I>&gt;<i>
+</I>&gt;<i> }
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Tue, Oct 11, 2016 at 2:44 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Relevant section of code:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/</A>
+</I>&gt;<i> blob/develop/src/main/java/io/seqware/pancancer/
+</I>&gt;<i> CgpSomaticCore.java#L769-L780 &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i>
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i>
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;<i>
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 11 Oct 2016, at 13:40, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> There is a step generating the BAS files:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> [2016/10/10 07:28:37] |  Running command: bash /datastore/oozie-6599f0b9-
+</I>&gt;<i> 8af7-44ca-a608-03c5bbc159c6/generated-scripts/s58_
+</I>&gt;<i> basFileGenerate_control_11-runner.sh
+</I>&gt;<i> [2016/10/10 07:28:37] |  Running command: bash /datastore/oozie-6599f0b9-
+</I>&gt;<i> 8af7-44ca-a608-03c5bbc159c6/generated-scripts/s58_
+</I>&gt;<i> basFileGenerate_tumours_12-runner.sh
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> But if the BAM files and BAS aren't co-located then you have a problem.
+</I>&gt;<i> You could symlink the BAM files into the work space and have all tools work
+</I>&gt;<i> from that path instead, deleting the symlinks at the end.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> This is one of the changes we had to implement differently as the BAS file
+</I>&gt;<i> data was being held in the GNOS xml data structures during the initial
+</I>&gt;<i> processing.  Moving to this means that any BAM input is sufficient.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hope this is easier to solve now,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i>
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i>
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;<i>
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 11 Oct 2016, at 13:31, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran,
+</I>&gt;<i>
+</I>&gt;<i> Its downloading the files still but in fact it does not seem to download
+</I>&gt;<i> any BAS file. Could you please educate me a bit on what are these and how I
+</I>&gt;<i> can create them?
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Tue, Oct 11, 2016 at 2:22 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>
+</I>&gt;<i> &lt;<A HREF="http://UrlBlockedError.aspx">http://UrlBlockedError.aspx</A>&gt;&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 4. It looks like the *_pindel_input_* steps run for only 22-23 seconds
+</I>&gt;<i> which could indicate a problem with either the headers or the absence of
+</I>&gt;<i> the BAS file from the expected location.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I think that you just revealed the problem. There is in fact no BAS files
+</I>&gt;<i> only BAM and BAI. There where BAS files for the test data HCC1143 which is
+</I>&gt;<i> the one that in fact work. It seems like BAS files are not gathered by
+</I>&gt;<i> gnos, could that be? or that my script fails to copy them. I'll try to
+</I>&gt;<i> gather a different sample with my client and check.
+</I>&gt;<i>
+</I>&gt;<i> Not knowing a thing about these files explains why I didn't notice. I'll
+</I>&gt;<i> get back to you when I know more.
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>&gt;<i> &lt;build.log&gt;&lt;outer.build.log&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161015/8850e028/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161015/8850e028/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000119.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</A></li>
+	<LI>Next message: <A HREF="000121.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

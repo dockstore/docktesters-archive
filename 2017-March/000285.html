@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] DKFZ BiasFilter 100% match on DO52140, DO35937,	and DO218695
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20DKFZ%20BiasFilter%20100%25%20match%20on%20DO52140%2C%20DO35937%2C%0A%09and%20DO218695&In-Reply-To=%3CCA%2Bdx8mYT%3Dkc%3DXvmNZbPrdkGD2%2BX5034_NK73Qd9xxkJoxv87Zg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000269.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] DKFZ BiasFilter 100% match on DO52140, DO35937,	and DO218695</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20DKFZ%20BiasFilter%20100%25%20match%20on%20DO52140%2C%20DO35937%2C%0A%09and%20DO218695&In-Reply-To=%3CCA%2Bdx8mYT%3Dkc%3DXvmNZbPrdkGD2%2BX5034_NK73Qd9xxkJoxv87Zg%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] DKFZ BiasFilter 100% match on DO52140, DO35937,	and DO218695">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Mon Mar 27 08:34:55 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000269.html">[DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#285">[ date ]</a>
+              <a href="thread.html#285">[ thread ]</a>
+              <a href="subject.html#285">[ subject ]</a>
+              <a href="author.html#285">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+I'm very pleased to announce that with the help of Kortine we have managed
+to reproduce the results. To get the proper results we had to filter out
+the input file (consensus.vcf from GNOS for each donor) to remove the
+ LOWSUPPORT and OXOG variants. I've also removed the bSeq and bPcr tags
+from the file as I saw in the python code that otherwise these already
+flagged variants would have been excluded.
+
+Best regards
+
+Miguel
+
+
+Comparison for DO52140 tag bPcr
+---
+Common: 1
+Extra: 0
+Missing: 0
+
+
+Comparison for DO52140 tag bSeq
+---
+Common: 1
+Extra: 0
+Missing: 0
+
+Processing donor: DO35937
+
+Comparison for DO35937 tag bPcr
+---
+Common: 1
+Extra: 0
+Missing: 0
+
+
+Comparison for DO35937 tag bSeq
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+Processing donor: DO218695
+
+Comparison for DO218695 tag bPcr
+---
+Common: 1
+Extra: 0
+Missing: 0
+
+
+Comparison for DO218695 tag bSeq
+---
+Common: 10
+Extra: 0
+Missing: 0
+
+
+
+
+On Wed, Mar 15, 2017 at 11:09 AM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+wrote:
+
+&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> As you can read below I made a mistake on my previous validation for the
+</I>&gt;<i> DKFZ BiasFilter. Unfortunately large differences have turned up now that
+</I>&gt;<i> I've corrected the process. In brief on both donors I've found that
+</I>&gt;<i> re-runing the filter flags some additional variants for both flags bPcr and
+</I>&gt;<i> bSeq. Notably all the discrepancies are for the new method flagging more
+</I>&gt;<i> variants. For instance in many cases the original file contains just one
+</I>&gt;<i> variant with the flag where the new one ten or twenty. You can read the
+</I>&gt;<i> details at the end of this email where we are comparing the original VCF to
+</I>&gt;<i> the new one.
+</I>&gt;<i>
+</I>&gt;<i> Note that the orginal VCF is the consensus variants are the input I use
+</I>&gt;<i> for the BiasFilter along with the corresponding BAM files for that donor. I
+</I>&gt;<i> can only imagine that if this VCF was not the one originally used due to
+</I>&gt;<i> some filtering step then perhaps the bias calculations might have been
+</I>&gt;<i> affected. If that is so I would need instructions on where to get the
+</I>&gt;<i> precise input VCFs.
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i> ----RESULTS----
+</I>&gt;<i>
+</I>&gt;<i> Comparison for *DO52140* tag *bPcr*
+</I>&gt;<i> ---
+</I>&gt;<i> Common: *1*
+</I>&gt;<i> Extra: *12*
+</I>&gt;<i>     - Example: 11:81550771:C:A,12:19486241:G:T,2:12287406:G:T
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison for *DO52140* tag *bSeq*
+</I>&gt;<i> ---
+</I>&gt;<i> Common: *1*
+</I>&gt;<i> Extra: *23*
+</I>&gt;<i>     - Example: 10:17681457:G:T,12:112049882:T:G,12:130990011:T:A
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i> Comparison for *DO35937* tag *bPcr*
+</I>&gt;<i> ---
+</I>&gt;<i> Common: *1*
+</I>&gt;<i> Extra: *10*
+</I>&gt;<i>     - Example: 1:114845662:G:T,14:33282600:C:A,16:78467879:G:T
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison for *DO35937* tag *bSeq*
+</I>&gt;<i> ---
+</I>&gt;<i> Common: *6*
+</I>&gt;<i> Extra: *88*
+</I>&gt;<i>     - Example: 10:21703903:A:C,10:24183103:C:T,10:51468498:C:G
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Mon, Mar 13, 2017 at 4:48 PM, Christina Yung &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">christina.yung at oicr.on.ca</A>
+</I>&gt;<i> &gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Miguel,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The bPCR and bSeq flags are indeed the ones flagged by the DKFZ bias
+</I>&gt;&gt;<i> filter.  When you summarize the comparison, please cc Matthias of DKFZ as
+</I>&gt;&gt;<i> his team developed this filter.  No issue at all, and thanks again for your
+</I>&gt;&gt;<i> great work!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Christina
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 3/13/2017 10:22 AM, Miguel Vazquez wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Dear all,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I just learnt that the DKFZ BiasFilter is NOT the OXOG filter workflow,
+</I>&gt;&gt;<i> which means* I checked for the wrong thing in this validation!* I'm
+</I>&gt;&gt;<i> sorry for the confusion.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Right now I pass the BAM files and the consensus.vcf (SNV_MNV) downloaded
+</I>&gt;&gt;<i> from GNOS to the BiasFilter and compare the resulting VCF with the
+</I>&gt;&gt;<i> consensus looking at the set of mutations containing the OXOGFAIL flag.
+</I>&gt;&gt;<i> This apparently is not the comparison to make. *What is it that I need
+</I>&gt;&gt;<i> to compare? is it the bPcr and bSeq flags?*
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> One first look at those flags do show quite some discrepancies
+</I>&gt;&gt;<i> unfortunately on both donors (DO52140 and DO35937) for both flags. For
+</I>&gt;&gt;<i> instance for DO35937 we find 11 mutations flaged bPcr with in the new
+</I>&gt;&gt;<i> result, while the consensus.vcf only finds one, of them. Something similar
+</I>&gt;&gt;<i> happens with the bSeq.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Can you please confirm this so I can come reply with a full report on
+</I>&gt;&gt;<i> this.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Kind regards, and sorry again for the confusion.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Miguel
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Mon, Feb 27, 2017 at 7:30 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Dear friends,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> I've performed the first test with the DKFZ BiasFilter and got a perfect
+</I>&gt;&gt;&gt;<i> match. There are 55 variants annotated with OXOGFAIL and they are the same
+</I>&gt;&gt;&gt;<i> in the input VCF file (consensus SNV/MNV VCF for that donor) and the output
+</I>&gt;&gt;&gt;<i> of the BiasFilter. I'm running the test on a second donor.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Best regards
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Miguel
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> docktesters mailing <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">listdocktesters at lists.icgc.orghttps</A>://lists.icgc.org/mailman/listinfo/docktesters
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> docktesters mailing list
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170327/5c062cbf/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170327/5c062cbf/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000269.html">[DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#285">[ date ]</a>
+              <a href="thread.html#285">[ thread ]</a>
+              <a href="subject.html#285">[ subject ]</a>
+              <a href="author.html#285">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

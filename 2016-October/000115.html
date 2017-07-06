@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Broad dockers
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20dockers&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A141C%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000114.html">
+   <LINK REL="Next"  HREF="000116.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Broad dockers</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20dockers&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A141C%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Broad dockers">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Thu Oct 13 10:46:24 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000114.html">[DOCKTESTERS] Broad dockers
+</A></li>
+        <LI>Next message: <A HREF="000116.html">[DOCKTESTERS] Broad dockers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#115">[ date ]</a>
+              <a href="thread.html#115">[ thread ]</a>
+              <a href="subject.html#115">[ subject ]</a>
+              <a href="author.html#115">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+Thanks for the heads-up, we'll look into these containers and see what we can do in terms of testing them and getting them posted to the Dockstore.
+
+I do have a few questions:
+1) What versions of Cromwell and wdl4s was this portion of the pipeline tested with?
+2) This release is for the tokens portion of the pipeline, how many portions of the pipeline do you anticipate will be available in the end? (and do you have a handy graph/chart that we can use to describe this?)
+3) For post-publication, are you thinking about a dual-license model ( something like <A HREF="https://www.quora.com/What-is-the-best-license-to-apply-on-an-open-source-project-that-I-intend-to-sell-commercially-as-well">https://www.quora.com/What-is-the-best-license-to-apply-on-an-open-source-project-that-I-intend-to-sell-commercially-as-well</A> ) or are you thinking about some form of DRM in the Docker image?
+
+
+________________________________
+From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>] on behalf of Gordon Saksena [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">gsaksena at broadinstitute.org</A>]
+Sent: October 12, 2016 3:11 PM
+To: docktesters
+Cc: Gad Getz
+Subject: [DOCKTESTERS] Broad dockers
+
+Hi,
+
+I have approval for the Broad PCAWG dockers to go on the staging (non-password protected) portion of Dockstore.  The Github Repo and DockerHub image have permissions granted to folks who sent me their github and docker usernames.  This should be adequate for the initial rounds of testing.
+
+The tokens portion of the pipeline should be ready for folks to give it a spin.  The non-protected reference files are passed in via http in the inputs file, and it only needs the normal BAM.  It takes about 5 hours on a full size file using a couple cores.  Other portions will be added as they are split out and tested.
+
+While the current permissions setup is fine for testing, something different will be needed for post publication.  Many of the algorithms are (or will be) free only for educational or research use, but require a separate license for commercial use.  We should discuss how that use case can be supported, and whether it has implications on testing.
+
+
+<A HREF="https://hub.docker.com/r/broadinstitute/pcawg_tokens/&lt;redir.aspx?REF=t2oyfEuDAgvNSbbfIv6vDmA3IdQFqBlgBMQyYyaIaE76V1PAdfPTCAFodHRwczovL2h1Yi5kb2NrZXIuY29tL3IvYnJvYWRpbnN0aXR1dGUvcGNhd2dfdG9rZW5zLw..">https://hub.docker.com/r/broadinstitute/pcawg_tokens/&lt;redir.aspx?REF=t2oyfEuDAgvNSbbfIv6vDmA3IdQFqBlgBMQyYyaIaE76V1PAdfPTCAFodHRwczovL2h1Yi5kb2NrZXIuY29tL3IvYnJvYWRpbnN0aXR1dGUvcGNhd2dfdG9rZW5zLw..</A>&gt;
+
+<A HREF="https://github.com/broadinstitute/pcawg&lt;redir.aspx?REF=YRuHl29pr_J2zGxyN2fVpymfwWxOPaImHYhnj94xV5P6V1PAdfPTCAFodHRwczovL2dpdGh1Yi5jb20vYnJvYWRpbnN0aXR1dGUvcGNhd2c.">https://github.com/broadinstitute/pcawg&lt;redir.aspx?REF=YRuHl29pr_J2zGxyN2fVpymfwWxOPaImHYhnj94xV5P6V1PAdfPTCAFodHRwczovL2dpdGh1Yi5jb20vYnJvYWRpbnN0aXR1dGUvcGNhd2c.</A>&gt;
+<A HREF="https://github.com/broadinstitute/pcawg/blob/master/tasks/tokens/taskdef.tokens.wdl&lt;redir.aspx?REF=FGY08LTLLTocjDsGPbicTMRuN2l47cI66PmvalxNDgf6V1PAdfPTCAFodHRwczovL2dpdGh1Yi5jb20vYnJvYWRpbnN0aXR1dGUvcGNhd2cvYmxvYi9tYXN0ZXIvdGFza3MvdG9rZW5zL3Rhc2tkZWYudG9rZW5zLndkbA..">https://github.com/broadinstitute/pcawg/blob/master/tasks/tokens/taskdef.tokens.wdl&lt;redir.aspx?REF=FGY08LTLLTocjDsGPbicTMRuN2l47cI66PmvalxNDgf6V1PAdfPTCAFodHRwczovL2dpdGh1Yi5jb20vYnJvYWRpbnN0aXR1dGUvcGNhd2cvYmxvYi9tYXN0ZXIvdGFza3MvdG9rZW5zL3Rhc2tkZWYudG9rZW5zLndkbA..</A>&gt;
+<A HREF="https://github.com/broadinstitute/pcawg/blob/master/tasks/tokens/inputtest_http_refdata.tokens.json&lt;redir.aspx?REF=TIcioMOk8LkXN0dYIggrha-l4JfAM0989TTSW2YBUkL6V1PAdfPTCAFodHRwczovL2dpdGh1Yi5jb20vYnJvYWRpbnN0aXR1dGUvcGNhd2cvYmxvYi9tYXN0ZXIvdGFza3MvdG9rZW5zL2lucHV0dGVzdF9odHRwX3JlZmRhdGEudG9rZW5zLmpzb24.">https://github.com/broadinstitute/pcawg/blob/master/tasks/tokens/inputtest_http_refdata.tokens.json&lt;redir.aspx?REF=TIcioMOk8LkXN0dYIggrha-l4JfAM0989TTSW2YBUkL6V1PAdfPTCAFodHRwczovL2dpdGh1Yi5jb20vYnJvYWRpbnN0aXR1dGUvcGNhd2cvYmxvYi9tYXN0ZXIvdGFza3MvdG9rZW5zL2lucHV0dGVzdF9odHRwX3JlZmRhdGEudG9rZW5zLmpzb24.</A>&gt;
+
+Gordon
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161013/8dc2f553/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161013/8dc2f553/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000114.html">[DOCKTESTERS] Broad dockers
+</A></li>
+	<LI>Next message: <A HREF="000116.html">[DOCKTESTERS] Broad dockers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#115">[ date ]</a>
+              <a href="thread.html#115">[ thread ]</a>
+              <a href="subject.html#115">[ subject ]</a>
+              <a href="author.html#115">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

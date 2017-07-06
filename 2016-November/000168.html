@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20pipeline%20taking%20a%20very%20long%20on%20DO50311%20and%0A%20issue%20with%20BWA-Mem&In-Reply-To=%3CCA%2Bdx8mar8VGsJvyvV33jYrYKdr0B5fPAvC4VYYS8-B226tX4Tw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000167.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20pipeline%20taking%20a%20very%20long%20on%20DO50311%20and%0A%20issue%20with%20BWA-Mem&In-Reply-To=%3CCA%2Bdx8mar8VGsJvyvV33jYrYKdr0B5fPAvC4VYYS8-B226tX4Tw%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Tue Nov 29 10:46:12 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000167.html">[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#168">[ date ]</a>
+              <a href="thread.html#168">[ thread ]</a>
+              <a href="subject.html#168">[ subject ]</a>
+              <a href="author.html#168">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks Denis.
+
+
+On Tue, Nov 29, 2016 at 4:27 PM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> re: bwa-mem on HCC1143
+</I>&gt;<i>
+</I>&gt;<i> I have not tried that. Unfortunately, according to the table (
+</I>&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A> ) I
+</I>&gt;<i> believe you're the first.
+</I>&gt;<i>
+</I>&gt;<i> re: Sanger on DO50311
+</I>&gt;<i> Yes, unfortunately it did take a bit over 8 days for me to run that donor
+</I>&gt;<i> on a pretty beefy machine (15 cpu, 125 GB ram).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ------------------------------
+</I>&gt;<i> *From:* <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A> [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>] on behalf of Miguel
+</I>&gt;<i> Vazquez [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>]
+</I>&gt;<i> *Sent:* November 29, 2016 6:06 AM
+</I>&gt;<i> *To:* Denis Yuen
+</I>&gt;<i> *Cc:* Francis Ouellette; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> *Subject:* [DOCKTESTERS] Sanger pipeline taking a very long on DO50311
+</I>&gt;<i> and issue with BWA-Mem
+</I>&gt;<i>
+</I>&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> I just wanted to give a partial update on my side and ask about two
+</I>&gt;<i> issues.
+</I>&gt;<i>
+</I>&gt;<i> 1) I've ran BAW-Mem on the test data HCC1143 and the process has failed,
+</I>&gt;<i> should it work for that dataset or is there a reason it shouldn't. About
+</I>&gt;<i> unaligning the BAM files I've checked the instructions on
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=">https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=</A>
+</I>&gt;<i> PANCANCER&amp;title=Preparing+paired-end+data+for+upload
+</I>&gt;<i> &lt;<A HREF="http://redir.aspx?REF=vzZnpHgQUQ-TmnK2WmjdtthDxHvxJtPVpEqrB_qN7UMgNBmdaxjUCAFodHRwczovL3dpa2kub2ljci5vbi5jYS9wYWdlcy92aWV3cGFnZS5hY3Rpb24_c3BhY2VLZXk9UEFOQ0FOQ0VSJnRpdGxlPVByZXBhcmluZytwYWlyZWQtZW5kK2RhdGErZm9yK3VwbG9hZA..">http://redir.aspx?REF=vzZnpHgQUQ-TmnK2WmjdtthDxHvxJtPVpEqrB_qN7UMgNBmdaxjUCAFodHRwczovL3dpa2kub2ljci5vbi5jYS9wYWdlcy92aWV3cGFnZS5hY3Rpb24_c3BhY2VLZXk9UEFOQ0FOQ0VSJnRpdGxlPVByZXBhcmluZytwYWlyZWQtZW5kK2RhdGErZm9yK3VwbG9hZA..</A>&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> and I ended up just doing
+</I>&gt;<i>
+</I>&gt;<i> cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY  &gt;
+</I>&gt;<i> cleaned.bam
+</I>&gt;<i>
+</I>&gt;<i> I skipped all the stuff about the SAM header, which I didn't fully
+</I>&gt;<i> understood but it seemed like housekeeping stuff that should affect the
+</I>&gt;<i> variant calling and didn't quite apply to this test data. Could that be
+</I>&gt;<i> the issue?
+</I>&gt;<i>
+</I>&gt;<i> I tried to run it on a normal donor but it turns out I had first to finish
+</I>&gt;<i> the test on Sanger. When I do I can save the container, thanks to Denis tip
+</I>&gt;<i> on a previous thread, and help debug it if need be. I'm sorry that I cannot
+</I>&gt;<i> give more details on the error but at the time I could not find the log
+</I>&gt;<i> files that where supposed to be there; when the next issue is resolved I'll
+</I>&gt;<i> come back to this.
+</I>&gt;<i>
+</I>&gt;<i> 2) I'm running Sanger on donor DO50311. I put the job on November 22,
+</I>&gt;<i> about a week ago, and it is still running. It seems to be doing caveman for
+</I>&gt;<i> the last few days. It going full throttle using 100% of the CPU and with
+</I>&gt;<i> running jobs not older than 15 hours, so I guess its not stuck or anything.
+</I>&gt;<i> But just in case, is taking this long normal?
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/983d52d6/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/983d52d6/attachment-0001.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000167.html">[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#168">[ date ]</a>
+              <a href="thread.html#168">[ thread ]</a>
+              <a href="subject.html#168">[ subject ]</a>
+              <a href="author.html#168">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] SV Merge image in Dockstore
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20SV%20Merge%20image%20in%20Dockstore&In-Reply-To=%3C830b6e5ecd8548fb94fc8bd0fde8cf47%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000291.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] SV Merge image in Dockstore</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20SV%20Merge%20image%20in%20Dockstore&In-Reply-To=%3C830b6e5ecd8548fb94fc8bd0fde8cf47%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] SV Merge image in Dockstore">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Mon Apr  3 10:01:34 EDT 2017</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000291.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#290">[ date ]</a>
+              <a href="thread.html#290">[ thread ]</a>
+              <a href="subject.html#290">[ subject ]</a>
+              <a href="author.html#290">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+
+As mentioned in the Monday call, I took a quick look at <A HREF="https://dockstore.org/containers/registry.hub.docker.com/essi/pcawg_sv_merge">https://dockstore.org/containers/registry.hub.docker.com/essi/pcawg_sv_merge</A> &lt;<A HREF="https://bitbucket.org/weischenfeldt/pcawg_sv_merge">https://bitbucket.org/weischenfeldt/pcawg_sv_merge</A>&gt;
+
+It looks like the tool is functional and I was able to run it with the test data (a small test json is registered on dockstore and is available here <A HREF="https://bitbucket.org/weischenfeldt/pcawg_sv_merge/src/26bcbf6b86935417d8be5a379b3657167076c6b8/Dockstore.json?at=docker&amp;fileviewer=file-view-default">https://bitbucket.org/weischenfeldt/pcawg_sv_merge/src/26bcbf6b86935417d8be5a379b3657167076c6b8/Dockstore.json?at=docker&amp;fileviewer=file-view-default</A> )
+
+A couple heads-up though:
+1) It appears that there's a bug with version 1.1.5 of Dockstore where it looks like Dockstore does not copy the results to the final location and instead leaves them in place when working with array output. This means that for now, users will need to look at the stdout file which does list all the output files (the file will be at a path that looks like ( &lt;your working directory&gt;./datastore/launcher-6dd9b514-fe37-4290-8f36-5fb28e5a7f3a/outputs/cwltool.stdout.txt )
+2) I wasn't able to download the full Synapse dataset, but this may be an issue with my account since the underlying dataset seems to be hosted at dccsftp.nci.nih.gov rather than Synapse itself. Link is available here <A HREF="https://www.synapse.org/#!Synapse:syn8547037">https://www.synapse.org/#!Synapse:syn8547037</A>
+
+In short, I believe that the tool should be ready for testing although there are a couple rough edges to work on (although they shouldn't block testing).
+
+
+
+Denis Yuen
+Senior Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170403/6b7021ea/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170403/6b7021ea/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000291.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#290">[ date ]</a>
+              <a href="thread.html#290">[ thread ]</a>
+              <a href="subject.html#290">[ subject ]</a>
+              <a href="author.html#290">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

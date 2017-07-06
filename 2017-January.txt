@@ -1,0 +1,2738 @@
+From francis at oicr.on.ca  Sun Jan  8 21:59:12 2017
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 9 Jan 2017 02:59:12 +0000
+Subject: [DOCKTESTERS] updates?
+Message-ID: <8B3855A6-9768-4C27-936A-4C96150100AA@oicr.on.ca>
+
+
+Hi Miguel,
+
+Will you be on call tomorrow AM? I will be there, but I was wondering if you had updates?
+
+I?m not sure it will come up tomorrow morning, but it was announced at OICR last week that 
+I am leaving OICR at the end of January. That said, I want to finish this docktesting work, 
+and so I will stick around for that. I am starting a new position in Montr?al as VP Scientific 
+Affairs at G?nome Qu?bec, a funding agency here in Qu?bec/Canada.
+
+Anyway Miguel, maybe you and I can talk in AM, maybe after the pcawg-tech call?
+
+All the best to all,
+
+francis
+
+  
+
+From mikisvaz at gmail.com  Mon Jan  9 06:04:40 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Mon, 9 Jan 2017 12:04:40 +0100
+Subject: [DOCKTESTERS] updates?
+In-Reply-To: <8B3855A6-9768-4C27-936A-4C96150100AA@oicr.on.ca>
+References: <8B3855A6-9768-4C27-936A-4C96150100AA@oicr.on.ca>
+Message-ID: <CA+dx8maKAjX3peDYy-+wS3nDY_Yn2nvvsaqaAuZzqveQuDwRig@mail.gmail.com>
+
+Hi Francis,
+
+Happy new year and congratulations on your new position. I hope you help
+fund great and successful science.
+
+I'll attend in the call latter today. I've only modest updates since the
+last call which you are mostly aware of:
+
+- I've completed the second donor for Sanger. There are now two donors for
+both Delly+DKFZ and Sanger. I've updated the result in the minutes of the
+call: DKFZ has big CNV differences, Sanger has small SNV and CNV
+differences.
+
+- Regarding DKFZ: I've made my results available to their team so that they
+can investigate the differences in CNVs
+
+- Regarding Sanger: I've ran the second sample again through the pipeline
+to see if I get the same SNV and CNV differences. Its about to complete but
+not before today's call.
+
+- I've also tried to run the BWA-Mem on a real donor and failed like it
+failed for the Test data. I haven't examined the issue in detail yet so
+I'll get back to you on this, but I'm afraid I'm going to require some
+assistance here.
+
+I will have time after the call to talk
+
+Kind regards
+
+Miguel
+
+
+On Mon, Jan 9, 2017 at 3:59 AM, Francis Ouellette <francis at oicr.on.ca>
+wrote:
+
+>
+> Hi Miguel,
+>
+> Will you be on call tomorrow AM? I will be there, but I was wondering if
+> you had updates?
+>
+> I?m not sure it will come up tomorrow morning, but it was announced at
+> OICR last week that
+> I am leaving OICR at the end of January. That said, I want to finish this
+> docktesting work,
+> and so I will stick around for that. I am starting a new position in
+> Montr?al as VP Scientific
+> Affairs at G?nome Qu?bec, a funding agency here in Qu?bec/Canada.
+>
+> Anyway Miguel, maybe you and I can talk in AM, maybe after the pcawg-tech
+> call?
+>
+> All the best to all,
+>
+> francis
+>
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170109/9d1b78e9/attachment.html>
+
+From Jonas.Demeulemeester at crick.ac.uk  Tue Jan 10 05:55:21 2017
+From: Jonas.Demeulemeester at crick.ac.uk (Jonas Demeulemeester)
+Date: Tue, 10 Jan 2017 10:55:21 +0000
+Subject: [DOCKTESTERS]  - Crick
+Message-ID: <5BFAFC5E-3C05-405C-94C6-40D791E50B7B@crick.ac.uk>
+
+Hi all,
+
+We?ve just joined in on the testing.
+
+To give you a brief overview.
+Mainly to test whether we could actually run containers locally, we?ve succesully run the DKFZ(+Delly) 2.0.1_cwl1.0 and Sanger 2.0.3 workflows for donor DO218695 (which was just one for which I had the files locally).
+The BWA-Mem 2.6.8_1.2 workflow exited with an error.
+
+We?re working on Openstack (CentOS-7.2-1604, Docker 1.12, 20 CPUs, 200GB RAM).
+
+I?ll get cracking on the two test donors Miguel was using (DO50311 and DO52140) or two others from the test 62 set if you prefer.
+Is the current main goal still to check consistency of the outputs?
+If so, I?ll send the comparison script outputs to the list and will update the wiki accordingly when the runs complete.
+
+Best,
+Jonas
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<%22mailto:>
+W: www.crick.ac.uk<%22http://>
+
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170110/a322038d/attachment-0001.html>
+
+From Denis.Yuen at oicr.on.ca  Tue Jan 10 10:22:38 2017
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Tue, 10 Jan 2017 15:22:38 +0000
+Subject: [DOCKTESTERS] - Crick
+In-Reply-To: <5BFAFC5E-3C05-405C-94C6-40D791E50B7B@crick.ac.uk>
+References: <5BFAFC5E-3C05-405C-94C6-40D791E50B7B@crick.ac.uk>
+Message-ID: <27512884B2D81B41AAB7BB266248F240C0C0ECEB@exmb2.ad.oicr.on.ca>
+
+Hi,
+
+For bwa-mem, do you (or Miguel) have a copy of the error message that you ran into?
+Also, in your case, did bwa fail with the test data (  https://github.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/blob/2.6.8_1.2/Dockstore_cwl.json ) or was this with the DO218695 donor?
+
+Thanks
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca<http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of Jonas Demeulemeester [Jonas.Demeulemeester at crick.ac.uk]
+Sent: January 10, 2017 5:55 AM
+To: docktesters at lists.icgc.org
+Subject: [DOCKTESTERS] - Crick
+
+Hi all,
+
+We?ve just joined in on the testing.
+
+To give you a brief overview.
+Mainly to test whether we could actually run containers locally, we?ve succesully run the DKFZ(+Delly) 2.0.1_cwl1.0 and Sanger 2.0.3 workflows for donor DO218695 (which was just one for which I had the files locally).
+The BWA-Mem 2.6.8_1.2 workflow exited with an error.
+
+We?re working on Openstack (CentOS-7.2-1604, Docker 1.12, 20 CPUs, 200GB RAM).
+
+I?ll get cracking on the two test donors Miguel was using (DO50311 and DO52140) or two others from the test 62 set if you prefer.
+Is the current main goal still to check consistency of the outputs?
+If so, I?ll send the comparison script outputs to the list and will update the wiki accordingly when the runs complete.
+
+Best,
+Jonas
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<UrlBlockedError.aspx>
+W: www.crick.ac.uk<UrlBlockedError.aspx>
+
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170110/6dc8b2e2/attachment.html>
+
+From mikisvaz at gmail.com  Tue Jan 10 10:25:03 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Tue, 10 Jan 2017 16:25:03 +0100
+Subject: [DOCKTESTERS] - Crick
+In-Reply-To: <27512884B2D81B41AAB7BB266248F240C0C0ECEB@exmb2.ad.oicr.on.ca>
+References: <5BFAFC5E-3C05-405C-94C6-40D791E50B7B@crick.ac.uk>
+ <27512884B2D81B41AAB7BB266248F240C0C0ECEB@exmb2.ad.oicr.on.ca>
+Message-ID: <CA+dx8maV-mTCPf8KtTbCr5DNnn0DNmiwV=oToBT_2bSbGvEQxQ@mail.gmail.com>
+
+Hi Denis,
+
+It failed for both the test data and the one donor I tried. I don't have
+the log right now, sorry. I'll run it again with test data and get it to
+you in a couple of days.
+
+On Tue, Jan 10, 2017 at 4:22 PM, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+
+> Hi,
+>
+> For bwa-mem, do you (or Miguel) have a copy of the error message that you
+> ran into?
+> Also, in your case, did bwa fail with the test data (
+> https://github.com/ICGC-TCGA-PanCancer/Seqware-BWA-
+> Workflow/blob/2.6.8_1.2/Dockstore_cwl.json ) or was this with the
+> DO218695 donor?
+>
+> Thanks
+>
+> *Denis Yuen*
+> Bioinformatics Software Developer
+>
+>
+> *Ontario* *Institute* *for* *Cancer* *Research*
+> MaRS Centre
+> 661 University Avenue
+> Suite 510
+> Toronto, Ontario, Canada M5G 0A3
+>
+> Toll-free: 1-866-678-6427
+> Twitter: @OICR_news
+> *www.oicr.on.ca <http://www.oicr.on.ca/>*
+>
+> This message and any attachments may contain confidential and/or
+> privileged information for the sole use of the intended recipient. Any
+> review or distribution by anyone other than the person for whom it was
+> originally intended is strictly prohibited. If you have received this
+> message in error, please contact the sender and delete all copies.
+> Opinions, conclusions or other information contained in this message may
+> not be that of the organization.
+> ------------------------------
+> *From:* docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org
+> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of
+> Jonas Demeulemeester [Jonas.Demeulemeester at crick.ac.uk]
+> *Sent:* January 10, 2017 5:55 AM
+> *To:* docktesters at lists.icgc.org
+> *Subject:* [DOCKTESTERS] - Crick
+>
+> Hi all,
+>
+> We?ve just joined in on the testing.
+>
+> To give you a brief overview.
+> Mainly to test whether we could actually run containers locally, we?ve
+> succesully run the DKFZ(+Delly) 2.0.1_cwl1.0 and Sanger 2.0.3 workflows for
+> donor DO218695 (which was just one for which I had the files locally).
+> The BWA-Mem 2.6.8_1.2 workflow exited with an error.
+>
+> We?re working on Openstack (CentOS-7.2-1604, Docker 1.12, 20 CPUs, 200GB
+> RAM).
+>
+> I?ll get cracking on the two test donors Miguel was using (DO50311 and
+> DO52140) or two others from the test 62 set if you prefer.
+> Is the current main goal still to check consistency of the outputs?
+> If so, I?ll send the comparison script outputs to the list and will update
+> the wiki accordingly when the runs complete.
+>
+> Best,
+> Jonas
+>
+> _________________________________
+> Jonas Demeulemeester, PhD
+> Postdoctoral Researcher
+> The Francis Crick Institute
+> 1 Midland Road
+> London
+> NW1 1AT
+>
+> *T:* +44 (0)20 3796 2594 <+44%2020%203796%202594>
+> M: +44 (0)7482 070730 <+44%207482%20070730>
+> *E:* jonas.demeulemeester at crick.ac.uk <http://UrlBlockedError.aspx>
+> *W:* www.crick.ac.uk <http://UrlBlockedError.aspx>
+>
+>
+>
+> The Francis Crick Institute Limited is a registered charity in England and
+> Wales no. 1140062 and a company registered in England and Wales no.
+> 06885462, with its registered office at 1 Midland Road London NW1 1AT
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170110/41ae5421/attachment-0001.html>
+
+From Jonas.Demeulemeester at crick.ac.uk  Tue Jan 10 10:56:00 2017
+From: Jonas.Demeulemeester at crick.ac.uk (Jonas Demeulemeester)
+Date: Tue, 10 Jan 2017 15:56:00 +0000
+Subject: [DOCKTESTERS] - Crick
+In-Reply-To: <27512884B2D81B41AAB7BB266248F240C0C0ECEB@exmb2.ad.oicr.on.ca>
+References: <5BFAFC5E-3C05-405C-94C6-40D791E50B7B@crick.ac.uk>
+ <27512884B2D81B41AAB7BB266248F240C0C0ECEB@exmb2.ad.oicr.on.ca>
+Message-ID: <CD01353C-B0A2-485F-BBA6-D2CB4C0D3C1F@crick.ac.uk>
+
+Hi Denis,
+
+I only have the output from my screen session (attached).
+This was a test run with the DO218695 donor.
+
+I?ll also try running again to get you the full logs or to see where I went wrong myself.
+
+Cheers,
+Jonas
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 10 Jan 2017, at 15:22, Denis Yuen <Denis.Yuen at oicr.on.ca<mailto:Denis.Yuen at oicr.on.ca>> wrote:
+
+Hi,
+
+For bwa-mem, do you (or Miguel) have a copy of the error message that you ran into?
+Also, in your case, did bwa fail with the test data (  https://github.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/blob/2.6.8_1.2/Dockstore_cwl.json ) or was this with the DO218695 donor?
+
+Thanks
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca<http://www.oicr.on.ca/>
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org>] on behalf of Jonas Demeulemeester [Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>]
+Sent: January 10, 2017 5:55 AM
+To: docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+Subject: [DOCKTESTERS] - Crick
+
+Hi all,
+
+We?ve just joined in on the testing.
+
+To give you a brief overview.
+Mainly to test whether we could actually run containers locally, we?ve succesully run the DKFZ(+Delly) 2.0.1_cwl1.0 and Sanger 2.0.3 workflows for donor DO218695 (which was just one for which I had the files locally).
+The BWA-Mem 2.6.8_1.2 workflow exited with an error.
+
+We?re working on Openstack (CentOS-7.2-1604, Docker 1.12, 20 CPUs, 200GB RAM).
+
+I?ll get cracking on the two test donors Miguel was using (DO50311 and DO52140) or two others from the test 62 set if you prefer.
+Is the current main goal still to check consistency of the outputs?
+If so, I?ll send the comparison script outputs to the list and will update the wiki accordingly when the runs complete.
+
+Best,
+Jonas
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170110/61961b68/attachment-0001.html>
+-------------- next part --------------
+An embedded and charset-unspecified text was scrubbed...
+Name: docktesters_bwamem_screen-out.txt
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170110/61961b68/attachment-0001.txt>
+
+From Denis.Yuen at oicr.on.ca  Wed Jan 11 10:38:53 2017
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Wed, 11 Jan 2017 15:38:53 +0000
+Subject: [DOCKTESTERS] - Crick
+In-Reply-To: <CD01353C-B0A2-485F-BBA6-D2CB4C0D3C1F@crick.ac.uk>
+References: <5BFAFC5E-3C05-405C-94C6-40D791E50B7B@crick.ac.uk>
+ <27512884B2D81B41AAB7BB266248F240C0C0ECEB@exmb2.ad.oicr.on.ca>,
+ <CD01353C-B0A2-485F-BBA6-D2CB4C0D3C1F@crick.ac.uk>
+Message-ID: <5a7f0244cee24540b9cc3f54b4763fa6@oicr.on.ca>
+
+Hi,
+
+
+I don't see anything obviously wrong with the "plumbing" of the workflow as opposed to the actual underlying tool assuming that the system had enough system resources (which it probably did since you were able to run the other workflows). I'll see if I can kick off a run with this donor to see what I can replicate and in the meantime, let's also see what Miguel is seeing.
+
+
+Thanks for the heads-up!
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca<http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+
+________________________________
+From: Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk>
+Sent: January 10, 2017 10:56 AM
+To: Denis Yuen
+Cc: docktesters at lists.icgc.org
+Subject: Re: [DOCKTESTERS] - Crick
+
+Hi Denis,
+
+I only have the output from my screen session (attached).
+This was a test run with the DO218695 donor.
+
+I?ll also try running again to get you the full logs or to see where I went wrong myself.
+
+Cheers,
+Jonas
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 10 Jan 2017, at 15:22, Denis Yuen <Denis.Yuen at oicr.on.ca<mailto:Denis.Yuen at oicr.on.ca>> wrote:
+
+Hi,
+
+For bwa-mem, do you (or Miguel) have a copy of the error message that you ran into?
+Also, in your case, did bwa fail with the test data (  https://github.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/blob/2.6.8_1.2/Dockstore_cwl.json ) or was this with the DO218695 donor?
+
+Thanks
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca<http://www.oicr.on.ca/>
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org>] on behalf of Jonas Demeulemeester [Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>]
+Sent: January 10, 2017 5:55 AM
+To: docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+Subject: [DOCKTESTERS] - Crick
+
+Hi all,
+
+We?ve just joined in on the testing.
+
+To give you a brief overview.
+Mainly to test whether we could actually run containers locally, we?ve succesully run the DKFZ(+Delly) 2.0.1_cwl1.0 and Sanger 2.0.3 workflows for donor DO218695 (which was just one for which I had the files locally).
+The BWA-Mem 2.6.8_1.2 workflow exited with an error.
+
+We?re working on Openstack (CentOS-7.2-1604, Docker 1.12, 20 CPUs, 200GB RAM).
+
+I?ll get cracking on the two test donors Miguel was using (DO50311 and DO52140) or two others from the test 62 set if you prefer.
+Is the current main goal still to check consistency of the outputs?
+If so, I?ll send the comparison script outputs to the list and will update the wiki accordingly when the runs complete.
+
+Best,
+Jonas
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170111/4efd26de/attachment-0001.html>
+
+From miguel.vazquez at cnio.es  Fri Jan 13 11:37:44 2017
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Fri, 13 Jan 2017 17:37:44 +0100
+Subject: [DOCKTESTERS] Sanger validation (DO52140) repeated: Same
+	discrepancies
+Message-ID: <CA+dx8masdfitFV7MLe7typigbDDHVdrh0R3XH=i5ucAZjtQMFA@mail.gmail.com>
+
+Hi all,
+
+I've completed a second run of the Sanger pipeline for donor DO52140 and
+have obtained the *same discrepancies* as detailed below.
+
+Jonas from Crick has agreed to repeat one of the donors I have ran in his
+infrastructure to see if the discrepancies are dependent on the setup.
+
+Best regards
+
+Miguel
+
+On Tue, Dec 27, 2016 at 7:16 PM, Miguel Vazquez <miguel.vazquez at cnio.es>
+wrote:
+
+> Francis,
+>
+> This was on a new donor. I decided to get a second donor  before repeating
+> the first. The first  donor also had differences in SNVs, but no
+> differences in CNV.
+>
+> Since the discrepancies for the first donor were not deemed too critical,
+> I've actually moved onto trying the bwa-mem workflow, which I couldn't make
+> to run on test data and so I'm trying on real data.  Should I instead try a
+> second run on a donor to test if the differences are the same?
+>
+> Best
+>
+> Miguel
+>
+> On Dec 27, 2016 5:30 PM, "Francis Ouellette" <francis at oicr.on.ca> wrote:
+>
+>
+> Are the differences the same or different then the last time you ran
+> this?
+> Was this Sanger workflow run on the same infrastructure as the last
+> one you did?
+>
+> @bffo
+>
+>
+>
+> On Dec 27, 2016, at 08:24, Miguel Vazquez <miguel.vazquez at cnio.es> wrote:
+>
+> Dear all,
+>
+> The test for the Sanger workflow on the second sample is complete. The
+> results are posted below.
+>
+> In brief, *somatic* *indels* * and* *SV* *are a 100% match* (803986 and 6
+> respectively matches) there are *small differences* *in* *somatic.snv.mnv*
+> (+5 -7 with 87234 matches) *and* *somatic.cnv* (-2 and 36 matches)
+>
+> Best regards
+>
+> Report
+> ~~~~~~
+>
+> Comparison of somatic.cnv for DO52140 using Sanger
+> ---
+> Common: 36
+> Extra: 0
+> Missing: 2
+>     - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>
+>
+> Comparison of somatic.indel for DO52140 using Sanger
+> ---
+> Common: 803986
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.snv.mnv for DO52140 using Sanger
+> ---
+> Common: 87234
+> Extra: 5
+>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+> Missing: 7
+>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>
+>
+> Comparison of somatic.sv for DO52140 using Sanger
+> ---
+> Common: 6
+> Extra: 0
+> Missing: 0
+>
+>
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170113/e0bfa4a1/attachment.html>
+
+From Denis.Yuen at oicr.on.ca  Fri Jan 13 12:06:26 2017
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Fri, 13 Jan 2017 17:06:26 +0000
+Subject: [DOCKTESTERS] - Crick
+In-Reply-To: <CD01353C-B0A2-485F-BBA6-D2CB4C0D3C1F@crick.ac.uk>
+References: <5BFAFC5E-3C05-405C-94C6-40D791E50B7B@crick.ac.uk>
+ <27512884B2D81B41AAB7BB266248F240C0C0ECEB@exmb2.ad.oicr.on.ca>,
+ <CD01353C-B0A2-485F-BBA6-D2CB4C0D3C1F@crick.ac.uk>
+Message-ID: <dfbdb6ac9b79407b86a369424bec4f30@oicr.on.ca>
+
+Hi,
+
+
+As a heads-up, I have the same issue with DO218695 as well on a host actually is able to run the test data.
+
+
+For the record, I'm using the test data
+
+
+{
+  "reads": [
+  {
+  "path":"https://s3.amazonaws.com/oicr.workflow.bundles/released-bundles/synthetic_bam_for_GNOS_upload/hg19.chr22.5x.normal.bam",
+  "class":"File"
+  },
+  {"path":"https://s3.amazonaws.com/oicr.workflow.bundles/released-bundles/synthetic_bam_for_GNOS_upload/hg19.chr22.5x.normal2.bam",
+  "class":"File"
+  }
+
+
+While for this donor it looks like the following (having downloaded the files previously)
+
+
+{
+  "reads": [
+  {
+  "path":"/home/ubuntu/3a62b4250f4c7227fd5283888f2b598e.bam",
+  "class":"File"
+  },
+  {
+  "path":"/home/ubuntu/a51ad19bf9dcf4819371740c732bcba0.bam",
+  "class":"File"
+  }
+
+
+
+I'll try a different donor as well if I get a chance but it genuinely looks like there's something different here between the test data and a real donor.
+
+
+
+
+
+________________________________
+From: Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk>
+Sent: January 10, 2017 10:56 AM
+To: Denis Yuen
+Cc: docktesters at lists.icgc.org
+Subject: Re: [DOCKTESTERS] - Crick
+
+Hi Denis,
+
+I only have the output from my screen session (attached).
+This was a test run with the DO218695 donor.
+
+I?ll also try running again to get you the full logs or to see where I went wrong myself.
+
+Cheers,
+Jonas
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 10 Jan 2017, at 15:22, Denis Yuen <Denis.Yuen at oicr.on.ca<mailto:Denis.Yuen at oicr.on.ca>> wrote:
+
+Hi,
+
+For bwa-mem, do you (or Miguel) have a copy of the error message that you ran into?
+Also, in your case, did bwa fail with the test data (  https://github.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/blob/2.6.8_1.2/Dockstore_cwl.json ) or was this with the DO218695 donor?
+
+Thanks
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca<http://www.oicr.on.ca/>
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org>] on behalf of Jonas Demeulemeester [Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>]
+Sent: January 10, 2017 5:55 AM
+To: docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+Subject: [DOCKTESTERS] - Crick
+
+Hi all,
+
+We?ve just joined in on the testing.
+
+To give you a brief overview.
+Mainly to test whether we could actually run containers locally, we?ve succesully run the DKFZ(+Delly) 2.0.1_cwl1.0 and Sanger 2.0.3 workflows for donor DO218695 (which was just one for which I had the files locally).
+The BWA-Mem 2.6.8_1.2 workflow exited with an error.
+
+We?re working on Openstack (CentOS-7.2-1604, Docker 1.12, 20 CPUs, 200GB RAM).
+
+I?ll get cracking on the two test donors Miguel was using (DO50311 and DO52140) or two others from the test 62 set if you prefer.
+Is the current main goal still to check consistency of the outputs?
+If so, I?ll send the comparison script outputs to the list and will update the wiki accordingly when the runs complete.
+
+Best,
+Jonas
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170113/bc910ea0/attachment-0001.html>
+
+From Denis.Yuen at oicr.on.ca  Fri Jan 13 13:36:02 2017
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Fri, 13 Jan 2017 18:36:02 +0000
+Subject: [DOCKTESTERS] Sanger validation (DO52140) repeated:
+	Same	discrepancies
+In-Reply-To: <CA+dx8masdfitFV7MLe7typigbDDHVdrh0R3XH=i5ucAZjtQMFA@mail.gmail.com>
+References: <CA+dx8masdfitFV7MLe7typigbDDHVdrh0R3XH=i5ucAZjtQMFA@mail.gmail.com>
+Message-ID: <ed1ea3bca6b1437d8ab16953296e8123@oicr.on.ca>
+
+Hi,
+
+
+FYI I've also added Jonas's results from January 10th to https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+
+(Not sure if Jonas can see this page)
+
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org <docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org> on behalf of Miguel Vazquez <miguel.vazquez at cnio.es>
+Sent: January 13, 2017 11:37 AM
+To: Francis Ouellette
+Cc: docktesters at lists.icgc.org
+Subject: Re: [DOCKTESTERS] Sanger validation (DO52140) repeated: Same discrepancies
+
+Hi all,
+
+I've completed a second run of the Sanger pipeline for donor DO52140 and have obtained the same discrepancies as detailed below.
+
+Jonas from Crick has agreed to repeat one of the donors I have ran in his infrastructure to see if the discrepancies are dependent on the setup.
+
+Best regards
+
+Miguel
+
+On Tue, Dec 27, 2016 at 7:16 PM, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+Francis,
+
+This was on a new donor. I decided to get a second donor  before repeating the first. The first  donor also had differences in SNVs, but no differences in CNV.
+
+Since the discrepancies for the first donor were not deemed too critical, I've actually moved onto trying the bwa-mem workflow, which I couldn't make to run on test data and so I'm trying on real data.  Should I instead try a second run on a donor to test if the differences are the same?
+
+Best
+
+Miguel
+
+On Dec 27, 2016 5:30 PM, "Francis Ouellette" <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+Are the differences the same or different then the last time you ran this?
+Was this Sanger workflow run on the same infrastructure as the last
+one you did?
+
+@bffo
+
+
+
+On Dec 27, 2016, at 08:24, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Dear all,
+
+The test for the Sanger workflow on the second sample is complete. The results are posted below.
+
+In brief, somatic indels and SV are a 100% match (803986 and 6 respectively matches) there are small differences in somatic.snv.mnv (+5 -7 with 87234 matches) and somatic.cnv (-2 and 36 matches)
+
+Best regards
+
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170113/ea34c6ca/attachment.html>
+
+From miguel.vazquez at cnio.es  Mon Jan 16 09:24:30 2017
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Mon, 16 Jan 2017 15:24:30 +0100
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+	DKFZ(+Delly)
+Message-ID: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The
+validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are *identical for Indels
+and SVs* but *almost identical for SNV.MNV and CNV*. The discrepancies are
+reproducible (on the same machine at least), i.e. the same are found after
+running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both
+germline and somatic variants the results are *identical for SNV.MNV and
+Indels* but with *large discrepancies for SV and CNV*.
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+Demeulemeester. Denis I believe is investigating this problem further. I
+haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example:
+10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example:
+10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found
+/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example:
+10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example:
+10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found
+/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170116/a2c3150b/attachment.html>
+
+From christina.yung at oicr.on.ca  Mon Jan 16 09:45:25 2017
+From: christina.yung at oicr.on.ca (Christina Yung)
+Date: Mon, 16 Jan 2017 09:45:25 -0500
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+Message-ID: <25ff7f43-716f-0022-f1ab-c6317a2290cf@oicr.on.ca>
+
+Hi Folks,
+
+Here are the instructions for preparing the data as input to BWA-Mem.  
+If you use a different protocol, please share.
+
+https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload
+
+Christina
+
+
+On 17-01-16 09:24 AM, Miguel Vazquez wrote:
+> Dear all,
+>
+> Let me summarize the status of the testing for Sanger and DKFZ. The 
+> validation has been run for two donors for each workflow: DO50311 DO52140
+>
+> Sanger:
+> ----------
+>
+> Sanger call only somatic variants. The results are *identical for 
+> Indels and SVs* but *almost identical for SNV.MNV and CNV*. The 
+> discrepancies are reproducible (on the same machine at least), i.e. 
+> the same are found after running the workflow a second time.
+>
+> DKFZ:
+> ---------
+> DKFZ cals somatic and germline variants, except germline CNVs. For 
+> both germline and somatic variants the results are *identical for 
+> SNV.MNV and Indels* but with *large discrepancies for SV and CNV*.
+>
+> Kortine Kleinheinz and Joachim Weischenfeldt are in the process of 
+> investigating this issue I believe.
+>
+>
+> BWA-Mem failed for me and has also failed for Denis Yuen and Jonas 
+> Demeulemeester. Denis I believe is investigating this problem further. 
+> I haven't had the chance to investigate this much myself.
+>
+> Best
+>
+> Miguel
+>
+>
+>
+>
+> ---------------------
+> RESULTS
+> ---------------------
+>
+> ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+>
+> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 51087
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO50311 using DKFZ
+> ---
+> Common: 26469
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv <http://somatic.sv> for DO50311 using DKFZ
+> ---
+> Common: 231
+> Extra: 44
+>     - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+> Missing: 48
+>     - Example: 
+> 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+>
+>
+> Comparison of somatic.cnv for DO50311 using DKFZ
+> ---
+> Common: 731
+> Extra: 213
+>     - Example: 
+> 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+> Missing: 190
+>     - Example: 
+> 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+>
+>
+> Comparison of germline.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 3850992
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO50311 using DKFZ
+> ---
+> Common: 709060
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.sv <http://germline.sv> for DO50311 using DKFZ
+> ---
+> Common: 1393
+> Extra: 231
+>     - Example: 
+> 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+> Missing: 615
+>     - Example: 
+> 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+>
+> File not found 
+> /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+>
+> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 37160
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO52140 using DKFZ
+> ---
+> Common: 19347
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv <http://somatic.sv> for DO52140 using DKFZ
+> ---
+> Common: 72
+> Extra: 23
+>     - Example: 
+> 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+> Missing: 61
+>     - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>
+>
+> Comparison of somatic.cnv for DO52140 using DKFZ
+> ---
+> Common: 275
+> Extra: 94
+>     - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+> Missing: 286
+>     - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>
+>
+> Comparison of germline.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 3833896
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO52140 using DKFZ
+> ---
+> Common: 706572
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.sv <http://germline.sv> for DO52140 using DKFZ
+> ---
+> Common: 1108
+> Extra: 1116
+>     - Example: 
+> 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+> Missing: 2908
+>     - Example: 
+> 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+>
+> File not found 
+> /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+>
+> Comparison of somatic.snv.mnv for DO50311 using Sanger
+> ---
+> Common: 156299
+> Extra: 1
+>     - Example: Y:58885197:A:G
+> Missing: 14
+>     - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+>
+>
+> Comparison of somatic.indel for DO50311 using Sanger
+> ---
+> Common: 812487
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv <http://somatic.sv> for DO50311 using Sanger
+> ---
+> Common: 260
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO50311 using Sanger
+> ---
+> Common: 138
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.snv.mnv for DO52140 using Sanger
+> ---
+> Common: 87234
+> Extra: 5
+>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+> Missing: 7
+>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>
+>
+> Comparison of somatic.indel for DO52140 using Sanger
+> ---
+> Common: 803986
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv <http://somatic.sv> for DO52140 using Sanger
+> ---
+> Common: 6
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO52140 using Sanger
+> ---
+> Common: 36
+> Extra: 0
+> Missing: 2
+>     - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>
+>
+> This body part will be downloaded on demand.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170116/79d87a62/attachment-0001.html>
+
+From Junjun.Zhang at oicr.on.ca  Mon Jan 16 10:24:00 2017
+From: Junjun.Zhang at oicr.on.ca (Junjun Zhang)
+Date: Mon, 16 Jan 2017 15:24:00 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <25ff7f43-716f-0022-f1ab-c6317a2290cf@oicr.on.ca>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <25ff7f43-716f-0022-f1ab-c6317a2290cf@oicr.on.ca>
+Message-ID: <D4A24E62.61DF4%junjun.zhang@oicr.on.ca>
+
+Hi,
+
+I?d like to point out that this wiki page is obsolete: https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload.
+
+It has been replaced by the FINAL SOP for preparing PCAWG sequences here: https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0. Many of us worked on it including Keiran.
+
+Regarding preparation of test input BAM from merged / aligned BAM, the first step (Your starting files must be for a single lane of sequencing in either BAM (unaligned BAM) or FASTQ) of this section is most relevant: https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG(a.k.a.PCAPorPAWG)SequenceSubmissionSOP-v1.0-5.Prepareyoursequencefiles
+
+Hope this helps,
+
+Junjun
+
+
+
+
+Junjun Zhang
+
+
+Lead bioinformatician
+
+
+Informatics and Bio-computing
+
+Ontario Institute for Cancer Research
+
+MaRS Centre
+
+661 University Avenue
+
+Suite 510
+
+Toronto, Ontario, Canada M5G 0A3
+
+
+Tel: 416-673-8517
+
+Mobile: 647-501-7511
+
+Toll-free: 1-866-678-6427
+
+Twitter:  @OICR_news
+
+
+www.oicr.on.ca<http://www.oicr.on.ca/>
+
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+From: <docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org>> on behalf of Christina Yung <christina.yung at oicr.on.ca<mailto:christina.yung at oicr.on.ca>>
+Date: Monday, January 16, 2017 at 9:45 AM
+To: Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>>
+Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>" <docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>
+Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+
+
+Hi Folks,
+
+Here are the instructions for preparing the data as input to BWA-Mem.  If you use a different protocol, please share.
+<https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload>https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload
+
+Christina
+
+On 17-01-16 09:24 AM, Miguel Vazquez wrote:
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+
+This body part will be downloaded on demand.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170116/9c42a8e5/attachment.html>
+
+From miguel.vazquez at cnio.es  Mon Jan 23 08:09:42 2017
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Mon, 23 Jan 2017 14:09:42 +0100
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+	DKFZ(+Delly)
+In-Reply-To: <D4A24E62.61DF4%junjun.zhang@oicr.on.ca>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <25ff7f43-716f-0022-f1ab-c6317a2290cf@oicr.on.ca>
+ <D4A24E62.61DF4%junjun.zhang@oicr.on.ca>
+Message-ID: <CA+dx8mYnrjNdS69E2SQSX5QYCvBBU-rVjYeuDH=P+iWH0Rsaew@mail.gmail.com>
+
+Junjun,
+
+The section to refer about preparing the unaligned version of the BAM seems
+the same as when I first went through it. The command-line featured there
+reads
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY
+resetheadertext=header.sam md5=1 md5filename=cleaned.bam.md5 > cleaned.bam
+
+Since some of the options refer to setting the header and performing the
+md5 etc, I've stripped it down to:
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY >
+cleaned.bam
+
+Do you think there is any reason that this might not work? I don't see how
+the header info would have any effect on the process. I would be good to
+rule this out as a source of the problem.
+
+Best
+
+Miguel
+
+
+
+On Mon, Jan 16, 2017 at 4:24 PM, Junjun Zhang <Junjun.Zhang at oicr.on.ca>
+wrote:
+
+> Hi,
+>
+> I?d like to point out that this wiki page is obsolete: https://wiki.oicr.
+> on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload.
+>
+> It has been replaced by the FINAL SOP for preparing PCAWG sequences here:
+> https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.
+> k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0. Many of us worked on
+> it including Keiran.
+>
+> Regarding preparation of test input BAM from merged / aligned BAM, the
+> first step (*Your starting files must be for a single lane of
+> sequencing in either BAM (unaligned BAM) or FASTQ*) of this section is
+> most relevant: https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+
+> %28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.
+> 0#PCAWG(a.k.a.PCAPorPAWG)SequenceSubmissionSOP-v1.0-5.
+> Prepareyoursequencefiles
+> <https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG%28a.k.a.PCAPorPAWG%29SequenceSubmissionSOP-v1.0-5.Prepareyoursequencefiles>
+>
+> Hope this helps,
+>
+> Junjun
+>
+>
+>
+> *Junjun Zhang*
+>
+>
+> Lead bioinformatician
+>
+>
+> *Informatics and Bio-computing*
+>
+> *Ontario Institute for Cancer Research*
+>
+> MaRS Centre
+>
+> 661 University Avenue
+>
+> Suite 510
+>
+> Toronto, Ontario, Canada M5G 0A3
+>
+>
+> Tel: 416-673-8517
+>
+> Mobile: 647-501-7511
+>
+> Toll-free: 1-866-678-6427
+>
+> Twitter:  @OICR_news
+>
+>
+> www.oicr.on.ca
+>
+>
+> This message and any attachments may contain confidential and/or
+> privileged information for the sole use of the intended recipient. Any
+> review or distribution by anyone other than the person for whom it was
+> originally intended is strictly prohibited. If you have received this
+> message in error, please contact the sender and delete all copies.
+> Opinions, conclusions or other information contained in this message may
+> not be that of the organization.
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170123/5eb68003/attachment-0001.html>
+
+From Junjun.Zhang at oicr.on.ca  Mon Jan 23 08:26:24 2017
+From: Junjun.Zhang at oicr.on.ca (Junjun Zhang)
+Date: Mon, 23 Jan 2017 13:26:24 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <CA+dx8mYnrjNdS69E2SQSX5QYCvBBU-rVjYeuDH=P+iWH0Rsaew@mail.gmail.com>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <25ff7f43-716f-0022-f1ab-c6317a2290cf@oicr.on.ca>
+ <D4A24E62.61DF4%junjun.zhang@oicr.on.ca>,
+ <CA+dx8mYnrjNdS69E2SQSX5QYCvBBU-rVjYeuDH=P+iWH0Rsaew@mail.gmail.com>
+Message-ID: <4ECF19E9-FC99-46D3-87B9-1DF60DDA440A@oicr.on.ca>
+
+Hi Miguel,
+
+I will need to take a closer look on this. But what I know are important include (but not limited to) that input bams must be lane level, ie, bam with only one read group id; some part of the read group line in bam header must be properly formed, don't remember details here. But many of us should remember we had done some bam reheading to some larger number of bams because of header issue.
+
+Cheers
+Junjun
+
+On Jan 23, 2017, at 8:10 AM, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Junjun,
+
+The section to refer about preparing the unaligned version of the BAM seems the same as when I first went through it. The command-line featured there reads
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY resetheadertext=header.sam md5=1 md5filename=cleaned.bam.md5 > cleaned.bam
+
+Since some of the options refer to setting the header and performing the md5 etc, I've stripped it down to:
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY > cleaned.bam
+
+Do you think there is any reason that this might not work? I don't see how the header info would have any effect on the process. I would be good to rule this out as a source of the problem.
+
+Best
+
+Miguel
+
+
+
+On Mon, Jan 16, 2017 at 4:24 PM, Junjun Zhang <Junjun.Zhang at oicr.on.ca<mailto:Junjun.Zhang at oicr.on.ca>> wrote:
+Hi,
+
+I'd like to point out that this wiki page is obsolete: https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload.
+
+It has been replaced by the FINAL SOP for preparing PCAWG sequences here: https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0. Many of us worked on it including Keiran.
+
+Regarding preparation of test input BAM from merged / aligned BAM, the first step (Your starting files must be for a single lane of sequencing in either BAM (unaligned BAM) or FASTQ) of this section is most relevant: https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG(a.k.a.PCAPorPAWG)SequenceSubmissionSOP-v1.0-5.Prepareyoursequencefiles<https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG%28a.k.a.PCAPorPAWG%29SequenceSubmissionSOP-v1.0-5.Prepareyoursequencefiles>
+
+Hope this helps,
+
+Junjun
+
+
+
+
+Junjun Zhang
+
+
+Lead bioinformatician
+
+
+Informatics and Bio-computing
+
+Ontario Institute for Cancer Research
+
+MaRS Centre
+
+661 University Avenue
+
+Suite 510
+
+Toronto, Ontario, Canada M5G 0A3
+
+
+Tel: 416-673-8517
+
+Mobile: 647-501-7511
+
+Toll-free: 1-866-678-6427
+
+Twitter:  @OICR_news
+
+
+www.oicr.on.ca<http://www.oicr.on.ca/>
+
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170123/2135abfb/attachment.html>
+
+From francis at oicr.on.ca  Mon Jan 23 08:42:08 2017
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 23 Jan 2017 13:42:08 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <4ECF19E9-FC99-46D3-87B9-1DF60DDA440A@oicr.on.ca>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <25ff7f43-716f-0022-f1ab-c6317a2290cf@oicr.on.ca>
+ <D4A24E62.61DF4%junjun.zhang@oicr.on.ca>
+ <CA+dx8mYnrjNdS69E2SQSX5QYCvBBU-rVjYeuDH=P+iWH0Rsaew@mail.gmail.com>
+ <4ECF19E9-FC99-46D3-87B9-1DF60DDA440A@oicr.on.ca>
+Message-ID: <30E0D7EC-C349-42DA-B541-252B9310EFEF@oicr.on.ca>
+
+Dear All,
+
+To let you know, Miguel will be taking over leading the docker testing working group after I leave in 8 days (last day for me at OICR is Jan 31).
+
+Denis will be his wing man at OICR, and will, amongst other things, manage the mailing list. (Denis I will pass on pw later today).
+
+I?m always available by e-mail (this one will work for the foreseeable future).
+
+Please let me know if you have questions,
+
+All the best,
+
+francis
+
+
+-- 
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette   
+
+
+From Jonas.Demeulemeester at crick.ac.uk  Thu Jan 26 08:41:28 2017
+From: Jonas.Demeulemeester at crick.ac.uk (Jonas Demeulemeester)
+Date: Thu, 26 Jan 2017 13:41:28 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger
+	and	DKFZ(+Delly)
+In-Reply-To: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+Message-ID: <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+
+Hi all,
+
+I can now confirm Miguel?s results with the Sanger workflow on donors DO50311 and DO52140.
+The calls made by the dockerised version are identical for Indels and SVs and produce only small discrepancies for SNV_MNVs and CNVs.
+The discrepancies seem independent of the system infrastructure as the number of missing/extra variants called are the same as Miguel?s reported previously (on DO52140)
+
+I?ve also updated the wiki page accordingly.
+
+Best regards,
+Jonas
+
+
+
+RESULTS - DO50311
+------
+
+
+Comparison of cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of snv_mnv for DO50311 using Sanger
+---
+Common: 156313
+Extra: 0
+Missing: 0
+
+
+Comparison of sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+
+
+
+RESULTS - DO52140
+------
+
+
+Comparison of cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of svn_mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+Missing: 7
+    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+
+
+Comparison of sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+
+
+
+
+For comparison, Miguel?s report on DO51240:
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<%22mailto:>
+W: www.crick.ac.uk<%22http://>
+
+
+
+On 16 Jan 2017, at 14:24, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170126/bc69170c/attachment-0001.html>
+
+From mikisvaz at gmail.com  Mon Jan 30 05:31:16 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Mon, 30 Jan 2017 11:31:16 +0100
+Subject: [DOCKTESTERS] BWA-Mem failure aftern revised unalignment of BAM
+	files
+Message-ID: <CA+dx8mYjsS9ahYK6P7w5qFyjkN0k07zO_jwJ4dPncD2y9-op_w@mail.gmail.com>
+
+Dear all,
+
+I've conducted further tests for the BWA-Mem pipeline which were not
+successful but I think are a step forward.
+
+Following the advice Junjun gave us last time I've revised how I was
+generating the unaligned version of the BAM files. Previously I skipped the
+entirely the generation of the header, because I thought that it was just
+housekeeping metadata. As Junjun suggested some of this fields might have
+been used by the pipeline to determine the provenance of the BAM files and
+might raise an error:
+
+I will need to take a closer look on this. But what I know are important
+include (but not limited to) that input bams must be lane level, ie, bam
+with only one read group id; some part of the read group line in bam header
+must be properly formed, don't remember details here. But many of us should
+remember we had done some bam reheading to some larger number of bams
+because of header issue.
+
+And so I've tried the following headers:
+
+cat > $normal_header_file <<-EOF
+@HD     VN:1.4
+@RG     ID:DOCKER:${1}.normal   CN:DOCKER       PL:ILLUMINA     PM:Illumina
+HiSeq 2000  LB:WGS:DOCKER:28085     PI:453
+SM:00000000-0000-0000-0000-000000000000 PU:DOCKER:1_1
+DT:2013-03-18T00:00:00+00:00
+@CO     dcc_project_code:DOCKER-TEST
+@CO     submitter_donor_id:$1
+@CO     submitter_specimen_id:${1}.specimen
+@CO     submitter_sample_id:${1}.sample
+@CO     dcc_specimen_type:Normal
+@CO     use_cntl:85098796-a2c1-11e3-a743-6c6c38d06053
+EOF
+
+cat > $tumor_header_file <<-EOF
+@HD     VN:1.4
+@RG     ID:DOCKER:${1}.tumor    CN:DOCKER       PL:ILLUMINA     PM:Illumina
+HiSeq 2000  LB:WGS:DOCKER:28085     PI:453
+SM:00000000-0000-0000-0000-000000000001 PU:DOCKER:2_2
+DT:2013-03-18T00:00:00+00:00
+@CO     dcc_project_code:DOCKER-TEST
+@CO     submitter_donor_id:$1
+@CO     submitter_specimen_id:${1}.specimen
+@CO     submitter_sample_id:${1}.sample
+@CO     dcc_specimen_type:Primary tumour - solid tissue
+@CO     use_cntl:85098796-a2c1-11e3-a743-6c6c38d06053
+
+
+This I think fixed something because the process ran for a much longer time
+than previously. But alas the result was still a failure. Bellow is the
+error report:
+
+
+Creating directories for run of Dockstore launcher at:
+./datastore//launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558
+Provisioning your input files to your local machine
+Downloading: #reads from
+/mnt/1TB/work/DockerTest-Miguel/data/DO52140/tumor.unaligned.bam into
+directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d5023c38-86e6-41c1-bb6b-d04f5365f747
+Downloading: #reads from
+/mnt/1TB/work/DockerTest-Miguel/data/DO52140/normal.unaligned.bam into
+directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c52eae16-342d-4bec-9b4f-6d7a3180607a
+Downloading: #reference_gz from
+https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/724ff872-b688-4c15-86af-d97aa100dde1
+[##################################################] 100%
+Downloading: #reference_gz_amb from
+https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.amb
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/52660af7-a489-4606-9567-03e17dcc7058
+[##################################################] 100%
+Downloading: #reference_gz_ann from
+https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.ann
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c9d6e471-7513-44dd-b183-6e9b0444d837
+[##################################################] 100%
+Downloading: #reference_gz_bwt from
+https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.bwt
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d2dd9e9d-b011-4323-871a-89bfd7825423
+[##################################################] 100%
+Downloading: #reference_gz_fai from
+https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.fai
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/7b94ce63-b9a2-4308-b256-f71dfc5e47f4
+[##################################################] 100%
+Downloading: #reference_gz_pac from
+https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.pac
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/1a6c57e1-3d1c-429d-80d0-2edd689d500f
+[##################################################] 100%
+Downloading: #reference_gz_sa from
+https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.sa
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/703bd122-f14f-4c97-9324-d0105b333cf1
+[##################################################] 100%
+Calling out to cwltool to run your tool
+Executing: cwltool --enable-dev --non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/working/
+/tmp/1485252784281-0/temp6497250720663017192.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/workflow_params.json
+/usr/local/bin/cwltool 1.0.20161202203310
+Resolved '/tmp/1485252784281-0/temp6497250720663017192.cwl' to
+'file:///tmp/1485252784281-0/temp6497250720663017192.cwl'
+[job temp6497250720663017192.cwl] /tmp/tmpoyVIRs$ docker \
+    run \
+    -i \
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c9d6e471-7513-44dd-b183-6e9b0444d837/genome.fa.gz.64.ann:/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/724ff872-b688-4c15-86af-d97aa100dde1/genome.fa.gz:/var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d5023c38-86e6-41c1-bb6b-d04f5365f747/tumor.unaligned.bam:/var/lib/cwl/stg45a02b86-bcd0-478e-bc2a-cf58f4086068/tumor.unaligned.bam:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/1a6c57e1-3d1c-429d-80d0-2edd689d500f/genome.fa.gz.64.pac:/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/703bd122-f14f-4c97-9324-d0105b333cf1/genome.fa.gz.64.sa:
+/var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/genome.fa.gz.64.sa:ro \
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/52660af7-a489-4606-9567-03e17dcc7058/genome.fa.gz.64.amb:/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/7b94ce63-b9a2-4308-b256-f71dfc5e47f4/genome.fa.gz.fai:/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c52eae16-342d-4bec-9b4f-6d7a3180607a/normal.unaligned.bam:/var/lib/cwl/stg10bd7879-0808-4e42-ac5c-47ff7b2e7e2d/normal.unaligned.bam:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d2dd9e9d-b011-4323-871a-89bfd7825423/genome.fa.gz.64.bwt:/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt:ro
+\
+    --volume=/mnt/1TB/tmp/tmpoyVIRs:/var/spool/cwl:rw \
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/workingYUUlQm:/tmp:rw
+\
+    --workdir=/var/spool/cwl \
+    --read-only=true \
+    --user=1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/var/spool/cwl \
+    quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8_1.2 \
+    /start.sh \
+    python \
+    /home/seqware/Seqware-BWA-Workflow/run_seqware_workflow.py \
+    --files \
+
+/var/lib/cwl/stg45a02b86-bcd0-478e-bc2a-cf58f4086068/tumor.unaligned.bam \
+
+/var/lib/cwl/stg10bd7879-0808-4e42-ac5c-47ff7b2e7e2d/normal.unaligned.bam \
+    --reference-gz \
+    /var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz \
+    --reference-gz-fai \
+    /var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai \
+    --reference-gz-amb \
+
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb \
+    --reference-gz-ann \
+
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann \
+    --reference-gz-bwt \
+
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt \
+    --reference-gz-pac \
+
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac \
+    --reference-gz-sa \
+    /var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/genome.fa.gz.64.sa
+\
+    --output-dir \
+    datastore \
+    --output-file-basename \
+    DO52140 \
+    --download-reference-files \
+    true
++ gosu root chmod a+wrx /tmp
++ gosu root chmod a+wrx /var/spool/cwl
++ gosu seqware bash -c 'python
+/home/seqware/Seqware-BWA-Workflow/run_seqware_workflow.py --files
+/var/lib/cwl/stg45a02b86-bcd0-478e-bc2a-cf58f4086068/tumor.unaligned.bam
+/var/lib/cwl/stg10bd7879-0808-4e42-ac5c-47ff7b2e7e2d/normal.unaligned.bam
+--reference-gz
+/var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz
+--reference-gz-fai
+/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai
+--reference-gz-amb
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb
+--reference-gz-ann
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann
+--reference-gz-bwt
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt
+--reference-gz-pac
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac
+--reference-gz-sa /var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/
+genome.fa.gz.64.sa --output-dir datastore --output-file-basename DO52140
+--download-reference-files true'
+RUNNING...
+ export TMPDIR=/tmp
+
+RUNNING...
+ export HOME=/var/spool/cwl
+
+RUNNING...
+ whoami
+
+seqware
+RUNNING...
+ gosu root chown -R seqware /data
+
+RUNNING...
+ gosu root chown -R seqware /home/seqware
+
+RUNNING...
+ gosu root chmod -R a+wrx /home/seqware
+
+RUNNING...
+ gosu root mkdir -p /var/spool/cwl/.seqware
+
+RUNNING...
+ gosu root chown -R seqware /var/spool/cwl/
+
+RUNNING...
+ gosu root cp /home/seqware/.seqware/settings /var/spool/cwl/.seqware
+
+RUNNING...
+ gosu root chmod a+wrx /var/spool/cwl/.seqware/settings
+
+RUNNING...
+ perl -pi -e 's/wrench.res/seqwaremaven/g' /home/seqware/bin/seqware
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s /var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s /var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/
+genome.fa.gz.64.sa /data/reference/bwa-0.6.2/
+
+RUNNING...
+ ls -lth /data/reference/bwa-0.6.2/
+
+total 28K
+lrwxrwxrwx 1 seqware seqware 71 Jan 24 10:25 genome.fa.gz.64.sa ->
+/var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/genome.fa.gz.64.sa
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.amb ->
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.bwt ->
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt
+lrwxrwxrwx 1 seqware seqware 65 Jan 24 10:25 genome.fa.gz ->
+/var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.pac ->
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac
+lrwxrwxrwx 1 seqware seqware 69 Jan 24 10:25 genome.fa.gz.fai ->
+/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.ann ->
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann
+RUNNING...
+ mkdir -p /var/spool/cwl/datastore
+
+RUNNING...
+ seqware bundle launch --dir
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/
+--engine whitestar --ini /var/spool/cwl/datastore/workflow.ini
+--no-metadata
+
+Performing launch of workflow 'BWA' version '2.6.8'
+[--plugin, net.sourceforge.seqware.pipeline.plugins.BundleManager, --,
+--install-dir-only, --bundle,
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/,
+--out, /tmp/bundle_manager6198370569999162990out]
+Installing Bundle (Working Directory Only)
+Bundle:
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/
+Added 'BWA' (SWID: 1)
+Bundle Has Been Installed to the MetaDB and Provisioned to
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/!
+[--plugin, io.seqware.pipeline.plugins.WorkflowScheduler, --,
+--workflow-accession, 1, --host, ec05fef2b76b, --out,
+/tmp/scheduler6853194998648983141out, --i,
+/var/spool/cwl/datastore/workflow.ini, --workflow-engine, whitestar,
+--no-meta-db, --]
+Created workflow run with SWID: 50
+[--plugin, io.seqware.pipeline.plugins.WorkflowLauncher, --,
+--launch-scheduled, 50]
+[2017/01/24 10:25:03] | Number of submitted workflows: 1
+Working Run: 50
+Valid run by host check: 50
+Launching via new launcher: 50
+Using working directory:
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e
+[2017/01/24 10:25:03] | Row #0 , Attempt #1 out of 6 : s50_start_0
+[2017/01/24 10:25:03] |     Submitting 3000M batch with: s50_start_0
+[2017/01/24 10:25:03] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_start_0-runner.sh
+[2017/01/24 10:25:04] |     Workflow step succeeded: s50_start_0
+[2017/01/24 10:25:04] | Row #1 , Attempt #1 out of 6 :
+s50_reference_download_1
+[2017/01/24 10:25:04] |     Submitting 8192M batch with:
+s50_reference_download_1
+[2017/01/24 10:25:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_reference_download_1-runner.sh
+[2017/01/24 10:35:04] |     Workflow step succeeded:
+s50_reference_download_1
+[2017/01/24 10:35:04] | Row #2 , Attempt #1 out of 6 :
+s50_headerJob0_2,s50_headerJob1_5
+[2017/01/24 10:35:04] |     Submitting 8000M batch with:
+s50_headerJob0_2,s50_headerJob1_5
+[2017/01/24 10:35:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_headerJob0_2-runner.sh
+[2017/01/24 10:35:04] |     Workflow step succeeded: s50_headerJob0_2
+[2017/01/24 10:35:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_headerJob1_5-runner.sh
+[2017/01/24 10:35:05] |     Workflow step succeeded: s50_headerJob1_5
+[2017/01/24 10:35:05] | Row #3 , Attempt #1 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/24 10:35:05] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/24 10:35:05] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:22:18] |     Workflow step failed: s50_bwa_mem_0_3
+[2017/01/25 13:22:18] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/25 13:24:49] |     Workflow step failed: s50_bwa_mem_1_6
+[2017/01/25 13:24:49] | Row #3 , Attempt #2 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/25 13:24:49] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/25 13:24:49] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:24:50] |     Workflow step s50_bwa_mem_0_3 was interrupted
+or threw an exception
+[2017/01/25 13:24:50] |     Batch of jobs failed: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] | Row #3 , Attempt #3 out of 6 : s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Submitting 8900M batch with: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:24:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/25 13:24:50] |     Workflow step s50_bwa_mem_0_3 was interrupted
+or threw an exception
+[2017/01/25 13:24:50] |     Batch of jobs failed: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] | Row #3 , Attempt #4 out of 6 : s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Submitting 8900M batch with: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:24:50] |     Workflow step s50_bwa_mem_1_6 was interrupted
+or threw an exception
+[2017/01/26 16:22:04] |     Workflow step failed: s50_bwa_mem_0_3
+[2017/01/26 16:22:04] | Row #3 , Attempt #5 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/26 16:22:04] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/26 16:22:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/27 19:06:58] |     Workflow step failed: s50_bwa_mem_0_3
+[2017/01/27 19:06:58] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/27 19:08:50] |     Workflow step failed: s50_bwa_mem_1_6
+[2017/01/27 19:08:50] | Row #3 , Attempt #6 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/27 19:08:50] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/27 19:08:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/27 19:08:51] |     Workflow step s50_bwa_mem_0_3 was interrupted
+or threw an exception
+[2017/01/27 19:08:51] |     Batch of jobs failed: s50_bwa_mem_0_3
+[2017/01/27 19:08:51] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/27 19:08:51] | Setting workflow-run status to failed for: 50
+[--plugin, io.seqware.pipeline.plugins.WorkflowWatcher, --,
+--workflow-run-accession, 50]
+[2017/01/27 19:08:51] |     Workflow step s50_bwa_mem_1_6 was interrupted
+or threw an exception
+Workflow run 50 is currently failed
+[--plugin, net.sourceforge.seqware.pipeline.plugins.WorkflowStatusChecker,
+--, --workflow-run-accession, 50]
+[2017/01/27 19:08:52] | Output for stdout due to workTypeError: exceptions
+must be old-style classes or derived from BaseException, not NoneType
+Error while running job: Error collecting output for parameter
+'merged_output_bai': Did not find output file with glob pattern:
+'[u'datastore/DO52140.bam.bai']'
+[job temp6497250720663017192.cwl] completed permanentFail
+Final process status is permanentFail
+Workflow error, try again with --debug for more information:
+  Process status is ['permanentFail']
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1
+(Exit value: 1)
+    at
+org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+    at
+org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+    at
+org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+    at java.lang.Thread.run(Thread.java:745)
+java.lang.RuntimeException: problems running command: cwltool --enable-dev
+--non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/working/
+/tmp/1485252784281-0/temp6497250720663017192.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/workflow_params.json
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170130/e34971e3/attachment-0001.html>
+

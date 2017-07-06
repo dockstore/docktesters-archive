@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3CD9A4E800-08E7-42FA-9E84-22383456767E%40sanger.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000121.html">
+   <LINK REL="Next"  HREF="000123.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference</H1>
+    <B>Keiran Raine</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3CD9A4E800-08E7-42FA-9E84-22383456767E%40sanger.ac.uk%3E"
+       TITLE="[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference">kr2 at sanger.ac.uk
+       </A><BR>
+    <I>Mon Oct 17 04:25:12 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000121.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</A></li>
+        <LI>Next message: <A HREF="000123.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for	PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#122">[ date ]</a>
+              <a href="thread.html#122">[ thread ]</a>
+              <a href="subject.html#122">[ subject ]</a>
+              <a href="author.html#122">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Denis,
+
+The commands executed by the Pindel step appear to be being handed the original BAM file location rather (/var/lib/cwl) than the symlinks in the output area (/var/spool/cwl).  This would be the problem.
+
+All the jobs that execute after the BAS generation should use the symlinked BAMs in the output area (although I think it's only important for pindel and brass).
+
+Regards,
+
+Keiran Raine
+Principal Bioinformatician
+Cancer Genome Project
+Wellcome Trust Sanger Institute
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+Tel:+44 (0)1223 834244 Ext: 4983
+Office: H104
+
+&gt;<i> On 15 Oct 2016, at 22:10, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> Agreed, to sum up:
+</I>&gt;<i> 
+</I>&gt;<i> 1) The donor test set includes bas files. The real donor sets do not. 
+</I>&gt;<i> 2) That said, the way the CWL file is written, regardless of whether a bas file is provided in the test set, they don't actually make it into the docker container. Instead, they get generated inside the container while it is running.
+</I>&gt;<i> 3) The pindel step does indeed fail in DO50311 on a host that successfully ran the test data. 
+</I>&gt;<i> 
+</I>&gt;<i> Keiran, some additional info for debugging.
+</I>&gt;<i> 
+</I>&gt;<i> The CWL file results in this docker invocation:
+</I>&gt;<i> 
+</I>&gt;<i> [job temp8674499429956656923.cwl] /tmp/tmp0NOg7v$ docker \
+</I>&gt;<i>     run \
+</I>&gt;<i>     -i \
+</I>&gt;<i>     --volume=/home/ubuntu/CGP-Somatic-Docker-original/./datastore/launcher-ba5b9c2f-0b64-473b-8c9f-99e1153ad0de/inputs/70fb518e-42c8-4fdd-b473-d3b380aafbdb/fdcb1bd7cffca69d15383ca9566c58e0.bam.bai:/var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam.bai:ro \
+</I>&gt;<i>     --volume=/home/ubuntu/CGP-Somatic-Docker-original/./datastore/launcher-ba5b9c2f-0b64-473b-8c9f-99e1153ad0de/inputs/8bcaff90-24fb-4d61-8898-800a95dce3e0/7875b5196f6b8b52847f99bf370aada0.bam:/var/lib/cwl/stg2e1e9218-4ca7-4cbb-b474-dfdf6ac0b8a6/7875b5196f6b8b52847f99bf370aada0.bam:ro \
+</I>&gt;<i>     --volume=/home/ubuntu/CGP-Somatic-Docker-original/./datastore/launcher-ba5b9c2f-0b64-473b-8c9f-99e1153ad0de/inputs/8bcaff90-24fb-4d61-8898-800a95dce3e0/7875b5196f6b8b52847f99bf370aada0.bam.bai:/var/lib/cwl/stg2e1e9218-4ca7-4cbb-b474-dfdf6ac0b8a6/7875b5196f6b8b52847f99bf370aada0.bam.bai:ro \
+</I>&gt;<i>     --volume=/home/ubuntu/CGP-Somatic-Docker-original/./datastore/launcher-ba5b9c2f-0b64-473b-8c9f-99e1153ad0de/inputs/ab975a04-937f-40fc-b3e5-40b41c2295fc/GRCh37d5_CGP_refBundle.tar.gz:/var/lib/cwl/stg218c30fe-3a28-4c3a-9803-253754dae462/GRCh37d5_CGP_refBundle.tar.gz:ro \
+</I>&gt;<i>     --volume=/home/ubuntu/CGP-Somatic-Docker-original/./datastore/launcher-ba5b9c2f-0b64-473b-8c9f-99e1153ad0de/inputs/70fb518e-42c8-4fdd-b473-d3b380aafbdb/fdcb1bd7cffca69d15383ca9566c58e0.bam:/var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam:ro \
+</I>&gt;<i>     --volume=/home/ubuntu/CGP-Somatic-Docker-original/./datastore/launcher-ba5b9c2f-0b64-473b-8c9f-99e1153ad0de/inputs/d3ae586e-1251-470b-bbf8-f498e5895312/GRCh37d5_battenberg.tar.gz:/var/lib/cwl/stg4e55e3b3-46aa-4c4b-b4d6-3f2749498168/GRCh37d5_battenberg.tar.gz:ro \
+</I>&gt;<i>     --volume=/tmp/tmp0NOg7v:/var/spool/cwl:rw \
+</I>&gt;<i>     --volume=/home/ubuntu/CGP-Somatic-Docker-original/datastore/launcher-ba5b9c2f-0b64-473b-8c9f-99e1153ad0de/workingQriPMs:/tmp:rw \
+</I>&gt;<i>     --workdir=/var/spool/cwl \
+</I>&gt;<i>     --read-only=true \
+</I>&gt;<i>     --user=1000 \
+</I>&gt;<i>     --env=TMPDIR=/tmp \
+</I>&gt;<i>     --env=HOME=/var/spool/cwl \
+</I>&gt;<i>     quay.io/pancancer/pcawg-sanger-cgp-workflow:2.0.0-cwl1 &lt;<A HREF="http://quay.io/pancancer/pcawg-sanger-cgp-workflow:2.0.0-cwl1">http://quay.io/pancancer/pcawg-sanger-cgp-workflow:2.0.0-cwl1</A>&gt; \
+</I>&gt;<i>     python \
+</I>&gt;<i>     /home/seqware/CGP-Somatic-Docker/scripts/run_seqware_workflow.py \
+</I>&gt;<i>     --tumor \
+</I>&gt;<i>     /var/lib/cwl/stg2e1e9218-4ca7-4cbb-b474-dfdf6ac0b8a6/7875b5196f6b8b52847f99bf370aada0.bam \
+</I>&gt;<i>     --normal \
+</I>&gt;<i>     /var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam \
+</I>&gt;<i>     --refFrom \
+</I>&gt;<i>     /var/lib/cwl/stg218c30fe-3a28-4c3a-9803-253754dae462/GRCh37d5_CGP_refBundle.tar.gz \
+</I>&gt;<i>     --bbFrom \
+</I>&gt;<i>     /var/lib/cwl/stg4e55e3b3-46aa-4c4b-b4d6-3f2749498168/GRCh37d5_battenberg.tar.gz
+</I>&gt;<i> 
+</I>&gt;<i> The listing of the working directory (/var/spool/cwl) is as follows and does seem to include generated bas files:
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at sanger-retest</A>:/tmp/tmp0NOg7v$ ls -alhtr
+</I>&gt;<i> total 92K
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu 1.6K Oct 14 22:07 workflow.ini
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu   28 Oct 14 22:07 .Rprofile
+</I>&gt;<i> drwxr-xr-x  3 ubuntu root   4.0K Oct 14 22:07 .seqware
+</I>&gt;<i> drwxr-xr-x  2 ubuntu ubuntu 4.0K Oct 14 22:07 ngsCounts
+</I>&gt;<i> lrwxrwxrwx  1 ubuntu ubuntu   89 Oct 14 22:07 7875b5196f6b8b52847f99bf370aada0.bam -&gt; /var/lib/cwl/stg2e1e9218-4ca7-4cbb-b474-dfdf6ac0b8a6/7875b5196f6b8b52847f99bf370aada0.bam
+</I>&gt;<i> lrwxrwxrwx  1 ubuntu ubuntu   93 Oct 14 22:07 fdcb1bd7cffca69d15383ca9566c58e0.bam.bai -&gt; /var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam.bai
+</I>&gt;<i> lrwxrwxrwx  1 ubuntu ubuntu   89 Oct 14 22:07 fdcb1bd7cffca69d15383ca9566c58e0.bam -&gt; /var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam
+</I>&gt;<i> lrwxrwxrwx  1 ubuntu ubuntu   93 Oct 14 22:07 7875b5196f6b8b52847f99bf370aada0.bam.bai -&gt; /var/lib/cwl/stg2e1e9218-4ca7-4cbb-b474-dfdf6ac0b8a6/7875b5196f6b8b52847f99bf370aada0.bam.bai
+</I>&gt;<i> drwxr-xr-x  3 ubuntu ubuntu 4.0K Oct 14 22:07 1
+</I>&gt;<i> drwxr-xr-x  2 ubuntu ubuntu 4.0K Oct 14 22:07 genotype
+</I>&gt;<i> drwxr-xr-x  8 ubuntu ubuntu 4.0K Oct 14 22:19 reference_files
+</I>&gt;<i> drwxr-xr-x  2 ubuntu ubuntu 4.0K Oct 14 22:19 genotype_b02b4bba-6e66-44fb-a48f-38c309aaaac5
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu 2.4K Oct 14 22:19 b02b4bba-6e66-44fb-a48f-38c309aaaac5.genotype.tar.gz
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu   33 Oct 14 22:19 b02b4bba-6e66-44fb-a48f-38c309aaaac5.genotype.tar.gz.md5
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu 1.5K Oct 14 22:58 fdcb1bd7cffca69d15383ca9566c58e0.bam.bas
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu 2.3K Oct 14 23:17 7875b5196f6b8b52847f99bf370aada0.bam.bas
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu   33 Oct 15 08:23 b02b4bba-6e66-44fb-a48f-38c309aaaac5.csc_0-0-0.20161014.somatic.genotype.tar.gz.md5
+</I>&gt;<i> -rw-r--r--  1 ubuntu ubuntu 2.4K Oct 15 08:23 b02b4bba-6e66-44fb-a48f-38c309aaaac5.csc_0-0-0.20161014.somatic.genotype.tar.gz
+</I>&gt;<i> drwxr-xr-x  2 ubuntu ubuntu 4.0K Oct 15 10:02 timings
+</I>&gt;<i> drwxr-xr-x  5 ubuntu ubuntu 4.0K Oct 15 10:02 0
+</I>&gt;<i> drwxr-xr-x  3 ubuntu ubuntu 4.0K Oct 15 10:06 bbCounts
+</I>&gt;<i> drwx------ 11 ubuntu ubuntu 4.0K Oct 15 20:28 .
+</I>&gt;<i> drwxrwxrwt 21 root   root   4.0K Oct 15 20:29 ..
+</I>&gt;<i> 
+</I>&gt;<i> The full output of the failing script is:
+</I>&gt;<i> 
+</I>&gt;<i> Errors from command: /usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl -b /var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz
+</I>&gt;<i> 
+</I>&gt;<i> Unknown sort order field: unknown
+</I>&gt;<i> Collated 500000 readpairs (in 6 sec.)
+</I>&gt;<i> [V] 1   34.4825MB/s     133279
+</I>&gt;<i> Thread Worker 1: started
+</I>&gt;<i> Thread 1 terminated abnormally: Failed to get insert size for readgroup: 'CRUK-CI:LP6005333-DNA_C03''
+</I>&gt;<i> Collated 500000 readpairs (in 4 sec.)
+</I>&gt;<i> [V] 2   39.9836MB/s     154626
+</I>&gt;<i> Thread Worker 2: started
+</I>&gt;<i> Thread 2 terminated abnormally: Failed to get insert size for readgroup: 'CRUK-CI:LP6005333-DNA_C03''
+</I>&gt;<i> Collated 500000 readpairs (in 4 sec.)
+</I>&gt;<i> Thread Worker 3: started
+</I>&gt;<i> Thread 3 terminated abnormally: Failed to get insert size for readgroup: 'CRUK-CI:LP6005333-DNA_C03'
+</I>&gt;<i> [V] 3   42.4188MB/s     164102
+</I>&gt;<i> Collated 500000 readpairs (in 4 sec.)
+</I>&gt;<i> Thread Worker 4: started
+</I>&gt;<i> Thread 4 terminated abnormally: Failed to get insert size for readgroup: 'CRUK-CI:LP6005333-DNA_C03''
+</I>&gt;<i> [V] 4   43.7799MB/s     169368
+</I>&gt;<i> Collated 500000 readpairs (in 4 sec.)
+</I>&gt;<i> An error occurred while running:
+</I>&gt;<i>         /opt/wtsi-cgp/bin/bamcollate2 outputformat=sam colsbs=268435456 collate=1 classes=F,F2 exclude=DUP,SECONDARY,QCFAIL,SUPPLEMENTARY T=/var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c/tmp1kNw/collate_tmp filename=/var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam
+</I>&gt;<i> ERROR: Converter thread error: Failed to get insert size for readgroup: 'CRUK-CI:LP6005333-DNA_C03''
+</I>&gt;<i> 
+</I>&gt;<i> Perl exited with active threads:
+</I>&gt;<i>         0 running and unjoined
+</I>&gt;<i>         3 finished and unjoined
+</I>&gt;<i>         0 running and detached
+</I>&gt;<i> Thread 2 terminated abnormally: main=HASH(0x50044b0) at /opt/wtsi-cgp/lib/perl5/PCAP/Threaded.pm line 115.
+</I>&gt;<i> Thread error: &quot;/usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl -b /var/lib/cwl/stge94eb32c-dc0f-4523-a88c-d1e00a322537/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz&quot; unexpectedly returned exit value 29 at (eval 410) line 13 thread 2.
+</I>&gt;<i>  at /opt/wtsi-cgp/lib/perl5/PCAP/Threaded.pm line 190
+</I>&gt;<i> 
+</I>&gt;<i> Command exited with non-zero status 25
+</I>&gt;<i> 10.23user 8.79system 0:32.33elapsed 58%CPU (0avgtext+0avgdata 10819936maxresident)k
+</I>&gt;<i> 1184inputs+8552outputs (2major+711948minor)pagefaults 0swaps 
+</I>&gt;<i> 
+</I>&gt;<i> Please let me know if any of the files on that host would be useful to debug this.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> From: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A> [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>] on behalf of Miguel Vazquez [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>]
+</I>&gt;<i> Sent: October 15, 2016 2:52 AM
+</I>&gt;<i> To: Denis Yuen
+</I>&gt;<i> Cc: Adam Struck; Keiran Raine; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;<i> 
+</I>&gt;<i> Just to clarify Denis, the BAS file was not present in the download of the donor data, while it was present in the download of the test data. That is as much as I observed, and this matched Keiran comment that a missing BAS file was consistent with the pindel error.I have no idea of what the workflow was doing so as far as I know the BAS could have been created correctly and the error was something else. 
+</I>&gt;<i> 
+</I>&gt;<i> Best regards
+</I>&gt;<i> 
+</I>&gt;<i> On Sat, Oct 15, 2016 at 12:20 AM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=pdXc3tLgyH1l3nCACyO7t60Zlm6wagDt69rPJrvutaboefIoPvXTCAFtYWlsdG86RGVuaXMuWXVlbkBvaWNyLm9uLmNh">msg://96/redir.aspx?REF=pdXc3tLgyH1l3nCACyO7t60Zlm6wagDt69rPJrvutaboefIoPvXTCAFtYWlsdG86RGVuaXMuWXVlbkBvaWNyLm9uLmNh</A>&gt;&gt; wrote:
+</I>&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> Adam, to summarise:
+</I>&gt;<i> My observations seem to match yours, the bas file and input bams are generated inside the Docker container with the test data. However, Miguel has observed that something else seems to be happening with DO50311 that looks like the bas file being missing. I'm currently running that donor to see if I can extract more information and determine what is occurring. 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> From: Adam Struck [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">strucka at ohsu.edu</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=e3Bb_0OXe1XHYVTj8ArmiAyg7BPppngtpWhFji-xoYvoefIoPvXTCAFtYWlsdG86c3RydWNrYUBvaHN1LmVkdQ..">msg://96/redir.aspx?REF=e3Bb_0OXe1XHYVTj8ArmiAyg7BPppngtpWhFji-xoYvoefIoPvXTCAFtYWlsdG86c3RydWNrYUBvaHN1LmVkdQ..</A>&gt;]
+</I>&gt;<i> Sent: October 14, 2016 6:10 PM
+</I>&gt;<i> To: Denis Yuen; Keiran Raine
+</I>&gt;<i> 
+</I>&gt;<i> Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=OLVV037EZQ_oNg0dw6j8CjmcRLX5SDA94DNZ9CuUmlPoefIoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.">msg://96/redir.aspx?REF=OLVV037EZQ_oNg0dw6j8CjmcRLX5SDA94DNZ9CuUmlPoefIoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;<i> 
+</I>&gt;<i> Hi Denis,
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Sorry, to chime in late.  The bas file and input BAMs should be getting colocalized already (see below). Where are these files ending up when you run the workflow?
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Inputs are symlinked to the OUTDIR.
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="https://github.com/adamstruck/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L1035-L1039">https://github.com/adamstruck/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L1035-L1039</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=9sxlgQySOjyiArzZHkvUEFmv7XZNtn7-nmwxwo9q02roefIoPvXTCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9d2gyRlNqWEJCV0ZITzN5aWxMZ1VLeC02Rl90MFJLVHVOZk1mZG96dUtmcXl6Q1FjZl9UVENBRm9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZZV1JoYlhOMGNuVmpheTlEUjFBdFUyOXRZWFJwWXkxRWIyTnJaWEl2WW14dllpOWtaWFpsYkc5d0wzTnlZeTl0WVdsdUwycGhkbUV2YVc4dmMyVnhkMkZ5WlM5d1lXNWpZVzVqWlhJdlEyZHdVMjl0WVhScFkwTnZjbVV1YW1GMllTTk1NVEF6TlMxTU1UQXpPUS4u">msg://96/redir.aspx?REF=9sxlgQySOjyiArzZHkvUEFmv7XZNtn7-nmwxwo9q02roefIoPvXTCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9d2gyRlNqWEJCV0ZITzN5aWxMZ1VLeC02Rl90MFJLVHVOZk1mZG96dUtmcXl6Q1FjZl9UVENBRm9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZZV1JoYlhOMGNuVmpheTlEUjFBdFUyOXRZWFJwWXkxRWIyTnJaWEl2WW14dllpOWtaWFpsYkc5d0wzTnlZeTl0WVdsdUwycGhkbUV2YVc4dmMyVnhkMkZ5WlM5d1lXNWpZVzVqWlhJdlEyZHdVMjl0WVhScFkwTnZjbVV1YW1GMllTTk1NVEF6TlMxTU1UQXpPUS4u</A>&gt;
+</I>&gt;<i>  
+</I>&gt;<i> Bas files are written to OUTDIR
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="https://github.com/adamstruck/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L769-L780">https://github.com/adamstruck/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L769-L780</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=nMZKB5yEsF1hOq-bI1Rl-HGQ9uMTzFrRZHaqeNBi9DDoefIoPvXTCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9UURXelNBM1RwNElybGJOYlBNOXV1T25BaDg4V3JUR0xPOS1kaDdJVGVnaXl6Q1FjZl9UVENBRm9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZZV1JoYlhOMGNuVmpheTlEUjFBdFUyOXRZWFJwWXkxRWIyTnJaWEl2WW14dllpOWtaWFpsYkc5d0wzTnlZeTl0WVdsdUwycGhkbUV2YVc4dmMyVnhkMkZ5WlM5d1lXNWpZVzVqWlhJdlEyZHdVMjl0WVhScFkwTnZjbVV1YW1GMllTTk1Oelk1TFV3M09EQS4.">msg://96/redir.aspx?REF=nMZKB5yEsF1hOq-bI1Rl-HGQ9uMTzFrRZHaqeNBi9DDoefIoPvXTCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9UURXelNBM1RwNElybGJOYlBNOXV1T25BaDg4V3JUR0xPOS1kaDdJVGVnaXl6Q1FjZl9UVENBRm9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZZV1JoYlhOMGNuVmpheTlEUjFBdFUyOXRZWFJwWXkxRWIyTnJaWEl2WW14dllpOWtaWFpsYkc5d0wzTnlZeTl0WVdsdUwycGhkbUV2YVc4dmMyVnhkMkZ5WlM5d1lXNWpZVzVqWlhJdlEyZHdVMjl0WVhScFkwTnZjbVV1YW1GMllTTk1Oelk1TFV3M09EQS4.</A>&gt;
+</I>&gt;<i>  
+</I>&gt;<i> I have now run 25 donors worth of data (from PRAD-UK) through this workflow using the WDL descriptor and the cromwell engine on the CCC platform without an issue.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> -Adam 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> From: &lt;docktesters-bounces+strucka=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ohsu.edu at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=8Jvw_X_sBlK8e4JvARHiU3J6q2_V5WsHbDLBblbblu7oefIoPvXTCAFtYWlsdG86b2hzdS5lZHVAbGlzdHMuaWNnYy5vcmc.">msg://96/redir.aspx?REF=8Jvw_X_sBlK8e4JvARHiU3J6q2_V5WsHbDLBblbblu7oefIoPvXTCAFtYWlsdG86b2hzdS5lZHVAbGlzdHMuaWNnYy5vcmc.</A>&gt;&gt; on behalf of Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=pdXc3tLgyH1l3nCACyO7t60Zlm6wagDt69rPJrvutaboefIoPvXTCAFtYWlsdG86RGVuaXMuWXVlbkBvaWNyLm9uLmNh">msg://96/redir.aspx?REF=pdXc3tLgyH1l3nCACyO7t60Zlm6wagDt69rPJrvutaboefIoPvXTCAFtYWlsdG86RGVuaXMuWXVlbkBvaWNyLm9uLmNh</A>&gt;&gt;
+</I>&gt;<i> Date: Friday, October 14, 2016 at 2:55 PM
+</I>&gt;<i> To: Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=MwoQC4T4UthwrvybjgAxpgXBl8iVDiWHQJPLp05vQkfoefIoPvXTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..">msg://96/redir.aspx?REF=MwoQC4T4UthwrvybjgAxpgXBl8iVDiWHQJPLp05vQkfoefIoPvXTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..</A>&gt;&gt;
+</I>&gt;<i> Cc: &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=OLVV037EZQ_oNg0dw6j8CjmcRLX5SDA94DNZ9CuUmlPoefIoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.">msg://96/redir.aspx?REF=OLVV037EZQ_oNg0dw6j8CjmcRLX5SDA94DNZ9CuUmlPoefIoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=J1xLM-ZHdFcuIJoDUngSAGOWZovkF6bW3MQ55JfVgERC3PQoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.">msg://96/redir.aspx?REF=J1xLM-ZHdFcuIJoDUngSAGOWZovkF6bW3MQ55JfVgERC3PQoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.</A>&gt;&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> Just as a heads-up for the end-of-week in this thread. 
+</I>&gt;<i> 
+</I>&gt;<i> &gt; RUN cpanm --mirror <A HREF="http://cpan.metacpan.org">http://cpan.metacpan.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=GCLBU8dKn6QvsjpW7CdADuiWvyBFmNzUsfP_4fo9Nr9C3PQoPvXTCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9UlFBbWtCNGJwYlREV2VyeXRjWVJPTTA0Um94d3E4aEVDMHlpNjZiZ2lkT3l6Q1FjZl9UVENBRm9kSFJ3Y3pvdkwzZGxZbTFoYVd3dWIybGpjaTV2Ymk1allTOXZkMkV2Y21Wa2FYSXVZWE53ZUQ5U1JVWTlaV2xLT0hObk5VRjZTMWRFYlhsbU5WQjVaVzl6TjBwcmVHOXpPR0ZWY2w5S01GUk5WVFEyUkhKM1dubHFWVVV6WlY5VVZFTkJSbTlrU0ZKM1QyazRkbGt6UW1oaWFUVjBXbGhTYUZrelFtaGlhVFYyWTIxakxnLi4.">msg://96/redir.aspx?REF=GCLBU8dKn6QvsjpW7CdADuiWvyBFmNzUsfP_4fo9Nr9C3PQoPvXTCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9UlFBbWtCNGJwYlREV2VyeXRjWVJPTTA0Um94d3E4aEVDMHlpNjZiZ2lkT3l6Q1FjZl9UVENBRm9kSFJ3Y3pvdkwzZGxZbTFoYVd3dWIybGpjaTV2Ymk1allTOXZkMkV2Y21Wa2FYSXVZWE53ZUQ5U1JVWTlaV2xLT0hObk5VRjZTMWRFYlhsbU5WQjVaVzl6TjBwcmVHOXpPR0ZWY2w5S01GUk5WVFEyUkhKM1dubHFWVVV6WlY5VVZFTkJSbTlrU0ZKM1QyazRkbGt6UW1oaWFUVjBXbGhTYUZrelFtaGlhVFYyWTIxakxnLi4.</A>&gt; -l $OPT File::ShareDir File::ShareDir::Install Bio::Root::<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Version at 1.006924</A> Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i> 
+</I>&gt;<i> This got me on the right track, I actually needed the following syntax
+</I>&gt;<i> 
+</I>&gt;<i> RUN cpanm --mirror <A HREF="https://cpan.metacpan.org">https://cpan.metacpan.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=M0uZ9D1dfWugNF2rWRaP_ci0k_TufqkfJPyoxnzuQiBC3PQoPvXTCAFodHRwczovL2NwYW4ubWV0YWNwYW4ub3Jn">msg://96/redir.aspx?REF=M0uZ9D1dfWugNF2rWRaP_ci0k_TufqkfJPyoxnzuQiBC3PQoPvXTCAFodHRwczovL2NwYW4ubWV0YWNwYW4ub3Jn</A>&gt; -l $OPT File::ShareDir File::ShareDir::Install CJFIELDS/BioPerl-1.6.924.tar.gz Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i> 
+</I>&gt;<i> However, it looks like making the suggested change breaks the workflow when attempting to run with the test data. In short, the bas file is definitely being generated inside the Docker container. Moving it to the suggested location breaks the workflow later. 
+</I>&gt;<i> 
+</I>&gt;<i> I'm currently attempting to run the donor DO50311 to see if I can get more insight into what is going on.
+</I>&gt;<i> 
+</I>&gt;<i> From: Keiran Raine [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=GpopcQzDji-UuYCWuCyn3sz_Aa2RgvMQllBpw7JmerVC3PQoPvXTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..">msg://96/redir.aspx?REF=GpopcQzDji-UuYCWuCyn3sz_Aa2RgvMQllBpw7JmerVC3PQoPvXTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..</A>&gt;]
+</I>&gt;<i> Sent: October 12, 2016 2:09 PM
+</I>&gt;<i> To: Denis Yuen
+</I>&gt;<i> Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=J1xLM-ZHdFcuIJoDUngSAGOWZovkF6bW3MQ55JfVgERC3PQoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.">msg://96/redir.aspx?REF=J1xLM-ZHdFcuIJoDUngSAGOWZovkF6bW3MQ55JfVgERC3PQoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;<i> 
+</I>&gt;<i> Hi Denis,
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> You've hit an issue that only has occurred in the last few weeks for us also.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> BioPerl released a new version (first in ~20 months) that split the repository moving a whole section into a different package.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> The fix would be to force the first install of BioPerl to a specific version.  Modify line 25/26 of the Dockerfile from:
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> RUN cpanm --mirror <A HREF="http://cpan.metacpan.org">http://cpan.metacpan.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt; -l $OPT File::ShareDir File::ShareDir::Install Bio::Root::Version Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> to
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> RUN cpanm --mirror <A HREF="http://cpan.metacpan.org">http://cpan.metacpan.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt; -l $OPT File::ShareDir File::ShareDir::Install Bio::Root::<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Version at 1.006924</A> Const::Fast Graph &amp;&amp; \
+</I>&gt;<i>      rm -rf ~/.cpanm
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Thankfully something I could identify immediately.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> 
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> 
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> 
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On 12 Oct 2016, at 17:04, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Hi, 
+</I>&gt;<i> 
+</I>&gt;<i> Keiran, I'm having trouble rebuilding the Sanger docker container in what I think is an unrelated section.
+</I>&gt;<i> Has anything changed about the build dependencies (for example, if there is a floating version that changed over time)?
+</I>&gt;<i> I'm attaching the build log from the Dockerfile and the log from inside the container.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt; [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;] on behalf of Denis Yuen [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;]
+</I>&gt;<i> Sent: October 12, 2016 10:59 AM
+</I>&gt;<i> To: Keiran Raine
+</I>&gt;<i> Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;<i> 
+</I>&gt;<i> Hi,
+</I>&gt;<i> 
+</I>&gt;<i> While that would have been a good explanation, unfortunately, it doesn't seem to be the case. 
+</I>&gt;<i> In the CWL file ( <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/Dockstore.cwl">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/Dockstore.cwl</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt; ) , the bam files are described like 
+</I>&gt;<i> 
+</I>&gt;<i> inputs:
+</I>&gt;<i>   tumor:
+</I>&gt;<i>     type: File
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>       position: 1
+</I>&gt;<i>       prefix: --tumor
+</I>&gt;<i>     secondaryFiles:
+</I>&gt;<i>     - .bai
+</I>&gt;<i>  
+</I>&gt;<i>   refFrom:
+</I>&gt;<i>     type: File
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>       position: 3
+</I>&gt;<i>       prefix: --refFrom
+</I>&gt;<i>   bbFrom:
+</I>&gt;<i>     type: File
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>       position: 4
+</I>&gt;<i>       prefix: --bbFrom
+</I>&gt;<i>   normal:
+</I>&gt;<i>     type: File
+</I>&gt;<i>     inputBinding:
+</I>&gt;<i>       position: 2
+</I>&gt;<i>       prefix: --normal
+</I>&gt;<i>     secondaryFiles:
+</I>&gt;<i>     - .bai
+</I>&gt;<i> The type of File (as opposed to directory) means that while the bam and bai files are individually mounted into the docker container while it runs, the bas files never were. If Miguel has the &quot;docker run&quot; output from the run (should just be in the stdout of the run), we should be able to verify this by looking at what gets mounted into the container at runtime. 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> From: Keiran Raine [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;]
+</I>&gt;<i> Sent: October 12, 2016 10:49 AM
+</I>&gt;<i> To: Denis Yuen
+</I>&gt;<i> Cc: Miguel Vazquez; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;<i> 
+</I>&gt;<i> Hi Denis, 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> I expect when you unpack the the test data the BAS files exist in the archive in that area so the fact it runs the out of that step to a different location isn't detected.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> 
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> 
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> 
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On 12 Oct 2016, at 15:36, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Hi,
+</I>&gt;<i> I can make the modification, I'll run it through the test data and that should finish in roughly a day. 
+</I>&gt;<i> In the meantime though, I am puzzled. Why would an issue like this affect a donor dataset, but not the test data?
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt; [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;] on behalf of Keiran Raine [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;]
+</I>&gt;<i> Sent: October 12, 2016 6:16 AM
+</I>&gt;<i> To: Miguel Vazquez
+</I>&gt;<i> Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;<i> 
+</I>&gt;<i> Hi, 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> This is assuming that it is possible to write to the location the BAM are in.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> I think Denis would be best placed to make the minor modification as I don't know the process they are using for build and deploy of the images (I made modifications and then handed over for CWL).
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> 
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> 
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> 
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On 12 Oct 2016, at 10:37, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> [The rest of the list where out of the loop for this part of the conversation, I'm putting them back in. In short, the Sanger pipeline produces the BAS file but not co-located with the BAM]
+</I>&gt;<i> 
+</I>&gt;<i> Hi Keiran,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Would it be possible then to change this and try again? what needs to happen? I guess you'll need to change the code and a new docker image be produced. Would this be our best alternative? 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Miguel
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On Tue, Oct 11, 2016 at 4:07 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> In the original version we didn't do this step, if we have write access it can be made to do that
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> 
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> 
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> 
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On 11 Oct 2016, at 13:49, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=gMH-5LAicq8S5yMOqPZvse2s_RgVxz6JNq1MjJxBgGtC3PQoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Hi Keiran,
+</I>&gt;<i> 
+</I>&gt;<i> If the BAS and BAM files need to be collocated, why is it not created next to the BAM file?
+</I>&gt;<i> 
+</I>&gt;<i> Would it not be better if it read
+</I>&gt;<i> 
+</I>&gt;<i> private Job basFileBaseJob(int tumourCount, String sampleBam, String process, int index) { 
+</I>&gt;<i> 
+</I>&gt;<i> Job thisJob = prepTimedJob(tumourCount, &quot;basFileGenerate&quot;, process, index);
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> File f = new File(sampleBam);
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> thisJob.getCommand()
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> .addArgument(getWorkflowBaseDir()+ &quot;/bin/wrapper.sh&quot;)
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> .addArgument(installBase)
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> .addArgument(&quot;bam_stats&quot;)
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> .addArgument(&quot;-i &quot; + sampleBam)
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> .addArgument(&quot;-o &quot; + sampleBam + &quot;.bas&quot;)
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> ;
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> return thisJob;
+</I>&gt;<i> 
+</I>&gt;<i> }
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Best
+</I>&gt;<i> 
+</I>&gt;<i> Miguel
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On Tue, Oct 11, 2016 at 2:44 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Relevant section of code: 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L769-L780">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L769-L780</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> 
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> 
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> 
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On 11 Oct 2016, at 13:40, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Hi, 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> There is a step generating the BAS files:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> [2016/10/10 07:28:37] |  Running command: bash /datastore/oozie-6599f0b9-8af7-44ca-a608-03c5bbc159c6/generated-scripts/s58_basFileGenerate_control_11-runner.sh
+</I>&gt;<i> [2016/10/10 07:28:37] |  Running command: bash /datastore/oozie-6599f0b9-8af7-44ca-a608-03c5bbc159c6/generated-scripts/s58_basFileGenerate_tumours_12-runner.sh
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> But if the BAM files and BAS aren't co-located then you have a problem.  You could symlink the BAM files into the work space and have all tools work from that path instead, deleting the symlinks at the end.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> This is one of the changes we had to implement differently as the BAS file data was being held in the GNOS xml data structures during the initial processing.  Moving to this means that any BAM input is sufficient.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Hope this is easier to solve now,
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> 
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> 
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> 
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On 11 Oct 2016, at 13:31, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> Keiran,
+</I>&gt;<i> 
+</I>&gt;<i> Its downloading the files still but in fact it does not seem to download any BAS file. Could you please educate me a bit on what are these and how I can create them?
+</I>&gt;<i> 
+</I>&gt;<i> Best
+</I>&gt;<i> 
+</I>&gt;<i> Miguel
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> On Tue, Oct 11, 2016 at 2:22 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.">msg://96/redir.aspx?REF=zEZt4HhRc3vEsFUYw7AbmSRLYx5BsmuKSs_sOlyc6_GcPvcoPvXTCAFodHRwOi8vVXJsQmxvY2tlZEVycm9yLmFzcHg.</A>&gt;&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 4. It looks like the *_pindel_input_* steps run for only 22-23 seconds which could indicate a problem with either the headers or the absence of the BAS file from the expected location.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> I think that you just revealed the problem. There is in fact no BAS files only BAM and BAI. There where BAS files for the test data HCC1143 which is the one that in fact work. It seems like BAS files are not gathered by gnos, could that be? or that my script fails to copy them. I'll try to gather a different sample with my client and check. 
+</I>&gt;<i> 
+</I>&gt;<i> Not knowing a thing about these files explains why I didn't notice. I'll get back to you when I know more.
+</I>&gt;<i> 
+</I>&gt;<i> Best
+</I>&gt;<i> 
+</I>&gt;<i> Miguel
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE. 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE. 
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE.
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE. 
+</I>&gt;<i> 
+</I>&gt;<i> &lt;build.log&gt;&lt;outer.build.log&gt;
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> 
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE.
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=JZZvNMiYrkfoy-7gYb4imZLAxfvR8Zf5IudHtB5aSXicPvcoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.">msg://96/redir.aspx?REF=JZZvNMiYrkfoy-7gYb4imZLAxfvR8Zf5IudHtB5aSXicPvcoPvXTCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.</A>&gt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A> &lt;x-<A HREF="msg://96/redir.aspx?REF=6dBvDfvGYqdzjIw44f0ufI0PD05iNplZFPq_T_TCU1ycPvcoPvXTCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.">msg://96/redir.aspx?REF=6dBvDfvGYqdzjIw44f0ufI0PD05iNplZFPq_T_TCU1ycPvcoPvXTCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.</A>&gt;
+</I>
+
+
+-- 
+ The Wellcome Trust Sanger Institute is operated by Genome Research 
+ Limited, a charity registered in England with number 1021457 and a 
+ company registered in England with number 2742969, whose registered 
+ office is 215 Euston Road, London, NW1 2BE. 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161017/ed36af76/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161017/ed36af76/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000121.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</A></li>
+	<LI>Next message: <A HREF="000123.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for	PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#122">[ date ]</a>
+              <a href="thread.html#122">[ thread ]</a>
+              <a href="subject.html#122">[ subject ]</a>
+              <a href="author.html#122">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,622 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Summary%20of%20validation%20of%20Dockers%20Sanger%20and%0A%20DKFZ%28%2BDelly%29&In-Reply-To=%3CD4BD2137.665F3%25junjun.zhang%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000229.html">
+   <LINK REL="Next"  HREF="000231.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)</H1>
+    <B>Junjun Zhang</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Summary%20of%20validation%20of%20Dockers%20Sanger%20and%0A%20DKFZ%28%2BDelly%29&In-Reply-To=%3CD4BD2137.665F3%25junjun.zhang%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)">Junjun.Zhang at oicr.on.ca
+       </A><BR>
+    <I>Sun Feb  5 18:52:58 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000229.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+        <LI>Next message: <A HREF="000231.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#230">[ date ]</a>
+              <a href="thread.html#230">[ thread ]</a>
+              <a href="subject.html#230">[ subject ]</a>
+              <a href="author.html#230">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Miguel and Jonas,
+
+I hope DKFZ pipeline authors (cc&#8217;d here) would be able to figure out the differences of the calls for DO52140
+
+Here I have another donor: DO51087. The size of the somatic SNV/MNV DKFZ call seems to be surprisingly large, the GZ&#8217;d VCF file is greater than 500MB. Here you can find more information about the file: <A HREF="https://dcc.icgc.org/repositories/files/FI500885.">https://dcc.icgc.org/repositories/files/FI500885.</A> You can verify that in GNOS as well: <A HREF="https://gtrepo-dkfz.annailabs.com/cghub/metadata/analysisFull/e1e9062e-35e6-447d-bc61-591e76fbeee0.">https://gtrepo-dkfz.annailabs.com/cghub/metadata/analysisFull/e1e9062e-35e6-447d-bc61-591e76fbeee0.</A>
+
+Matthias, can you please take a look of the VCF? Hope you may be able to spot something abnormal there.
+
+Maybe Miguel/Jonas, if you plan to test more donors for the DKFZ pipeline, can you please choose this donor? Tumour aligned BAM is: <A HREF="https://dcc.icgc.org/repositories/files/FI37278,">https://dcc.icgc.org/repositories/files/FI37278,</A> normal aligned BAM is <A HREF="https://dcc.icgc.org/repositories/files/FI37277">https://dcc.icgc.org/repositories/files/FI37277</A>
+
+Thanks,
+Junjun
+
+
+
+From: &lt;docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&lt;mailto:docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&gt;&gt; on behalf of Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;
+Date: Saturday, February 4, 2017 at 10:14 AM
+To: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt;
+Cc: &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+
+Hi Miguel,
+
+The comparison was indeed run largely using your scripts.
+I didn't notice any missteps but you never know of course.
+Hope they can pinpoint the issue.
+
+Cheers,
+Jonas
+
+
+On 3 Feb 2017, at 19:06, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+
+Excellent Jonas, this is very useful info.
+
+ I guess you are using my own scripts for this. The possibility remains that there is a misstep in them regarding delly. Let's see what turns out of the checks by our friends at DKFZ.
+
+Best regards
+
+Have a great weekend
+
+Miguel
+
+On Feb 3, 2017 6:10 PM, &quot;Jonas Demeulemeester&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt; wrote:
+Dear all,
+
+Also for the DKFZ (+Delly) workflow, I can confirm Miguel&#8217;s results on samples DO52140 and DO50311.
+The dockerised pipelines return identical calls for SNV.MNVs and indels but partly different ones for SVs and CNVs, independent of the infrastructure.
+
+Best regards,
+Jonas
+
+
+
+
+
+RESULTS DO52140
+---------------
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv">http://somatic.sv</A>&gt; for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:&lt;DEL&gt;,11:38252019:N:&lt;TRA&gt;,11:47700673:N:&lt;TRA&gt;
+Missing: 61
+    - Example: 10:134749140:N:&lt;DEL&gt;,11:179191:N:&lt;TRA&gt;,11:38252005:N:&lt;TRA&gt;
+
+
+Comparison of germline.sv&lt;<A HREF="http://germline.sv">http://germline.sv</A>&gt; for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:&lt;DEL&gt;,10:104645247:N:&lt;DEL&gt;,10:105097522:N:&lt;DEL&gt;
+Missing: 2908
+    - Example: 10:100107032:N:&lt;TRA&gt;,10:100107151:N:&lt;TRA&gt;,10:102158345:N:&lt;DEL&gt;
+
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:&lt;LOH&gt;,1:109068899:N:&lt;DEL&gt;,1:109359995:N:&lt;DEL&gt;
+Missing: 286
+    - Example: 10:88653561:N:&lt;LOH&gt;,11:179192:N:&lt;LOH&gt;,11:38252006:N:&lt;LOH&gt;
+
+
+
+
+RESULTS DO50311
+---------------
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv">http://somatic.sv</A>&gt; for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:&lt;TRA&gt;,10:56066821:N:&lt;TRA&gt;,11:16776092:N:&lt;TRA&gt;
+Missing: 48
+    - Example: 10:119704959:N:&lt;INV&gt;,10:13116322:N:&lt;TRA&gt;,10:47063485:N:&lt;TRA&gt;
+
+
+Comparison of germline.sv&lt;<A HREF="http://germline.sv">http://germline.sv</A>&gt; for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:&lt;DEL&gt;,10:134948976:N:&lt;DEL&gt;,10:19996638:N:&lt;DEL&gt;
+Missing: 615
+    - Example: 10:101851839:N:&lt;TRA&gt;,10:101851884:N:&lt;TRA&gt;,10:10745225:N:&lt;DUP&gt;
+
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:&lt;DEL&gt;,10:20596801:N:&lt;NEUTRAL&gt;,10:47674883:N:&lt;NEUTRAL&gt;
+Missing: 190
+    - Example: 10:100891940:N:&lt;NEUTRAL&gt;,10:104975905:N:&lt;NEUTRAL&gt;,10:119704960:N:&lt;NEUTRAL&gt;
+
+
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594&lt;tel:+44%2020%203796%202594&gt;
+M: +44 (0)7482 070730&lt;tel:+44%207482%20070730&gt;
+E: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>
+W: www.crick.ac.uk
+
+
+
+On 26 Jan 2017, at 13:41, Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt; wrote:
+
+Hi all,
+
+I can now confirm Miguel&#8217;s results with the Sanger workflow on donors DO50311 and DO52140.
+The calls made by the dockerised version are identical for Indels and SVs and produce only small discrepancies for SNV_MNVs and CNVs.
+The discrepancies seem independent of the system infrastructure as the number of missing/extra variants called are the same as Miguel&#8217;s reported previously (on DO52140)
+
+I&#8217;ve also updated the wiki page accordingly.
+
+Best regards,
+Jonas
+
+
+
+RESULTS - DO50311
+------
+
+
+Comparison of cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of snv_mnv for DO50311 using Sanger
+---
+Common: 156313
+Extra: 0
+Missing: 0
+
+
+Comparison of sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+
+
+
+RESULTS - DO52140
+------
+
+
+Comparison of cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:&lt;CNV&gt;,10:11779907:G:&lt;CNV&gt;
+
+
+Comparison of indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of svn_mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+Missing: 7
+    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+
+
+Comparison of sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+
+
+
+
+For comparison, Miguel&#8217;s report on DO51240:
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:&lt;CNV&gt;,10:11779907:G:&lt;CNV&gt;
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv">http://somatic.sv</A>&gt; for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594&lt;tel:+44%2020%203796%202594&gt;
+M: +44 (0)7482 070730&lt;tel:+44%207482%20070730&gt;
+E: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>
+W: www.crick.ac.uk
+
+
+
+On 16 Jan 2017, at 14:24, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-253-35-14</A>:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv/">http://somatic.sv/</A>&gt; for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:&lt;TRA&gt;,10:56066821:N:&lt;TRA&gt;,11:16776092:N:&lt;TRA&gt;
+Missing: 48
+    - Example: 10:119704959:N:&lt;INV&gt;,10:13116322:N:&lt;TRA&gt;,10:47063485:N:&lt;TRA&gt;
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:&lt;DEL&gt;,10:20596801:N:&lt;NEUTRAL&gt;,10:47674883:N:&lt;NEUTRAL&gt;
+Missing: 190
+    - Example: 10:100891940:N:&lt;NEUTRAL&gt;,10:104975905:N:&lt;NEUTRAL&gt;,10:119704960:N:&lt;NEUTRAL&gt;
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv&lt;<A HREF="http://germline.sv/">http://germline.sv/</A>&gt; for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:&lt;DEL&gt;,10:134948976:N:&lt;DEL&gt;,10:19996638:N:&lt;DEL&gt;
+Missing: 615
+    - Example: 10:101851839:N:&lt;TRA&gt;,10:101851884:N:&lt;TRA&gt;,10:10745225:N:&lt;DUP&gt;
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv/">http://somatic.sv/</A>&gt; for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:&lt;DEL&gt;,11:38252019:N:&lt;TRA&gt;,11:47700673:N:&lt;TRA&gt;
+Missing: 61
+    - Example: 10:134749140:N:&lt;DEL&gt;,11:179191:N:&lt;TRA&gt;,11:38252005:N:&lt;TRA&gt;
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:&lt;LOH&gt;,1:109068899:N:&lt;DEL&gt;,1:109359995:N:&lt;DEL&gt;
+Missing: 286
+    - Example: 10:88653561:N:&lt;LOH&gt;,11:179192:N:&lt;LOH&gt;,11:38252006:N:&lt;LOH&gt;
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv&lt;<A HREF="http://germline.sv/">http://germline.sv/</A>&gt; for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:&lt;DEL&gt;,10:104645247:N:&lt;DEL&gt;,10:105097522:N:&lt;DEL&gt;
+Missing: 2908
+    - Example: 10:100107032:N:&lt;TRA&gt;,10:100107151:N:&lt;TRA&gt;,10:102158345:N:&lt;DEL&gt;
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv/">http://somatic.sv/</A>&gt; for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv/">http://somatic.sv/</A>&gt; for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:&lt;CNV&gt;,10:11779907:G:&lt;CNV&gt;
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170205/c64fe680/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170205/c64fe680/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000229.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+	<LI>Next message: <A HREF="000231.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#230">[ date ]</a>
+              <a href="thread.html#230">[ thread ]</a>
+              <a href="subject.html#230">[ subject ]</a>
+              <a href="author.html#230">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

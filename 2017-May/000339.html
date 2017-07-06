@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS]  Issues with Consensus Docker
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%20Issues%20with%20Consensus%20Docker&In-Reply-To=%3CCA%2Bdx8mb7M2zupxT3iT1J8seOQoo7LvyNWxzc57v_Yp9y9%2B0z9Q%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000338.html">
+   <LINK REL="Next"  HREF="000340.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS]  Issues with Consensus Docker</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%20Issues%20with%20Consensus%20Docker&In-Reply-To=%3CCA%2Bdx8mb7M2zupxT3iT1J8seOQoo7LvyNWxzc57v_Yp9y9%2B0z9Q%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS]  Issues with Consensus Docker">mikisvaz at gmail.com
+       </A><BR>
+    <I>Thu May 11 10:07:45 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000338.html">[DOCKTESTERS] pcawg-consensus-caller now available
+</A></li>
+        <LI>Next message: <A HREF="000340.html">[DOCKTESTERS] Issues with Consensus Docker
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#339">[ date ]</a>
+              <a href="thread.html#339">[ thread ]</a>
+              <a href="subject.html#339">[ subject ]</a>
+              <a href="author.html#339">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+I've started trying to test the Consensus Docker and I've ran into a few
+difficulties. Some pertain the application itself and some I are questions
+I have related to CWL or Docker.
+
+1- Missing input dbs_dir: The documentation suggests that this is a
+directory with resources that need to be set up beforehand using the same
+docker container with different parameters. I'm not sure how to handle
+this. To keep going I've just pointed to some arbitrary directory
+
+2- Missing tbi files on input VCFs: The CWL explicitly asks for the input
+VCF. In the documentation it seems like the inputs are in fact compressed
+with gzip. Up to here is fine, though I wonder if there would not be a more
+explicit way to indicate this in. The problem comes when I run it that I
+get an error complaining about a missing tbi file:
+
+  Missing input file [Errno 2] No such file or directory:
+'/mnt/1TB/work/DockerTest-Miguel/data/DO52621//broad.oxoG.annotated.vcf.gz
+*.tbi*'
+
+It is not a problem to produce it using tabix but what is confusing to me
+is that there is no mention of any tbi file in the Dockstore.json file. How
+does this work?
+
+3- After producing the tbi files I get this error, which I think is related
+to (1)
+
+  Invalid filename: '' contains illegal characters
+
+
+Best regards
+
+Miguel
+
+----Dockstore.json-----
+
+
+{
+  &quot;broad_input_file&quot;: {
+    &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;dkfz_embl_input_file&quot;: {
+    &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;variant_type&quot;: &quot;fill me in&quot;,
+  &quot;consensus_vcf_index&quot;: {
+    &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+
+
+
+*  &quot;dbs_dir&quot;: {    &quot;path&quot;: &quot;/tmp/fill_directory_in&quot;,    &quot;class&quot;:
+&quot;Directory&quot;  },*
+  &quot;muse_input_file&quot;: {
+    &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;consensus_zipped_vcf&quot;: {
+    &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;sanger_input_file&quot;: {
+    &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  }
+}
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/e5736990/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/e5736990/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000338.html">[DOCKTESTERS] pcawg-consensus-caller now available
+</A></li>
+	<LI>Next message: <A HREF="000340.html">[DOCKTESTERS] Issues with Consensus Docker
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#339">[ date ]</a>
+              <a href="thread.html#339">[ thread ]</a>
+              <a href="subject.html#339">[ subject ]</a>
+              <a href="author.html#339">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

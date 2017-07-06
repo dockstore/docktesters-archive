@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Important%20correction%3A%20DKFZ%20BiasFilter%20large%0A%20missmatch%20on%20DO52140%20and%20DO35937&In-Reply-To=%3CD4F48356.6A6B5%25junjun.zhang%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000264.html">
+   <LINK REL="Next"  HREF="000285.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937</H1>
+    <B>Junjun Zhang</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Important%20correction%3A%20DKFZ%20BiasFilter%20large%0A%20missmatch%20on%20DO52140%20and%20DO35937&In-Reply-To=%3CD4F48356.6A6B5%25junjun.zhang%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937">Junjun.Zhang at oicr.on.ca
+       </A><BR>
+    <I>Sun Mar 19 19:17:59 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000264.html">[DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937
+</A></li>
+        <LI>Next message: <A HREF="000285.html">[DOCKTESTERS] DKFZ BiasFilter 100% match on DO52140, DO35937,	and DO218695
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#269">[ date ]</a>
+              <a href="thread.html#269">[ thread ]</a>
+              <a href="subject.html#269">[ subject ]</a>
+              <a href="author.html#269">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks Miguel for getting new test done and detailed summary.
+
+Matthias, can you please comment?
+
+Junjun
+
+
+From: &lt;docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&lt;mailto:docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&gt;&gt; on behalf of Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt;
+Date: Wednesday, March 15, 2017 at 6:09 AM
+To: Christina Yung &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Christina.Yung at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Christina.Yung at oicr.on.ca</A>&gt;&gt;
+Cc: Lincoln Stein &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">lincoln.stein at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">lincoln.stein at gmail.com</A>&gt;&gt;, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;, &quot;Schlesner, Matthias&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">m.schlesner at dkfz-heidelberg.de</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">m.schlesner at dkfz-heidelberg.de</A>&gt;&gt;
+Subject: [DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937
+
+Dear all,
+
+As you can read below I made a mistake on my previous validation for the DKFZ BiasFilter. Unfortunately large differences have turned up now that I've corrected the process. In brief on both donors I've found that re-runing the filter flags some additional variants for both flags bPcr and bSeq. Notably all the discrepancies are for the new method flagging more variants. For instance in many cases the original file contains just one variant with the flag where the new one ten or twenty. You can read the details at the end of this email where we are comparing the original VCF to the new one.
+
+Note that the orginal VCF is the consensus variants are the input I use for the BiasFilter along with the corresponding BAM files for that donor. I can only imagine that if this VCF was not the one originally used due to some filtering step then perhaps the bias calculations might have been affected. If that is so I would need instructions on where to get the precise input VCFs.
+
+Best regards
+
+Miguel
+
+----RESULTS----
+
+Comparison for DO52140 tag bPcr
+---
+Common: 1
+Extra: 12
+    - Example: 11:81550771:C:A,12:19486241:G:T,2:12287406:G:T
+Missing: 0
+
+
+Comparison for DO52140 tag bSeq
+---
+Common: 1
+Extra: 23
+    - Example: 10:17681457:G:T,12:112049882:T:G,12:130990011:T:A
+Missing: 0
+
+Comparison for DO35937 tag bPcr
+---
+Common: 1
+Extra: 10
+    - Example: 1:114845662:G:T,14:33282600:C:A,16:78467879:G:T
+Missing: 0
+
+
+Comparison for DO35937 tag bSeq
+---
+Common: 6
+Extra: 88
+    - Example: 10:21703903:A:C,10:24183103:C:T,10:51468498:C:G
+Missing: 0
+
+
+
+
+On Mon, Mar 13, 2017 at 4:48 PM, Christina Yung &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">christina.yung at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">christina.yung at oicr.on.ca</A>&gt;&gt; wrote:
+Hi Miguel,
+
+The bPCR and bSeq flags are indeed the ones flagged by the DKFZ bias filter.  When you summarize the comparison, please cc Matthias of DKFZ as his team developed this filter.  No issue at all, and thanks again for your great work!
+
+Christina
+
+
+On 3/13/2017 10:22 AM, Miguel Vazquez wrote:
+Dear all,
+
+I just learnt that the DKFZ BiasFilter is NOT the OXOG filter workflow, which means I checked for the wrong thing in this validation! I'm sorry for the confusion.
+
+Right now I pass the BAM files and the consensus.vcf (SNV_MNV) downloaded from GNOS to the BiasFilter and compare the resulting VCF with the consensus looking at the set of mutations containing the OXOGFAIL flag. This apparently is not the comparison to make. What is it that I need to compare? is it the bPcr and bSeq flags?
+
+One first look at those flags do show quite some discrepancies unfortunately on both donors (DO52140 and DO35937) for both flags. For instance for DO35937 we find 11 mutations flaged bPcr with in the new result, while the consensus.vcf only finds one, of them. Something similar happens with the bSeq.
+
+Can you please confirm this so I can come reply with a full report on this.
+
+Kind regards, and sorry again for the confusion.
+
+Miguel
+
+
+
+On Mon, Feb 27, 2017 at 7:30 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+Dear friends,
+
+I've performed the first test with the DKFZ BiasFilter and got a perfect match. There are 55 variants annotated with OXOGFAIL and they are the same in the input VCF file (consensus SNV/MNV VCF for that donor) and the output of the BiasFilter. I'm running the test on a second donor.
+
+Best regards
+
+Miguel
+
+
+
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170319/06e3eeab/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170319/06e3eeab/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000264.html">[DOCKTESTERS] Important correction: DKFZ BiasFilter large missmatch on DO52140 and DO35937
+</A></li>
+	<LI>Next message: <A HREF="000285.html">[DOCKTESTERS] DKFZ BiasFilter 100% match on DO52140, DO35937,	and DO218695
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#269">[ date ]</a>
+              <a href="thread.html#269">[ thread ]</a>
+              <a href="subject.html#269">[ subject ]</a>
+              <a href="author.html#269">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

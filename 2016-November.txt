@@ -1,0 +1,3742 @@
+From francis at oicr.on.ca  Mon Nov  7 01:04:46 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 7 Nov 2016 06:04:46 +0000
+Subject: [DOCKTESTERS] added "bug tracking/comments" pages
+Message-ID: <AAB1A87C-7C97-40D7-8773-1DCF802B5C7C@oicr.on.ca>
+
+
+Hi all,
+
+for all current PCAWG docker containers we currently have I added a page
+where problems need to be added, and where I will track things from. If
+needed I will move things to JIRA, but right now I will see if this works.
+
+See: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+
+Table has links to each page.
+
+@bffo
+
+ PS Things seem to have been quiet in last week .. Please let me know
+     if all is OK.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161107/a093b9e7/attachment.html>
+
+From francis at oicr.on.ca  Mon Nov  7 01:34:31 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 7 Nov 2016 06:34:31 +0000
+Subject: [DOCKTESTERS] need to meet
+Message-ID: <E5407FB4-C3D5-4BD9-AA6F-DA9CEB393E33@oicr.on.ca>
+
+I would like to meet this week, if you can  ?
+
+Here is a doodle poll:
+
+https://doodle.com/poll/asyaybdsf9qb8fxy
+
+Also, to make sure I have all that should be on list,
+here is list membership: please let me know if
+I?m missing anybody.
+
+Andrew.duncan at oicr.on.ca<mailto:Andrew.duncan at oicr.on.ca>
+Christina.Yung at oicr.on.ca<mailto:Christina.Yung at oicr.on.ca>
+Denis.Yuen at oicr.on.ca<mailto:Denis.Yuen at oicr.on.ca>
+Zhibin.Lu at oicr.on.ca<mailto:Zhibin.Lu at oicr.on.ca>
+Brian.oconnor at oicr.on.ca<mailto:Brian.oconnor at oicr.on.ca>
+Broconno at ucsc.edu<mailto:Broconno at ucsc.edu>
+Buchanae at ohsu.edu<mailto:Buchanae at ohsu.edu>
+Ellrott at ohsu.edu<mailto:Ellrott at ohsu.edu>
+Francis at oicr.on.ca<mailto:Francis at oicr.on.ca>
+Gsaksena at broadinstitute.org<mailto:Gsaksena at broadinstitute.org>
+Junjun.zhang at oicr.on.ca<mailto:Junjun.zhang at oicr.on.ca>
+Miguel.vazquez at cnio.es<mailto:Miguel.vazquez at cnio.es>
+Ohofmann72 at gmail.com<mailto:Ohofmann72 at gmail.com>
+Solomon.shorser at oicr.on.ca<mailto:Solomon.shorser at oicr.on.ca>
+Strucka at ohsu.edu<mailto:Strucka at ohsu.edu>
+
+Cheers,
+
+@bffo
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161107/579a1a45/attachment-0001.html>
+
+From francis at oicr.on.ca  Tue Nov  8 09:40:50 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Tue, 8 Nov 2016 14:40:50 +0000
+Subject: [DOCKTESTERS] Looks like Friday at 11:00 (Eastern)
+Message-ID: <CB98952A-7028-4847-9C3A-E7D7E89995B4@oicr.on.ca>
+
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+[cid:A31741D9-7C0F-4B07-B24D-231366926BEE at oicr.on.ca]
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161108/29385592/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2016-11-08 09.38.56.png
+Type: image/png
+Size: 219463 bytes
+Desc: Screenshot 2016-11-08 09.38.56.png
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161108/29385592/attachment-0001.png>
+
+From francis at oicr.on.ca  Tue Nov  8 11:55:04 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Tue, 8 Nov 2016 16:55:04 +0000
+Subject: [DOCKTESTERS] Looks like Friday at 11:00 (Eastern)
+In-Reply-To: <CB98952A-7028-4847-9C3A-E7D7E89995B4@oicr.on.ca>
+References: <CB98952A-7028-4847-9C3A-E7D7E89995B4@oicr.on.ca>
+Message-ID: <9BC760D2-A776-4296-9FED-5551B1958947@oicr.on.ca>
+
+OK, making call at 11:00 (Eastern time).
+
+Here is Conference call info
+
+Dial in: 800 747 5150
+Access code: 3592059
+
+Talk to you then,
+
+@bffo
+
+
+
+Dial in from USA/Canada: 1-800-747-5150
+Dial in from UK: 08004960577
+Dial in from UK mobile: 02079040082
+Dial in from Argentina: 08008007388
+Dial in from Australia: 1-800-422-903
+Dial in from Belgium: 080039117
+Dial in from China: 4006208033 or 4008108940 or 8008190299
+Dial in from Germany: 08001014525
+Dial in from Hong Kong: 800968124
+Dial in from India: 000180 or 0008001006002
+Dial in from Japan: 00531001555
+Dial in from Netherlands: 08002658213
+Dial in from Norway: 80056401
+Dial in from Qatar: 00800100036
+Dial in from Singapore: 8001011435
+Dial in from South Africa: 0800990930
+Dial in from Spain: 900800371
+Dial in from Sweden: 0201400589
+Dial in from Switzerland: 0800700283
+
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+[cid:CC74C329-540B-4232-B4BC-A487ED8A23B2 at oicr.on.ca]
+
+
+
+
+On Nov 8, 2016, at 9:40 AM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161108/23f936b8/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2016-11-08 11.53.26.png
+Type: image/png
+Size: 138359 bytes
+Desc: Screenshot 2016-11-08 11.53.26.png
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161108/23f936b8/attachment-0001.png>
+
+From francis at oicr.on.ca  Fri Nov 11 11:00:10 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Fri, 11 Nov 2016 16:00:10 +0000
+Subject: [DOCKTESTERS] Looks like Friday at 11:00 (Eastern)
+In-Reply-To: <9BC760D2-A776-4296-9FED-5551B1958947@oicr.on.ca>
+References: <CB98952A-7028-4847-9C3A-E7D7E89995B4@oicr.on.ca>
+ <9BC760D2-A776-4296-9FED-5551B1958947@oicr.on.ca>
+Message-ID: <72A9B5DC-A083-4F30-90C3-8B0C792D5F26@oicr.on.ca>
+
+
+On Nov 8, 2016, at 11:55, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+OK, making call at 11:00 (Eastern time).
+
+Here is Conference call info
+
+Dial in: 800 747 5150
+Access code: 3592059
+
+Talk to you then,
+
+@bffo
+
+
+
+Dial in from USA/Canada: 1-800-747-5150
+Dial in from UK: 08004960577
+Dial in from UK mobile: 02079040082
+Dial in from Argentina: 08008007388
+Dial in from Australia: 1-800-422-903
+Dial in from Belgium: 080039117
+Dial in from China: 4006208033 or 4008108940 or 8008190299
+Dial in from Germany: 08001014525
+Dial in from Hong Kong: 800968124
+Dial in from India: 000180 or 0008001006002
+Dial in from Japan: 00531001555
+Dial in from Netherlands: 08002658213
+Dial in from Norway: 80056401
+Dial in from Qatar: 00800100036
+Dial in from Singapore: 8001011435
+Dial in from South Africa: 0800990930
+Dial in from Spain: 900800371
+Dial in from Sweden: 0201400589
+Dial in from Switzerland: 0800700283
+
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+[cid:CC74C329-540B-4232-B4BC-A487ED8A23B2 at oicr.on.ca]
+
+
+
+
+On Nov 8, 2016, at 9:40 AM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161111/70584529/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2016-11-08 11.53.26.png
+Type: image/png
+Size: 138359 bytes
+Desc: Screenshot 2016-11-08 11.53.26.png
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161111/70584529/attachment-0001.png>
+
+From francis at oicr.on.ca  Fri Nov 11 11:03:29 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Fri, 11 Nov 2016 16:03:29 +0000
+Subject: [DOCKTESTERS] reference for today's conf call
+Message-ID: <776F3803-4861-48A0-9F54-BF668BF95929@oicr.on.ca>
+
+https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161111/029b276c/attachment.html>
+
+From i.buchhalter at dkfz-heidelberg.de  Wed Nov 16 08:33:42 2016
+From: i.buchhalter at dkfz-heidelberg.de (Ivo Buchhalter)
+Date: Wed, 16 Nov 2016 14:33:42 +0100
+Subject: [DOCKTESTERS] DKFZ bias filter docker
+In-Reply-To: <27512884B2D81B41AAB7BB266248F240C09A2111@exmb2.ad.oicr.on.ca>
+References: <8b96b9c2-d0a4-d8ea-b2ca-7dabfc3a785d@dkfz.de>
+ <27512884B2D81B41AAB7BB266248F240C09A1875@exmb2.ad.oicr.on.ca>
+ <95c07a22-98c6-8602-a6ce-f17ca178ec9b@dkfz.de>
+ <27512884B2D81B41AAB7BB266248F240C09A19D9@exmb2.ad.oicr.on.ca>
+ <DC4E5B09-AD3F-4F85-8310-5EE76B17FD01@dkfz.de>
+ <27512884B2D81B41AAB7BB266248F240C09A2111@exmb2.ad.oicr.on.ca>
+Message-ID: <a0a83c44-d8bb-bb59-3ec9-50add9c14a12@dkfz.de>
+
+Dear all,
+
+Thanks to the big help from Johannes and Manuel we have finally a 
+running version of the DKFZ bias filter on Dockstore. You can find it 
+here: https://dockstore.org/containers/quay.io/jwerner_dkfz/DKFZBiasFilter
+
+Please be aware that currently the json overwrites the default values so 
+you will have to make sure to replace them (see comment at the bottom of 
+the page).
+
+If you have any questions let me/ Johannes know.
+
+Thanks,
+Ivo
+
+
+On 10/26/2016 05:04 PM, Denis Yuen wrote:
+> Hi,
+> I think next week should be sufficient, thanks for the update!
+>
+> ________________________________________
+> From: Buchhalter, Ivo [i.buchhalter at Dkfz-Heidelberg.de]
+> Sent: October 26, 2016 9:32 AM
+> To: Denis Yuen
+> Cc: Buchhalter, Ivo; docktesters at lists.icgc.org; Werner, Johannes; Prinz, Manuel; Schlesner, Matthias
+> Subject: Re: [DOCKTESTERS] DKFZ bias filter docker
+>
+> Hi Denis,
+>
+> Unfortunately Manuel, who was supposed to help us to fix the docker fell sick. He will be back by the mid of next week. Will it be sufficient it we submit our docker by the end of next week or should we try to start working on it (probably with your help?).
+>
+> Thanks,
+> Ivo
+>
+>
+>
+>> On 19 Oct 2016, at 21:33, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+>>
+>> Hi,
+>>
+>> Thanks, this definitely helps to make it more clear.
+>> I think this will give us enough information for us to start working on a CWL descriptor or to assist one being written.
+>>
+>> ________________________________________
+>> From: Ivo Buchhalter [i.buchhalter at dkfz-heidelberg.de]
+>> Sent: October 19, 2016 2:19 AM
+>> To: Denis Yuen; Ivo Buchhalter; docktesters at lists.icgc.org
+>> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+>> Subject: Re: [DOCKTESTERS] DKFZ bias filter docker
+>>
+>> Hi Denis,
+>>
+>> Sorry for the missing information. I updated the README in the
+>> repository. I hope things are more clear now.
+>>> 1) How does this relate to the existing dkfz workflow? ( https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows ) Is this a step that follows that workflow or is this a portion of that workflow that has been split out?
+>> The filter is part of the DKFZ workflow. Since the other workflows don't
+>> use similar filters the DKFZ stand alone filter was run on the complete
+>> data set after merging the calls (only somatic SNV calls).
+>>> 2) Could we get a readme that describes how to use this?
+>> I updated the README. I hope it's more clear now.
+>>> 3) Do you have some non-confidential small test data that we can use to run/test this quickly before running a real donor through this?
+>> I will check if we can provide this later but the filter generally runs
+>> only a couple of minutes (on a normal somatic "PASS" vcf with <= 10 000
+>> variants).
+>>
+>> Best,
+>> Ivo
+>>
+>>
+>>> Thanks!
+>>>
+>>> ________________________________________
+>>> From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of Ivo Buchhalter [i.buchhalter at dkfz-heidelberg.de]
+>>> Sent: October 18, 2016 3:06 AM
+>>> To: docktesters at lists.icgc.org
+>>> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+>>> Subject: [DOCKTESTERS] DKFZ bias filter docker
+>>>
+>>> Dear dockertesters,
+>>>
+>>> I was told to contact you regarding the DKFZ bias filter docker. The
+>>> docker is basically ready and it also passed internal testing. The
+>>> scripts and Dockerfile can be found here:
+>>> https://github.com/eilslabs/DKFZBiasFilter
+>>> Johannes and Manuel (CCed) have been working on bringing it into
+>>> Dockstore (they ran into a NFS problem). Johannes is currently on
+>>> vacation (until October 23rd).
+>>> Please let me know if it is sufficient to have the docker available on
+>>> Dockstore some time next week. Alternatively it might be possible that
+>>> you work with the scripts and Dockerfile on GitHub. If none of this
+>>> works I (or probably Manuel) can also try to get it running on Dockstore
+>>> some time later this week.
+>>>
+>>> Best,
+>>> Ivo
+>>>
+>>> PS: Sorry to the DKFZ people the email before bounced back because the
+>>> link of the email address on the Wiki had a typo.
+>>> _______________________________________________
+>>> docktesters mailing list
+>>> docktesters at lists.icgc.org
+>>> https://lists.icgc.org/mailman/listinfo/docktesters
+>> On 10/18/2016 05:38 PM, Denis Yuen wrote:
+>>> Hi,
+>>>
+>>> Thanks for the heads-up, we can probably help out with writing the CWL descriptor for this, but I do have a few questions.
+>>>
+>>> 1) How does this relate to the existing dkfz workflow? ( https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows ) Is this a step that follows that workflow or is this a portion of that workflow that has been split out?
+>>> 2) Could we get a readme that describes how to use this?
+>>> 3) Do you have some non-confidential small test data that we can use to run/test this quickly before running a real donor through this?
+>>>
+>>> Thanks!
+>>>
+>>> ________________________________________
+>>> From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of Ivo Buchhalter [i.buchhalter at dkfz-heidelberg.de]
+>>> Sent: October 18, 2016 3:06 AM
+>>> To: docktesters at lists.icgc.org
+>>> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+>>> Subject: [DOCKTESTERS] DKFZ bias filter docker
+>>>
+>>> Dear dockertesters,
+>>>
+>>> I was told to contact you regarding the DKFZ bias filter docker. The
+>>> docker is basically ready and it also passed internal testing. The
+>>> scripts and Dockerfile can be found here:
+>>> https://github.com/eilslabs/DKFZBiasFilter
+>>> Johannes and Manuel (CCed) have been working on bringing it into
+>>> Dockstore (they ran into a NFS problem). Johannes is currently on
+>>> vacation (until October 23rd).
+>>> Please let me know if it is sufficient to have the docker available on
+>>> Dockstore some time next week. Alternatively it might be possible that
+>>> you work with the scripts and Dockerfile on GitHub. If none of this
+>>> works I (or probably Manuel) can also try to get it running on Dockstore
+>>> some time later this week.
+>>>
+>>> Best,
+>>> Ivo
+>>>
+>>> PS: Sorry to the DKFZ people the email before bounced back because the
+>>> link of the email address on the Wiki had a typo.
+>>> _______________________________________________
+>>> docktesters mailing list
+>>> docktesters at lists.icgc.org
+>>> https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+From Denis.Yuen at oicr.on.ca  Wed Nov 16 13:42:12 2016
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Wed, 16 Nov 2016 18:42:12 +0000
+Subject: [DOCKTESTERS] DKFZ bias filter docker
+In-Reply-To: <a0a83c44-d8bb-bb59-3ec9-50add9c14a12@dkfz.de>
+References: <8b96b9c2-d0a4-d8ea-b2ca-7dabfc3a785d@dkfz.de>
+ <27512884B2D81B41AAB7BB266248F240C09A1875@exmb2.ad.oicr.on.ca>
+ <95c07a22-98c6-8602-a6ce-f17ca178ec9b@dkfz.de>
+ <27512884B2D81B41AAB7BB266248F240C09A19D9@exmb2.ad.oicr.on.ca>
+ <DC4E5B09-AD3F-4F85-8310-5EE76B17FD01@dkfz.de>
+ <27512884B2D81B41AAB7BB266248F240C09A2111@exmb2.ad.oicr.on.ca>,
+ <a0a83c44-d8bb-bb59-3ec9-50add9c14a12@dkfz.de>
+Message-ID: <27512884B2D81B41AAB7BB266248F240C09A3CDC@exmb2.ad.oicr.on.ca>
+
+Hi, 
+Looks good! I've done a test run and it looks like all the plumbing is functional. 
+I've also created a pull request with an example test json file (works with an upcoming version of dockstore in test). 
+________________________________________
+From: Ivo Buchhalter [i.buchhalter at dkfz-heidelberg.de]
+Sent: November 16, 2016 8:33 AM
+To: Denis Yuen; Buchhalter, Ivo
+Cc: docktesters at lists.icgc.org; Werner, Johannes; Prinz, Manuel; Schlesner, Matthias
+Subject: Re: [DOCKTESTERS] DKFZ bias filter docker
+
+Dear all,
+
+Thanks to the big help from Johannes and Manuel we have finally a
+running version of the DKFZ bias filter on Dockstore. You can find it
+here: https://dockstore.org/containers/quay.io/jwerner_dkfz/DKFZBiasFilter
+
+Please be aware that currently the json overwrites the default values so
+you will have to make sure to replace them (see comment at the bottom of
+the page).
+
+If you have any questions let me/ Johannes know.
+
+Thanks,
+Ivo
+
+
+On 10/26/2016 05:04 PM, Denis Yuen wrote:
+> Hi,
+> I think next week should be sufficient, thanks for the update!
+>
+> ________________________________________
+> From: Buchhalter, Ivo [i.buchhalter at Dkfz-Heidelberg.de]
+> Sent: October 26, 2016 9:32 AM
+> To: Denis Yuen
+> Cc: Buchhalter, Ivo; docktesters at lists.icgc.org; Werner, Johannes; Prinz, Manuel; Schlesner, Matthias
+> Subject: Re: [DOCKTESTERS] DKFZ bias filter docker
+>
+> Hi Denis,
+>
+> Unfortunately Manuel, who was supposed to help us to fix the docker fell sick. He will be back by the mid of next week. Will it be sufficient it we submit our docker by the end of next week or should we try to start working on it (probably with your help?).
+>
+> Thanks,
+> Ivo
+>
+>
+>
+>> On 19 Oct 2016, at 21:33, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+>>
+>> Hi,
+>>
+>> Thanks, this definitely helps to make it more clear.
+>> I think this will give us enough information for us to start working on a CWL descriptor or to assist one being written.
+>>
+>> ________________________________________
+>> From: Ivo Buchhalter [i.buchhalter at dkfz-heidelberg.de]
+>> Sent: October 19, 2016 2:19 AM
+>> To: Denis Yuen; Ivo Buchhalter; docktesters at lists.icgc.org
+>> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+>> Subject: Re: [DOCKTESTERS] DKFZ bias filter docker
+>>
+>> Hi Denis,
+>>
+>> Sorry for the missing information. I updated the README in the
+>> repository. I hope things are more clear now.
+>>> 1) How does this relate to the existing dkfz workflow? ( https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows ) Is this a step that follows that workflow or is this a portion of that workflow that has been split out?
+>> The filter is part of the DKFZ workflow. Since the other workflows don't
+>> use similar filters the DKFZ stand alone filter was run on the complete
+>> data set after merging the calls (only somatic SNV calls).
+>>> 2) Could we get a readme that describes how to use this?
+>> I updated the README. I hope it's more clear now.
+>>> 3) Do you have some non-confidential small test data that we can use to run/test this quickly before running a real donor through this?
+>> I will check if we can provide this later but the filter generally runs
+>> only a couple of minutes (on a normal somatic "PASS" vcf with <= 10 000
+>> variants).
+>>
+>> Best,
+>> Ivo
+>>
+>>
+>>> Thanks!
+>>>
+>>> ________________________________________
+>>> From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of Ivo Buchhalter [i.buchhalter at dkfz-heidelberg.de]
+>>> Sent: October 18, 2016 3:06 AM
+>>> To: docktesters at lists.icgc.org
+>>> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+>>> Subject: [DOCKTESTERS] DKFZ bias filter docker
+>>>
+>>> Dear dockertesters,
+>>>
+>>> I was told to contact you regarding the DKFZ bias filter docker. The
+>>> docker is basically ready and it also passed internal testing. The
+>>> scripts and Dockerfile can be found here:
+>>> https://github.com/eilslabs/DKFZBiasFilter
+>>> Johannes and Manuel (CCed) have been working on bringing it into
+>>> Dockstore (they ran into a NFS problem). Johannes is currently on
+>>> vacation (until October 23rd).
+>>> Please let me know if it is sufficient to have the docker available on
+>>> Dockstore some time next week. Alternatively it might be possible that
+>>> you work with the scripts and Dockerfile on GitHub. If none of this
+>>> works I (or probably Manuel) can also try to get it running on Dockstore
+>>> some time later this week.
+>>>
+>>> Best,
+>>> Ivo
+>>>
+>>> PS: Sorry to the DKFZ people the email before bounced back because the
+>>> link of the email address on the Wiki had a typo.
+>>> _______________________________________________
+>>> docktesters mailing list
+>>> docktesters at lists.icgc.org
+>>> https://lists.icgc.org/mailman/listinfo/docktesters
+>> On 10/18/2016 05:38 PM, Denis Yuen wrote:
+>>> Hi,
+>>>
+>>> Thanks for the heads-up, we can probably help out with writing the CWL descriptor for this, but I do have a few questions.
+>>>
+>>> 1) How does this relate to the existing dkfz workflow? ( https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows ) Is this a step that follows that workflow or is this a portion of that workflow that has been split out?
+>>> 2) Could we get a readme that describes how to use this?
+>>> 3) Do you have some non-confidential small test data that we can use to run/test this quickly before running a real donor through this?
+>>>
+>>> Thanks!
+>>>
+>>> ________________________________________
+>>> From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of Ivo Buchhalter [i.buchhalter at dkfz-heidelberg.de]
+>>> Sent: October 18, 2016 3:06 AM
+>>> To: docktesters at lists.icgc.org
+>>> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+>>> Subject: [DOCKTESTERS] DKFZ bias filter docker
+>>>
+>>> Dear dockertesters,
+>>>
+>>> I was told to contact you regarding the DKFZ bias filter docker. The
+>>> docker is basically ready and it also passed internal testing. The
+>>> scripts and Dockerfile can be found here:
+>>> https://github.com/eilslabs/DKFZBiasFilter
+>>> Johannes and Manuel (CCed) have been working on bringing it into
+>>> Dockstore (they ran into a NFS problem). Johannes is currently on
+>>> vacation (until October 23rd).
+>>> Please let me know if it is sufficient to have the docker available on
+>>> Dockstore some time next week. Alternatively it might be possible that
+>>> you work with the scripts and Dockerfile on GitHub. If none of this
+>>> works I (or probably Manuel) can also try to get it running on Dockstore
+>>> some time later this week.
+>>>
+>>> Best,
+>>> Ivo
+>>>
+>>> PS: Sorry to the DKFZ people the email before bounced back because the
+>>> link of the email address on the Wiki had a typo.
+>>> _______________________________________________
+>>> docktesters mailing list
+>>> docktesters at lists.icgc.org
+>>> https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+From miguel.vazquez at cnio.es  Fri Nov 18 08:06:35 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Fri, 18 Nov 2016 14:06:35 +0100
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing and
+ original VCF
+Message-ID: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+
+Dear Francis and friends,
+
+Given that Francis was eager to see some inital estimates on how well the
+testing where in terms of overlap I have made some advances. Let me show
+you some of my initial results.
+
+For sample DO50311 with the pipeline from DKFZ (using Delly first to
+produce the BEDPE file) I get the following result:
+
+
+> *Comparison----------*
+> Total original (dkfz): 16090
+> Total this: 51087
+> *Common: 16090*
+> *Missing: 0*. Example:
+> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+>
+>
+Whit means that in the original VCF there are 16K mutations, all of them
+are found in our new VCF (this), however our new file contains 35K extra
+mutations. Listed are some examples of extra mutations, going back to our
+VCF here is a sample line
+
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+CONTROL TUMOR
+1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF
+SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0
+0/0:114:49,62,0,3
+
+I take it this is a good result. Finding all the reported mutations is a
+great sign I think, and the extra mutations must be a filtering step that
+we need to account for. *I hope someone can point out from the VCF line
+above what is it that I need to use for the filtering.*
+
+The *VCF files I took from a file I have named
+'preliminary_final_release.snvs.tgz' from May 30* that contains VCF file
+with the merged results from all callers. I simply subset the lines for
+each caller, in this case dkfz. Also the files are listed by aliquote so I
+have to translate the donor to aliquote ID. I've script this quickly using
+my Rbbt framework but I'll rewrite it all in bash and add it to my repo of
+testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test
+
+Summary of my progress
+-----------------------------------
+
+- Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+integrated; missing data-preparation step), Broad (??)
+- Donor integration: GNOS (works), IGCG (works)
+- Comparison: DKFZ (missing filtering?), rest (waiting)
+
+I have everything scripted so I can iterate a list of donors and download
+the data, run pipelines, erase data, compare results.
+
+Missing things on my ToDo list
+-------------------------------------------
+
+- Integrate BWM-Mem by incorporating the initial step to de-align the BAM
+files
+- Find a programmatic way to access the bundle-id files for each donor from
+ICGC data portal, righ now I have to go to the web page
+- Add filtering step to DKFZ and other pipelines as they become usable.
+- Change the scripting of the comparison to bash and add it to
+https://github.com/mikisvaz/PCAWG-Docker-Test
+
+Best regards to all
+
+Miguel
+
+
+
+On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca>
+wrote:
+
+>
+> Anybody else on our poll for next call?
+> Looks like Friday at 11:00. I will close poll later today.
+>
+>
+> @bffo
+>
+>
+>
+>
+>
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/2d7c2492/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2016-11-08 09.38.56.png
+Type: image/png
+Size: 219463 bytes
+Desc: not available
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/2d7c2492/attachment-0001.png>
+
+From miguel.vazquez at cnio.es  Fri Nov 18 08:48:07 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Fri, 18 Nov 2016 14:48:07 +0100
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+Message-ID: <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+
+Hi again
+
+I've done some more investigating and it turns out that there is a was
+ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for
+mutations that 'PASS' I get
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 16088
+
+
+
+
+*Common: 16088Missing: 2. Example: 10:86361665:T, 3:168842417:GExtra: 0.
+Example: *
+Not a perfect match, but very close!!!!
+
+Best
+
+Miguel
+
+
+On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es>
+wrote:
+
+> Dear Francis and friends,
+>
+> Given that Francis was eager to see some inital estimates on how well the
+> testing where in terms of overlap I have made some advances. Let me show
+> you some of my initial results.
+>
+> For sample DO50311 with the pipeline from DKFZ (using Delly first to
+> produce the BEDPE file) I get the following result:
+>
+>
+>> *Comparison----------*
+>> Total original (dkfz): 16090
+>> Total this: 51087
+>> *Common: 16090*
+>> *Missing: 0*. Example:
+>> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+>>
+>>
+> Whit means that in the original VCF there are 16K mutations, all of them
+> are found in our new VCF (this), however our new file contains 35K extra
+> mutations. Listed are some examples of extra mutations, going back to our
+> VCF here is a sample line
+>
+> #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+> CONTROL TUMOR
+> 1       725971  .       G       T       .
+> RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57
+> GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+>
+> I take it this is a good result. Finding all the reported mutations is a
+> great sign I think, and the extra mutations must be a filtering step that
+> we need to account for. *I hope someone can point out from the VCF line
+> above what is it that I need to use for the filtering.*
+>
+> The *VCF files I took from a file I have named
+> 'preliminary_final_release.snvs.tgz' from May 30* that contains VCF file
+> with the merged results from all callers. I simply subset the lines for
+> each caller, in this case dkfz. Also the files are listed by aliquote so I
+> have to translate the donor to aliquote ID. I've script this quickly using
+> my Rbbt framework but I'll rewrite it all in bash and add it to my repo of
+> testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test
+>
+> Summary of my progress
+> -----------------------------------
+>
+> - Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+> integrated; missing data-preparation step), Broad (??)
+> - Donor integration: GNOS (works), IGCG (works)
+> - Comparison: DKFZ (missing filtering?), rest (waiting)
+>
+> I have everything scripted so I can iterate a list of donors and download
+> the data, run pipelines, erase data, compare results.
+>
+> Missing things on my ToDo list
+> -------------------------------------------
+>
+> - Integrate BWM-Mem by incorporating the initial step to de-align the BAM
+> files
+> - Find a programmatic way to access the bundle-id files for each donor
+> from ICGC data portal, righ now I have to go to the web page
+> - Add filtering step to DKFZ and other pipelines as they become usable.
+> - Change the scripting of the comparison to bash and add it to
+> https://github.com/mikisvaz/PCAWG-Docker-Test
+>
+> Best regards to all
+>
+> Miguel
+>
+>
+>
+> On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca>
+> wrote:
+>
+>>
+>> Anybody else on our poll for next call?
+>> Looks like Friday at 11:00. I will close poll later today.
+>>
+>>
+>> @bffo
+>>
+>>
+>>
+>>
+>>
+>>
+>> _______________________________________________
+>> docktesters mailing list
+>> docktesters at lists.icgc.org
+>> https://lists.icgc.org/mailman/listinfo/docktesters
+>>
+>>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/a35faa59/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2016-11-08 09.38.56.png
+Type: image/png
+Size: 219463 bytes
+Desc: not available
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/a35faa59/attachment-0001.png>
+
+From francis at oicr.on.ca  Fri Nov 18 09:37:08 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Fri, 18 Nov 2016 14:37:08 +0000
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+Message-ID: <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+
+
+Great,
+
+Thank you Miguel!  I would call this one a success!
+
+I think we need two such success for each pipeline.
+
+I will update table with this one.
+
+Let?s get it done for the others. I will send more mail today.
+
+Miguel: I imagine you documented what you did on google doc?
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+
+
+
+
+
+On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Hi again
+
+I've done some more investigating and it turns out that there is a was ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for mutations that 'PASS' I get
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 16088
+Common: 16088
+Missing: 2. Example: 10:86361665:T, 3:168842417:G
+Extra: 0. Example:
+
+Not a perfect match, but very close!!!!
+
+Best
+
+Miguel
+
+
+On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+Dear Francis and friends,
+
+Given that Francis was eager to see some inital estimates on how well the testing where in terms of overlap I have made some advances. Let me show you some of my initial results.
+
+For sample DO50311 with the pipeline from DKFZ (using Delly first to produce the BEDPE file) I get the following result:
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 51087
+Common: 16090
+Missing: 0. Example:
+Extra: 34997. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+
+
+Whit means that in the original VCF there are 16K mutations, all of them are found in our new VCF (this), however our new file contains 35K extra mutations. Listed are some examples of extra mutations, going back to our VCF here is a sample line
+
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  CONTROL TUMOR
+1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+
+I take it this is a good result. Finding all the reported mutations is a great sign I think, and the extra mutations must be a filtering step that we need to account for. I hope someone can point out from the VCF line above what is it that I need to use for the filtering.
+
+The VCF files I took from a file I have named 'preliminary_final_release.snvs.tgz' from May 30 that contains VCF file with the merged results from all callers. I simply subset the lines for each caller, in this case dkfz. Also the files are listed by aliquote so I have to translate the donor to aliquote ID. I've script this quickly using my Rbbt framework but I'll rewrite it all in bash and add it to my repo of testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test
+
+Summary of my progress
+-----------------------------------
+
+- Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not integrated; missing data-preparation step), Broad (??)
+- Donor integration: GNOS (works), IGCG (works)
+- Comparison: DKFZ (missing filtering?), rest (waiting)
+
+I have everything scripted so I can iterate a list of donors and download the data, run pipelines, erase data, compare results.
+
+Missing things on my ToDo list
+-------------------------------------------
+
+- Integrate BWM-Mem by incorporating the initial step to de-align the BAM files
+- Find a programmatic way to access the bundle-id files for each donor from ICGC data portal, righ now I have to go to the web page
+- Add filtering step to DKFZ and other pipelines as they become usable.
+- Change the scripting of the comparison to bash and add it to https://github.com/mikisvaz/PCAWG-Docker-Test
+
+Best regards to all
+
+Miguel
+
+
+
+On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/6055cf3f/attachment.html>
+
+From miguel.vazquez at cnio.es  Fri Nov 18 10:06:44 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Fri, 18 Nov 2016 16:06:44 +0100
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+Message-ID: <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+
+I've added a description on the google doc. Next week I'll try to put it
+properly into my scripts so I can run a bunch of these.
+
+What is the status of the Sanger pipeline, is it fixed already?
+
+On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca>
+wrote:
+
+>
+> Great,
+>
+> Thank you Miguel!  I would call this one a success!
+>
+> I think we need two such success for each pipeline.
+>
+> I will update table with this one.
+>
+> Let?s get it done for the others. I will send more mail today.
+>
+> Miguel: I imagine you documented what you did on google doc?
+>
+> Thank you all,
+>
+> francis
+>
+> --
+> B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es>
+> wrote:
+>
+> Hi again
+>
+> I've done some more investigating and it turns out that there is a was
+> ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for
+> mutations that 'PASS' I get
+>
+> Comparison
+> ----------
+> Total original (dkfz): 16090
+> Total this: 16088
+>
+>
+>
+>
+> *Common: 16088 Missing: 2. Example: 10:86361665:T, 3:168842417:G Extra: 0.
+> Example: *
+> Not a perfect match, but very close!!!!
+>
+> Best
+>
+> Miguel
+>
+>
+> On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es>
+> wrote:
+>
+>> Dear Francis and friends,
+>>
+>> Given that Francis was eager to see some inital estimates on how well the
+>> testing where in terms of overlap I have made some advances. Let me show
+>> you some of my initial results.
+>>
+>> For sample DO50311 with the pipeline from DKFZ (using Delly first to
+>> produce the BEDPE file) I get the following result:
+>>
+>>
+>>> *Comparison ----------*
+>>> Total original (dkfz): 16090
+>>> Total this: 51087
+>>> *Common: 16090*
+>>> *Missing: 0*. Example:
+>>> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+>>>
+>>>
+>> Whit means that in the original VCF there are 16K mutations, all of them
+>> are found in our new VCF (this), however our new file contains 35K extra
+>> mutations. Listed are some examples of extra mutations, going back to our
+>> VCF here is a sample line
+>>
+>> #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+>> CONTROL TUMOR
+>> 1       725971  .       G       T       .
+>> RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57
+>> GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+>>
+>> I take it this is a good result. Finding all the reported mutations is a
+>> great sign I think, and the extra mutations must be a filtering step that
+>> we need to account for. *I hope someone can point out from the VCF line
+>> above what is it that I need to use for the filtering.*
+>>
+>> The *VCF files I took from a file I have named
+>> 'preliminary_final_release.snvs.tgz' from May 30* that contains VCF file
+>> with the merged results from all callers. I simply subset the lines for
+>> each caller, in this case dkfz. Also the files are listed by aliquote so I
+>> have to translate the donor to aliquote ID. I've script this quickly using
+>> my Rbbt framework but I'll rewrite it all in bash and add it to my repo of
+>> testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test
+>>
+>> Summary of my progress
+>> -----------------------------------
+>>
+>> - Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+>> integrated; missing data-preparation step), Broad (??)
+>> - Donor integration: GNOS (works), IGCG (works)
+>> - Comparison: DKFZ (missing filtering?), rest (waiting)
+>>
+>> I have everything scripted so I can iterate a list of donors and download
+>> the data, run pipelines, erase data, compare results.
+>>
+>> Missing things on my ToDo list
+>> -------------------------------------------
+>>
+>> - Integrate BWM-Mem by incorporating the initial step to de-align the BAM
+>> files
+>> - Find a programmatic way to access the bundle-id files for each donor
+>> from ICGC data portal, righ now I have to go to the web page
+>> - Add filtering step to DKFZ and other pipelines as they become usable.
+>> - Change the scripting of the comparison to bash and add it to
+>> https://github.com/mikisvaz/PCAWG-Docker-Test
+>>
+>> Best regards to all
+>>
+>> Miguel
+>>
+>>
+>>
+>> On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca>
+>> wrote:
+>>
+>>>
+>>> Anybody else on our poll for next call?
+>>> Looks like Friday at 11:00. I will close poll later today.
+>>>
+>>>
+>>> @bffo
+>>>
+>>>
+>>>
+>>> <Screenshot 2016-11-08 09.38.56.png>
+>>>
+>>>
+>>>
+>>> _______________________________________________
+>>> docktesters mailing list
+>>> docktesters at lists.icgc.org
+>>> https://lists.icgc.org/mailman/listinfo/docktesters
+>>>
+>>>
+>>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/10112cec/attachment-0001.html>
+
+From Christina.Yung at oicr.on.ca  Fri Nov 18 12:40:51 2016
+From: Christina.Yung at oicr.on.ca (Christina Yung)
+Date: Fri, 18 Nov 2016 17:40:51 +0000
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+Message-ID: <0F84ED6166CE664E8563B61CB2ECB98CCBB0D91E@exmb2.ad.oicr.on.ca>
+
+Thank you, Miguel.  These results are very encouraging.  I just have a suggestion: since we?re comparing strictly the outputs of the DKFZ/EMBL pipeline, we should compare the pre-filtered results, ie. ~51K calls.  We?ll later compare if the filtering steps give similar results as well when the dockers become ready.
+
+For testing BWA-Mem, Keiran has documented the steps to convert aligned BAM to unaligned:
+https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload
+
+For Sanger docker, I believe Denis has tested the new version and reported that the problem is fixed.
+
+Best,
+Christina
+
+
+From: docktesters-bounces+christina.yung=oicr.on.ca at lists.icgc.org [mailto:docktesters-bounces+christina.yung=oicr.on.ca at lists.icgc.org] On Behalf Of Miguel Vazquez
+Sent: Friday, November 18, 2016 10:07 AM
+To: Francis Ouellette
+Cc: docktesters at lists.icgc.org; Alysha Moncrieffe
+Subject: Re: [DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+
+I've added a description on the google doc. Next week I'll try to put it properly into my scripts so I can run a bunch of these.
+What is the status of the Sanger pipeline, is it fixed already?
+
+On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+Great,
+
+Thank you Miguel!  I would call this one a success!
+
+I think we need two such success for each pipeline.
+
+I will update table with this one.
+
+Let?s get it done for the others. I will send more mail today.
+
+Miguel: I imagine you documented what you did on google doc?
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+
+
+
+
+On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Hi again
+
+I've done some more investigating and it turns out that there is a was ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for mutations that 'PASS' I get
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 16088
+Common: 16088
+Missing: 2. Example: 10:86361665:T, 3:168842417:G
+Extra: 0. Example:
+Not a perfect match, but very close!!!!
+Best
+Miguel
+
+
+On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+Dear Francis and friends,
+Given that Francis was eager to see some inital estimates on how well the testing where in terms of overlap I have made some advances. Let me show you some of my initial results.
+For sample DO50311 with the pipeline from DKFZ (using Delly first to produce the BEDPE file) I get the following result:
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 51087
+Common: 16090
+Missing: 0. Example:
+Extra: 34997. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+
+Whit means that in the original VCF there are 16K mutations, all of them are found in our new VCF (this), however our new file contains 35K extra mutations. Listed are some examples of extra mutations, going back to our VCF here is a sample line
+
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  CONTROL TUMOR
+1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+I take it this is a good result. Finding all the reported mutations is a great sign I think, and the extra mutations must be a filtering step that we need to account for. I hope someone can point out from the VCF line above what is it that I need to use for the filtering.
+The VCF files I took from a file I have named 'preliminary_final_release.snvs.tgz' from May 30 that contains VCF file with the merged results from all callers. I simply subset the lines for each caller, in this case dkfz. Also the files are listed by aliquote so I have to translate the donor to aliquote ID. I've script this quickly using my Rbbt framework but I'll rewrite it all in bash and add it to my repo of testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test
+Summary of my progress
+-----------------------------------
+
+- Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not integrated; missing data-preparation step), Broad (??)
+- Donor integration: GNOS (works), IGCG (works)
+- Comparison: DKFZ (missing filtering?), rest (waiting)
+I have everything scripted so I can iterate a list of donors and download the data, run pipelines, erase data, compare results.
+
+Missing things on my ToDo list
+-------------------------------------------
+- Integrate BWM-Mem by incorporating the initial step to de-align the BAM files
+- Find a programmatic way to access the bundle-id files for each donor from ICGC data portal, righ now I have to go to the web page
+- Add filtering step to DKFZ and other pipelines as they become usable.
+- Change the scripting of the comparison to bash and add it to https://github.com/mikisvaz/PCAWG-Docker-Test
+
+Best regards to all
+Miguel
+
+
+
+On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/28cfc438/attachment-0001.html>
+
+From Denis.Yuen at oicr.on.ca  Fri Nov 18 13:18:49 2016
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Fri, 18 Nov 2016 18:18:49 +0000
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>,
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+Message-ID: <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+
+Hi,
+
+Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-sanger-cgp-workflow<https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow> and it should work on DO50311
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of Miguel Vazquez [miguel.vazquez at cnio.es]
+Sent: November 18, 2016 10:06 AM
+To: Francis Ouellette
+Cc: docktesters at lists.icgc.org; Alysha Moncrieffe
+Subject: Re: [DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+
+I've added a description on the google doc. Next week I'll try to put it properly into my scripts so I can run a bunch of these.
+
+What is the status of the Sanger pipeline, is it fixed already?
+
+On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca<redir.aspx?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Great,
+
+Thank you Miguel!  I would call this one a success!
+
+I think we need two such success for each pipeline.
+
+I will update table with this one.
+
+Let?s get it done for the others. I will send more mail today.
+
+Miguel: I imagine you documented what you did on google doc?
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette<redir.aspx?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+
+
+
+
+
+
+
+
+On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es<redir.aspx?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+
+Hi again
+
+I've done some more investigating and it turns out that there is a was ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for mutations that 'PASS' I get
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 16088
+Common: 16088
+Missing: 2. Example: 10:86361665:T, 3:168842417:G
+Extra: 0. Example:
+
+Not a perfect match, but very close!!!!
+
+Best
+
+Miguel
+
+
+On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es<redir.aspx?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+Dear Francis and friends,
+
+Given that Francis was eager to see some inital estimates on how well the testing where in terms of overlap I have made some advances. Let me show you some of my initial results.
+
+For sample DO50311 with the pipeline from DKFZ (using Delly first to produce the BEDPE file) I get the following result:
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 51087
+Common: 16090
+Missing: 0. Example:
+Extra: 34997. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+
+
+Whit means that in the original VCF there are 16K mutations, all of them are found in our new VCF (this), however our new file contains 35K extra mutations. Listed are some examples of extra mutations, going back to our VCF here is a sample line
+
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  CONTROL TUMOR
+1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+
+I take it this is a good result. Finding all the reported mutations is a great sign I think, and the extra mutations must be a filtering step that we need to account for. I hope someone can point out from the VCF line above what is it that I need to use for the filtering.
+
+The VCF files I took from a file I have named 'preliminary_final_release.snvs.tgz' from May 30 that contains VCF file with the merged results from all callers. I simply subset the lines for each caller, in this case dkfz. Also the files are listed by aliquote so I have to translate the donor to aliquote ID. I've script this quickly using my Rbbt framework but I'll rewrite it all in bash and add it to my repo of testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test<redir.aspx?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+
+Summary of my progress
+-----------------------------------
+
+- Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not integrated; missing data-preparation step), Broad (??)
+- Donor integration: GNOS (works), IGCG (works)
+- Comparison: DKFZ (missing filtering?), rest (waiting)
+
+I have everything scripted so I can iterate a list of donors and download the data, run pipelines, erase data, compare results.
+
+Missing things on my ToDo list
+-------------------------------------------
+
+- Integrate BWM-Mem by incorporating the initial step to de-align the BAM files
+- Find a programmatic way to access the bundle-id files for each donor from ICGC data portal, righ now I have to go to the web page
+- Add filtering step to DKFZ and other pipelines as they become usable.
+- Change the scripting of the comparison to bash and add it to https://github.com/mikisvaz/PCAWG-Docker-Test<redir.aspx?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+
+Best regards to all
+
+Miguel
+
+
+
+On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca<redir.aspx?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<redir.aspx?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+https://lists.icgc.org/mailman/listinfo/docktesters<redir.aspx?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/e9843c0e/attachment.html>
+
+From miguel.vazquez at cnio.es  Mon Nov 21 04:07:46 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Mon, 21 Nov 2016 10:07:46 +0100
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+Message-ID: <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+
+Thanks Denis, I'm trying it out now
+
+On Fri, Nov 18, 2016 at 7:18 PM, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+
+> Hi,
+>
+> Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-
+> sanger-cgp-workflow
+> <https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow>
+> and it should work on DO50311
+>
+> ------------------------------
+> *From:* docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org
+> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of
+> Miguel Vazquez [miguel.vazquez at cnio.es]
+> *Sent:* November 18, 2016 10:06 AM
+> *To:* Francis Ouellette
+> *Cc:* docktesters at lists.icgc.org; Alysha Moncrieffe
+> *Subject:* Re: [DOCKTESTERS] Preliminary results for overlap between
+> testing and original VCF
+>
+> I've added a description on the google doc. Next week I'll try to put it
+> properly into my scripts so I can run a bunch of these.
+>
+> What is the status of the Sanger pipeline, is it fixed already?
+>
+> On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca
+> <http://redir.aspx?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>
+> > wrote:
+>
+>>
+>> Great,
+>>
+>> Thank you Miguel!  I would call this one a success!
+>>
+>> I think we need two such success for each pipeline.
+>>
+>> I will update table with this one.
+>>
+>> Let?s get it done for the others. I will send more mail today.
+>>
+>> Miguel: I imagine you documented what you did on google doc?
+>>
+>> Thank you all,
+>>
+>> francis
+>>
+>> --
+>> B.F. Francis Ouellette          http://oicr.on.ca/person/fran
+>> cis-ouellette
+>> <http://redir.aspx?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>>
+>> On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es
+>> <http://redir.aspx?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>>
+>> wrote:
+>>
+>> Hi again
+>>
+>> I've done some more investigating and it turns out that there is a was
+>> ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for
+>> mutations that 'PASS' I get
+>>
+>> Comparison
+>> ----------
+>> Total original (dkfz): 16090
+>> Total this: 16088
+>>
+>>
+>>
+>>
+>> *Common: 16088 Missing: 2. Example: 10:86361665:T, 3:168842417:G Extra:
+>> 0. Example: *
+>> Not a perfect match, but very close!!!!
+>>
+>> Best
+>>
+>> Miguel
+>>
+>>
+>> On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es
+>> <http://redir.aspx?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>
+>> > wrote:
+>>
+>>> Dear Francis and friends,
+>>>
+>>> Given that Francis was eager to see some inital estimates on how well
+>>> the testing where in terms of overlap I have made some advances. Let me
+>>> show you some of my initial results.
+>>>
+>>> For sample DO50311 with the pipeline from DKFZ (using Delly first to
+>>> produce the BEDPE file) I get the following result:
+>>>
+>>>
+>>>> *Comparison ----------*
+>>>> Total original (dkfz): 16090
+>>>> Total this: 51087
+>>>> *Common: 16090*
+>>>> *Missing: 0*. Example:
+>>>> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+>>>>
+>>>>
+>>> Whit means that in the original VCF there are 16K mutations, all of them
+>>> are found in our new VCF (this), however our new file contains 35K extra
+>>> mutations. Listed are some examples of extra mutations, going back to our
+>>> VCF here is a sample line
+>>>
+>>> #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+>>> CONTROL TUMOR
+>>> 1       725971  .       G       T       .
+>>> RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57
+>>> GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+>>>
+>>> I take it this is a good result. Finding all the reported mutations is a
+>>> great sign I think, and the extra mutations must be a filtering step that
+>>> we need to account for. *I hope someone can point out from the VCF line
+>>> above what is it that I need to use for the filtering.*
+>>>
+>>> The *VCF files I took from a file I have named
+>>> 'preliminary_final_release.snvs.tgz' from May 30* that contains VCF
+>>> file with the merged results from all callers. I simply subset the lines
+>>> for each caller, in this case dkfz. Also the files are listed by aliquote
+>>> so I have to translate the donor to aliquote ID. I've script this quickly
+>>> using my Rbbt framework but I'll rewrite it all in bash and add it to my
+>>> repo of testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test
+>>> <http://redir.aspx?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>>>
+>>> Summary of my progress
+>>> -----------------------------------
+>>>
+>>> - Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+>>> integrated; missing data-preparation step), Broad (??)
+>>> - Donor integration: GNOS (works), IGCG (works)
+>>> - Comparison: DKFZ (missing filtering?), rest (waiting)
+>>>
+>>> I have everything scripted so I can iterate a list of donors and
+>>> download the data, run pipelines, erase data, compare results.
+>>>
+>>> Missing things on my ToDo list
+>>> -------------------------------------------
+>>>
+>>> - Integrate BWM-Mem by incorporating the initial step to de-align the
+>>> BAM files
+>>> - Find a programmatic way to access the bundle-id files for each donor
+>>> from ICGC data portal, righ now I have to go to the web page
+>>> - Add filtering step to DKFZ and other pipelines as they become usable.
+>>> - Change the scripting of the comparison to bash and add it to
+>>> https://github.com/mikisvaz/PCAWG-Docker-Test
+>>> <http://redir.aspx?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>>>
+>>> Best regards to all
+>>>
+>>> Miguel
+>>>
+>>>
+>>>
+>>> On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca
+>>> <http://redir.aspx?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>
+>>> > wrote:
+>>>
+>>>>
+>>>> Anybody else on our poll for next call?
+>>>> Looks like Friday at 11:00. I will close poll later today.
+>>>>
+>>>>
+>>>> @bffo
+>>>>
+>>>>
+>>>>
+>>>> <Screenshot 2016-11-08 09.38.56.png>
+>>>>
+>>>>
+>>>>
+>>>> _______________________________________________
+>>>> docktesters mailing list
+>>>> docktesters at lists.icgc.org
+>>>> <http://redir.aspx?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+>>>> https://lists.icgc.org/mailman/listinfo/docktesters
+>>>> <http://redir.aspx?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+>>>>
+>>>>
+>>>
+>>
+>>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/b708cfb7/attachment-0001.html>
+
+From francis at oicr.on.ca  Mon Nov 21 07:31:50 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 21 Nov 2016 12:31:50 +0000
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+Message-ID: <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+
+Miguel,
+
+I?ve updated the wiki with your results, and added another link (on the same page)
+to the google doc, where you describe what you did get USeq to work.
+
+To all:
+
+Christina has commented in an e-mail that we had what we needed to test
+pcawg-bwa-mem-workflow pipeline, as well the pcawg-sanger-cgp-workflow
+pieline.
+
+Adam/Alex: Any advances in either of these fronts?
+
+Talk to some of you in 90 min.
+
+@bffo
+
+
+From: Christina Yung <Christina.Yung at oicr.on.ca<mailto:Christina.Yung at oicr.on.ca>>
+
+Thank you, Miguel.  These results are very encouraging.  I just have a suggestion: since we?re comparing strictly the outputs of the DKFZ/EMBL pipeline, we should compare the pre-filtered results, i.e.. ~51K calls.  We?ll later compare if the filtering steps give similar results as well when the dockers become ready.
+
+For testing BWA-Mem, Keiran has documented the steps to convert aligned BAM to unaligned:
+https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload
+
+For Sanger docker, I believe Denis has tested the new version and reported that the problem is fixed.
+
+
+
+
+On Nov 21, 2016, at 04:07, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Thanks Denis, I'm trying it out now
+
+On Fri, Nov 18, 2016 at 7:18 PM, Denis Yuen <Denis.Yuen at oicr.on.ca<mailto:Denis.Yuen at oicr.on.ca>> wrote:
+Hi,
+
+Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-sanger-cgp-workflow<https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow> and it should work on DO50311
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:oicr.on.ca at lists.icgc.org> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:oicr.on.ca at lists.icgc.org>] on behalf of Miguel Vazquez [miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>]
+Sent: November 18, 2016 10:06 AM
+To: Francis Ouellette
+Cc: docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>; Alysha Moncrieffe
+Subject: Re: [DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+
+I've added a description on the google doc. Next week I'll try to put it properly into my scripts so I can run a bunch of these.
+
+What is the status of the Sanger pipeline, is it fixed already?
+
+On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca<http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Great,
+
+Thank you Miguel!  I would call this one a success!
+
+I think we need two such success for each pipeline.
+
+I will update table with this one.
+
+Let?s get it done for the others. I will send more mail today.
+
+Miguel: I imagine you documented what you did on google doc?
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette<http://redir.aspx/?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+
+
+
+
+
+
+
+
+On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es<http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+
+Hi again
+
+I've done some more investigating and it turns out that there is a was ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for mutations that 'PASS' I get
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 16088
+Common: 16088
+Missing: 2. Example: 10:86361665:T, 3:168842417:G
+Extra: 0. Example:
+
+Not a perfect match, but very close!!!!
+
+Best
+
+Miguel
+
+
+On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es<http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+Dear Francis and friends,
+
+Given that Francis was eager to see some inital estimates on how well the testing where in terms of overlap I have made some advances. Let me show you some of my initial results.
+
+For sample DO50311 with the pipeline from DKFZ (using Delly first to produce the BEDPE file) I get the following result:
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 51087
+Common: 16090
+Missing: 0. Example:
+Extra: 34997. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+
+
+Whit means that in the original VCF there are 16K mutations, all of them are found in our new VCF (this), however our new file contains 35K extra mutations. Listed are some examples of extra mutations, going back to our VCF here is a sample line
+
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  CONTROL TUMOR
+1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+
+I take it this is a good result. Finding all the reported mutations is a great sign I think, and the extra mutations must be a filtering step that we need to account for. I hope someone can point out from the VCF line above what is it that I need to use for the filtering.
+
+The VCF files I took from a file I have named 'preliminary_final_release.snvs.tgz' from May 30 that contains VCF file with the merged results from all callers. I simply subset the lines for each caller, in this case dkfz. Also the files are listed by aliquote so I have to translate the donor to aliquote ID. I've script this quickly using my Rbbt framework but I'll rewrite it all in bash and add it to my repo of testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test<http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+
+Summary of my progress
+-----------------------------------
+
+- Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not integrated; missing data-preparation step), Broad (??)
+- Donor integration: GNOS (works), IGCG (works)
+- Comparison: DKFZ (missing filtering?), rest (waiting)
+
+I have everything scripted so I can iterate a list of donors and download the data, run pipelines, erase data, compare results.
+
+Missing things on my ToDo list
+-------------------------------------------
+
+- Integrate BWM-Mem by incorporating the initial step to de-align the BAM files
+- Find a programmatic way to access the bundle-id files for each donor from ICGC data portal, righ now I have to go to the web page
+- Add filtering step to DKFZ and other pipelines as they become usable.
+- Change the scripting of the comparison to bash and add it to https://github.com/mikisvaz/PCAWG-Docker-Test<http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+
+Best regards to all
+
+Miguel
+
+
+
+On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca<http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<http://redir.aspx/?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+https://lists.icgc.org/mailman/listinfo/docktesters<http://redir.aspx/?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/ae357f64/attachment-0001.html>
+
+From francis at oicr.on.ca  Mon Nov 21 07:55:55 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 21 Nov 2016 12:55:55 +0000
+Subject: [DOCKTESTERS] DOCKTESTERS update
+In-Reply-To: <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+ <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+Message-ID: <4DB33796-DFCD-43B2-8279-3DAD83892672@oicr.on.ca>
+
+
+Dear Dockstore testing working group.
+
+I?ve cleaned-up our wiki home page:
+
+https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+%28Dockstore%29+Testing+Working+Group<https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+(Dockstore)+Testing+Working+Group>
+
+I moved the list of this working group to a separate page, please add/update info there please:
+
+https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+%28Dockstore%29+Testing+Working+Group+Participants<https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+(Dockstore)+Testing+Working+Group+Participants>
+
+I also moved the list of Docker containers to be tested to s separate page, which I will mention today on call:
+
+https://wiki.oicr.on.ca/display/PANCANCER/Docker+containers+to+be+tested
+
+Let me know (in next 60 min) if you have additional information I should share with the group.
+
+Many thanks to all for the work you do,
+
+@bffo
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/55c792d9/attachment.html>
+
+From francis at oicr.on.ca  Mon Nov 21 08:30:07 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 21 Nov 2016 13:30:07 +0000
+Subject: [DOCKTESTERS] DOCKTESTERS update
+In-Reply-To: <4DB33796-DFCD-43B2-8279-3DAD83892672@oicr.on.ca>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+ <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+ <4DB33796-DFCD-43B2-8279-3DAD83892672@oicr.on.ca>
+Message-ID: <FA0916DA-3E72-4DDE-8BCF-9D649F98A1D4@oicr.on.ca>
+
+
+And, of course, l;et me know if you can?t get to the wiki!
+
+@bffo
+
+
+On Nov 21, 2016, at 07:55, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+
+Dear Dockstore testing working group.
+
+I?ve cleaned-up our wiki home page:
+
+https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+%28Dockstore%29+Testing+Working+Group<https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+(Dockstore)+Testing+Working+Group>
+
+I moved the list of this working group to a separate page, please add/update info there please:
+
+https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+%28Dockstore%29+Testing+Working+Group+Participants<https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+(Dockstore)+Testing+Working+Group+Participants>
+
+I also moved the list of Docker containers to be tested to s separate page, which I will mention today on call:
+
+https://wiki.oicr.on.ca/display/PANCANCER/Docker+containers+to+be+tested
+
+Let me know (in next 60 min) if you have additional information I should share with the group.
+
+Many thanks to all for the work you do,
+
+@bffo
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/ba9af85f/attachment.html>
+
+From miguel.vazquez at cnio.es  Mon Nov 21 08:35:39 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Mon, 21 Nov 2016 14:35:39 +0100
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+ <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+Message-ID: <CA+dx8ma+-vUQwmMT-k=gXmv70rShcbTeaa54yzU=DEdNKfSf5w@mail.gmail.com>
+
+Hi Francis,
+
+Just a few updates from my end.
+
+- I've ported the comparison code to bash and added it to my repository of
+scripts
+- I've included the necesary tools to perform BAM unalignment (biobambam),
+they are now submodules of my repository, and there are scripts to compile
+them and use them
+- I'm in the process of testing the BWA-Mem on the HCC1143 test data
+- I've created a bacth processing tool that takes a list of donors and goes
+through them running all three workflows (in addition to Delly before DKFZ)
+and comparing the results. It downloads the donor data, runs the workflows,
+compares, and cleans up for the next donor. I will do the finishing touches
+one I finish the tests I have running on Sanger with a donor and BWA-Mem
+for the test data.
+
+My scripts are https://github.com/mikisvaz/PCAWG-Docker-Test
+
+Once I have everything thing in line I will finish the documentation and
+update you guys with another email
+
+Best
+
+M
+
+On Mon, Nov 21, 2016 at 1:31 PM, Francis Ouellette <francis at oicr.on.ca>
+wrote:
+
+> Miguel,
+>
+> I?ve updated the wiki with your results, and added another link (on the
+> same page)
+> to the google doc, where you describe what you did get USeq to work.
+>
+> To all:
+>
+> Christina has commented in an e-mail that we had what we needed to test
+> pcawg-bwa-mem-workflow pipeline, as well the pcawg-sanger-cgp-workflow
+> pieline.
+>
+> Adam/Alex: Any advances in either of these fronts?
+>
+> Talk to some of you in 90 min.
+>
+> @bffo
+>
+>
+> *From: *Christina Yung <Christina.Yung at oicr.on.ca>
+>
+> Thank you, Miguel.  These results are very encouraging.  I just have a
+> suggestion: since we?re comparing strictly the outputs of the DKFZ/EMBL
+> pipeline, we should compare the pre-filtered results, i.e.. ~51K calls.
+> We?ll later compare if the filtering steps give similar results as well
+> when the dockers become ready.
+>
+> For testing BWA-Mem, Keiran has documented the steps to convert aligned
+> BAM to unaligned:
+> https://wiki.oicr.on.ca/display/PANCANCER/Preparing+
+> paired-end+data+for+upload
+>
+> For Sanger docker, I believe Denis has tested the new version and reported
+> that the problem is fixed.
+>
+>
+>
+>
+>
+> On Nov 21, 2016, at 04:07, Miguel Vazquez <miguel.vazquez at cnio.es> wrote:
+>
+> Thanks Denis, I'm trying it out now
+>
+> On Fri, Nov 18, 2016 at 7:18 PM, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+>
+>> Hi,
+>>
+>> Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-sanger
+>> -cgp-workflow
+>> <https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow>
+>> and it should work on DO50311
+>>
+>> ------------------------------
+>> *From:* docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org
+>> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of
+>> Miguel Vazquez [miguel.vazquez at cnio.es]
+>> *Sent:* November 18, 2016 10:06 AM
+>> *To:* Francis Ouellette
+>> *Cc:* docktesters at lists.icgc.org; Alysha Moncrieffe
+>> *Subject:* Re: [DOCKTESTERS] Preliminary results for overlap between
+>> testing and original VCF
+>>
+>> I've added a description on the google doc. Next week I'll try to put it
+>> properly into my scripts so I can run a bunch of these.
+>>
+>> What is the status of the Sanger pipeline, is it fixed already?
+>>
+>> On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca
+>> <http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>
+>> > wrote:
+>>
+>>>
+>>> Great,
+>>>
+>>> Thank you Miguel!  I would call this one a success!
+>>>
+>>> I think we need two such success for each pipeline.
+>>>
+>>> I will update table with this one.
+>>>
+>>> Let?s get it done for the others. I will send more mail today.
+>>>
+>>> Miguel: I imagine you documented what you did on google doc?
+>>>
+>>> Thank you all,
+>>>
+>>> francis
+>>>
+>>> --
+>>> B.F. Francis Ouellette          http://oicr.on.ca/person/fran
+>>> cis-ouellette
+>>> <http://redir.aspx/?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es
+>>> <http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>>
+>>> wrote:
+>>>
+>>> Hi again
+>>>
+>>> I've done some more investigating and it turns out that there is a was
+>>> ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for
+>>> mutations that 'PASS' I get
+>>>
+>>> Comparison
+>>> ----------
+>>> Total original (dkfz): 16090
+>>> Total this: 16088
+>>>
+>>>
+>>>
+>>>
+>>> *Common: 16088 Missing: 2. Example: 10:86361665:T, 3:168842417:G Extra:
+>>> 0. Example: *
+>>> Not a perfect match, but very close!!!!
+>>>
+>>> Best
+>>>
+>>> Miguel
+>>>
+>>>
+>>> On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es
+>>> <http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>
+>>> > wrote:
+>>>
+>>>> Dear Francis and friends,
+>>>>
+>>>> Given that Francis was eager to see some inital estimates on how well
+>>>> the testing where in terms of overlap I have made some advances. Let me
+>>>> show you some of my initial results.
+>>>>
+>>>> For sample DO50311 with the pipeline from DKFZ (using Delly first to
+>>>> produce the BEDPE file) I get the following result:
+>>>>
+>>>>
+>>>>> *Comparison ----------*
+>>>>> Total original (dkfz): 16090
+>>>>> Total this: 51087
+>>>>> *Common: 16090*
+>>>>> *Missing: 0*. Example:
+>>>>> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+>>>>>
+>>>>>
+>>>> Whit means that in the original VCF there are 16K mutations, all of
+>>>> them are found in our new VCF (this), however our new file contains 35K
+>>>> extra mutations. Listed are some examples of extra mutations, going back to
+>>>> our VCF here is a sample line
+>>>>
+>>>> #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+>>>> CONTROL TUMOR
+>>>> 1       725971  .       G       T       .
+>>>> RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57
+>>>> GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+>>>>
+>>>> I take it this is a good result. Finding all the reported mutations is
+>>>> a great sign I think, and the extra mutations must be a filtering step that
+>>>> we need to account for. *I hope someone can point out from the VCF
+>>>> line above what is it that I need to use for the filtering.*
+>>>>
+>>>> The *VCF files I took from a file I have named
+>>>> 'preliminary_final_release.snvs.tgz' from May 30* that contains VCF
+>>>> file with the merged results from all callers. I simply subset the lines
+>>>> for each caller, in this case dkfz. Also the files are listed by aliquote
+>>>> so I have to translate the donor to aliquote ID. I've script this quickly
+>>>> using my Rbbt framework but I'll rewrite it all in bash and add it to my
+>>>> repo of testing scripts at https://github.com/mikisvaz/PC
+>>>> AWG-Docker-Test
+>>>> <http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>>>>
+>>>> Summary of my progress
+>>>> -----------------------------------
+>>>>
+>>>> - Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+>>>> integrated; missing data-preparation step), Broad (??)
+>>>> - Donor integration: GNOS (works), IGCG (works)
+>>>> - Comparison: DKFZ (missing filtering?), rest (waiting)
+>>>>
+>>>> I have everything scripted so I can iterate a list of donors and
+>>>> download the data, run pipelines, erase data, compare results.
+>>>>
+>>>> Missing things on my ToDo list
+>>>> -------------------------------------------
+>>>>
+>>>> - Integrate BWM-Mem by incorporating the initial step to de-align the
+>>>> BAM files
+>>>> - Find a programmatic way to access the bundle-id files for each donor
+>>>> from ICGC data portal, righ now I have to go to the web page
+>>>> - Add filtering step to DKFZ and other pipelines as they become usable.
+>>>> - Change the scripting of the comparison to bash and add it to
+>>>> https://github.com/mikisvaz/PCAWG-Docker-Test
+>>>> <http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>>>>
+>>>> Best regards to all
+>>>>
+>>>> Miguel
+>>>>
+>>>>
+>>>>
+>>>> On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca
+>>>> <http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>
+>>>> > wrote:
+>>>>
+>>>>>
+>>>>> Anybody else on our poll for next call?
+>>>>> Looks like Friday at 11:00. I will close poll later today.
+>>>>>
+>>>>>
+>>>>> @bffo
+>>>>>
+>>>>>
+>>>>>
+>>>>> <Screenshot 2016-11-08 09.38.56.png>
+>>>>>
+>>>>>
+>>>>>
+>>>>> _______________________________________________
+>>>>> docktesters mailing list
+>>>>> docktesters at lists.icgc.org
+>>>>> <http://redir.aspx/?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+>>>>> https://lists.icgc.org/mailman/listinfo/docktesters
+>>>>> <http://redir.aspx/?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+>>>>>
+>>>>>
+>>>>
+>>>
+>>>
+>>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/f159eeee/attachment-0001.html>
+
+From francis at oicr.on.ca  Mon Nov 21 08:41:56 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 21 Nov 2016 13:41:56 +0000
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <CA+dx8ma+-vUQwmMT-k=gXmv70rShcbTeaa54yzU=DEdNKfSf5w@mail.gmail.com>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+ <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+ <CA+dx8ma+-vUQwmMT-k=gXmv70rShcbTeaa54yzU=DEdNKfSf5w@mail.gmail.com>
+Message-ID: <D61E0C2E-672D-4C72-91E4-07ED45C2ED20@oicr.on.ca>
+
+Great, thank you Miguel.
+
+@bffo
+
+
+
+On Nov 21, 2016, at 08:35, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Hi Francis,
+
+Just a few updates from my end.
+
+- I've ported the comparison code to bash and added it to my repository of scripts
+- I've included the necesary tools to perform BAM unalignment (biobambam), they are now submodules of my repository, and there are scripts to compile them and use them
+- I'm in the process of testing the BWA-Mem on the HCC1143 test data
+- I've created a bacth processing tool that takes a list of donors and goes through them running all three workflows (in addition to Delly before DKFZ) and comparing the results. It downloads the donor data, runs the workflows, compares, and cleans up for the next donor. I will do the finishing touches one I finish the tests I have running on Sanger with a donor and BWA-Mem for the test data.
+
+My scripts are https://github.com/mikisvaz/PCAWG-Docker-Test
+
+Once I have everything thing in line I will finish the documentation and update you guys with another email
+
+Best
+
+M
+
+On Mon, Nov 21, 2016 at 1:31 PM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+Miguel,
+
+I?ve updated the wiki with your results, and added another link (on the same page)
+to the google doc, where you describe what you did get USeq to work.
+
+To all:
+
+Christina has commented in an e-mail that we had what we needed to test
+pcawg-bwa-mem-workflow pipeline, as well the pcawg-sanger-cgp-workflow
+pieline.
+
+Adam/Alex: Any advances in either of these fronts?
+
+Talk to some of you in 90 min.
+
+@bffo
+
+
+From: Christina Yung <Christina.Yung at oicr.on.ca<mailto:Christina.Yung at oicr.on.ca>>
+
+Thank you, Miguel.  These results are very encouraging.  I just have a suggestion: since we?re comparing strictly the outputs of the DKFZ/EMBL pipeline, we should compare the pre-filtered results, i.e.. ~51K calls.  We?ll later compare if the filtering steps give similar results as well when the dockers become ready.
+
+For testing BWA-Mem, Keiran has documented the steps to convert aligned BAM to unaligned:
+https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload
+
+For Sanger docker, I believe Denis has tested the new version and reported that the problem is fixed.
+
+
+
+
+On Nov 21, 2016, at 04:07, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Thanks Denis, I'm trying it out now
+
+On Fri, Nov 18, 2016 at 7:18 PM, Denis Yuen <Denis.Yuen at oicr.on.ca<mailto:Denis.Yuen at oicr.on.ca>> wrote:
+Hi,
+
+Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-sanger-cgp-workflow<https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow> and it should work on DO50311
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:oicr.on.ca at lists.icgc.org> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:oicr.on.ca at lists.icgc.org>] on behalf of Miguel Vazquez [miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>]
+Sent: November 18, 2016 10:06 AM
+To: Francis Ouellette
+Cc: docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>; Alysha Moncrieffe
+Subject: Re: [DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+
+I've added a description on the google doc. Next week I'll try to put it properly into my scripts so I can run a bunch of these.
+
+What is the status of the Sanger pipeline, is it fixed already?
+
+On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca<http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Great,
+
+Thank you Miguel!  I would call this one a success!
+
+I think we need two such success for each pipeline.
+
+I will update table with this one.
+
+Let?s get it done for the others. I will send more mail today.
+
+Miguel: I imagine you documented what you did on google doc?
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette<http://redir.aspx/?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+
+
+
+
+
+
+
+
+On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es<http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+
+Hi again
+
+I've done some more investigating and it turns out that there is a was ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for mutations that 'PASS' I get
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 16088
+Common: 16088
+Missing: 2. Example: 10:86361665:T, 3:168842417:G
+Extra: 0. Example:
+
+Not a perfect match, but very close!!!!
+
+Best
+
+Miguel
+
+
+On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es<http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+Dear Francis and friends,
+
+Given that Francis was eager to see some inital estimates on how well the testing where in terms of overlap I have made some advances. Let me show you some of my initial results.
+
+For sample DO50311 with the pipeline from DKFZ (using Delly first to produce the BEDPE file) I get the following result:
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 51087
+Common: 16090
+Missing: 0. Example:
+Extra: 34997. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+
+
+Whit means that in the original VCF there are 16K mutations, all of them are found in our new VCF (this), however our new file contains 35K extra mutations. Listed are some examples of extra mutations, going back to our VCF here is a sample line
+
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  CONTROL TUMOR
+1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+
+I take it this is a good result. Finding all the reported mutations is a great sign I think, and the extra mutations must be a filtering step that we need to account for. I hope someone can point out from the VCF line above what is it that I need to use for the filtering.
+
+The VCF files I took from a file I have named 'preliminary_final_release.snvs.tgz' from May 30 that contains VCF file with the merged results from all callers. I simply subset the lines for each caller, in this case dkfz. Also the files are listed by aliquote so I have to translate the donor to aliquote ID. I've script this quickly using my Rbbt framework but I'll rewrite it all in bash and add it to my repo of testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test<http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+
+Summary of my progress
+-----------------------------------
+
+- Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not integrated; missing data-preparation step), Broad (??)
+- Donor integration: GNOS (works), IGCG (works)
+- Comparison: DKFZ (missing filtering?), rest (waiting)
+
+I have everything scripted so I can iterate a list of donors and download the data, run pipelines, erase data, compare results.
+
+Missing things on my ToDo list
+-------------------------------------------
+
+- Integrate BWM-Mem by incorporating the initial step to de-align the BAM files
+- Find a programmatic way to access the bundle-id files for each donor from ICGC data portal, righ now I have to go to the web page
+- Add filtering step to DKFZ and other pipelines as they become usable.
+- Change the scripting of the comparison to bash and add it to https://github.com/mikisvaz/PCAWG-Docker-Test<http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+
+Best regards to all
+
+Miguel
+
+
+
+On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca<http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<http://redir.aspx/?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+https://lists.icgc.org/mailman/listinfo/docktesters<http://redir.aspx/?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+
+
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/bffe5e0b/attachment-0001.html>
+
+From miguel.vazquez at cnio.es  Mon Nov 21 08:43:12 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Mon, 21 Nov 2016 14:43:12 +0100
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+ <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+Message-ID: <CA+dx8maXPBqc3M9GThUbUKo-bh932_irNqg5offu3xbmuTJZug@mail.gmail.com>
+
+Hi all,
+
+I have a question regarding the comparison with the official VCF for the
+BWA-Mem pipeline. I the VCF files I'm working with the callers are: broad,
+dkfz, sanger and muse. Which one corresponds to the BWA-Mem, if none, with
+what should I compare?
+
+Best
+
+M
+
+On Mon, Nov 21, 2016 at 1:31 PM, Francis Ouellette <francis at oicr.on.ca>
+wrote:
+
+> Miguel,
+>
+> I?ve updated the wiki with your results, and added another link (on the
+> same page)
+> to the google doc, where you describe what you did get USeq to work.
+>
+> To all:
+>
+> Christina has commented in an e-mail that we had what we needed to test
+> pcawg-bwa-mem-workflow pipeline, as well the pcawg-sanger-cgp-workflow
+> pieline.
+>
+> Adam/Alex: Any advances in either of these fronts?
+>
+> Talk to some of you in 90 min.
+>
+> @bffo
+>
+>
+> *From: *Christina Yung <Christina.Yung at oicr.on.ca>
+>
+> Thank you, Miguel.  These results are very encouraging.  I just have a
+> suggestion: since we?re comparing strictly the outputs of the DKFZ/EMBL
+> pipeline, we should compare the pre-filtered results, i.e.. ~51K calls.
+> We?ll later compare if the filtering steps give similar results as well
+> when the dockers become ready.
+>
+> For testing BWA-Mem, Keiran has documented the steps to convert aligned
+> BAM to unaligned:
+> https://wiki.oicr.on.ca/display/PANCANCER/Preparing+
+> paired-end+data+for+upload
+>
+> For Sanger docker, I believe Denis has tested the new version and reported
+> that the problem is fixed.
+>
+>
+>
+>
+>
+> On Nov 21, 2016, at 04:07, Miguel Vazquez <miguel.vazquez at cnio.es> wrote:
+>
+> Thanks Denis, I'm trying it out now
+>
+> On Fri, Nov 18, 2016 at 7:18 PM, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+>
+>> Hi,
+>>
+>> Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-sanger
+>> -cgp-workflow
+>> <https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow>
+>> and it should work on DO50311
+>>
+>> ------------------------------
+>> *From:* docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org
+>> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of
+>> Miguel Vazquez [miguel.vazquez at cnio.es]
+>> *Sent:* November 18, 2016 10:06 AM
+>> *To:* Francis Ouellette
+>> *Cc:* docktesters at lists.icgc.org; Alysha Moncrieffe
+>> *Subject:* Re: [DOCKTESTERS] Preliminary results for overlap between
+>> testing and original VCF
+>>
+>> I've added a description on the google doc. Next week I'll try to put it
+>> properly into my scripts so I can run a bunch of these.
+>>
+>> What is the status of the Sanger pipeline, is it fixed already?
+>>
+>> On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca
+>> <http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>
+>> > wrote:
+>>
+>>>
+>>> Great,
+>>>
+>>> Thank you Miguel!  I would call this one a success!
+>>>
+>>> I think we need two such success for each pipeline.
+>>>
+>>> I will update table with this one.
+>>>
+>>> Let?s get it done for the others. I will send more mail today.
+>>>
+>>> Miguel: I imagine you documented what you did on google doc?
+>>>
+>>> Thank you all,
+>>>
+>>> francis
+>>>
+>>> --
+>>> B.F. Francis Ouellette          http://oicr.on.ca/person/fran
+>>> cis-ouellette
+>>> <http://redir.aspx/?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es
+>>> <http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>>
+>>> wrote:
+>>>
+>>> Hi again
+>>>
+>>> I've done some more investigating and it turns out that there is a was
+>>> ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for
+>>> mutations that 'PASS' I get
+>>>
+>>> Comparison
+>>> ----------
+>>> Total original (dkfz): 16090
+>>> Total this: 16088
+>>>
+>>>
+>>>
+>>>
+>>> *Common: 16088 Missing: 2. Example: 10:86361665:T, 3:168842417:G Extra:
+>>> 0. Example: *
+>>> Not a perfect match, but very close!!!!
+>>>
+>>> Best
+>>>
+>>> Miguel
+>>>
+>>>
+>>> On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es
+>>> <http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>
+>>> > wrote:
+>>>
+>>>> Dear Francis and friends,
+>>>>
+>>>> Given that Francis was eager to see some inital estimates on how well
+>>>> the testing where in terms of overlap I have made some advances. Let me
+>>>> show you some of my initial results.
+>>>>
+>>>> For sample DO50311 with the pipeline from DKFZ (using Delly first to
+>>>> produce the BEDPE file) I get the following result:
+>>>>
+>>>>
+>>>>> *Comparison ----------*
+>>>>> Total original (dkfz): 16090
+>>>>> Total this: 51087
+>>>>> *Common: 16090*
+>>>>> *Missing: 0*. Example:
+>>>>> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+>>>>>
+>>>>>
+>>>> Whit means that in the original VCF there are 16K mutations, all of
+>>>> them are found in our new VCF (this), however our new file contains 35K
+>>>> extra mutations. Listed are some examples of extra mutations, going back to
+>>>> our VCF here is a sample line
+>>>>
+>>>> #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+>>>> CONTROL TUMOR
+>>>> 1       725971  .       G       T       .
+>>>> RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57
+>>>> GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+>>>>
+>>>> I take it this is a good result. Finding all the reported mutations is
+>>>> a great sign I think, and the extra mutations must be a filtering step that
+>>>> we need to account for. *I hope someone can point out from the VCF
+>>>> line above what is it that I need to use for the filtering.*
+>>>>
+>>>> The *VCF files I took from a file I have named
+>>>> 'preliminary_final_release.snvs.tgz' from May 30* that contains VCF
+>>>> file with the merged results from all callers. I simply subset the lines
+>>>> for each caller, in this case dkfz. Also the files are listed by aliquote
+>>>> so I have to translate the donor to aliquote ID. I've script this quickly
+>>>> using my Rbbt framework but I'll rewrite it all in bash and add it to my
+>>>> repo of testing scripts at https://github.com/mikisvaz/PC
+>>>> AWG-Docker-Test
+>>>> <http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>>>>
+>>>> Summary of my progress
+>>>> -----------------------------------
+>>>>
+>>>> - Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+>>>> integrated; missing data-preparation step), Broad (??)
+>>>> - Donor integration: GNOS (works), IGCG (works)
+>>>> - Comparison: DKFZ (missing filtering?), rest (waiting)
+>>>>
+>>>> I have everything scripted so I can iterate a list of donors and
+>>>> download the data, run pipelines, erase data, compare results.
+>>>>
+>>>> Missing things on my ToDo list
+>>>> -------------------------------------------
+>>>>
+>>>> - Integrate BWM-Mem by incorporating the initial step to de-align the
+>>>> BAM files
+>>>> - Find a programmatic way to access the bundle-id files for each donor
+>>>> from ICGC data portal, righ now I have to go to the web page
+>>>> - Add filtering step to DKFZ and other pipelines as they become usable.
+>>>> - Change the scripting of the comparison to bash and add it to
+>>>> https://github.com/mikisvaz/PCAWG-Docker-Test
+>>>> <http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>>>>
+>>>> Best regards to all
+>>>>
+>>>> Miguel
+>>>>
+>>>>
+>>>>
+>>>> On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca
+>>>> <http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>
+>>>> > wrote:
+>>>>
+>>>>>
+>>>>> Anybody else on our poll for next call?
+>>>>> Looks like Friday at 11:00. I will close poll later today.
+>>>>>
+>>>>>
+>>>>> @bffo
+>>>>>
+>>>>>
+>>>>>
+>>>>> <Screenshot 2016-11-08 09.38.56.png>
+>>>>>
+>>>>>
+>>>>>
+>>>>> _______________________________________________
+>>>>> docktesters mailing list
+>>>>> docktesters at lists.icgc.org
+>>>>> <http://redir.aspx/?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+>>>>> https://lists.icgc.org/mailman/listinfo/docktesters
+>>>>> <http://redir.aspx/?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+>>>>>
+>>>>>
+>>>>
+>>>
+>>>
+>>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/e24c3b61/attachment-0001.html>
+
+From Christina.Yung at oicr.on.ca  Mon Nov 21 08:50:47 2016
+From: Christina.Yung at oicr.on.ca (Christina Yung)
+Date: Mon, 21 Nov 2016 13:50:47 +0000
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <CA+dx8maXPBqc3M9GThUbUKo-bh932_irNqg5offu3xbmuTJZug@mail.gmail.com>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+ <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+ <CA+dx8maXPBqc3M9GThUbUKo-bh932_irNqg5offu3xbmuTJZug@mail.gmail.com>
+Message-ID: <0F84ED6166CE664E8563B61CB2ECB98CCBB14782@exmb2.ad.oicr.on.ca>
+
+Hi Miguel,
+
+For all of these pipelines, I suggest comparing to their original outputs from the production runs.  You can find the GNOS info to download the BAMs and VCFs in this spreadsheet:
+http://pancancer.info/data_releases/may2016/release_may2016.v1.4.tsv
+
+The VCFs are from individual pipelines before any merging and filtering.  A subset of BAMs and VCFs are also on AWS (US-West).  Let me know if that?s your work environment, and I?ll point you to downloading from S3.
+
+Thanks,
+Christina
+
+From: docktesters-bounces+christina.yung=oicr.on.ca at lists.icgc.org [mailto:docktesters-bounces+christina.yung=oicr.on.ca at lists.icgc.org] On Behalf Of Miguel Vazquez
+Sent: Monday, November 21, 2016 8:43 AM
+To: Francis Ouellette
+Cc: docktesters at lists.icgc.org
+Subject: Re: [DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+
+Hi all,
+I have a question regarding the comparison with the official VCF for the BWA-Mem pipeline. I the VCF files I'm working with the callers are: broad, dkfz, sanger and muse. Which one corresponds to the BWA-Mem, if none, with what should I compare?
+Best
+M
+
+On Mon, Nov 21, 2016 at 1:31 PM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+Miguel,
+
+I?ve updated the wiki with your results, and added another link (on the same page)
+to the google doc, where you describe what you did get USeq to work.
+
+To all:
+
+Christina has commented in an e-mail that we had what we needed to test
+pcawg-bwa-mem-workflow pipeline, as well the pcawg-sanger-cgp-workflow
+pieline.
+
+Adam/Alex: Any advances in either of these fronts?
+
+Talk to some of you in 90 min.
+
+@bffo
+
+
+From: Christina Yung <Christina.Yung at oicr.on.ca<mailto:Christina.Yung at oicr.on.ca>>
+
+Thank you, Miguel.  These results are very encouraging.  I just have a suggestion: since we?re comparing strictly the outputs of the DKFZ/EMBL pipeline, we should compare the pre-filtered results, i.e.. ~51K calls.  We?ll later compare if the filtering steps give similar results as well when the dockers become ready.
+
+For testing BWA-Mem, Keiran has documented the steps to convert aligned BAM to unaligned:
+https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload
+
+For Sanger docker, I believe Denis has tested the new version and reported that the problem is fixed.
+
+
+
+
+On Nov 21, 2016, at 04:07, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Thanks Denis, I'm trying it out now
+
+On Fri, Nov 18, 2016 at 7:18 PM, Denis Yuen <Denis.Yuen at oicr.on.ca<mailto:Denis.Yuen at oicr.on.ca>> wrote:
+Hi,
+
+Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-sanger-cgp-workflow<https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow> and it should work on DO50311
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:oicr.on.ca at lists.icgc.org> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org<mailto:oicr.on.ca at lists.icgc.org>] on behalf of Miguel Vazquez [miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>]
+Sent: November 18, 2016 10:06 AM
+To: Francis Ouellette
+Cc: docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>; Alysha Moncrieffe
+Subject: Re: [DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+I've added a description on the google doc. Next week I'll try to put it properly into my scripts so I can run a bunch of these.
+What is the status of the Sanger pipeline, is it fixed already?
+
+On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca<http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Great,
+
+Thank you Miguel!  I would call this one a success!
+
+I think we need two such success for each pipeline.
+
+I will update table with this one.
+
+Let?s get it done for the others. I will send more mail today.
+
+Miguel: I imagine you documented what you did on google doc?
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette<http://redir.aspx/?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+
+
+
+
+
+
+
+On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es<http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+
+Hi again
+
+I've done some more investigating and it turns out that there is a was ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for mutations that 'PASS' I get
+
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 16088
+Common: 16088
+Missing: 2. Example: 10:86361665:T, 3:168842417:G
+Extra: 0. Example:
+Not a perfect match, but very close!!!!
+Best
+Miguel
+
+
+On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es<http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>> wrote:
+Dear Francis and friends,
+Given that Francis was eager to see some inital estimates on how well the testing where in terms of overlap I have made some advances. Let me show you some of my initial results.
+For sample DO50311 with the pipeline from DKFZ (using Delly first to produce the BEDPE file) I get the following result:
+Comparison
+----------
+Total original (dkfz): 16090
+Total this: 51087
+Common: 16090
+Missing: 0. Example:
+Extra: 34997. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+
+Whit means that in the original VCF there are 16K mutations, all of them are found in our new VCF (this), however our new file contains 35K extra mutations. Listed are some examples of extra mutations, going back to our VCF here is a sample line
+
+#CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT  CONTROL TUMOR
+1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+I take it this is a good result. Finding all the reported mutations is a great sign I think, and the extra mutations must be a filtering step that we need to account for. I hope someone can point out from the VCF line above what is it that I need to use for the filtering.
+The VCF files I took from a file I have named 'preliminary_final_release.snvs.tgz' from May 30 that contains VCF file with the merged results from all callers. I simply subset the lines for each caller, in this case dkfz. Also the files are listed by aliquote so I have to translate the donor to aliquote ID. I've script this quickly using my Rbbt framework but I'll rewrite it all in bash and add it to my repo of testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test<http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+Summary of my progress
+-----------------------------------
+
+- Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not integrated; missing data-preparation step), Broad (??)
+- Donor integration: GNOS (works), IGCG (works)
+- Comparison: DKFZ (missing filtering?), rest (waiting)
+I have everything scripted so I can iterate a list of donors and download the data, run pipelines, erase data, compare results.
+
+Missing things on my ToDo list
+-------------------------------------------
+- Integrate BWM-Mem by incorporating the initial step to de-align the BAM files
+- Find a programmatic way to access the bundle-id files for each donor from ICGC data portal, righ now I have to go to the web page
+- Add filtering step to DKFZ and other pipelines as they become usable.
+- Change the scripting of the comparison to bash and add it to https://github.com/mikisvaz/PCAWG-Docker-Test<http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+
+Best regards to all
+Miguel
+
+
+
+On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca<http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>> wrote:
+
+Anybody else on our poll for next call?
+Looks like Friday at 11:00. I will close poll later today.
+
+
+@bffo
+
+
+
+<Screenshot 2016-11-08 09.38.56.png>
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<http://redir.aspx/?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+https://lists.icgc.org/mailman/listinfo/docktesters<http://redir.aspx/?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/a1c921fb/attachment-0001.html>
+
+From miguel.vazquez at cnio.es  Mon Nov 21 09:34:06 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Mon, 21 Nov 2016 15:34:06 +0100
+Subject: [DOCKTESTERS] Preliminary results for overlap between testing
+ and original VCF
+In-Reply-To: <0F84ED6166CE664E8563B61CB2ECB98CCBB14782@exmb2.ad.oicr.on.ca>
+References: <CA+dx8mZR8BJw6O57bOKi3qFi5r0Lxn7NLFrJGpzh3YXp3FRO-w@mail.gmail.com>
+ <CA+dx8mYxybgaGS4OVRwJ1+_n0fN-BrjtFPgWPbOxAT91zspGLA@mail.gmail.com>
+ <2DE4C9DE-64A4-40D2-81EC-D2D755737E0B@oicr.on.ca>
+ <CA+dx8mZAv4Wpt-=TxQjvXCOdLSz3+1LZuc6_AT3JxfGYmEAqjg@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A402E@exmb2.ad.oicr.on.ca>
+ <CA+dx8mYt2d2vzkMAwq-2c4-hvXPsc5nRCYEsZ=tscksMB8DHdw@mail.gmail.com>
+ <4D04C9B9-76D1-4F4D-9A29-88449AF11F5B@oicr.on.ca>
+ <CA+dx8maXPBqc3M9GThUbUKo-bh932_irNqg5offu3xbmuTJZug@mail.gmail.com>
+ <0F84ED6166CE664E8563B61CB2ECB98CCBB14782@exmb2.ad.oicr.on.ca>
+Message-ID: <CA+dx8mZUXjqUF6PMpVeUtxX4Nqw-C4bEQpaej7FHZmMBZ7OWbw@mail.gmail.com>
+
+Hi Christina,
+
+I've done a quick test downloading the VCF file from GNOS and it appears we
+have a *100% overlap* between when considering all variants. I'll update my
+code to use the GNOS VCFs and no filtering from now on.
+
+Best
+
+M
+
+On Mon, Nov 21, 2016 at 2:50 PM, Christina Yung <Christina.Yung at oicr.on.ca>
+wrote:
+
+> Hi Miguel,
+>
+>
+>
+> For all of these pipelines, I suggest comparing to their original outputs
+> from the production runs.  You can find the GNOS info to download the BAMs
+> and VCFs in this spreadsheet:
+>
+> http://pancancer.info/data_releases/may2016/release_may2016.v1.4.tsv
+>
+>
+>
+> The VCFs are from individual pipelines before any merging and filtering.
+> A subset of BAMs and VCFs are also on AWS (US-West).  Let me know if that?s
+> your work environment, and I?ll point you to downloading from S3.
+>
+>
+>
+> Thanks,
+>
+> Christina
+>
+>
+>
+> *From:* docktesters-bounces+christina.yung=oicr.on.ca at lists.icgc.org
+> [mailto:docktesters-bounces+christina.yung=oicr.on.ca at lists.icgc.org] *On
+> Behalf Of *Miguel Vazquez
+> *Sent:* Monday, November 21, 2016 8:43 AM
+> *To:* Francis Ouellette
+> *Cc:* docktesters at lists.icgc.org
+> *Subject:* Re: [DOCKTESTERS] Preliminary results for overlap between
+> testing and original VCF
+>
+>
+>
+> Hi all,
+>
+> I have a question regarding the comparison with the official VCF for the
+> BWA-Mem pipeline. I the VCF files I'm working with the callers are: broad,
+> dkfz, sanger and muse. Which one corresponds to the BWA-Mem, if none, with
+> what should I compare?
+>
+> Best
+>
+> M
+>
+>
+>
+> On Mon, Nov 21, 2016 at 1:31 PM, Francis Ouellette <francis at oicr.on.ca>
+> wrote:
+>
+> Miguel,
+>
+>
+>
+> I?ve updated the wiki with your results, and added another link (on the
+> same page)
+>
+> to the google doc, where you describe what you did get USeq to work.
+>
+>
+>
+> To all:
+>
+>
+>
+> Christina has commented in an e-mail that we had what we needed to test
+>
+> pcawg-bwa-mem-workflow pipeline, as well the pcawg-sanger-cgp-workflow
+>
+> pieline.
+>
+>
+>
+> Adam/Alex: Any advances in either of these fronts?
+>
+>
+>
+> Talk to some of you in 90 min.
+>
+>
+>
+> @bffo
+>
+>
+>
+>
+>
+> *From: *Christina Yung <Christina.Yung at oicr.on.ca>
+>
+>
+>
+> Thank you, Miguel.  These results are very encouraging.  I just have a
+> suggestion: since we?re comparing strictly the outputs of the DKFZ/EMBL
+> pipeline, we should compare the pre-filtered results, i.e.. ~51K calls.
+> We?ll later compare if the filtering steps give similar results as well
+> when the dockers become ready.
+>
+>
+>
+> For testing BWA-Mem, Keiran has documented the steps to convert aligned
+> BAM to unaligned:
+>
+> https://wiki.oicr.on.ca/display/PANCANCER/Preparing+
+> paired-end+data+for+upload
+>
+>
+>
+> For Sanger docker, I believe Denis has tested the new version and reported
+> that the problem is fixed.
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> On Nov 21, 2016, at 04:07, Miguel Vazquez <miguel.vazquez at cnio.es> wrote:
+>
+>
+>
+> Thanks Denis, I'm trying it out now
+>
+>
+>
+> On Fri, Nov 18, 2016 at 7:18 PM, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+>
+> Hi,
+>
+> Yes, you're going to want version 2.0.2 of quay.io/pancancer/pcawg-
+> sanger-cgp-workflow
+> <https://dockstore.org/containers/quay.io/pancancer/pcawg-sanger-cgp-workflow>
+> and it should work on DO50311
+>
+>
+> ------------------------------
+>
+> *From:* docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org
+> [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of
+> Miguel Vazquez [miguel.vazquez at cnio.es]
+> *Sent:* November 18, 2016 10:06 AM
+> *To:* Francis Ouellette
+> *Cc:* docktesters at lists.icgc.org; Alysha Moncrieffe
+> *Subject:* Re: [DOCKTESTERS] Preliminary results for overlap between
+> testing and original VCF
+>
+> I've added a description on the google doc. Next week I'll try to put it
+> properly into my scripts so I can run a bunch of these.
+>
+> What is the status of the Sanger pipeline, is it fixed already?
+>
+>
+>
+> On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette <francis at oicr.on.ca
+> <http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>>
+> wrote:
+>
+>
+>
+> Great,
+>
+>
+>
+> Thank you Miguel!  I would call this one a success!
+>
+>
+>
+> I think we need two such success for each pipeline.
+>
+>
+>
+> I will update table with this one.
+>
+>
+>
+> Let?s get it done for the others. I will send more mail today.
+>
+>
+>
+> Miguel: I imagine you documented what you did on google doc?
+>
+>
+>
+> Thank you all,
+>
+>
+>
+> francis
+>
+>
+>
+> --
+> B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+> <http://redir.aspx/?REF=0UreupwcTkKW9dPdcAcOZSwr1PCoFogk1pc5rUxKyqwp6Vk83w_UCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> On Nov 18, 2016, at 8:48 AM, Miguel Vazquez <miguel.vazquez at cnio.es
+> <http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>>
+> wrote:
+>
+>
+>
+> Hi again
+>
+>
+> I've done some more investigating and it turns out that there is a was
+> ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for
+> mutations that 'PASS' I get
+>
+> Comparison
+> ----------
+> Total original (dkfz): 16090
+> Total this: 16088
+>
+>
+> *Common: 16088 Missing: 2. Example: 10:86361665:T, 3:168842417:G Extra: 0.
+> Example: *
+>
+> Not a perfect match, but very close!!!!
+>
+> Best
+>
+> Miguel
+>
+>
+>
+>
+>
+> On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es
+> <http://redir.aspx/?REF=Kweh6Zrv2yLYJ6d-A3noRb40KYzhiBDYyhrAJFBs39wp6Vk83w_UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..>>
+> wrote:
+>
+> Dear Francis and friends,
+>
+> Given that Francis was eager to see some inital estimates on how well the
+> testing where in terms of overlap I have made some advances. Let me show
+> you some of my initial results.
+>
+> For sample DO50311 with the pipeline from DKFZ (using Delly first to
+> produce the BEDPE file) I get the following result:
+>
+>
+> *Comparison ----------*
+> Total original (dkfz): 16090
+> Total this: 51087
+> *Common: 16090*
+> *Missing: 0*. Example:
+> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+>
+>
+>
+> Whit means that in the original VCF there are 16K mutations, all of them
+> are found in our new VCF (this), however our new file contains 35K extra
+> mutations. Listed are some examples of extra mutations, going back to our
+> VCF here is a sample line
+>
+> #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+> CONTROL TUMOR
+> 1       725971  .       G       T       .       RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF
+> SOMATIC;SNP;AF=0.02,0.03;MQ=57  GT:DP:DP4       0/0:115:60,53,2,0
+> 0/0:114:49,62,0,3
+>
+> I take it this is a good result. Finding all the reported mutations is a
+> great sign I think, and the extra mutations must be a filtering step that
+> we need to account for. *I hope someone can point out from the VCF line
+> above what is it that I need to use for the filtering.*
+>
+> The *VCF files I took from a file I have named
+> 'preliminary_final_release.snvs.tgz' from May 30* that contains VCF file
+> with the merged results from all callers. I simply subset the lines for
+> each caller, in this case dkfz. Also the files are listed by aliquote so I
+> have to translate the donor to aliquote ID. I've script this quickly using
+> my Rbbt framework but I'll rewrite it all in bash and add it to my repo of
+> testing scripts at https://github.com/mikisvaz/PCAWG-Docker-Test
+> <http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>
+> Summary of my progress
+> -----------------------------------
+>
+>
+>
+> - Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+> integrated; missing data-preparation step), Broad (??)
+>
+> - Donor integration: GNOS (works), IGCG (works)
+>
+> - Comparison: DKFZ (missing filtering?), rest (waiting)
+>
+> I have everything scripted so I can iterate a list of donors and download
+> the data, run pipelines, erase data, compare results.
+>
+>
+>
+> Missing things on my ToDo list
+> -------------------------------------------
+>
+> - Integrate BWM-Mem by incorporating the initial step to de-align the BAM
+> files
+>
+> - Find a programmatic way to access the bundle-id files for each donor
+> from ICGC data portal, righ now I have to go to the web page
+>
+> - Add filtering step to DKFZ and other pipelines as they become usable.
+>
+> - Change the scripting of the comparison to bash and add it to
+> https://github.com/mikisvaz/PCAWG-Docker-Test
+> <http://redir.aspx/?REF=ifG4GCk_l3pNcH7e3HJrfA0cM0Gm2sNaFyX98swizIYp6Vk83w_UCAFodHRwczovL2dpdGh1Yi5jb20vbWlraXN2YXovUENBV0ctRG9ja2VyLVRlc3Q.>
+>
+>
+>
+> Best regards to all
+>
+> Miguel
+>
+>
+>
+>
+>
+>
+>
+> On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette <francis at oicr.on.ca
+> <http://redir.aspx/?REF=WSDmaoJ3jmz2tDPVny13duJ4BUlEbh_-y7ecNxPVyIIp6Vk83w_UCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh>>
+> wrote:
+>
+>
+>
+> Anybody else on our poll for next call?
+>
+> Looks like Friday at 11:00. I will close poll later today.
+>
+>
+>
+>
+>
+> @bffo
+>
+>
+>
+>
+>
+>
+>
+> <Screenshot 2016-11-08 09.38.56.png>
+>
+>
+>
+>
+>
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> <http://redir.aspx/?REF=KK_VOfU2uNcbODGU4Lfr1y3ZGPez4FjPXh7X_ZQ_MS8p6Vk83w_UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.>
+> https://lists.icgc.org/mailman/listinfo/docktesters
+> <http://redir.aspx/?REF=u-2uNMcWMGwMjsNB2mWtIgvNoHHVJeMtFa2HY-To8sAp6Vk83w_UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161121/13c2fe10/attachment-0001.html>
+
+From francis at oicr.on.ca  Mon Nov 28 10:33:08 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 28 Nov 2016 15:33:08 +0000
+Subject: [DOCKTESTERS] docker testing WG update
+Message-ID: <E128C010-CE64-4BC0-B72C-6FEFF74C95A5@oicr.on.ca>
+
+
+Dear all,
+
+This past week has been somewhat quiet on the docktesters mailing list, although
+I understand from the PCAWG-tech conference call today that a number of things
+are happening in the background.
+
+Minutes/updates from today?s PCAWG-tech call are here: https://goo.gl/R0L6nN
+
+This e-mail is to provide spme specific updates from those of you not on the call today
+but of relevance to dockstore testing WG (and I invite those who were on the call to
+correct anything I have wrong, or which could use more details).
+
+
+  1.  (from Junjun & Denis): Some reference files which are now hosted on the dcc.icgc.org<http://dcc.icgc.org> portal were moved, and those docker containers that use these (human reference sequence) will need to be retested (I think this is all of the ones we have done to date!).
+  2.  (From Denis): There is an issue for people who use docker on a shared instance with multiple users, and use the ?sudo? command (e.g. the BWA-mem, Sanger and DKFZ pipelines), and for this a fix has been put in, and a new dockstore will be (has been?) deployed. Retesting will be necessary.
+  3.  The Broad (Gordon Saksena <gsaksena at broadinstitute.org<mailto:gsaksena at broadinstitute.org>>, who is on this mailman list) is asking for help to test some not quite yet deployed containers. Those of you who want to help (OHSU was mentioned :), probably best to contact Gordon directly, and CC list, to see what is needed to get this testing started. Denis made the good suggestion to have ?test data? available asap to help expedite the testing process.
+
+All: from: https://wiki.oicr.on.ca/pages/editpage.action?pageId=66309629
+
+I added a request to include time-stamps of when testing was done, so we know which dockstore was used, and that the right testing was done.
+
+[cid:A2252A3F-7328-495B-91BE-6EB69D8222AC at oicr.on.ca]
+
+I would also like to encourage all of you to get to pick one container this week, and test one workflow before next Friday (Dec 2).
+
+If you want me to assign a specific pipeline to you, please let me know.
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161128/da0cd9f0/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2016-11-28 10.25.40 copy.png
+Type: image/png
+Size: 78031 bytes
+Desc: Screenshot 2016-11-28 10.25.40 copy.png
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161128/da0cd9f0/attachment-0001.png>
+
+From Denis.Yuen at oicr.on.ca  Mon Nov 28 10:48:22 2016
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Mon, 28 Nov 2016 15:48:22 +0000
+Subject: [DOCKTESTERS] docker testing WG update
+In-Reply-To: <E128C010-CE64-4BC0-B72C-6FEFF74C95A5@oicr.on.ca>
+References: <E128C010-CE64-4BC0-B72C-6FEFF74C95A5@oicr.on.ca>
+Message-ID: <27512884B2D81B41AAB7BB266248F240C09A47BB@exmb2.ad.oicr.on.ca>
+
+Hi,
+I just wanted to clarify a few things which should actually make things a bit easier.
+
+1) Some reference data is about to be moved (has not been moved yet). When this occurs, I'll upload new test json and let this group know on a tool-by-tool basis.
+In order to use the new site for reference data, if you're launching using the Dockstore CLI, you will need to update to 1.1 (already in production).
+
+2) To expand on the sudo issue, the fix actually occurs inside the docker image for each CWL tool.
+I'm hoping to time my work so that I can release a gosu+new reference data update for each tool that is affected at the same time so that we kill two birds with one stone.
+Contact me if you think you are writing a docker image that is affected (you will be affected if you use sudo or if you use the "USER" instruction in a Dockerfile).
+
+
+Thanks!
+
+
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca<http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org [docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org] on behalf of Francis Ouellette [francis at oicr.on.ca]
+Sent: November 28, 2016 10:33 AM
+To: docktesters at lists.icgc.org
+Subject: [DOCKTESTERS] docker testing WG update
+
+
+Dear all,
+
+This past week has been somewhat quiet on the docktesters mailing list, although
+I understand from the PCAWG-tech conference call today that a number of things
+are happening in the background.
+
+Minutes/updates from today?s PCAWG-tech call are here: https://goo.gl/R0L6nN<redir.aspx?REF=9QXpWySocykQJqkoLU2KBe86pW9MjufmbeKzomQf9wVLsSKjpBfUCAFodHRwczovL2dvby5nbC9SMEw2bk4.>
+
+This e-mail is to provide spme specific updates from those of you not on the call today
+but of relevance to dockstore testing WG (and I invite those who were on the call to
+correct anything I have wrong, or which could use more details).
+
+
+  1.  (from Junjun & Denis): Some reference files which are now hosted on the dcc.icgc.org<redir.aspx?REF=2wVIfnaVEmEa9C4cUJEqKYFoNDMocy0dg7EbEVUqk8KlEyWjpBfUCAFodHRwOi8vZGNjLmljZ2Mub3Jn> portal were moved, and those docker containers that use these (human reference sequence) will need to be retested (I think this is all of the ones we have done to date!).
+  2.  (From Denis): There is an issue for people who use docker on a shared instance with multiple users, and use the ?sudo? command (e.g. the BWA-mem, Sanger and DKFZ pipelines), and for this a fix has been put in, and a new dockstore will be (has been?) deployed. Retesting will be necessary.
+  3.  The Broad (Gordon Saksena <gsaksena at broadinstitute.org<redir.aspx?REF=Qj1LthAAC7CL2Elnqv23PbVnVqTVIxgCkHPfb5KLH3mlEyWjpBfUCAFtYWlsdG86Z3Nha3NlbmFAYnJvYWRpbnN0aXR1dGUub3Jn>>, who is on this mailman list) is asking for help to test some not quite yet deployed containers. Those of you who want to help (OHSU was mentioned :), probably best to contact Gordon directly, and CC list, to see what is needed to get this testing started. Denis made the good suggestion to have ?test data? available asap to help expedite the testing process.
+
+All: from: https://wiki.oicr.on.ca/pages/editpage.action?pageId=66309629<redir.aspx?REF=XVCTzt_btUDKhLbqqkVNO66FcLZRW0KQGvmLJjSBtpSlEyWjpBfUCAFodHRwczovL3dpa2kub2ljci5vbi5jYS9wYWdlcy9lZGl0cGFnZS5hY3Rpb24_cGFnZUlkPTY2MzA5NjI5>
+
+I added a request to include time-stamps of when testing was done, so we know which dockstore was used, and that the right testing was done.
+
+[cid:A2252A3F-7328-495B-91BE-6EB69D8222AC at oicr.on.ca]
+
+I would also like to encourage all of you to get to pick one container this week, and test one workflow before next Friday (Dec 2).
+
+If you want me to assign a specific pipeline to you, please let me know.
+
+Thank you all,
+
+francis
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette<redir.aspx?REF=1dwl05V0xbRkOi9Sod434RvgzUbByPIThln30cQ4bQmlEyWjpBfUCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.>
+
+
+
+
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161128/9cae84ea/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2016-11-28 10.25.40 copy.png
+Type: image/png
+Size: 78031 bytes
+Desc: Screenshot 2016-11-28 10.25.40 copy.png
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161128/9cae84ea/attachment-0001.png>
+
+From miguel.vazquez at cnio.es  Tue Nov 29 06:06:32 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Tue, 29 Nov 2016 12:06:32 +0100
+Subject: [DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and
+ issue with BWA-Mem
+Message-ID: <CA+dx8mY3AnJhXX=3EbawAosE5rRzgP_GjG9CJL3og-BS8m=B_g@mail.gmail.com>
+
+Hi all,
+
+I just wanted to give a partial update on my side and ask about two issues.
+
+1) I've ran BAW-Mem on the test data HCC1143 and the process has failed,
+should it work for that dataset or is there a reason it shouldn't. About
+unaligning the BAM files I've checked the instructions on
+
+https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=PANCANCER&title=Preparing+paired-end+data+for+upload
+
+
+and I ended up just doing
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY  >
+cleaned.bam
+
+I skipped all the stuff about the SAM header, which I didn't fully
+understood but it seemed like housekeeping stuff that should affect the
+variant calling and didn't quite apply to this test data. Could that be the
+issue?
+
+I tried to run it on a normal donor but it turns out I had first to finish
+the test on Sanger. When I do I can save the container, thanks to Denis tip
+on a previous thread, and help debug it if need be. I'm sorry that I cannot
+give more details on the error but at the time I could not find the log
+files that where supposed to be there; when the next issue is resolved I'll
+come back to this.
+
+2) I'm running Sanger on donor DO50311. I put the job on November 22, about
+a week ago, and it is still running. It seems to be doing caveman for the
+last few days. It going full throttle using 100% of the CPU and with
+running jobs not older than 15 hours, so I guess its not stuck or anything.
+But just in case, is taking this long normal?
+
+Best
+
+Miguel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/1bedb6a9/attachment.html>
+
+From miguel.vazquez at cnio.es  Tue Nov 29 06:08:10 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Tue, 29 Nov 2016 12:08:10 +0100
+Subject: [DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and
+ issue with BWA-Mem
+In-Reply-To: <CA+dx8mY3AnJhXX=3EbawAosE5rRzgP_GjG9CJL3og-BS8m=B_g@mail.gmail.com>
+References: <CA+dx8mY3AnJhXX=3EbawAosE5rRzgP_GjG9CJL3og-BS8m=B_g@mail.gmail.com>
+Message-ID: <CA+dx8mZGveBuYwZeND8FTewP3OZHXvu6KqLuW_QPem2xzUC_7w@mail.gmail.com>
+
+Excuse me,
+
+I meant:
+
+(...)
+I skipped all the stuff about the SAM header, which I didn't fully
+understood but it seemed like housekeeping stuff that *shouldn't* affect
+the variant calling and didn't quite apply to this test data. Could that be
+the issue?
+(...)
+
+On Tue, Nov 29, 2016 at 12:06 PM, Miguel Vazquez <miguel.vazquez at cnio.es>
+wrote:
+
+> Hi all,
+>
+> I just wanted to give a partial update on my side and ask about two
+> issues.
+>
+> 1) I've ran BAW-Mem on the test data HCC1143 and the process has failed,
+> should it work for that dataset or is there a reason it shouldn't. About
+> unaligning the BAM files I've checked the instructions on
+>
+> https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=
+> PANCANCER&title=Preparing+paired-end+data+for+upload
+>
+> and I ended up just doing
+>
+> cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY  >
+> cleaned.bam
+>
+> I skipped all the stuff about the SAM header, which I didn't fully
+> understood but it seemed like housekeeping stuff that should affect the
+> variant calling and didn't quite apply to this test data. Could that be
+> the issue?
+>
+> I tried to run it on a normal donor but it turns out I had first to finish
+> the test on Sanger. When I do I can save the container, thanks to Denis tip
+> on a previous thread, and help debug it if need be. I'm sorry that I cannot
+> give more details on the error but at the time I could not find the log
+> files that where supposed to be there; when the next issue is resolved I'll
+> come back to this.
+>
+> 2) I'm running Sanger on donor DO50311. I put the job on November 22,
+> about a week ago, and it is still running. It seems to be doing caveman for
+> the last few days. It going full throttle using 100% of the CPU and with
+> running jobs not older than 15 hours, so I guess its not stuck or anything.
+> But just in case, is taking this long normal?
+>
+> Best
+>
+> Miguel
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/57ac8184/attachment.html>
+
+From Denis.Yuen at oicr.on.ca  Tue Nov 29 10:27:51 2016
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Tue, 29 Nov 2016 15:27:51 +0000
+Subject: [DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and
+ issue with BWA-Mem
+In-Reply-To: <CA+dx8mY3AnJhXX=3EbawAosE5rRzgP_GjG9CJL3og-BS8m=B_g@mail.gmail.com>
+References: <CA+dx8mY3AnJhXX=3EbawAosE5rRzgP_GjG9CJL3og-BS8m=B_g@mail.gmail.com>
+Message-ID: <27512884B2D81B41AAB7BB266248F240C09A49C4@exmb2.ad.oicr.on.ca>
+
+Hi,
+
+re: bwa-mem on HCC1143
+
+I have not tried that. Unfortunately, according to the table ( https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data ) I believe you're the first.
+
+re: Sanger on DO50311
+Yes, unfortunately it did take a bit over 8 days for me to run that donor on a pretty beefy machine (15 cpu, 125 GB ram).
+
+
+
+________________________________
+From: mikisvaz at gmail.com [mikisvaz at gmail.com] on behalf of Miguel Vazquez [miguel.vazquez at cnio.es]
+Sent: November 29, 2016 6:06 AM
+To: Denis Yuen
+Cc: Francis Ouellette; docktesters at lists.icgc.org
+Subject: [DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+
+Hi all,
+
+I just wanted to give a partial update on my side and ask about two issues.
+
+1) I've ran BAW-Mem on the test data HCC1143 and the process has failed, should it work for that dataset or is there a reason it shouldn't. About unaligning the BAM files I've checked the instructions on
+
+https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=PANCANCER&title=Preparing+paired-end+data+for+upload<redir.aspx?REF=vzZnpHgQUQ-TmnK2WmjdtthDxHvxJtPVpEqrB_qN7UMgNBmdaxjUCAFodHRwczovL3dpa2kub2ljci5vbi5jYS9wYWdlcy92aWV3cGFnZS5hY3Rpb24_c3BhY2VLZXk9UEFOQ0FOQ0VSJnRpdGxlPVByZXBhcmluZytwYWlyZWQtZW5kK2RhdGErZm9yK3VwbG9hZA..>
+
+and I ended up just doing
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY  > cleaned.bam
+
+I skipped all the stuff about the SAM header, which I didn't fully understood but it seemed like housekeeping stuff that should affect the variant calling and didn't quite apply to this test data. Could that be the issue?
+
+I tried to run it on a normal donor but it turns out I had first to finish the test on Sanger. When I do I can save the container, thanks to Denis tip on a previous thread, and help debug it if need be. I'm sorry that I cannot give more details on the error but at the time I could not find the log files that where supposed to be there; when the next issue is resolved I'll come back to this.
+
+2) I'm running Sanger on donor DO50311. I put the job on November 22, about a week ago, and it is still running. It seems to be doing caveman for the last few days. It going full throttle using 100% of the CPU and with running jobs not older than 15 hours, so I guess its not stuck or anything. But just in case, is taking this long normal?
+
+Best
+
+Miguel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/c1b3017b/attachment.html>
+
+From miguel.vazquez at cnio.es  Tue Nov 29 10:46:12 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Tue, 29 Nov 2016 16:46:12 +0100
+Subject: [DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and
+ issue with BWA-Mem
+In-Reply-To: <27512884B2D81B41AAB7BB266248F240C09A49C4@exmb2.ad.oicr.on.ca>
+References: <CA+dx8mY3AnJhXX=3EbawAosE5rRzgP_GjG9CJL3og-BS8m=B_g@mail.gmail.com>
+ <27512884B2D81B41AAB7BB266248F240C09A49C4@exmb2.ad.oicr.on.ca>
+Message-ID: <CA+dx8mar8VGsJvyvV33jYrYKdr0B5fPAvC4VYYS8-B226tX4Tw@mail.gmail.com>
+
+Thanks Denis.
+
+
+On Tue, Nov 29, 2016 at 4:27 PM, Denis Yuen <Denis.Yuen at oicr.on.ca> wrote:
+
+> Hi,
+>
+> re: bwa-mem on HCC1143
+>
+> I have not tried that. Unfortunately, according to the table (
+> https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data ) I
+> believe you're the first.
+>
+> re: Sanger on DO50311
+> Yes, unfortunately it did take a bit over 8 days for me to run that donor
+> on a pretty beefy machine (15 cpu, 125 GB ram).
+>
+>
+>
+> ------------------------------
+> *From:* mikisvaz at gmail.com [mikisvaz at gmail.com] on behalf of Miguel
+> Vazquez [miguel.vazquez at cnio.es]
+> *Sent:* November 29, 2016 6:06 AM
+> *To:* Denis Yuen
+> *Cc:* Francis Ouellette; docktesters at lists.icgc.org
+> *Subject:* [DOCKTESTERS] Sanger pipeline taking a very long on DO50311
+> and issue with BWA-Mem
+>
+> Hi all,
+>
+> I just wanted to give a partial update on my side and ask about two
+> issues.
+>
+> 1) I've ran BAW-Mem on the test data HCC1143 and the process has failed,
+> should it work for that dataset or is there a reason it shouldn't. About
+> unaligning the BAM files I've checked the instructions on
+>
+> https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=
+> PANCANCER&title=Preparing+paired-end+data+for+upload
+> <http://redir.aspx?REF=vzZnpHgQUQ-TmnK2WmjdtthDxHvxJtPVpEqrB_qN7UMgNBmdaxjUCAFodHRwczovL3dpa2kub2ljci5vbi5jYS9wYWdlcy92aWV3cGFnZS5hY3Rpb24_c3BhY2VLZXk9UEFOQ0FOQ0VSJnRpdGxlPVByZXBhcmluZytwYWlyZWQtZW5kK2RhdGErZm9yK3VwbG9hZA..>
+>
+>
+> and I ended up just doing
+>
+> cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY  >
+> cleaned.bam
+>
+> I skipped all the stuff about the SAM header, which I didn't fully
+> understood but it seemed like housekeeping stuff that should affect the
+> variant calling and didn't quite apply to this test data. Could that be
+> the issue?
+>
+> I tried to run it on a normal donor but it turns out I had first to finish
+> the test on Sanger. When I do I can save the container, thanks to Denis tip
+> on a previous thread, and help debug it if need be. I'm sorry that I cannot
+> give more details on the error but at the time I could not find the log
+> files that where supposed to be there; when the next issue is resolved I'll
+> come back to this.
+>
+> 2) I'm running Sanger on donor DO50311. I put the job on November 22,
+> about a week ago, and it is still running. It seems to be doing caveman for
+> the last few days. It going full throttle using 100% of the CPU and with
+> running jobs not older than 15 hours, so I guess its not stuck or anything.
+> But just in case, is taking this long normal?
+>
+> Best
+>
+> Miguel
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/983d52d6/attachment-0001.html>
+

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] BWA-Mem update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20update&In-Reply-To=%3CD4F85302.1A46B%25george.mihaiescu%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000276.html">
+   <LINK REL="Next"  HREF="000278.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] BWA-Mem update</H1>
+    <B>George Mihaiescu</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20update&In-Reply-To=%3CD4F85302.1A46B%25george.mihaiescu%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] BWA-Mem update">George.Mihaiescu at oicr.on.ca
+       </A><BR>
+    <I>Wed Mar 22 16:18:17 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000276.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+        <LI>Next message: <A HREF="000278.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#277">[ date ]</a>
+              <a href="thread.html#277">[ thread ]</a>
+              <a href="subject.html#277">[ subject ]</a>
+              <a href="author.html#277">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I finished one of the dockerized Sanger tests and upon verification there were just a few differences, but I'm not sure if they are normal or not.
+
+Results:
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">root at dockstore-test3</A>:~/PCAWG-Docker-Test# bin/compare_result.sh Sanger DO50398
+
+var/spool/cwl/0/caveman/
+
+var/spool/cwl/0/caveman/splitList
+
+var/spool/cwl/0/caveman/7f94d650-41b9-4664-bcde-dc8533e4602d_vs_69586c55-6f81-4728-8a82-bd97bceafaaa.muts.ids.vcf.gz
+
+var/spool/cwl/0/caveman/alg_bean
+
+var/spool/cwl/0/caveman/prob_arr
+
+var/spool/cwl/0/caveman/7f94d650-41b9-4664-bcde-dc8533e4602d_vs_69586c55-6f81-4728-8a82-bd97bceafaaa.snps.ids.vcf.gz.tbi
+
+var/spool/cwl/0/caveman/7f94d650-41b9-4664-bcde-dc8533e4602d_vs_69586c55-6f81-4728-8a82-bd97bceafaaa.no_analysis.bed
+
+var/spool/cwl/0/caveman/7f94d650-41b9-4664-bcde-dc8533e4602d_vs_69586c55-6f81-4728-8a82-bd97bceafaaa.snps.ids.vcf.gz
+
+var/spool/cwl/0/caveman/7f94d650-41b9-4664-bcde-dc8533e4602d_vs_69586c55-6f81-4728-8a82-bd97bceafaaa.flagged.muts.vcf.gz
+
+var/spool/cwl/0/caveman/7f94d650-41b9-4664-bcde-dc8533e4602d_vs_69586c55-6f81-4728-8a82-bd97bceafaaa.muts.ids.vcf.gz.tbi
+
+var/spool/cwl/0/caveman/cov_arr
+
+var/spool/cwl/0/caveman/7f94d650-41b9-4664-bcde-dc8533e4602d_vs_69586c55-6f81-4728-8a82-bd97bceafaaa.flagged.muts.vcf.gz.tbi
+
+var/spool/cwl/0/caveman/caveman.cfg.ini
+
+Comparison for DO50398 using Sanger
+
+---
+
+Common: 171325
+
+Extra: 3
+
+    - Example: 14:20031258:G,8:43827158:A,X:61711363:C
+
+Missing: 13
+
+    - Example: 10:106963148:T,17:64794691:G,1:82709263:T
+
+
+
+Because I'm a infrastructure architect my main reason for the test was to monitor resource utilization, so I wrote a wiki detailing my observations:
+
+<A HREF="https://wiki.oicr.on.ca/display/~gmihaiescu/Dockerized+Sanger+workflow">https://wiki.oicr.on.ca/display/~gmihaiescu/Dockerized+Sanger+workflow</A>
+
+I have there more Docker tests running, two of them run Sanger against the same donor (but using Vms with 8 cores because I want to see if the run time and resource utilization are constant), and a third test that is running DKFZ.
+
+Cheers,
+George
+
+From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;&gt;
+Date: Wednesday, March 22, 2017 at 1:08 PM
+To: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;
+Cc: Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt;&gt;, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt;, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] BWA-Mem update
+
+Thanks Jonas for this information.
+
+I hope that someone here can provide us with some suggestion on what to try next. Perhaps the version issue that Jonas point out is the key.
+
+I just want to add that, as I told Jonas earlier, my own tests using the new split BAM files also gave 3% mismatches.
+
+Best regards
+
+Miguel
+
+On Wed, Mar 22, 2017 at 6:56 PM, Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt; wrote:
+Hi all,
+
+A brief update on the BWA-Mem docker tests.
+I prepared normal + tumor lane-level unaligned bams for DO503011 and ran the BWA-Mem workflow for normal and tumor seperately.
+Doing the comparison however, I am still getting 3% of reads that are aligned differently (see below for a few examples).
+However, when checking the headers of the original and newly mapped bam files (attached) I noticed that the original is mapped using a different version of BWA and SeqWare.
+I&#8217;m hoping the mapping differences can be ascribed to this.
+
+Is there a list available somewhere detailing which samples were mapped using which versions?
+That way we could select a relevant test sample without having to sort through the headers of all different bams.
+
+Best wishes,
+Jonas
+
+
+
+
+
+newly aligned:
+
+IDflagchrpos
+HS2000-1012_275:7:1101:17411:15403993112743126
+HS2000-1012_275:7:1101:17411:154031473112743376
+HS2000-1012_275:7:1101:11883:83640991628672999
+HS2000-1012_275:7:1101:11883:836401471628673223
+HS2000-1012_275:7:1101:16576:28476163GL000238.121309
+HS2000-1012_275:7:1101:16576:2847683GL000238.121664
+
+vs the original:
+
+IDflagchrpos
+HS2000-1012_275:7:1101:17411:1540399854944243
+HS2000-1012_275:7:1101:17411:15403147854944493
+HS2000-1012_275:7:1101:11883:836401631628464362
+HS2000-1012_275:7:1101:11883:83640831628464586
+HS2000-1012_275:7:1101:16576:2847699126124549
+HS2000-1012_275:7:1101:16576:28476147126124903
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594&lt;tel:+44%2020%203796%202594&gt;
+M: +44 (0)7482 070730&lt;tel:+44%207482%20070730&gt;
+E: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>
+W: www.crick.ac.uk
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/010b4c6b/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170322/010b4c6b/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000276.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+	<LI>Next message: <A HREF="000278.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#277">[ date ]</a>
+              <a href="thread.html#277">[ thread ]</a>
+              <a href="subject.html#277">[ subject ]</a>
+              <a href="author.html#277">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

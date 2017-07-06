@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Core workflow icgc reference data location and gosu
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Core%20workflow%20icgc%20reference%20data%20location%20and%0A%20gosu&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A617F%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000180.html">
+   <LINK REL="Next"  HREF="000173.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Core workflow icgc reference data location and gosu</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Core%20workflow%20icgc%20reference%20data%20location%20and%0A%20gosu&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A617F%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Core workflow icgc reference data location and gosu">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Mon Dec  5 12:47:40 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000180.html">[DOCKTESTERS] Core workflow icgc reference data location and	gosu
+</A></li>
+        <LI>Next message: <A HREF="000173.html">[DOCKTESTERS] Variant call validation results for Sanger
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#181">[ date ]</a>
+              <a href="thread.html#181">[ thread ]</a>
+              <a href="subject.html#181">[ subject ]</a>
+              <a href="author.html#181">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Yup, we've added that warning because we test with a specific version of cwltool.
+
+It looks like you have a newer version of cwltool which is probably ok (assuming you haven't run into any problems). The warning is more aimed at users of older versions of cwltool than newer.
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+________________________________
+From: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A> [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>] on behalf of Miguel Vazquez [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>]
+Sent: December 5, 2016 12:16 PM
+To: Denis Yuen
+Cc: Francis Ouellette; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+Subject: Re: [DOCKTESTERS] Core workflow icgc reference data location and gosu
+
+By the way Denis, I now get this message when running dockstore:
+
+cwltool version is 1.0.20161202203310 , Dockstore is tested with 1.0.20161114152756
+Override and run with `--script`
+
+I've added the --script to the command line and it works, but just so you know.
+
+Miguel
+
+On Mon, Dec 5, 2016 at 4:05 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;redir.aspx?REF=ecCYHu_4RoyycX0Hikg_on65eKkWeXhMLFUoglU1xi8SztJcNh3UCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..&gt;&gt; wrote:
+Thanks Denis, your suggestion of removing the jar files worked.
+
+Best regards
+
+Miguel
+
+On Mon, Dec 5, 2016 at 3:18 PM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&lt;redir.aspx?REF=LfYkayWO-wb3F2Jw63ufZJR00wdFYs8ZA_uWSSkRg6ISztJcNh3UCAFtYWlsdG86RGVuaXMuWXVlbkBvaWNyLm9uLmNh&gt;&gt; wrote:
+Hi,
+Having some difficulty reproducing this.
+It's possible that a jar file was corrupted in transit, try deleting ~/.dockstore/self-installs/ and retrying.
+
+
+
+________________________________
+From: Francis Ouellette
+Sent: December 3, 2016 6:48 PM
+To: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;redir.aspx?REF=Qp7Y6coOhLdhUbtNUWXZO78T48bKG1p8vxPYuKWU9loSztJcNh3UCAFtYWlsdG86ZG9ja3Rlc3RlcnNAbGlzdHMuaWNnYy5vcmc.&gt;
+Cc: Denis Yuen; Miguel Vazquez
+Subject: Re: [DOCKTESTERS] Core workflow icgc reference data location and gosu
+
+
+Anybody else with these problems?
+
+@bffo
+
+
+
+
+On Dec 3, 2016, at 06:10, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;redir.aspx?REF=3w7IBO4lxdWmG56Xs9HOk89mXNhNihEBiNbW5w2HlNNsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9Z0JwRTlBaUhtdWl1dkRVQUVuejN0VERvUXk5YXh5cjVjRW1FSlBJbEFfVm1LZHRkR1IzVUNBRnRZV2xzZEc4NmJXbG5kV1ZzTG5aaGVuRjFaWHBBWTI1cGJ5NWxjdy4u&gt;&gt; wrote:
+
+Denis,
+
+I've tried updating to the latest dockstore and ran into a bug.
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-253-35-14</A>:~$ dockstore
+Error: A JNI error has occurred, please check your installation and try again
+Exception in thread &quot;main&quot; java.lang.NoClassDefFoundError: io/cwl/avro/CWL$GsonBuildException
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+        at java.lang.Class.privateGetMethodRecursive(Class.java:3048)
+        at java.lang.Class.getMethod0(Class.java:3018)
+        at java.lang.Class.getMethod(Class.java:1784)
+        at sun.launcher.LauncherHelper.va&lt;redir.aspx?REF=TjENSDOrNSff3TcU1xQl-epUGTBoxp9DLPeUa5dUwmZsMNVcNh3UCAFodHRwOi8vc3VuLmxhdW5jaGVyLkxhdW5jaGVySGVscGVyLnZh&gt;lidateMainClass(LauncherHelper.java:544)
+        at sun.launcher.LauncherHelper.ch&lt;redir.aspx?REF=2KqCm73z0xjg7eM3EbabyGtOB6GG-JE7vRwL8K3cDwJsMNVcNh3UCAFodHRwOi8vc3VuLmxhdW5jaGVyLkxhdW5jaGVySGVscGVyLmNo&gt;eckAndLoadMain(LauncherHelper.java:526)
+Caused by: java.lang.ClassNotFoundException: io.cwl.avro.CWL$GsonBuildException
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:370)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+        ... 7 more
+Caused by: java.util.zip.ZipException: invalid LOC header (bad signature)
+        at java.util.zip.ZipFile.read(Native Method)
+        at java.util.zip.ZipFile.access$1400(ZipFile.java:60)
+        at java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:717)
+        at java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(ZipFile.java:419)
+        at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:158)
+        at sun.misc.Resource.getBytes(Resource.java:124)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:462)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+        ... 13 more
+
+What I did is that I moved the old version of dockstore from ~/bin/dockstore to ~/bin/dockstore.old and downloaded the new version from
+
+<A HREF="https://github.com/ga4gh/dockstore/releases/download/1.1/dockstore&lt;redir.aspx?REF=sn9tvzEjp-Jjg6MLUJANNgI3ZFMSIVPNf4uGT8ytQolsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9dnR2Tmg3TTRtU002RW5YNVg1UkJRVDZ5dUMzNFAxRThBR1hzVUc3djVrM0FpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZaMkUwWjJndlpHOWphM04wYjNKbEwzSmxiR1ZoYzJWekwyUnZkMjVzYjJGa0x6RXVNUzlrYjJOcmMzUnZjbVUu">https://github.com/ga4gh/dockstore/releases/download/1.1/dockstore&lt;redir.aspx?REF=sn9tvzEjp-Jjg6MLUJANNgI3ZFMSIVPNf4uGT8ytQolsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9dnR2Tmg3TTRtU002RW5YNVg1UkJRVDZ5dUMzNFAxRThBR1hzVUc3djVrM0FpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZaMkUwWjJndlpHOWphM04wYjNKbEwzSmxiR1ZoYzJWekwyUnZkMjVzYjJGa0x6RXVNUzlrYjJOcmMzUnZjbVUu</A>&gt;
+
+I ran the new dockstore, it downloaded
+
+<A HREF="https://seqwaremaven.oicr.on.ca/artifactory/collab-release/io/dockstore/dockstore-client/1.1/dockstore-client-1.1.jar&lt;redir.aspx?REF=VtmsnE7YlRJ7qyRZN8OiEWFjV3un0ph7WIXVY0W3UQBsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9dmU4TjF0dUlGdDdROVBIeFVWYTdlN1hsRkxXQ0FRYzZrQmozdV9pb1l4VEFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwzTmxjWGRoY21WdFlYWmxiaTV2YVdOeUxtOXVMbU5oTDJGeWRHbG1ZV04wYjNKNUwyTnZiR3hoWWkxeVpXeGxZWE5sTDJsdkwyUnZZMnR6ZEc5eVpTOWtiMk5yYzNSdmNtVXRZMnhwWlc1MEx6RXVNUzlrYjJOcmMzUnZjbVV0WTJ4cFpXNTBMVEV1TVM1cVlYSS4.">https://seqwaremaven.oicr.on.ca/artifactory/collab-release/io/dockstore/dockstore-client/1.1/dockstore-client-1.1.jar&lt;redir.aspx?REF=VtmsnE7YlRJ7qyRZN8OiEWFjV3un0ph7WIXVY0W3UQBsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9dmU4TjF0dUlGdDdROVBIeFVWYTdlN1hsRkxXQ0FRYzZrQmozdV9pb1l4VEFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwzTmxjWGRoY21WdFlYWmxiaTV2YVdOeUxtOXVMbU5oTDJGeWRHbG1ZV04wYjNKNUwyTnZiR3hoWWkxeVpXeGxZWE5sTDJsdkwyUnZZMnR6ZEc5eVpTOWtiMk5yYzNSdmNtVXRZMnhwWlc1MEx6RXVNUzlrYjJOcmMzUnZjbVV0WTJ4cFpXNTBMVEV1TVM1cVlYSS4.</A>&gt;
+
+and then when I tried running dockstore --version I got the error above. Anything I can do?
+
+Best regards
+
+Miguel
+
+
+On Fri, Dec 2, 2016 at 6:15 PM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&lt;redir.aspx?REF=wBWwq_FsU84z1f74zIwMTAqOFtqwCae0FREciFrpnXpsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9QjAybU5kWkxtQnphRm85VGMwejA5V3lMSU5ZWEcxeGQwd3JrTG1LLU5iSEFpOTFkR1IzVUNBRnRZV2xzZEc4NlJHVnVhWE11V1hWbGJrQnZhV055TG05dUxtTmg.&gt;&gt; wrote:
+Hi,
+
+I've gone through and created a new release for each of the core tools (bwa-mem, delly, dkfz, sanger) with two (non-scientific) changes.
+
+1) Each of these tools has been redirected to use reference data hosted on the icgc portal ( <A HREF="https://dcc.icgc.org/releases/PCAWG&lt;redir.aspx?REF=ojclhIiF6NoGskevsqPuwhFBSCaeGOgdCK97Zk6MRTJsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9eTkydDZmd09aUFdTeTFCeUZiVDE1SEJnYnZaRXlaVGFlMUw5Sjd5eVlQWEFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwyUmpZeTVwWTJkakxtOXlaeTl5Wld4bFlYTmxjeTlRUTBGWFJ3Li4.">https://dcc.icgc.org/releases/PCAWG&lt;redir.aspx?REF=ojclhIiF6NoGskevsqPuwhFBSCaeGOgdCK97Zk6MRTJsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9eTkydDZmd09aUFdTeTFCeUZiVDE1SEJnYnZaRXlaVGFlMUw5Sjd5eVlQWEFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwyUmpZeTVwWTJkakxtOXlaeTl5Wld4bFlYTmxjeTlRUTBGWFJ3Li4.</A>&gt; ) rather than aws in order to conserve our use of S3. This means that sample json parameter files have been updated and any references inside the Docker images that we're aware of also have been updated. As usual, if re-running workflows frequently, you'll want to host these files locally.
+
+If you are using the Dockstore command-line interface, you'll need to upgrade to the latest release of dockstore (1.2) to use this new file location.
+
+2) A number of users have run into problems running the workflow when running in a multi-user environment (i.e. not running Docker containers with the first user on a host). This release replaces most usage of sudo inside the tools with gosu to deal with this issue.
+
+The new release numbers are documented at <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data&lt;redir.aspx?REF=AZHpukxYf-PZpiuBjB9AHNCNBoqNB3zBa1nX33XA3RlsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9Qk1EVW82cE9pVkdkZ0p2VExLVlpiQU5DT2U2UzFHTG9aNHlGbjlSbklmckFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwzZHBhMmt1YjJsamNpNXZiaTVqWVM5a2FYTndiR0Y1TDFCQlRrTkJUa05GVWk5WGIzSnJabXh2ZHl0VVpYTjBhVzVuSzBSaGRHRS4.">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data&lt;redir.aspx?REF=AZHpukxYf-PZpiuBjB9AHNCNBoqNB3zBa1nX33XA3RlsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9Qk1EVW82cE9pVkdkZ0p2VExLVlpiQU5DT2U2UzFHTG9aNHlGbjlSbklmckFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwzZHBhMmt1YjJsamNpNXZiaTVqWVM5a2FYTndiR0Y1TDFCQlRrTkJUa05GVWk5WGIzSnJabXh2ZHl0VVpYTjBhVzVuSzBSaGRHRS4.</A>&gt;
+In particular:
+
+  *   bwa-mem 2.6.8_1.2
+  *   dkfz 2.0.1_cwl1.0
+  *   sanger 2.0.3
+  *   embl 2.0.1-cwl1.0
+
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;redir.aspx?REF=oKirKLQEOi6F_dpAnFvVvGSA04rFj7YmZJzlaaMPWv5sMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9NkVOeEFvRlY2OU1wcGlCOFVac1c3UzYyLTFHTDBtazlHNldXdGZWQjJvM0FpOTFkR1IzVUNBRm9kSFJ3T2k4dmQzZDNMbTlwWTNJdWIyNHVZMkV2&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;redir.aspx?REF=V7WAXgfDDWMtWRn-104J6lG8D5XIMOdSNSLaa741nwBsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9VmN4Yk03bEF5bXZkM19GUy15SDQxaWtON3VYM2F4VEVaRFY2Uk1WV1FWSEFpOTFkR1IzVUNBRnRZV2xzZEc4NlpHOWphM1JsYzNSbGNuTkFiR2x6ZEhNdWFXTm5ZeTV2Y21jLg..&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters&lt;redir.aspx?REF=MV-kfX0Z-zUyJ03K-X9-W_0RtXZD33IWdJoc7399uP5sMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9RFlWRkl6c2szeHhjUHp0YVUtbXljQTg5Mm9XYnJMVHp6d0pUTVREUW9BTEFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwyeHBjM1J6TG1saloyTXViM0puTDIxaGFXeHRZVzR2YkdsemRHbHVabTh2Wkc5amEzUmxjM1JsY25NLg..">https://lists.icgc.org/mailman/listinfo/docktesters&lt;redir.aspx?REF=MV-kfX0Z-zUyJ03K-X9-W_0RtXZD33IWdJoc7399uP5sMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9RFlWRkl6c2szeHhjUHp0YVUtbXljQTg5Mm9XYnJMVHp6d0pUTVREUW9BTEFpOTFkR1IzVUNBRm9kSFJ3Y3pvdkwyeHBjM1J6TG1saloyTXViM0puTDIxaGFXeHRZVzR2YkdsemRHbHVabTh2Wkc5amEzUmxjM1JsY25NLg..</A>&gt;
+
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;redir.aspx?REF=V7WAXgfDDWMtWRn-104J6lG8D5XIMOdSNSLaa741nwBsMNVcNh3UCAFodHRwOi8vcmVkaXIuYXNweD9SRUY9VmN4Yk03bEF5bXZkM19GUy15SDQxaWtON3VYM2F4VEVaRFY2Uk1WV1FWSEFpOTFkR1IzVUNBRnRZV2xzZEc4NlpHOWphM1JsYzNSbGNuTkFiR2x6ZEhNdWFXTm5ZeTV2Y21jLg..&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters&lt;redir.aspx?REF=i95dEK5NpCAmHm-E-jSFaGbp3L4f04hqFETUxxBCXWZsMNVcNh3UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.">https://lists.icgc.org/mailman/listinfo/docktesters&lt;redir.aspx?REF=i95dEK5NpCAmHm-E-jSFaGbp3L4f04hqFETUxxBCXWZsMNVcNh3UCAFodHRwczovL2xpc3RzLmljZ2Mub3JnL21haWxtYW4vbGlzdGluZm8vZG9ja3Rlc3RlcnM.</A>&gt;
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161205/aa4c4c06/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161205/aa4c4c06/attachment-0001.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000180.html">[DOCKTESTERS] Core workflow icgc reference data location and	gosu
+</A></li>
+	<LI>Next message: <A HREF="000173.html">[DOCKTESTERS] Variant call validation results for Sanger
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#181">[ date ]</a>
+              <a href="thread.html#181">[ thread ]</a>
+              <a href="subject.html#181">[ subject ]</a>
+              <a href="author.html#181">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

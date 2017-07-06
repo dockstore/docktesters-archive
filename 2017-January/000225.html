@@ -1,0 +1,497 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] BWA-Mem failure aftern revised unalignment of BAM	files
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20failure%20aftern%20revised%20unalignment%20of%20BAM%0A%09files&In-Reply-To=%3CCA%2Bdx8mYjsS9ahYK6P7w5qFyjkN0k07zO_jwJ4dPncD2y9-op_w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000224.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] BWA-Mem failure aftern revised unalignment of BAM	files</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20failure%20aftern%20revised%20unalignment%20of%20BAM%0A%09files&In-Reply-To=%3CCA%2Bdx8mYjsS9ahYK6P7w5qFyjkN0k07zO_jwJ4dPncD2y9-op_w%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] BWA-Mem failure aftern revised unalignment of BAM	files">mikisvaz at gmail.com
+       </A><BR>
+    <I>Mon Jan 30 05:31:16 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000224.html">[DOCKTESTERS] Summary of validation of Dockers Sanger	and	DKFZ(+Delly)
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#225">[ date ]</a>
+              <a href="thread.html#225">[ thread ]</a>
+              <a href="subject.html#225">[ subject ]</a>
+              <a href="author.html#225">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+I've conducted further tests for the BWA-Mem pipeline which were not
+successful but I think are a step forward.
+
+Following the advice Junjun gave us last time I've revised how I was
+generating the unaligned version of the BAM files. Previously I skipped the
+entirely the generation of the header, because I thought that it was just
+housekeeping metadata. As Junjun suggested some of this fields might have
+been used by the pipeline to determine the provenance of the BAM files and
+might raise an error:
+
+I will need to take a closer look on this. But what I know are important
+include (but not limited to) that input bams must be lane level, ie, bam
+with only one read group id; some part of the read group line in bam header
+must be properly formed, don't remember details here. But many of us should
+remember we had done some bam reheading to some larger number of bams
+because of header issue.
+
+And so I've tried the following headers:
+
+cat &gt; $normal_header_file &lt;&lt;-EOF
+@HD     VN:1.4
+@RG     ID:DOCKER:${1}.normal   CN:DOCKER       PL:ILLUMINA     PM:Illumina
+HiSeq 2000  LB:WGS:DOCKER:28085     PI:453
+SM:00000000-0000-0000-0000-000000000000 PU:DOCKER:1_1
+DT:2013-03-18T00:00:00+00:00
+@CO     dcc_project_code:DOCKER-TEST
+@CO     submitter_donor_id:$1
+@CO     submitter_specimen_id:${1}.specimen
+@CO     submitter_sample_id:${1}.sample
+@CO     dcc_specimen_type:Normal
+@CO     use_cntl:85098796-a2c1-11e3-a743-6c6c38d06053
+EOF
+
+cat &gt; $tumor_header_file &lt;&lt;-EOF
+@HD     VN:1.4
+@RG     ID:DOCKER:${1}.tumor    CN:DOCKER       PL:ILLUMINA     PM:Illumina
+HiSeq 2000  LB:WGS:DOCKER:28085     PI:453
+SM:00000000-0000-0000-0000-000000000001 PU:DOCKER:2_2
+DT:2013-03-18T00:00:00+00:00
+@CO     dcc_project_code:DOCKER-TEST
+@CO     submitter_donor_id:$1
+@CO     submitter_specimen_id:${1}.specimen
+@CO     submitter_sample_id:${1}.sample
+@CO     dcc_specimen_type:Primary tumour - solid tissue
+@CO     use_cntl:85098796-a2c1-11e3-a743-6c6c38d06053
+
+
+This I think fixed something because the process ran for a much longer time
+than previously. But alas the result was still a failure. Bellow is the
+error report:
+
+
+Creating directories for run of Dockstore launcher at:
+./datastore//launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558
+Provisioning your input files to your local machine
+Downloading: #reads from
+/mnt/1TB/work/DockerTest-Miguel/data/DO52140/tumor.unaligned.bam into
+directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d5023c38-86e6-41c1-bb6b-d04f5365f747
+Downloading: #reads from
+/mnt/1TB/work/DockerTest-Miguel/data/DO52140/normal.unaligned.bam into
+directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c52eae16-342d-4bec-9b4f-6d7a3180607a
+Downloading: #reference_gz from
+<A HREF="https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz">https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz</A>
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/724ff872-b688-4c15-86af-d97aa100dde1
+[##################################################] 100%
+Downloading: #reference_gz_amb from
+<A HREF="https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.amb">https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.amb</A>
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/52660af7-a489-4606-9567-03e17dcc7058
+[##################################################] 100%
+Downloading: #reference_gz_ann from
+<A HREF="https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.ann">https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.ann</A>
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c9d6e471-7513-44dd-b183-6e9b0444d837
+[##################################################] 100%
+Downloading: #reference_gz_bwt from
+<A HREF="https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.bwt">https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.bwt</A>
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d2dd9e9d-b011-4323-871a-89bfd7825423
+[##################################################] 100%
+Downloading: #reference_gz_fai from
+<A HREF="https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.fai">https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.fai</A>
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/7b94ce63-b9a2-4308-b256-f71dfc5e47f4
+[##################################################] 100%
+Downloading: #reference_gz_pac from
+<A HREF="https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.pac">https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.pac</A>
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/1a6c57e1-3d1c-429d-80d0-2edd689d500f
+[##################################################] 100%
+Downloading: #reference_gz_sa from
+<A HREF="https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.sa">https://dcc.icgc.org/api/v1/download?fn=/PCAWG/reference_data/pcawg-bwa-mem/genome.fa.gz.64.sa</A>
+into directory:
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/703bd122-f14f-4c97-9324-d0105b333cf1
+[##################################################] 100%
+Calling out to cwltool to run your tool
+Executing: cwltool --enable-dev --non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/working/
+/tmp/1485252784281-0/temp6497250720663017192.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/workflow_params.json
+/usr/local/bin/cwltool 1.0.20161202203310
+Resolved '/tmp/1485252784281-0/temp6497250720663017192.cwl' to
+'<A HREF="file:///tmp/1485252784281-0/temp6497250720663017192.cwl">file:///tmp/1485252784281-0/temp6497250720663017192.cwl</A>'
+[job temp6497250720663017192.cwl] /tmp/tmpoyVIRs$ docker \
+    run \
+    -i \
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c9d6e471-7513-44dd-b183-6e9b0444d837/genome.fa.gz.64.ann:/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/724ff872-b688-4c15-86af-d97aa100dde1/genome.fa.gz:/var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d5023c38-86e6-41c1-bb6b-d04f5365f747/tumor.unaligned.bam:/var/lib/cwl/stg45a02b86-bcd0-478e-bc2a-cf58f4086068/tumor.unaligned.bam:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/1a6c57e1-3d1c-429d-80d0-2edd689d500f/genome.fa.gz.64.pac:/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/703bd122-f14f-4c97-9324-d0105b333cf1/genome.fa.gz.64.sa:
+/var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/genome.fa.gz.64.sa:ro \
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/52660af7-a489-4606-9567-03e17dcc7058/genome.fa.gz.64.amb:/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/7b94ce63-b9a2-4308-b256-f71dfc5e47f4/genome.fa.gz.fai:/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/c52eae16-342d-4bec-9b4f-6d7a3180607a/normal.unaligned.bam:/var/lib/cwl/stg10bd7879-0808-4e42-ac5c-47ff7b2e7e2d/normal.unaligned.bam:ro
+\
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/inputs/d2dd9e9d-b011-4323-871a-89bfd7825423/genome.fa.gz.64.bwt:/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt:ro
+\
+    --volume=/mnt/1TB/tmp/tmpoyVIRs:/var/spool/cwl:rw \
+
+--volume=/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/workingYUUlQm:/tmp:rw
+\
+    --workdir=/var/spool/cwl \
+    --read-only=true \
+    --user=1000 \
+    --rm \
+    --env=TMPDIR=/tmp \
+    --env=HOME=/var/spool/cwl \
+    quay.io/pancancer/pcawg-bwa-mem-workflow:2.6.8_1.2 \
+    /start.sh \
+    python \
+    /home/seqware/Seqware-BWA-Workflow/run_seqware_workflow.py \
+    --files \
+
+/var/lib/cwl/stg45a02b86-bcd0-478e-bc2a-cf58f4086068/tumor.unaligned.bam \
+
+/var/lib/cwl/stg10bd7879-0808-4e42-ac5c-47ff7b2e7e2d/normal.unaligned.bam \
+    --reference-gz \
+    /var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz \
+    --reference-gz-fai \
+    /var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai \
+    --reference-gz-amb \
+
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb \
+    --reference-gz-ann \
+
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann \
+    --reference-gz-bwt \
+
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt \
+    --reference-gz-pac \
+
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac \
+    --reference-gz-sa \
+    /var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/genome.fa.gz.64.sa
+\
+    --output-dir \
+    datastore \
+    --output-file-basename \
+    DO52140 \
+    --download-reference-files \
+    true
++ gosu root chmod a+wrx /tmp
++ gosu root chmod a+wrx /var/spool/cwl
++ gosu seqware bash -c 'python
+/home/seqware/Seqware-BWA-Workflow/run_seqware_workflow.py --files
+/var/lib/cwl/stg45a02b86-bcd0-478e-bc2a-cf58f4086068/tumor.unaligned.bam
+/var/lib/cwl/stg10bd7879-0808-4e42-ac5c-47ff7b2e7e2d/normal.unaligned.bam
+--reference-gz
+/var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz
+--reference-gz-fai
+/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai
+--reference-gz-amb
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb
+--reference-gz-ann
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann
+--reference-gz-bwt
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt
+--reference-gz-pac
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac
+--reference-gz-sa /var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/
+genome.fa.gz.64.sa --output-dir datastore --output-file-basename DO52140
+--download-reference-files true'
+RUNNING...
+ export TMPDIR=/tmp
+
+RUNNING...
+ export HOME=/var/spool/cwl
+
+RUNNING...
+ whoami
+
+seqware
+RUNNING...
+ gosu root chown -R seqware /data
+
+RUNNING...
+ gosu root chown -R seqware /home/seqware
+
+RUNNING...
+ gosu root chmod -R a+wrx /home/seqware
+
+RUNNING...
+ gosu root mkdir -p /var/spool/cwl/.seqware
+
+RUNNING...
+ gosu root chown -R seqware /var/spool/cwl/
+
+RUNNING...
+ gosu root cp /home/seqware/.seqware/settings /var/spool/cwl/.seqware
+
+RUNNING...
+ gosu root chmod a+wrx /var/spool/cwl/.seqware/settings
+
+RUNNING...
+ perl -pi -e 's/wrench.res/seqwaremaven/g' /home/seqware/bin/seqware
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s /var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt
+/data/reference/bwa-0.6.2/
+
+RUNNING...
+ ln -s /var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/
+genome.fa.gz.64.sa /data/reference/bwa-0.6.2/
+
+RUNNING...
+ ls -lth /data/reference/bwa-0.6.2/
+
+total 28K
+lrwxrwxrwx 1 seqware seqware 71 Jan 24 10:25 genome.fa.gz.64.sa -&gt;
+/var/lib/cwl/stg3b1104d4-4344-45d8-9a09-f89a4670b053/genome.fa.gz.64.sa
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.amb -&gt;
+/var/lib/cwl/stgbfe4c6f4-f826-413d-ab73-b12a7ae02d62/genome.fa.gz.64.amb
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.bwt -&gt;
+/var/lib/cwl/stg281dba3f-5ce1-48a4-946f-a8965f5500b9/genome.fa.gz.64.bwt
+lrwxrwxrwx 1 seqware seqware 65 Jan 24 10:25 genome.fa.gz -&gt;
+/var/lib/cwl/stg6db89d66-c40c-401f-bfc5-8aab0415616d/genome.fa.gz
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.pac -&gt;
+/var/lib/cwl/stg449f1560-ca34-4f78-97e4-589a2d9d2c75/genome.fa.gz.64.pac
+lrwxrwxrwx 1 seqware seqware 69 Jan 24 10:25 genome.fa.gz.fai -&gt;
+/var/lib/cwl/stga47bd898-ac3a-4843-8a5d-484138045e0d/genome.fa.gz.fai
+lrwxrwxrwx 1 seqware seqware 72 Jan 24 10:25 genome.fa.gz.64.ann -&gt;
+/var/lib/cwl/stgf8618e3f-08e1-48b1-ab39-17f27a790b50/genome.fa.gz.64.ann
+RUNNING...
+ mkdir -p /var/spool/cwl/datastore
+
+RUNNING...
+ seqware bundle launch --dir
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/
+--engine whitestar --ini /var/spool/cwl/datastore/workflow.ini
+--no-metadata
+
+Performing launch of workflow 'BWA' version '2.6.8'
+[--plugin, net.sourceforge.seqware.pipeline.plugins.BundleManager, --,
+--install-dir-only, --bundle,
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/,
+--out, /tmp/bundle_manager6198370569999162990out]
+Installing Bundle (Working Directory Only)
+Bundle:
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/
+Added 'BWA' (SWID: 1)
+Bundle Has Been Installed to the MetaDB and Provisioned to
+/home/seqware/Seqware-BWA-Workflow/target/Workflow_Bundle_BWA_2.6.8_SeqWare_1.1.1/!
+[--plugin, io.seqware.pipeline.plugins.WorkflowScheduler, --,
+--workflow-accession, 1, --host, ec05fef2b76b, --out,
+/tmp/scheduler6853194998648983141out, --i,
+/var/spool/cwl/datastore/workflow.ini, --workflow-engine, whitestar,
+--no-meta-db, --]
+Created workflow run with SWID: 50
+[--plugin, io.seqware.pipeline.plugins.WorkflowLauncher, --,
+--launch-scheduled, 50]
+[2017/01/24 10:25:03] | Number of submitted workflows: 1
+Working Run: 50
+Valid run by host check: 50
+Launching via new launcher: 50
+Using working directory:
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e
+[2017/01/24 10:25:03] | Row #0 , Attempt #1 out of 6 : s50_start_0
+[2017/01/24 10:25:03] |     Submitting 3000M batch with: s50_start_0
+[2017/01/24 10:25:03] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_start_0-runner.sh
+[2017/01/24 10:25:04] |     Workflow step succeeded: s50_start_0
+[2017/01/24 10:25:04] | Row #1 , Attempt #1 out of 6 :
+s50_reference_download_1
+[2017/01/24 10:25:04] |     Submitting 8192M batch with:
+s50_reference_download_1
+[2017/01/24 10:25:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_reference_download_1-runner.sh
+[2017/01/24 10:35:04] |     Workflow step succeeded:
+s50_reference_download_1
+[2017/01/24 10:35:04] | Row #2 , Attempt #1 out of 6 :
+s50_headerJob0_2,s50_headerJob1_5
+[2017/01/24 10:35:04] |     Submitting 8000M batch with:
+s50_headerJob0_2,s50_headerJob1_5
+[2017/01/24 10:35:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_headerJob0_2-runner.sh
+[2017/01/24 10:35:04] |     Workflow step succeeded: s50_headerJob0_2
+[2017/01/24 10:35:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_headerJob1_5-runner.sh
+[2017/01/24 10:35:05] |     Workflow step succeeded: s50_headerJob1_5
+[2017/01/24 10:35:05] | Row #3 , Attempt #1 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/24 10:35:05] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/24 10:35:05] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:22:18] |     Workflow step failed: s50_bwa_mem_0_3
+[2017/01/25 13:22:18] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/25 13:24:49] |     Workflow step failed: s50_bwa_mem_1_6
+[2017/01/25 13:24:49] | Row #3 , Attempt #2 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/25 13:24:49] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/25 13:24:49] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:24:50] |     Workflow step s50_bwa_mem_0_3 was interrupted
+or threw an exception
+[2017/01/25 13:24:50] |     Batch of jobs failed: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] | Row #3 , Attempt #3 out of 6 : s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Submitting 8900M batch with: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:24:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/25 13:24:50] |     Workflow step s50_bwa_mem_0_3 was interrupted
+or threw an exception
+[2017/01/25 13:24:50] |     Batch of jobs failed: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] | Row #3 , Attempt #4 out of 6 : s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Submitting 8900M batch with: s50_bwa_mem_0_3
+[2017/01/25 13:24:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/25 13:24:50] |     Workflow step s50_bwa_mem_1_6 was interrupted
+or threw an exception
+[2017/01/26 16:22:04] |     Workflow step failed: s50_bwa_mem_0_3
+[2017/01/26 16:22:04] | Row #3 , Attempt #5 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/26 16:22:04] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/26 16:22:04] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/27 19:06:58] |     Workflow step failed: s50_bwa_mem_0_3
+[2017/01/27 19:06:58] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/27 19:08:50] |     Workflow step failed: s50_bwa_mem_1_6
+[2017/01/27 19:08:50] | Row #3 , Attempt #6 out of 6 :
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/27 19:08:50] |     Submitting 17800M batch with:
+s50_bwa_mem_0_3,s50_bwa_mem_1_6
+[2017/01/27 19:08:50] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_0_3-runner.sh
+[2017/01/27 19:08:51] |     Workflow step s50_bwa_mem_0_3 was interrupted
+or threw an exception
+[2017/01/27 19:08:51] |     Batch of jobs failed: s50_bwa_mem_0_3
+[2017/01/27 19:08:51] |     Running command: bash
+/datastore/oozie-c37a7a97-9677-4d3c-8e8b-884f6beffc5e/generated-scripts/s50_bwa_mem_1_6-runner.sh
+[2017/01/27 19:08:51] | Setting workflow-run status to failed for: 50
+[--plugin, io.seqware.pipeline.plugins.WorkflowWatcher, --,
+--workflow-run-accession, 50]
+[2017/01/27 19:08:51] |     Workflow step s50_bwa_mem_1_6 was interrupted
+or threw an exception
+Workflow run 50 is currently failed
+[--plugin, net.sourceforge.seqware.pipeline.plugins.WorkflowStatusChecker,
+--, --workflow-run-accession, 50]
+[2017/01/27 19:08:52] | Output for stdout due to workTypeError: exceptions
+must be old-style classes or derived from BaseException, not NoneType
+Error while running job: Error collecting output for parameter
+'merged_output_bai': Did not find output file with glob pattern:
+'[u'datastore/DO52140.bam.bai']'
+[job temp6497250720663017192.cwl] completed permanentFail
+Final process status is permanentFail
+Workflow error, try again with --debug for more information:
+  Process status is ['permanentFail']
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1
+(Exit value: 1)
+    at
+org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+    at
+org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+    at
+org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+    at java.lang.Thread.run(Thread.java:745)
+java.lang.RuntimeException: problems running command: cwltool --enable-dev
+--non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/working/
+/tmp/1485252784281-0/temp6497250720663017192.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/BWA-Mem/DO52140/./datastore/launcher-914e072a-f3bd-4953-ad8a-f1ef230b3558/workflow_params.json
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170130/e34971e3/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170130/e34971e3/attachment-0001.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000224.html">[DOCKTESTERS] Summary of validation of Dockers Sanger	and	DKFZ(+Delly)
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#225">[ date ]</a>
+              <a href="thread.html#225">[ thread ]</a>
+              <a href="subject.html#225">[ subject ]</a>
+              <a href="author.html#225">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

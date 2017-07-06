@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] DKFZ bias filter docker
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20DKFZ%20bias%20filter%20docker&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A19D9%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000127.html">
+   <LINK REL="Next"  HREF="000132.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] DKFZ bias filter docker</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20DKFZ%20bias%20filter%20docker&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A19D9%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] DKFZ bias filter docker">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Wed Oct 19 15:33:07 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000127.html">[DOCKTESTERS] DKFZ bias filter docker
+</A></li>
+        <LI>Next message: <A HREF="000132.html">[DOCKTESTERS] DKFZ bias filter docker
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Thanks, this definitely helps to make it more clear. 
+I think this will give us enough information for us to start working on a CWL descriptor or to assist one being written. 
+
+________________________________________
+From: Ivo Buchhalter [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">i.buchhalter at dkfz-heidelberg.de</A>]
+Sent: October 19, 2016 2:19 AM
+To: Denis Yuen; Ivo Buchhalter; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+Cc: Werner, Johannes; prinz; Schlesner, Matthias
+Subject: Re: [DOCKTESTERS] DKFZ bias filter docker
+
+Hi Denis,
+
+Sorry for the missing information. I updated the README in the
+repository. I hope things are more clear now.
+&gt;<i> 1) How does this relate to the existing dkfz workflow? ( <A HREF="https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows">https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows</A> ) Is this a step that follows that workflow or is this a portion of that workflow that has been split out?
+</I>The filter is part of the DKFZ workflow. Since the other workflows don't
+use similar filters the DKFZ stand alone filter was run on the complete
+data set after merging the calls (only somatic SNV calls).
+&gt;<i> 2) Could we get a readme that describes how to use this?
+</I>I updated the README. I hope it's more clear now.
+&gt;<i> 3) Do you have some non-confidential small test data that we can use to run/test this quickly before running a real donor through this?
+</I>I will check if we can provide this later but the filter generally runs
+only a couple of minutes (on a normal somatic &quot;PASS&quot; vcf with &lt;= 10 000
+variants).
+
+Best,
+Ivo
+
+
+&gt;<i> Thanks!
+</I>&gt;<i>
+</I>&gt;<i> ________________________________________
+</I>&gt;<i> From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>] on behalf of Ivo Buchhalter [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">i.buchhalter at dkfz-heidelberg.de</A>]
+</I>&gt;<i> Sent: October 18, 2016 3:06 AM
+</I>&gt;<i> To: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+</I>&gt;<i> Subject: [DOCKTESTERS] DKFZ bias filter docker
+</I>&gt;<i>
+</I>&gt;<i> Dear dockertesters,
+</I>&gt;<i>
+</I>&gt;<i> I was told to contact you regarding the DKFZ bias filter docker. The
+</I>&gt;<i> docker is basically ready and it also passed internal testing. The
+</I>&gt;<i> scripts and Dockerfile can be found here:
+</I>&gt;<i> <A HREF="https://github.com/eilslabs/DKFZBiasFilter">https://github.com/eilslabs/DKFZBiasFilter</A>
+</I>&gt;<i> Johannes and Manuel (CCed) have been working on bringing it into
+</I>&gt;<i> Dockstore (they ran into a NFS problem). Johannes is currently on
+</I>&gt;<i> vacation (until October 23rd).
+</I>&gt;<i> Please let me know if it is sufficient to have the docker available on
+</I>&gt;<i> Dockstore some time next week. Alternatively it might be possible that
+</I>&gt;<i> you work with the scripts and Dockerfile on GitHub. If none of this
+</I>&gt;<i> works I (or probably Manuel) can also try to get it running on Dockstore
+</I>&gt;<i> some time later this week.
+</I>&gt;<i>
+</I>&gt;<i> Best,
+</I>&gt;<i> Ivo
+</I>&gt;<i>
+</I>&gt;<i> PS: Sorry to the DKFZ people the email before bounced back because the
+</I>&gt;<i> link of the email address on the Wiki had a typo.
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>On 10/18/2016 05:38 PM, Denis Yuen wrote:
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> Thanks for the heads-up, we can probably help out with writing the CWL descriptor for this, but I do have a few questions.
+</I>&gt;<i>
+</I>&gt;<i> 1) How does this relate to the existing dkfz workflow? ( <A HREF="https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows">https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows</A> ) Is this a step that follows that workflow or is this a portion of that workflow that has been split out?
+</I>&gt;<i> 2) Could we get a readme that describes how to use this?
+</I>&gt;<i> 3) Do you have some non-confidential small test data that we can use to run/test this quickly before running a real donor through this?
+</I>&gt;<i>
+</I>&gt;<i> Thanks!
+</I>&gt;<i>
+</I>&gt;<i> ________________________________________
+</I>&gt;<i> From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>] on behalf of Ivo Buchhalter [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">i.buchhalter at dkfz-heidelberg.de</A>]
+</I>&gt;<i> Sent: October 18, 2016 3:06 AM
+</I>&gt;<i> To: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> Cc: Werner, Johannes; prinz; Schlesner, Matthias
+</I>&gt;<i> Subject: [DOCKTESTERS] DKFZ bias filter docker
+</I>&gt;<i>
+</I>&gt;<i> Dear dockertesters,
+</I>&gt;<i>
+</I>&gt;<i> I was told to contact you regarding the DKFZ bias filter docker. The
+</I>&gt;<i> docker is basically ready and it also passed internal testing. The
+</I>&gt;<i> scripts and Dockerfile can be found here:
+</I>&gt;<i> <A HREF="https://github.com/eilslabs/DKFZBiasFilter">https://github.com/eilslabs/DKFZBiasFilter</A>
+</I>&gt;<i> Johannes and Manuel (CCed) have been working on bringing it into
+</I>&gt;<i> Dockstore (they ran into a NFS problem). Johannes is currently on
+</I>&gt;<i> vacation (until October 23rd).
+</I>&gt;<i> Please let me know if it is sufficient to have the docker available on
+</I>&gt;<i> Dockstore some time next week. Alternatively it might be possible that
+</I>&gt;<i> you work with the scripts and Dockerfile on GitHub. If none of this
+</I>&gt;<i> works I (or probably Manuel) can also try to get it running on Dockstore
+</I>&gt;<i> some time later this week.
+</I>&gt;<i>
+</I>&gt;<i> Best,
+</I>&gt;<i> Ivo
+</I>&gt;<i>
+</I>&gt;<i> PS: Sorry to the DKFZ people the email before bounced back because the
+</I>&gt;<i> link of the email address on the Wiki had a typo.
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000127.html">[DOCKTESTERS] DKFZ bias filter docker
+</A></li>
+	<LI>Next message: <A HREF="000132.html">[DOCKTESTERS] DKFZ bias filter docker
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#128">[ date ]</a>
+              <a href="thread.html#128">[ thread ]</a>
+              <a href="subject.html#128">[ subject ]</a>
+              <a href="author.html#128">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

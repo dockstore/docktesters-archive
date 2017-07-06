@@ -1,0 +1,409 @@
+From Marc.Perry at oicr.on.ca  Mon Jun 13 15:54:49 2016
+From: Marc.Perry at oicr.on.ca (Marc Perry)
+Date: Mon, 13 Jun 2016 19:54:49 +0000
+Subject: [DOCKTESTERS] FW: UPDATE: There are now four Docker images
+ available for PCAWG Workflows,
+ and Brian is planning a Dockstore Tutorial for next week
+Message-ID: <C05BD76ADF6E2F43B40D03CBBE465B1DCB55B152@exmb2.ad.oicr.on.ca>
+
+Hi All,
+
+I tried to send out this Email last week and now realize why I did not get a response: I mangled the Email address by switching two of terms.  So, in the interim, Brian has had a terrific response to his Webinar Tutorial poll and the first one will be held this Thursday, June 16th, 2016 at 9:00 A.M. PDT.  So if you are able to participate in that it will probably we worthwhile.  During today's weekly PCAWG-Tech call he mentioned that not everyone who is interested will be able to attend that time so he may offer this first one again.
+
+We would like to have another Docktesters TC as soon as possible, and I was wondering if next Monday would suit us (see below).
+
+Thanks,
+-- Marc
+
+From: Marc Perry
+Sent: Tuesday, June 07, 2016 3:30 PM
+To: 'docktesters at icgc.lists.org'
+Subject: UPDATE: There are now four Docker images available for PCAWG Workflows, and Brian is planning a Dockstore Tutorial for next week
+
+Hi Docktesters,
+
+You may not have heard but Francis is going to be out of action for the next week (approx.) and he asked me to schedule the next teleconference for our PCAWG Docker Testing Working Group.  Since our inaugural TC was held on a Monday, right after the PCAWG Technical Working Group's weekly TC (that has been held at 9:00  A.M. Eastern Time for many months), I was wondering if either Monday, June 13, 2016, or Monday, June 20, 2016, at 10:00 A.M. (currently UTC-04:00) would work for the majority of us?
+Please reply and let me know your availability for both of those time slots at your earliest convenience.  If is just not going to work then I will create a Doodle Poll for you to fill in.
+
+Other news:
+If you have been joining in on the Weekly PCAWG-Tech calls then you know that Brian et al., have now released four Docker images to www.dockstore.org<http://www.dockstore.org>, and these all need to be tested.  I have updated the wiki page for our group and the links and details are listed here: https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+%28Dockstore%29+Testing+Working+Group (scroll down to the table at the bottom of the page).  I am also creating a page that will have an SOP describing how to get up and running.
+
+As we discussed at our last conference call back at the end of April, Brian is also going to be holding some Tutorial Webinars.  These are going to be an introduction to Dockstore itself, and also cover how to build a Docker image from a Github repository.  At yesterday's PCAWG-Tech TC he included a link to a Doodle Poll for the best time to hold the first one of these (sometime next week): http://doodle.com/poll/isqtfqzgcw2q9i9s so please fill that out, as I think it will extremely instructive (even if we are testers, and not software developers).
+
+Thanks,
+-- Marc
+
+Marc Perry, Ph.D.
+DCC Biocuration Lead
+
+International Cancer Genome Consortium
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Tel:        416-673-8593
+Email:    marc.perry at oicr.on.ca<mailto:marc.perry at oicr.on.ca>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20160613/447429bf/attachment.html>
+
+From Marc.Perry at oicr.on.ca  Thu Jun 16 10:18:23 2016
+From: Marc.Perry at oicr.on.ca (Marc Perry)
+Date: Thu, 16 Jun 2016 14:18:23 +0000
+Subject: [DOCKTESTERS] REMINDER: Docker training 6/16 Wed 9am Pacific
+Message-ID: <C05BD76ADF6E2F43B40D03CBBE465B1DCB55EC13@exmb2.ad.oicr.on.ca>
+
+Hi Docktesters,
+
+In case any of you are not also members of the original pawg at lists.icgc.org PCAWG Mailing List, I am forwarding Brian's Email describing today's Webinar/Tutorial.
+
+-- Marc
+
+-----Original Message-----
+From: pawg-bounces at lists.icgc.org [mailto:pawg-bounces at lists.icgc.org] On Behalf Of Brian O'Connor
+Sent: Thursday, June 16, 2016 1:05 AM
+To: pawg at lists.icgc.org
+Subject: Re: [PAWG] Docker training 6/16 Wed 9am Pacific
+
+Hi Everyone,
+
+I have two items I wanted to share ahead of the call tomorrow.  The first is the slide-pack I will use for the first part of the tutorial.  See:
+
+https://docs.google.com/presentation/d/12ZbaQIPqyOApfuaIH_ulOJwlBDzaECwDdbTFrnhagGg/edit?usp=sharing
+
+and the second is the tutorial I will walk the group through:
+
+https://github.com/ga4gh/dockstore/wiki/Dockstore-New-Developer-Tutorial
+
+Also, just as a reminder I will use Google Hangouts on Air, the URL is:
+
+https://plus.google.com/events/ctpcmpsfn6kdg9v64ij1fauc99g
+
+Brian
+
+
+> On Jun 15, 2016, at 1:52 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+> 
+> Hi Everyone,
+> 
+> Just a reminder, I?ll host the first in a series of Docker tutorials tomorrow morning at 9am Pacific time.  Keep in mind, I will host others for those of you that can?t make it this time.  The topics will include what is Docker, how to create tools using it, and how to leverage the Dockstore to share tools with the wider community.
+> 
+> I?m going to use Google Hangouts on Air for this.  The link is:
+> 
+> https://plus.google.com/events/ctpcmpsfn6kdg9v64ij1fauc99g
+> 
+> I?ve never used this service before so hopefully it will work well.  It includes a Q&A feature that will allow people to post questions.  The Dockstore co-creator, Denis Yuen, will be on hand to answer questions via the Q&A chat feature during the talk.
+> 
+> Brian
+> 
+> PS: if anyone is willing to host a backup dial-in number I would very much appreciate it.  Please contact me if you can do this.  I don?t anticipate needing this but just in case Hangouts fails us?
+> 
+> 
+>> On Jun 9, 2016, at 6:09 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+>> 
+>> Hi Everyone,
+>> 
+>> The response has been pretty amazing for this tutorial, over 80 people have registered interest!  The most popular time was 9am Pacific on Thursday 6/16 so I?ll go with that time.  If this tutorial proves useful, I?ll repeat it so those of you that can?t make it next Thursday have an opportunity to take it.  If possible, I?ll record a screencast as well.
+>> 
+>> I?ll send out webinar details early next week.
+>> 
+>> Brian
+>> 
+>>> On Jun 7, 2016, at 3:52 PM, Brian O'Connor <boconnor at oicr.on.ca> wrote:
+>>> 
+>>> Hi,
+>>> 
+>>> I?m going to give a webinar on how to Docker-ize tools, register them on Dockstore.org, and share them with others.  Docker-based tools are extremely convenient for running the same tool in a wide variety of environments, both cloud and HPC-based.  This tutorial will be extremely helpful as the PCAWG project moves to the publication phase and our tools need to be shared with the wider community.
+>>> 
+>>> If you are interested in attending, please indicate your preferred times here:
+>>> 
+>>> http://doodle.com/poll/isqtfqzgcw2q9i9s
+>>> 
+>>> Brian O'Connor
+>> 
+> 
+
+_______________________________________________
+PAWG mailing list
+PAWG at lists.icgc.org
+https://lists.icgc.org/mailman/listinfo/pawg
+
+From Marc.Perry at oicr.on.ca  Thu Jun 16 16:58:40 2016
+From: Marc.Perry at oicr.on.ca (Marc Perry)
+Date: Thu, 16 Jun 2016 20:58:40 +0000
+Subject: [DOCKTESTERS] FW: Docker training (repeat) next week
+In-Reply-To: <70A8BED4-9B3D-4083-920D-E3F396DEE68D@oicr.on.ca>
+References: <29B40A09-2DB6-4D07-9032-39B8ACA72C98@oicr.on.ca>
+	<C7FF4C88-2008-4F38-8B47-D703DEBF7EB2@oicr.on.ca>
+	<23B534F7-AFE9-4CBF-ACE4-354715AB0A50@oicr.on.ca>
+	<CF75FA26-C773-4A4D-9103-49A6E67D781E@oicr.on.ca>
+	<70A8BED4-9B3D-4083-920D-E3F396DEE68D@oicr.on.ca>
+Message-ID: <C05BD76ADF6E2F43B40D03CBBE465B1DCB55F49A@exmb2.ad.oicr.on.ca>
+
+Brian asked me to forward this message to the Docktesters Group:
+
+-----Original Message-----
+From: pawg-bounces at lists.icgc.org [mailto:pawg-bounces at lists.icgc.org] On Behalf Of Brian O'Connor
+Sent: Thursday, June 16, 2016 2:39 PM
+To: pawg at lists.icgc.org; docktesters at lists.icgc.org
+Subject: [PAWG] Docker training (repeat) next week
+
+Hi Everyone,
+
+For those of you that missed the Docker tutorial today I will give a repeat tutorial hosted at UCSC (and online) sometime next week.  If you?re interested, vote for your preferred time here:
+
+http://doodle.com/poll/7wuke8w5ykirgehe
+
+If this proves useful we?ll develop more advanced tutorials describing how to build workflows and run them on various clouds.
+
+Hope this helps!
+
+Brian
+
+
+> On Jun 15, 2016, at 10:05 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+> 
+> Hi Everyone,
+> 
+> I have two items I wanted to share ahead of the call tomorrow.  The first is the slide-pack I will use for the first part of the tutorial.  See:
+> 
+> https://docs.google.com/presentation/d/12ZbaQIPqyOApfuaIH_ulOJwlBDzaECwDdbTFrnhagGg/edit?usp=sharing
+> 
+> and the second is the tutorial I will walk the group through:
+> 
+> https://github.com/ga4gh/dockstore/wiki/Dockstore-New-Developer-Tutorial
+> 
+> Also, just as a reminder I will use Google Hangouts on Air, the URL is:
+> 
+> https://plus.google.com/events/ctpcmpsfn6kdg9v64ij1fauc99g
+> 
+> Brian
+> 
+> 
+>> On Jun 15, 2016, at 1:52 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+>> 
+>> Hi Everyone,
+>> 
+>> Just a reminder, I?ll host the first in a series of Docker tutorials tomorrow morning at 9am Pacific time.  Keep in mind, I will host others for those of you that can?t make it this time.  The topics will include what is Docker, how to create tools using it, and how to leverage the Dockstore to share tools with the wider community.
+>> 
+>> I?m going to use Google Hangouts on Air for this.  The link is:
+>> 
+>> https://plus.google.com/events/ctpcmpsfn6kdg9v64ij1fauc99g
+>> 
+>> I?ve never used this service before so hopefully it will work well.  It includes a Q&A feature that will allow people to post questions.  The Dockstore co-creator, Denis Yuen, will be on hand to answer questions via the Q&A chat feature during the talk.
+>> 
+>> Brian
+>> 
+>> PS: if anyone is willing to host a backup dial-in number I would very much appreciate it.  Please contact me if you can do this.  I don?t anticipate needing this but just in case Hangouts fails us?
+>> 
+>> 
+>>> On Jun 9, 2016, at 6:09 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+>>> 
+>>> Hi Everyone,
+>>> 
+>>> The response has been pretty amazing for this tutorial, over 80 people have registered interest!  The most popular time was 9am Pacific on Thursday 6/16 so I?ll go with that time.  If this tutorial proves useful, I?ll repeat it so those of you that can?t make it next Thursday have an opportunity to take it.  If possible, I?ll record a screencast as well.
+>>> 
+>>> I?ll send out webinar details early next week.
+>>> 
+>>> Brian
+>>> 
+>>>> On Jun 7, 2016, at 3:52 PM, Brian O'Connor <boconnor at oicr.on.ca> wrote:
+>>>> 
+>>>> Hi,
+>>>> 
+>>>> I?m going to give a webinar on how to Docker-ize tools, register them on Dockstore.org, and share them with others.  Docker-based tools are extremely convenient for running the same tool in a wide variety of environments, both cloud and HPC-based.  This tutorial will be extremely helpful as the PCAWG project moves to the publication phase and our tools need to be shared with the wider community.
+>>>> 
+>>>> If you are interested in attending, please indicate your preferred times here:
+>>>> 
+>>>> http://doodle.com/poll/isqtfqzgcw2q9i9s
+>>>> 
+>>>> Brian O'Connor
+>>> 
+>> 
+> 
+
+_______________________________________________
+PAWG mailing list
+PAWG at lists.icgc.org
+https://lists.icgc.org/mailman/listinfo/pawg
+
+From Brian.OConnor at oicr.on.ca  Thu Jun 16 14:39:14 2016
+From: Brian.OConnor at oicr.on.ca (Brian O'Connor)
+Date: Thu, 16 Jun 2016 18:39:14 +0000
+Subject: [DOCKTESTERS] Docker training (repeat) next week
+In-Reply-To: <CF75FA26-C773-4A4D-9103-49A6E67D781E@oicr.on.ca>
+References: <29B40A09-2DB6-4D07-9032-39B8ACA72C98@oicr.on.ca>
+	<C7FF4C88-2008-4F38-8B47-D703DEBF7EB2@oicr.on.ca>
+	<23B534F7-AFE9-4CBF-ACE4-354715AB0A50@oicr.on.ca>
+	<CF75FA26-C773-4A4D-9103-49A6E67D781E@oicr.on.ca>
+Message-ID: <70A8BED4-9B3D-4083-920D-E3F396DEE68D@oicr.on.ca>
+
+Hi Everyone,
+
+For those of you that missed the Docker tutorial today I will give a repeat tutorial hosted at UCSC (and online) sometime next week.  If you?re interested, vote for your preferred time here:
+
+http://doodle.com/poll/7wuke8w5ykirgehe
+
+If this proves useful we?ll develop more advanced tutorials describing how to build workflows and run them on various clouds.
+
+Hope this helps!
+
+Brian
+
+
+> On Jun 15, 2016, at 10:05 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+> 
+> Hi Everyone,
+> 
+> I have two items I wanted to share ahead of the call tomorrow.  The first is the slide-pack I will use for the first part of the tutorial.  See:
+> 
+> https://docs.google.com/presentation/d/12ZbaQIPqyOApfuaIH_ulOJwlBDzaECwDdbTFrnhagGg/edit?usp=sharing
+> 
+> and the second is the tutorial I will walk the group through:
+> 
+> https://github.com/ga4gh/dockstore/wiki/Dockstore-New-Developer-Tutorial
+> 
+> Also, just as a reminder I will use Google Hangouts on Air, the URL is:
+> 
+> https://plus.google.com/events/ctpcmpsfn6kdg9v64ij1fauc99g
+> 
+> Brian
+> 
+> 
+>> On Jun 15, 2016, at 1:52 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+>> 
+>> Hi Everyone,
+>> 
+>> Just a reminder, I?ll host the first in a series of Docker tutorials tomorrow morning at 9am Pacific time.  Keep in mind, I will host others for those of you that can?t make it this time.  The topics will include what is Docker, how to create tools using it, and how to leverage the Dockstore to share tools with the wider community.
+>> 
+>> I?m going to use Google Hangouts on Air for this.  The link is:
+>> 
+>> https://plus.google.com/events/ctpcmpsfn6kdg9v64ij1fauc99g
+>> 
+>> I?ve never used this service before so hopefully it will work well.  It includes a Q&A feature that will allow people to post questions.  The Dockstore co-creator, Denis Yuen, will be on hand to answer questions via the Q&A chat feature during the talk.
+>> 
+>> Brian
+>> 
+>> PS: if anyone is willing to host a backup dial-in number I would very much appreciate it.  Please contact me if you can do this.  I don?t anticipate needing this but just in case Hangouts fails us?
+>> 
+>> 
+>>> On Jun 9, 2016, at 6:09 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca> wrote:
+>>> 
+>>> Hi Everyone,
+>>> 
+>>> The response has been pretty amazing for this tutorial, over 80 people have registered interest!  The most popular time was 9am Pacific on Thursday 6/16 so I?ll go with that time.  If this tutorial proves useful, I?ll repeat it so those of you that can?t make it next Thursday have an opportunity to take it.  If possible, I?ll record a screencast as well.
+>>> 
+>>> I?ll send out webinar details early next week.
+>>> 
+>>> Brian
+>>> 
+>>>> On Jun 7, 2016, at 3:52 PM, Brian O'Connor <boconnor at oicr.on.ca> wrote:
+>>>> 
+>>>> Hi,
+>>>> 
+>>>> I?m going to give a webinar on how to Docker-ize tools, register them on Dockstore.org, and share them with others.  Docker-based tools are extremely convenient for running the same tool in a wide variety of environments, both cloud and HPC-based.  This tutorial will be extremely helpful as the PCAWG project moves to the publication phase and our tools need to be shared with the wider community.
+>>>> 
+>>>> If you are interested in attending, please indicate your preferred times here:
+>>>> 
+>>>> http://doodle.com/poll/isqtfqzgcw2q9i9s
+>>>> 
+>>>> Brian O'Connor
+>>> 
+>> 
+> 
+
+
+From Marc.Perry at oicr.on.ca  Mon Jun 20 09:57:15 2016
+From: Marc.Perry at oicr.on.ca (Marc Perry)
+Date: Mon, 20 Jun 2016 13:57:15 +0000
+Subject: [DOCKTESTERS] UPDATE: NO CONFERENCE CALL TODAY
+Message-ID: <C05BD76ADF6E2F43B40D03CBBE465B1DCB561A33@exmb2.ad.oicr.on.ca>
+
+Hi Docktesters,
+
+I apologize for not notifying you about this last week.  I only heard back from one of the actual "testers" so I decided to (a) follow-up individually with the members of this list, and then (b) find a mutually convenient time for next teleconference.
+
+Thanks,
+-- Marc
+
+Marc Perry, Ph.D.
+DCC Biocuration Lead
+
+
+International Cancer Genome Consortium
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+
+Tel:        416-673-8593
+Email:    marc.perry at oicr.on.ca<mailto:marc.perry at oicr.on.ca>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20160620/d1a91c7b/attachment.html>
+
+From francis at oicr.on.ca  Mon Jun 20 10:03:01 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 20 Jun 2016 14:03:01 +0000
+Subject: [DOCKTESTERS] UPDATE: NO CONFERENCE CALL TODAY
+In-Reply-To: <C05BD76ADF6E2F43B40D03CBBE465B1DCB561A33@exmb2.ad.oicr.on.ca>
+References: <C05BD76ADF6E2F43B40D03CBBE465B1DCB561A33@exmb2.ad.oicr.on.ca>
+Message-ID: <41EF95AA-A2D8-47BB-AF82-B0792F8EBA1B@oicr.on.ca>
+
+
+Hi All,
+
+We are a small group, so let?s try and work and try and find a time where we can
+all meet together, and not have to do multiple calls.
+
+Thank you,
+
+@bffo
+
+
+
+On Jun 20, 2016, at 9:57 AM, Marc Perry <Marc.Perry at oicr.on.ca<mailto:Marc.Perry at oicr.on.ca>> wrote:
+
+Hi Docktesters,
+
+I apologize for not notifying you about this last week.  I only heard back from one of the actual ?testers? so I decided to (a) follow-up individually with the members of this list, and then (b) find a mutually convenient time for next teleconference.
+
+Thanks,
+-- Marc
+
+Marc Perry, Ph.D.
+DCC Biocuration Lead
+
+
+International Cancer Genome Consortium
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+
+Tel:        416-673-8593
+Email:    marc.perry at oicr.on.ca<mailto:marc.perry at oicr.on.ca>
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20160620/d9ade585/attachment.html>
+

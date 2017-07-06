@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Sanger validation (DO52140) repeated: Same	discrepancies
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20validation%20%28DO52140%29%20repeated%3A%20Same%0A%09discrepancies&In-Reply-To=%3CCA%2Bdx8masdfitFV7MLe7typigbDDHVdrh0R3XH%3Di5ucAZjtQMFA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000216.html">
+   <LINK REL="Next"  HREF="000217.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Sanger validation (DO52140) repeated: Same	discrepancies</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20validation%20%28DO52140%29%20repeated%3A%20Same%0A%09discrepancies&In-Reply-To=%3CCA%2Bdx8masdfitFV7MLe7typigbDDHVdrh0R3XH%3Di5ucAZjtQMFA%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Sanger validation (DO52140) repeated: Same	discrepancies">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Fri Jan 13 11:37:44 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000216.html">[DOCKTESTERS] - Crick
+</A></li>
+        <LI>Next message: <A HREF="000217.html">[DOCKTESTERS] Sanger validation (DO52140) repeated:	Same	discrepancies
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#215">[ date ]</a>
+              <a href="thread.html#215">[ thread ]</a>
+              <a href="subject.html#215">[ subject ]</a>
+              <a href="author.html#215">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi all,
+
+I've completed a second run of the Sanger pipeline for donor DO52140 and
+have obtained the *same discrepancies* as detailed below.
+
+Jonas from Crick has agreed to repeat one of the donors I have ran in his
+infrastructure to see if the discrepancies are dependent on the setup.
+
+Best regards
+
+Miguel
+
+On Tue, Dec 27, 2016 at 7:16 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+wrote:
+
+&gt;<i> Francis,
+</I>&gt;<i>
+</I>&gt;<i> This was on a new donor. I decided to get a second donor  before repeating
+</I>&gt;<i> the first. The first  donor also had differences in SNVs, but no
+</I>&gt;<i> differences in CNV.
+</I>&gt;<i>
+</I>&gt;<i> Since the discrepancies for the first donor were not deemed too critical,
+</I>&gt;<i> I've actually moved onto trying the bwa-mem workflow, which I couldn't make
+</I>&gt;<i> to run on test data and so I'm trying on real data.  Should I instead try a
+</I>&gt;<i> second run on a donor to test if the differences are the same?
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i> On Dec 27, 2016 5:30 PM, &quot;Francis Ouellette&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Are the differences the same or different then the last time you ran
+</I>&gt;<i> this?
+</I>&gt;<i> Was this Sanger workflow run on the same infrastructure as the last
+</I>&gt;<i> one you did?
+</I>&gt;<i>
+</I>&gt;<i> @bffo
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Dec 27, 2016, at 08:24, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> The test for the Sanger workflow on the second sample is complete. The
+</I>&gt;<i> results are posted below.
+</I>&gt;<i>
+</I>&gt;<i> In brief, *somatic* *indels* * and* *SV* *are a 100% match* (803986 and 6
+</I>&gt;<i> respectively matches) there are *small differences* *in* *somatic.snv.mnv*
+</I>&gt;<i> (+5 -7 with 87234 matches) *and* *somatic.cnv* (-2 and 36 matches)
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Report
+</I>&gt;<i> ~~~~~~
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 36
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 2
+</I>&gt;<i>     - Example: 10:11767915:T:&lt;CNV&gt;,10:11779907:G:&lt;CNV&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 803986
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 87234
+</I>&gt;<i> Extra: 5
+</I>&gt;<i>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+</I>&gt;<i> Missing: 7
+</I>&gt;<i>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 6
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170113/e0bfa4a1/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170113/e0bfa4a1/attachment.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000216.html">[DOCKTESTERS] - Crick
+</A></li>
+	<LI>Next message: <A HREF="000217.html">[DOCKTESTERS] Sanger validation (DO52140) repeated:	Same	discrepancies
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#215">[ date ]</a>
+              <a href="thread.html#215">[ thread ]</a>
+              <a href="subject.html#215">[ subject ]</a>
+              <a href="author.html#215">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

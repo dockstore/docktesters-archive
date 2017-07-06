@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Fwd%3A%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3C6D379955-753C-4F00-A4C8-5E32C654349E%40sanger.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000096.html">
+   <LINK REL="Next"  HREF="000098.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference</H1>
+    <B>Keiran Raine</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Fwd%3A%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3C6D379955-753C-4F00-A4C8-5E32C654349E%40sanger.ac.uk%3E"
+       TITLE="[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference">kr2 at sanger.ac.uk
+       </A><BR>
+    <I>Tue Oct 11 07:50:02 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000096.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+        <LI>Next message: <A HREF="000098.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#97">[ date ]</a>
+              <a href="thread.html#97">[ thread ]</a>
+              <a href="subject.html#97">[ subject ]</a>
+              <a href="author.html#97">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+1. Can you confirm that the donors you are using are the standard BAMs mapped within the PanCancer project i.e. those available in GNOS as I have copied of all local?
+2. Is there an MD5 check of the BAM files carried out?  When pulled from GSNO it was part of that application.
+3. All the output of pindel is being written to '/var/spool/cwl/0/pindel/tmpPindel/'  Is this area part of the 1TB(or large) workspace?
+4. It looks like the *_pindel_input_* steps run for only 22-23 seconds which could indicate a problem with either the headers or the absence of the BAS file from the expected location.
+
+If you don't have the ability for the state to be saved it's going to be very difficult to debug this,
+
+Regards,
+
+Keiran Raine
+Principal Bioinformatician
+Cancer Genome Project
+Wellcome Trust Sanger Institute
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+Tel:+44 (0)1223 834244 Ext: 4983
+Office: H104
+
+&gt;<i> On 11 Oct 2016, at 10:19, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> Hi again,
+</I>&gt;<i> 
+</I>&gt;<i> Here is the log file for the Sanger pipeline using a different donor. I hope this helps. Other than that there is not much I can do. The filesystem does not seem to hold anything other than the input files that are copied into the 'datastore' subdirectory, and the docker image has been wiped. 
+</I>&gt;<i> 
+</I>&gt;<i> If someone has any other suggestion on how I can make myself useful in this matter I'd be glad to hear it. Otherwise I'm moving on.
+</I>&gt;<i> 
+</I>&gt;<i> Regards,
+</I>&gt;<i> 
+</I>&gt;<i> Miguel
+</I>&gt;<i> 
+</I>&gt;<i> On Mon, Oct 10, 2016 at 9:11 AM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+</I>&gt;<i> Hi all,
+</I>&gt;<i> 
+</I>&gt;<i> I've reproduced the Sanger error again. I'm attaching the result of the command to see if this helps 
+</I>&gt;<i> 
+</I>&gt;<i> Best
+</I>&gt;<i> 
+</I>&gt;<i> M
+</I>&gt;<i> 
+</I>&gt;<i> On Fri, Sep 30, 2016 at 3:52 PM, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt;&gt; wrote:
+</I>&gt;<i> Dear Miguel and Junjun, 
+</I>&gt;<i> 
+</I>&gt;<i> Any more attempts on testing the PCAWG sanger docker container?
+</I>&gt;<i> 
+</I>&gt;<i> If you reproduce the same error, we will need to involve Bryan and 
+</I>&gt;<i> Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt;&gt; (author of the container).
+</I>&gt;<i> 
+</I>&gt;<i> Let&#8217;s get this one figured out.
+</I>&gt;<i> 
+</I>&gt;<i> I am going to assume that the making of the docker container is what 
+</I>&gt;<i> needs resolving. 
+</I>&gt;<i> 
+</I>&gt;<i> Brian: We may need your input here.
+</I>&gt;<i> 
+</I>&gt;<i> Details of our current experiment should continue to be posted here:
+</I>&gt;<i> 
+</I>&gt;<i> <A HREF="https://goo.gl/XX5BG9">https://goo.gl/XX5BG9</A> &lt;<A HREF="https://goo.gl/XX5BG9">https://goo.gl/XX5BG9</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> Thank you all,
+</I>&gt;<i> 
+</I>&gt;<i> francis
+</I>&gt;<i> 
+</I>&gt;<i> PS would be good for others on list to follow directions on above google 
+</I>&gt;<i> doc and also see if they can succeed on this workflow.
+</I>&gt;<i> 
+</I>&gt;<i> Junjun and Miguel have tried different clouds, but used the sanger 
+</I>&gt;<i> workflow, on the same data set. 
+</I>&gt;<i> 
+</I>&gt;<i> Thank you for trying to do this.
+</I>&gt;<i> 
+</I>&gt;<i> Would be good if I heard back from anybody before Monday AM (tech call).
+</I>&gt;<i> 
+</I>&gt;<i> @bffo
+</I>&gt;<i> 
+</I>&gt;<i> PS I CCed Keiran, but waiting to hear back from Brian before we need to involve him some more.
+</I>&gt;<i> PPS Junjun/Miguel: maybe you can try the DKFZ docker as well? (on the same data set).
+</I>&gt;<i> 
+</I>&gt;<i>  
+</I>&gt;<i> -- 
+</I>&gt;<i> B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A> &lt;<A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A>&gt;    
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Begin forwarded message:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> From: Christina Yung &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Christina.Yung at oicr.on.ca</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Christina.Yung at oicr.on.ca</A>&gt;&gt;
+</I>&gt;&gt;<i> Subject: [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+</I>&gt;&gt;<i> Date: September 30, 2016 at 9:19:39 AM EDT
+</I>&gt;&gt;<i> To: &quot;pawg-tech (<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">pawg-tech at lists.icgc.org</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">pawg-tech at lists.icgc.org</A>&gt;)&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">pawg-tech at lists.icgc.org</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">pawg-tech at lists.icgc.org</A>&gt;&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Hi Everyone,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Below is a draft agenda for Monday&#8217;s tech call.  Please let me know if you have any agenda items for discussion.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/2016-10-03+PCAWG-TECH+Teleconference">https://wiki.oicr.on.ca/display/PANCANCER/2016-10-03+PCAWG-TECH+Teleconference</A> &lt;<A HREF="https://wiki.oicr.on.ca/display/PANCANCER/2016-10-03+PCAWG-TECH+Teleconference">https://wiki.oicr.on.ca/display/PANCANCER/2016-10-03+PCAWG-TECH+Teleconference</A>&gt;
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Have a great weekend!
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Christina
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Call Info
+</I>&gt;&gt;<i> Usual Time            9 AM Eastern Time, Mondays
+</I>&gt;&gt;<i> UK                          0208 322 2500
+</I>&gt;&gt;<i> Canada                  1-866-220-6419
+</I>&gt;&gt;<i> United States        1-877-420-0272
+</I>&gt;&gt;<i> All Others              Please see attached PDF file &lt;<A HREF="https://wiki.oicr.on.ca/download/attachments/57776990/PAWG-TECH-Telecon-International-Numbers.pdf?version=1&amp;modificationDate=1401456003000&amp;api=v2">https://wiki.oicr.on.ca/download/attachments/57776990/PAWG-TECH-Telecon-International-Numbers.pdf?version=1&amp;modificationDate=1401456003000&amp;api=v2</A>&gt; with a list of numbers for other countries.
+</I>&gt;&gt;<i> Participant Code  5910819#
+</I>&gt;&gt;<i> Agenda
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> Time
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Item
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Who
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Attachments/Links
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 5min
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Welcome. Wait for group members to log on
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Christina Yung &lt;<A HREF="https://wiki.oicr.on.ca/display/~cyung">https://wiki.oicr.on.ca/display/~cyung</A>&gt;, OICR
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 10min
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Overall status
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Christina Yung &lt;<A HREF="https://wiki.oicr.on.ca/display/~cyung">https://wiki.oicr.on.ca/display/~cyung</A>&gt;, OICR
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &#183;        
+</I>&gt;&gt;<i> Linkouts to Most Current PCAWG Data &lt;<A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Linkouts+to+Most+Current+PCAWG+Data">https://wiki.oicr.on.ca/display/PANCANCER/Linkouts+to+Most+Current+PCAWG+Data</A>&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &#183;        
+</I>&gt;&gt;<i> Report data issues to <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">pcawg-data at icgc.org</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">pcawg-data at icgc.org</A>&gt;, GNOS issue to: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Help at annaisystems.com</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Help at annaisystems.com</A>&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> &#183;        
+</I>&gt;&gt;<i> From Boston F2F:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> PCAWG datasets &amp; dependencies &lt;<A HREF="https://docs.google.com/spreadsheets/d/1VltMMLL5XDIFipM3zzLqZOGj5z-UxIMKLDbsuDiD2Q8/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1VltMMLL5XDIFipM3zzLqZOGj5z-UxIMKLDbsuDiD2Q8/edit?usp=sharing</A>&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Action Items
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 1.      
+</I>&gt;&gt;<i> [Joachim] Consensus SV - final?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 2.      
+</I>&gt;&gt;<i> [Jakob] Consensus SNVs - changes to &quot;SNV near indels&quot; annotation?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 3.      
+</I>&gt;&gt;<i> [Junjun] Specimen ID mapping for miRNA and methylation
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 4.      
+</I>&gt;&gt;<i> [Jonathan &amp; Joachim] Consensus calls for cell lines, followed by filtering
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 5.      
+</I>&gt;&gt;<i> [Matthias &amp; Gordon] Docker containers for filtering methods
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 6.      
+</I>&gt;&gt;<i> [Christina] Run alignment &amp; variant workflows on medulloblastoma sample (tumor 40x, normal 30x) from ICGC benchmark to estimate false negative
+</I>&gt;&gt;<i>  rate
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 7.      
+</I>&gt;&gt;<i> [Christina] Follow up with institutes interested in hosting PCAWG data long-term
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 8.      
+</I>&gt;&gt;<i> [All] As per Jennifer's email on Sept 16, please provide authorship information again or for the first time using PCAWG Author Form (<A HREF="http://goo.gl/forms/5Wq5x5X1DK">http://goo.gl/forms/5Wq5x5X1DK</A> &lt;<A HREF="http://goo.gl/forms/5Wq5x5X1DK">http://goo.gl/forms/5Wq5x5X1DK</A>&gt;).
+</I>&gt;&gt;<i>  Save the link &quot;Edit your response&quot; so you can go back later to provide updates, for example about your evolving role in writing specific papers.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 9.      
+</I>&gt;&gt;<i> [All] Contribute to the manuscripts on
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> a.      
+</I>&gt;&gt;<i> infrastructure:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> <A HREF="https://docs.google.com/document/d/10alAxrWLdLSyhci-rfNuVH13rFXCJkaY_rzf1KJn7nc/edit">https://docs.google.com/document/d/10alAxrWLdLSyhci-rfNuVH13rFXCJkaY_rzf1KJn7nc/edit</A> &lt;<A HREF="https://docs.google.com/document/d/10alAxrWLdLSyhci-rfNuVH13rFXCJkaY_rzf1KJn7nc/edit">https://docs.google.com/document/d/10alAxrWLdLSyhci-rfNuVH13rFXCJkaY_rzf1KJn7nc/edit</A>&gt;
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> b.      
+</I>&gt;&gt;<i> variants: Paper ( <A HREF="https://goo.gl/g9CLsu">https://goo.gl/g9CLsu</A> &lt;<A HREF="https://goo.gl/g9CLsu">https://goo.gl/g9CLsu</A>&gt; ), Supplement ( <A HREF="https://goo.gl/EWYh7e">https://goo.gl/EWYh7e</A> &lt;<A HREF="https://goo.gl/EWYh7e">https://goo.gl/EWYh7e</A>&gt; )
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> c.      
+</I>&gt;&gt;<i> Rogue's Gallery of Cancer Genome Sequencing Artifacts (
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> outline &lt;<A HREF="https://wiki.oicr.on.ca/download/attachments/66958609/Rogues%E2%80%99%20Gallery%20of%20Cancer%20Genome%20Sequencing%20Artefacts.pdf?version=1&amp;modificationDate=1469802643000&amp;api=v2">https://wiki.oicr.on.ca/download/attachments/66958609/Rogues%E2%80%99%20Gallery%20of%20Cancer%20Genome%20Sequencing%20Artefacts.pdf?version=1&amp;modificationDate=1469802643000&amp;api=v2</A>&gt; )
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 10.  
+</I>&gt;&gt;<i> [Junjun] Discuss PCAWG vs DCC glossary terms at next PCAWG-10/13 conference
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 10min
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Status of dockerizing workflows
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Brian O'Connor &lt;<A HREF="https://wiki.oicr.on.ca/display/~boconnor">https://wiki.oicr.on.ca/display/~boconnor</A>&gt;, UCSC
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Gordon Saksena &lt;<A HREF="https://wiki.oicr.on.ca/display/~gsaksena@broadinstitute.org">https://wiki.oicr.on.ca/display/~gsaksena@broadinstitute.org</A>&gt;, Broad
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Francis Ouellette &lt;<A HREF="https://wiki.oicr.on.ca/display/~francis">https://wiki.oicr.on.ca/display/~francis</A>&gt;, OICR
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Status of PCAWG Workflow ports to Dockstore:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Denis has been porting the Dockstore entries to CWL version 1.0 which is part of our effort to publish Dockstore (this doesn't affect the content of the pipelines, simply their
+</I>&gt;&gt;<i>  &quot;descriptors&quot; which allow them to be runnable via Dockstore). Denis has also worked on testing BWA-Mem, Sanger, EMBL (which all work with CWL 1.0 and Kerian's test dataset) and has fixed issues with DKFZ and is testing the latter with a real sample shortly.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 1.      
+</I>&gt;&gt;<i> BWA-Mem - Ready for testing by Francis' team
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 2.      
+</I>&gt;&gt;<i> Sanger - Ready for testing by Francis' team.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 3.      
+</I>&gt;&gt;<i> EMBL - Ready for testing by Francis' team.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 4.      
+</I>&gt;&gt;<i> DKFZ - Ready for testing by Francis' team. I've exchanged emails with Manuel Ballesteros who has been testing this pipeline.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 5.      
+</I>&gt;&gt;<i> Broad - Variant calling (MuTect, dRanger, snowman), need some work, Gordan sent details previously
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 6.      
+</I>&gt;&gt;<i> OxoG - Waiting for Dimitri to provide OxoG docker
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 7.      
+</I>&gt;&gt;<i> Variantbam
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 8.      
+</I>&gt;&gt;<i> Consensus algorithm
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> PCAWG Docker (Dockstore) Testing Working Group &lt;<A HREF="https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+%28Dockstore%29+Testing+Working+Group">https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+Docker+%28Dockstore%29+Testing+Working+Group</A>&gt;
+</I>&gt;&gt;<i> 5min
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Other business?
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Group
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Christina K. Yung, PhD
+</I>&gt;&gt;<i> Project Manager, Cancer Genome Collaboratory
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Ontario Institute for Cancer Research
+</I>&gt;&gt;<i> MaRS Centre
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 661 University Avenue, Suite 510 
+</I>&gt;&gt;<i> Toronto, Ontario, Canada M5G 0A3
+</I>&gt;&gt;<i> Tel: 416-673-8578
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> www.oicr.on.ca &lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i>  
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> PAWG-TECH mailing list
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">PAWG-TECH at lists.icgc.org</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">PAWG-TECH at lists.icgc.org</A>&gt;
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/pawg-tech">https://lists.icgc.org/mailman/listinfo/pawg-tech</A> &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/pawg-tech">https://lists.icgc.org/mailman/listinfo/pawg-tech</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A> &lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A> &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>&gt;
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> 
+</I>&gt;<i> &lt;Sanger.DO50398.log&gt;
+</I>
+
+
+
+-- 
+ The Wellcome Trust Sanger Institute is operated by Genome Research 
+ Limited, a charity registered in England with number 1021457 and a 
+ company registered in England with number 2742969, whose registered 
+ office is 215 Euston Road, London, NW1 2BE. 
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161011/215e51ee/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161011/215e51ee/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000096.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+	<LI>Next message: <A HREF="000098.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#97">[ date ]</a>
+              <a href="thread.html#97">[ thread ]</a>
+              <a href="subject.html#97">[ subject ]</a>
+              <a href="author.html#97">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

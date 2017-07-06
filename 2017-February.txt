@@ -1,0 +1,6580 @@
+From Jonas.Demeulemeester at crick.ac.uk  Fri Feb  3 12:10:07 2017
+From: Jonas.Demeulemeester at crick.ac.uk (Jonas Demeulemeester)
+Date: Fri, 3 Feb 2017 17:10:07 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers
+	Sanger	and	DKFZ(+Delly)
+In-Reply-To: <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+Message-ID: <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+
+Dear all,
+
+Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on samples DO52140 and DO50311.
+The dockerised pipelines return identical calls for SNV.MNVs and indels but partly different ones for SVs and CNVs, independent of the infrastructure.
+
+Best regards,
+Jonas
+
+
+
+
+
+RESULTS DO52140
+---------------
+
+Comparison of somatic.sv for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of germline.sv for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+
+
+RESULTS DO50311
+---------------
+
+Comparison of somatic.sv for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of germline.sv for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<%22mailto:>
+W: www.crick.ac.uk<%22http://>
+
+
+
+On 26 Jan 2017, at 13:41, Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+
+Hi all,
+
+I can now confirm Miguel?s results with the Sanger workflow on donors DO50311 and DO52140.
+The calls made by the dockerised version are identical for Indels and SVs and produce only small discrepancies for SNV_MNVs and CNVs.
+The discrepancies seem independent of the system infrastructure as the number of missing/extra variants called are the same as Miguel?s reported previously (on DO52140)
+
+I?ve also updated the wiki page accordingly.
+
+Best regards,
+Jonas
+
+
+
+RESULTS - DO50311
+------
+
+
+Comparison of cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of snv_mnv for DO50311 using Sanger
+---
+Common: 156313
+Extra: 0
+Missing: 0
+
+
+Comparison of sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+
+
+
+RESULTS - DO52140
+------
+
+
+Comparison of cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of svn_mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+Missing: 7
+    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+
+
+Comparison of sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+
+
+
+
+For comparison, Miguel?s report on DO51240:
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<x-msg://5/%22mailto:>
+W: www.crick.ac.uk<x-msg://5/%22http://>
+
+
+
+On 16 Jan 2017, at 14:24, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170203/42c1ae33/attachment-0001.html>
+
+From miguel.vazquez at cnio.es  Fri Feb  3 13:05:57 2017
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Fri, 3 Feb 2017 19:05:57 +0100
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+	DKFZ(+Delly)
+In-Reply-To: <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+Message-ID: <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+
+Excellent Jonas, this is very useful info.
+
+ I guess you are using my own scripts for this. The possibility remains
+that there is a misstep in them regarding delly. Let's see what turns out
+of the checks by our friends at DKFZ.
+
+Best regards
+
+Have a great weekend
+
+Miguel
+
+On Feb 3, 2017 6:10 PM, "Jonas Demeulemeester" <
+Jonas.Demeulemeester at crick.ac.uk> wrote:
+
+> Dear all,
+>
+> Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on
+> samples DO52140 and DO50311.
+> The dockerised pipelines return identical calls for SNV.MNVs and indels but
+> partly different ones for SVs and CNVs, independent of the infrastructure.
+>
+> Best regards,
+> Jonas
+>
+>
+>
+>
+>
+> RESULTS DO52140
+> ---------------
+>
+> Comparison of somatic.sv for DO52140 using DKFZ
+> ---
+> Common: 72
+> Extra: 23
+>     - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:
+> N:<TRA>
+> Missing: 61
+>     - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>
+>
+> Comparison of germline.sv for DO52140 using DKFZ
+> ---
+> Common: 1108
+> Extra: 1116
+>     - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:
+> 105097522:N:<DEL>
+> Missing: 2908
+>     - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:
+> 102158345:N:<DEL>
+>
+>
+> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 37160
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 3833896
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO52140 using DKFZ
+> ---
+> Common: 19347
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO52140 using DKFZ
+> ---
+> Common: 706572
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO52140 using DKFZ
+> ---
+> Common: 275
+> Extra: 94
+>     - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+> Missing: 286
+>     - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>
+>
+>
+>
+> RESULTS DO50311
+> ---------------
+>
+> Comparison of somatic.sv for DO50311 using DKFZ
+> ---
+> Common: 231
+> Extra: 44
+>     - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+> Missing: 48
+>     - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:
+> N:<TRA>
+>
+>
+> Comparison of germline.sv for DO50311 using DKFZ
+> ---
+> Common: 1393
+> Extra: 231
+>     - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:
+> N:<DEL>
+> Missing: 615
+>     - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:
+> N:<DUP>
+>
+>
+> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 51087
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 3850992
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO50311 using DKFZ
+> ---
+> Common: 26469
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO50311 using DKFZ
+> ---
+> Common: 709060
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO50311 using DKFZ
+> ---
+> Common: 731
+> Extra: 213
+>     - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:
+> 47674883:N:<NEUTRAL>
+> Missing: 190
+>     - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:
+> 119704960:N:<NEUTRAL>
+>
+>
+>
+>
+>
+> _________________________________
+> Jonas Demeulemeester, PhD
+> Postdoctoral Researcher
+> The Francis Crick Institute
+> 1 Midland Road
+> London
+> NW1 1AT
+>
+> *T:* +44 (0)20 3796 2594 <+44%2020%203796%202594>
+> M: +44 (0)7482 070730 <+44%207482%20070730>
+> *E:* jonas.demeulemeester at crick.ac.uk
+> *W:* www.crick.ac.uk
+>
+>
+>
+> On 26 Jan 2017, at 13:41, Jonas Demeulemeester <
+> Jonas.Demeulemeester at crick.ac.uk> wrote:
+>
+> Hi all,
+>
+> I can now confirm Miguel?s results with the *Sanger workflow* on
+> donors DO50311 and DO52140.
+> The calls made by the dockerised version are identical for Indels and SVs
+> and produce only small discrepancies for SNV_MNVs and CNVs.
+> The discrepancies seem independent of the system infrastructure as the
+> number of missing/extra variants called are the same as Miguel?s reported
+> previously (on DO52140)
+>
+> I?ve also updated the wiki page accordingly.
+>
+> Best regards,
+> Jonas
+>
+>
+>
+> RESULTS - DO50311
+> ------
+>
+>
+> Comparison of cnv for DO50311 using Sanger
+> ---
+> Common: 138
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of indel for DO50311 using Sanger
+> ---
+> Common: 812487
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of snv_mnv for DO50311 using Sanger
+> ---
+> Common: 156313
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of sv for DO50311 using Sanger
+> ---
+> Common: 260
+> Extra: 0
+> Missing: 0
+>
+>
+>
+>
+>
+> RESULTS - DO52140
+> ------
+>
+>
+> Comparison of cnv for DO52140 using Sanger
+> ---
+> Common: 36
+> Extra: 0
+> Missing: 2
+>     - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>
+>
+> Comparison of indel for DO52140 using Sanger
+> ---
+> Common: 803986
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of svn_mnv for DO52140 using Sanger
+> ---
+> Common: 87234
+> Extra: 5
+>     - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+> Missing: 7
+>     - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+>
+>
+> Comparison of sv for DO52140 using Sanger
+> ---
+> Common: 6
+> Extra: 0
+> Missing: 0
+>
+>
+>
+>
+>
+>
+> For comparison, Miguel?s report on DO51240:
+> Report
+> ~~~~~~
+>
+> Comparison of somatic.cnv for DO52140 using Sanger
+> ---
+> Common: 36
+> Extra: 0
+> Missing: 2
+>     - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>
+>
+> Comparison of somatic.indel for DO52140 using Sanger
+> ---
+> Common: 803986
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.snv.mnv for DO52140 using Sanger
+> ---
+> Common: 87234
+> Extra: 5
+>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+> Missing: 7
+>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>
+>
+> Comparison of somatic.sv for DO52140 using Sanger
+> ---
+> Common: 6
+> Extra: 0
+> Missing: 0
+>
+>
+> _________________________________
+> Jonas Demeulemeester, PhD
+> Postdoctoral Researcher
+> The Francis Crick Institute
+> 1 Midland Road
+> London
+> NW1 1AT
+>
+> *T:* +44 (0)20 3796 2594 <+44%2020%203796%202594>
+> M: +44 (0)7482 070730 <+44%207482%20070730>
+> *E:* jonas.demeulemeester at crick.ac.uk
+> *W:* www.crick.ac.uk
+>
+>
+>
+> On 16 Jan 2017, at 14:24, Miguel Vazquez <miguel.vazquez at cnio.es> wrote:
+>
+> Dear all,
+>
+> Let me summarize the status of the testing for Sanger and DKFZ. The
+> validation has been run for two donors for each workflow: DO50311 DO52140
+>
+> Sanger:
+> ----------
+>
+> Sanger call only somatic variants. The results are *identical for Indels
+> and SVs* but *almost identical for SNV.MNV and CNV*. The discrepancies
+> are reproducible (on the same machine at least), i.e. the same are found
+> after running the workflow a second time.
+>
+> DKFZ:
+> ---------
+> DKFZ cals somatic and germline variants, except germline CNVs. For both
+> germline and somatic variants the results are *identical for SNV.MNV and
+> Indels* but with *large discrepancies for SV and CNV*.
+>
+> Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+> investigating this issue I believe.
+>
+> BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+> Demeulemeester. Denis I believe is investigating this problem further. I
+> haven't had the chance to investigate this much myself.
+>
+> Best
+>
+> Miguel
+>
+>
+>
+>
+> ---------------------
+> RESULTS
+> ---------------------
+>
+> ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+>
+> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 51087
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO50311 using DKFZ
+> ---
+> Common: 26469
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO50311 using DKFZ
+> ---
+> Common: 231
+> Extra: 44
+>     - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+> Missing: 48
+>     - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:
+> N:<TRA>
+>
+>
+> Comparison of somatic.cnv for DO50311 using DKFZ
+> ---
+> Common: 731
+> Extra: 213
+>     - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:
+> 47674883:N:<NEUTRAL>
+> Missing: 190
+>     - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:
+> 119704960:N:<NEUTRAL>
+>
+>
+> Comparison of germline.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 3850992
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO50311 using DKFZ
+> ---
+> Common: 709060
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.sv for DO50311 using DKFZ
+> ---
+> Common: 1393
+> Extra: 231
+>     - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:
+> N:<DEL>
+> Missing: 615
+>     - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:
+> N:<DUP>
+>
+> File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//
+> output//DO50311.germline.cnv.vcf.gz
+>
+> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 37160
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO52140 using DKFZ
+> ---
+> Common: 19347
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO52140 using DKFZ
+> ---
+> Common: 72
+> Extra: 23
+>     - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:
+> N:<TRA>
+> Missing: 61
+>     - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>
+>
+> Comparison of somatic.cnv for DO52140 using DKFZ
+> ---
+> Common: 275
+> Extra: 94
+>     - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+> Missing: 286
+>     - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>
+>
+> Comparison of germline.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 3833896
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO52140 using DKFZ
+> ---
+> Common: 706572
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.sv for DO52140 using DKFZ
+> ---
+> Common: 1108
+> Extra: 1116
+>     - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:
+> 105097522:N:<DEL>
+> Missing: 2908
+>     - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:
+> 102158345:N:<DEL>
+>
+> File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//
+> output//DO52140.germline.cnv.vcf.gz
+>
+> Comparison of somatic.snv.mnv for DO50311 using Sanger
+> ---
+> Common: 156299
+> Extra: 1
+>     - Example: Y:58885197:A:G
+> Missing: 14
+>     - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+>
+>
+> Comparison of somatic.indel for DO50311 using Sanger
+> ---
+> Common: 812487
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO50311 using Sanger
+> ---
+> Common: 260
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO50311 using Sanger
+> ---
+> Common: 138
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.snv.mnv for DO52140 using Sanger
+> ---
+> Common: 87234
+> Extra: 5
+>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+> Missing: 7
+>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>
+>
+> Comparison of somatic.indel for DO52140 using Sanger
+> ---
+> Common: 803986
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO52140 using Sanger
+> ---
+> Common: 6
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO52140 using Sanger
+> ---
+> Common: 36
+> Extra: 0
+> Missing: 2
+>     - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+> The Francis Crick Institute Limited is a registered charity in England and
+> Wales no. 1140062 and a company registered in England and Wales no.
+> 06885462, with its registered office at 1 Midland Road London NW1 1AT
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+> The Francis Crick Institute Limited is a registered charity in England and
+> Wales no. 1140062 and a company registered in England and Wales no.
+> 06885462, with its registered office at 1 Midland Road London NW1 1AT
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170203/104ca7d8/attachment-0001.html>
+
+From Christina.Yung at oicr.on.ca  Fri Feb  3 13:06:52 2017
+From: Christina.Yung at oicr.on.ca (Christina Yung)
+Date: Fri, 3 Feb 2017 18:06:52 +0000
+Subject: [DOCKTESTERS] Summary of validation of
+	Dockers	Sanger	and	DKFZ(+Delly)
+In-Reply-To: <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>,
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+Message-ID: <DFE9BB45-FF92-4FD5-AD4E-72759A3EFAEC@oicr.on.ca>
+
+Thank you, Jonas, for confirming. I'm copying the authors of the dkfz/embl pipeline.
+
+Christina
+
+On Feb 3, 2017, at 11:10 AM, Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+
+Dear all,
+
+Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on samples DO52140 and DO50311.
+The dockerised pipelines return identical calls for SNV.MNVs and indels but partly different ones for SVs and CNVs, independent of the infrastructure.
+
+Best regards,
+Jonas
+
+
+
+
+
+RESULTS DO52140
+---------------
+
+Comparison of somatic.sv for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of germline.sv for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+
+
+RESULTS DO50311
+---------------
+
+Comparison of somatic.sv for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of germline.sv for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<%22mailto:>
+W: www.crick.ac.uk<%22http://>
+
+
+
+On 26 Jan 2017, at 13:41, Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+
+Hi all,
+
+I can now confirm Miguel?s results with the Sanger workflow on donors DO50311 and DO52140.
+The calls made by the dockerised version are identical for Indels and SVs and produce only small discrepancies for SNV_MNVs and CNVs.
+The discrepancies seem independent of the system infrastructure as the number of missing/extra variants called are the same as Miguel?s reported previously (on DO52140)
+
+I?ve also updated the wiki page accordingly.
+
+Best regards,
+Jonas
+
+
+
+RESULTS - DO50311
+------
+
+
+Comparison of cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of snv_mnv for DO50311 using Sanger
+---
+Common: 156313
+Extra: 0
+Missing: 0
+
+
+Comparison of sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+
+
+
+RESULTS - DO52140
+------
+
+
+Comparison of cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of svn_mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+Missing: 7
+    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+
+
+Comparison of sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+
+
+
+
+For comparison, Miguel?s report on DO51240:
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<x-msg://5/%22mailto:>
+W: www.crick.ac.uk<x-msg://5/%22http://>
+
+
+
+On 16 Jan 2017, at 14:24, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170203/a27bf4bb/attachment-0001.html>
+
+From Jonas.Demeulemeester at crick.ac.uk  Sat Feb  4 10:14:20 2017
+From: Jonas.Demeulemeester at crick.ac.uk (Jonas Demeulemeester)
+Date: Sat, 4 Feb 2017 15:14:20 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>,
+ <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+Message-ID: <65CE38A2-A465-42CE-8058-EAFC893B15A0@crick.ac.uk>
+
+Hi Miguel,
+
+The comparison was indeed run largely using your scripts.
+I didn't notice any missteps but you never know of course.
+Hope they can pinpoint the issue.
+
+Cheers,
+Jonas
+
+
+On 3 Feb 2017, at 19:06, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Excellent Jonas, this is very useful info.
+
+ I guess you are using my own scripts for this. The possibility remains that there is a misstep in them regarding delly. Let's see what turns out of the checks by our friends at DKFZ.
+
+Best regards
+
+Have a great weekend
+
+Miguel
+
+On Feb 3, 2017 6:10 PM, "Jonas Demeulemeester" <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+Dear all,
+
+Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on samples DO52140 and DO50311.
+The dockerised pipelines return identical calls for SNV.MNVs and indels but partly different ones for SVs and CNVs, independent of the infrastructure.
+
+Best regards,
+Jonas
+
+
+
+
+
+RESULTS DO52140
+---------------
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+
+
+RESULTS DO50311
+---------------
+
+Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+M: +44 (0)7482 070730<tel:+44%207482%20070730>
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 26 Jan 2017, at 13:41, Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+
+Hi all,
+
+I can now confirm Miguel?s results with the Sanger workflow on donors DO50311 and DO52140.
+The calls made by the dockerised version are identical for Indels and SVs and produce only small discrepancies for SNV_MNVs and CNVs.
+The discrepancies seem independent of the system infrastructure as the number of missing/extra variants called are the same as Miguel?s reported previously (on DO52140)
+
+I?ve also updated the wiki page accordingly.
+
+Best regards,
+Jonas
+
+
+
+RESULTS - DO50311
+------
+
+
+Comparison of cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of snv_mnv for DO50311 using Sanger
+---
+Common: 156313
+Extra: 0
+Missing: 0
+
+
+Comparison of sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+
+
+
+RESULTS - DO52140
+------
+
+
+Comparison of cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of svn_mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+Missing: 7
+    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+
+
+Comparison of sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+
+
+
+
+For comparison, Miguel?s report on DO51240:
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+M: +44 (0)7482 070730<tel:+44%207482%20070730>
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 16 Jan 2017, at 14:24, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170204/6b044803/attachment-0001.html>
+
+From Junjun.Zhang at oicr.on.ca  Sun Feb  5 18:52:58 2017
+From: Junjun.Zhang at oicr.on.ca (Junjun Zhang)
+Date: Sun, 5 Feb 2017 23:52:58 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <65CE38A2-A465-42CE-8058-EAFC893B15A0@crick.ac.uk>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+ <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+ <65CE38A2-A465-42CE-8058-EAFC893B15A0@crick.ac.uk>
+Message-ID: <D4BD2137.665F3%junjun.zhang@oicr.on.ca>
+
+Hi Miguel and Jonas,
+
+I hope DKFZ pipeline authors (cc?d here) would be able to figure out the differences of the calls for DO52140
+
+Here I have another donor: DO51087. The size of the somatic SNV/MNV DKFZ call seems to be surprisingly large, the GZ?d VCF file is greater than 500MB. Here you can find more information about the file: https://dcc.icgc.org/repositories/files/FI500885. You can verify that in GNOS as well: https://gtrepo-dkfz.annailabs.com/cghub/metadata/analysisFull/e1e9062e-35e6-447d-bc61-591e76fbeee0.
+
+Matthias, can you please take a look of the VCF? Hope you may be able to spot something abnormal there.
+
+Maybe Miguel/Jonas, if you plan to test more donors for the DKFZ pipeline, can you please choose this donor? Tumour aligned BAM is: https://dcc.icgc.org/repositories/files/FI37278, normal aligned BAM is https://dcc.icgc.org/repositories/files/FI37277
+
+Thanks,
+Junjun
+
+
+
+From: <docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org>> on behalf of Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>>
+Date: Saturday, February 4, 2017 at 10:14 AM
+To: Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>" <docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>
+Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+
+Hi Miguel,
+
+The comparison was indeed run largely using your scripts.
+I didn't notice any missteps but you never know of course.
+Hope they can pinpoint the issue.
+
+Cheers,
+Jonas
+
+
+On 3 Feb 2017, at 19:06, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Excellent Jonas, this is very useful info.
+
+ I guess you are using my own scripts for this. The possibility remains that there is a misstep in them regarding delly. Let's see what turns out of the checks by our friends at DKFZ.
+
+Best regards
+
+Have a great weekend
+
+Miguel
+
+On Feb 3, 2017 6:10 PM, "Jonas Demeulemeester" <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+Dear all,
+
+Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on samples DO52140 and DO50311.
+The dockerised pipelines return identical calls for SNV.MNVs and indels but partly different ones for SVs and CNVs, independent of the infrastructure.
+
+Best regards,
+Jonas
+
+
+
+
+
+RESULTS DO52140
+---------------
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+
+
+RESULTS DO50311
+---------------
+
+Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+M: +44 (0)7482 070730<tel:+44%207482%20070730>
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 26 Jan 2017, at 13:41, Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+
+Hi all,
+
+I can now confirm Miguel?s results with the Sanger workflow on donors DO50311 and DO52140.
+The calls made by the dockerised version are identical for Indels and SVs and produce only small discrepancies for SNV_MNVs and CNVs.
+The discrepancies seem independent of the system infrastructure as the number of missing/extra variants called are the same as Miguel?s reported previously (on DO52140)
+
+I?ve also updated the wiki page accordingly.
+
+Best regards,
+Jonas
+
+
+
+RESULTS - DO50311
+------
+
+
+Comparison of cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of snv_mnv for DO50311 using Sanger
+---
+Common: 156313
+Extra: 0
+Missing: 0
+
+
+Comparison of sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+
+
+
+RESULTS - DO52140
+------
+
+
+Comparison of cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of svn_mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+Missing: 7
+    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+
+
+Comparison of sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+
+
+
+
+For comparison, Miguel?s report on DO51240:
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+M: +44 (0)7482 070730<tel:+44%207482%20070730>
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 16 Jan 2017, at 14:24, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170205/c64fe680/attachment-0001.html>
+
+From m.schlesner at Dkfz-Heidelberg.de  Mon Feb  6 01:28:40 2017
+From: m.schlesner at Dkfz-Heidelberg.de (Schlesner, Matthias)
+Date: Mon, 6 Feb 2017 06:28:40 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <D4BD2137.665F3%junjun.zhang@oicr.on.ca>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+ <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+ <65CE38A2-A465-42CE-8058-EAFC893B15A0@crick.ac.uk>
+ <D4BD2137.665F3%junjun.zhang@oicr.on.ca>
+Message-ID: <D4BDD5A1.42C9B%m.schlesner@dkfz.de>
+
+Hi Junjun,
+
+This sample has extreme OxoG which could  not be removed completely by our filter. Hence there is a huge number of artifacts remaining which blow up the file size.
+
+Best,
+Matthias
+
+
+Dr. Matthias Schlesner
+Division Theoretical Bioinformatics (B080)
+Head of Computational Oncology Group
+
+German Cancer Research Center (DKFZ)
+Foundation under Public Law
+Im Neuenheimer Feld 280
+69120 Heidelberg
+Germany
+office: Berliner Str. 41 (Mathematikon), room 02.MB.116
+phone: +49 6221 42-2720
+fax:      +49 6221 42-3626
+
+m.schlesner at dkfz.d<mailto:m.schlesner at dkfz.de>e
+www.dkfz.de<http://www.dkfz.de/>
+
+ [unknown.png]
+
+Management Board: Prof. Dr. Michael Baumann, Prof. Dr. Josef Puchta
+
+VAT-ID No.: DE143293537
+
+From: Junjun Zhang <Junjun.Zhang at oicr.on.ca<mailto:Junjun.Zhang at oicr.on.ca>>
+Date: Monday, February 6, 2017 at 12:52 AM
+To: Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>>, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>" <docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>, "joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.dk>" <joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.dk>>, "Schlesner, Matthias" <m.schlesner at Dkfz-Heidelberg.de<mailto:m.schlesner at Dkfz-Heidelberg.de>>
+Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+
+Hi Miguel and Jonas,
+
+I hope DKFZ pipeline authors (cc?d here) would be able to figure out the differences of the calls for DO52140
+
+Here I have another donor: DO51087. The size of the somatic SNV/MNV DKFZ call seems to be surprisingly large, the GZ?d VCF file is greater than 500MB. Here you can find more information about the file: https://dcc.icgc.org/repositories/files/FI500885. You can verify that in GNOS as well: https://gtrepo-dkfz.annailabs.com/cghub/metadata/analysisFull/e1e9062e-35e6-447d-bc61-591e76fbeee0.
+
+Matthias, can you please take a look of the VCF? Hope you may be able to spot something abnormal there.
+
+Maybe Miguel/Jonas, if you plan to test more donors for the DKFZ pipeline, can you please choose this donor? Tumour aligned BAM is: https://dcc.icgc.org/repositories/files/FI37278, normal aligned BAM is https://dcc.icgc.org/repositories/files/FI37277
+
+Thanks,
+Junjun
+
+
+
+From: <docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org<mailto:docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org>> on behalf of Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>>
+Date: Saturday, February 4, 2017 at 10:14 AM
+To: Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>" <docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>
+Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+
+Hi Miguel,
+
+The comparison was indeed run largely using your scripts.
+I didn't notice any missteps but you never know of course.
+Hope they can pinpoint the issue.
+
+Cheers,
+Jonas
+
+
+On 3 Feb 2017, at 19:06, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Excellent Jonas, this is very useful info.
+
+ I guess you are using my own scripts for this. The possibility remains that there is a misstep in them regarding delly. Let's see what turns out of the checks by our friends at DKFZ.
+
+Best regards
+
+Have a great weekend
+
+Miguel
+
+On Feb 3, 2017 6:10 PM, "Jonas Demeulemeester" <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+Dear all,
+
+Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on samples DO52140 and DO50311.
+The dockerised pipelines return identical calls for SNV.MNVs and indels but partly different ones for SVs and CNVs, independent of the infrastructure.
+
+Best regards,
+Jonas
+
+
+
+
+
+RESULTS DO52140
+---------------
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+
+
+RESULTS DO50311
+---------------
+
+Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+M: +44 (0)7482 070730<tel:+44%207482%20070730>
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 26 Jan 2017, at 13:41, Jonas Demeulemeester <Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>> wrote:
+
+Hi all,
+
+I can now confirm Miguel?s results with the Sanger workflow on donors DO50311 and DO52140.
+The calls made by the dockerised version are identical for Indels and SVs and produce only small discrepancies for SNV_MNVs and CNVs.
+The discrepancies seem independent of the system infrastructure as the number of missing/extra variants called are the same as Miguel?s reported previously (on DO52140)
+
+I?ve also updated the wiki page accordingly.
+
+Best regards,
+Jonas
+
+
+
+RESULTS - DO50311
+------
+
+
+Comparison of cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of snv_mnv for DO50311 using Sanger
+---
+Common: 156313
+Extra: 0
+Missing: 0
+
+
+Comparison of sv for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+
+
+
+RESULTS - DO52140
+------
+
+
+Comparison of cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of svn_mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+Missing: 7
+    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+
+
+Comparison of sv for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+
+
+
+
+For comparison, Miguel?s report on DO51240:
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+M: +44 (0)7482 070730<tel:+44%207482%20070730>
+E: jonas.demeulemeester at crick.ac.uk
+W: www.crick.ac.uk
+
+
+
+On 16 Jan 2017, at 14:24, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: 0BB9DB68-3AC6-4A64-8FEC-A2F54869FBB5[2].png
+Type: image/png
+Size: 9135 bytes
+Desc: 0BB9DB68-3AC6-4A64-8FEC-A2F54869FBB5[2].png
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170206/56d9ddc3/attachment-0001.png>
+
+From Junjun.Zhang at oicr.on.ca  Mon Feb  6 10:24:28 2017
+From: Junjun.Zhang at oicr.on.ca (Junjun Zhang)
+Date: Mon, 6 Feb 2017 15:24:28 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <D4BDD5A1.42C9B%m.schlesner@dkfz.de>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+ <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+ <65CE38A2-A465-42CE-8058-EAFC893B15A0@crick.ac.uk>
+ <D4BD2137.665F3%junjun.zhang@oicr.on.ca> <D4BDD5A1.42C9B%m.schlesner@dkfz.de>
+Message-ID: <D4BDFBE6.66D91%junjun.zhang@oicr.on.ca>
+
+Hi Matthias,
+
+Thanks for clarification.
+
+We had discussion about this donor (DO51087) during today?s tech call.
+Lincoln suggests to ask you to help viewing the QC metrics of this donor,
+if appropriate, this donor may be added to the exclusion list.
+
+Just an FYI, you can find more information about this donor here:
+https://docs.google.com/spreadsheets/d/126V4Dke1IvfVZqHLvZPUUeo7PO1Hi8jg8Qh
+xiIDOFR4/edit#gid=1654136615 (search for DO51087).
+
+Can you please help with this?
+
+Thanks,
+Junjun
+
+
+
+
+On 2017-02-06, 1:28 AM, "Schlesner, Matthias"
+<m.schlesner at Dkfz-Heidelberg.de> wrote:
+
+>Hi Junjun,
+>
+>This sample has extreme OxoG which could  not be removed completely by
+>our filter. Hence there is a huge number of artifacts remaining which
+>blow up the file size.
+>
+>Best,
+>Matthias
+>
+>
+>Dr. Matthias Schlesner
+>Division Theoretical Bioinformatics (B080)
+>Head of Computational Oncology Group
+>
+>German Cancer Research Center (DKFZ)
+>Foundation under Public Law
+>Im Neuenheimer Feld 280
+>69120 Heidelberg
+>Germany
+>office: Berliner Str. 41 (Mathematikon), room 02.MB.116
+>phone: +49 6221 42-2720
+>fax:      +49 6221 42-3626
+>
+>m.schlesner at dkfz.d<mailto:m.schlesner at dkfz.de>e
+>www.dkfz.de<http://www.dkfz.de/>
+>
+> [unknown.png]
+>
+>Management Board: Prof. Dr. Michael Baumann, Prof. Dr. Josef Puchta
+>
+>VAT-ID No.: DE143293537
+>
+>From: Junjun Zhang
+><Junjun.Zhang at oicr.on.ca<mailto:Junjun.Zhang at oicr.on.ca>>
+>Date: Monday, February 6, 2017 at 12:52 AM
+>To: Jonas Demeulemeester
+><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>
+>>, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+>Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>"
+><docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>,
+>"joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.dk>
+>" 
+><joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.dk>
+>>, "Schlesner, Matthias"
+>><m.schlesner at Dkfz-Heidelberg.de<mailto:m.schlesner at Dkfz-Heidelberg.de>>
+>Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+>DKFZ(+Delly)
+>
+>Hi Miguel and Jonas,
+>
+>I hope DKFZ pipeline authors (cc?d here) would be able to figure out the
+>differences of the calls for DO52140
+>
+>Here I have another donor: DO51087. The size of the somatic SNV/MNV DKFZ
+>call seems to be surprisingly large, the GZ?d VCF file is greater than
+>500MB. Here you can find more information about the file:
+>https://dcc.icgc.org/repositories/files/FI500885. You can verify that in
+>GNOS as well: 
+>https://gtrepo-dkfz.annailabs.com/cghub/metadata/analysisFull/e1e9062e-35e
+>6-447d-bc61-591e76fbeee0.
+>
+>Matthias, can you please take a look of the VCF? Hope you may be able to
+>spot something abnormal there.
+>
+>Maybe Miguel/Jonas, if you plan to test more donors for the DKFZ
+>pipeline, can you please choose this donor? Tumour aligned BAM is:
+>https://dcc.icgc.org/repositories/files/FI37278, normal aligned BAM is
+>https://dcc.icgc.org/repositories/files/FI37277
+>
+>Thanks,
+>Junjun
+>
+>
+>
+>From: 
+><docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org<mailto:docktes
+>ters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org>> on behalf of Jonas
+>Demeulemeester 
+><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>
+>>
+>Date: Saturday, February 4, 2017 at 10:14 AM
+>To: Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+>Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>"
+><docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>
+>Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+>DKFZ(+Delly)
+>
+>Hi Miguel,
+>
+>The comparison was indeed run largely using your scripts.
+>I didn't notice any missteps but you never know of course.
+>Hope they can pinpoint the issue.
+>
+>Cheers,
+>Jonas
+>
+>
+>On 3 Feb 2017, at 19:06, Miguel Vazquez
+><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+>
+>Excellent Jonas, this is very useful info.
+>
+> I guess you are using my own scripts for this. The possibility remains
+>that there is a misstep in them regarding delly. Let's see what turns out
+>of the checks by our friends at DKFZ.
+>
+>Best regards
+>
+>Have a great weekend
+>
+>Miguel
+>
+>On Feb 3, 2017 6:10 PM, "Jonas Demeulemeester"
+><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>
+>> wrote:
+>Dear all,
+>
+>Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on
+>samples DO52140 and DO50311.
+>The dockerised pipelines return identical calls for SNV.MNVs and indels
+>but partly different ones for SVs and CNVs, independent of the
+>infrastructure.
+>
+>Best regards,
+>Jonas
+>
+>
+>
+>
+>
+>RESULTS DO52140
+>---------------
+>
+>Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+>---
+>Common: 72
+>Extra: 23
+>    - Example: 
+>10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+>Missing: 61
+>    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>
+>
+>Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+>---
+>Common: 1108
+>Extra: 1116
+>    - Example: 
+>10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+>Missing: 2908
+>    - Example: 
+>10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+>
+>
+>Comparison of somatic.snv.mnv for DO52140 using DKFZ
+>---
+>Common: 37160
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.snv.mnv for DO52140 using DKFZ
+>---
+>Common: 3833896
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.indel for DO52140 using DKFZ
+>---
+>Common: 19347
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.indel for DO52140 using DKFZ
+>---
+>Common: 706572
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.cnv for DO52140 using DKFZ
+>---
+>Common: 275
+>Extra: 94
+>    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+>Missing: 286
+>    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>
+>
+>
+>
+>RESULTS DO50311
+>---------------
+>
+>Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+>---
+>Common: 231
+>Extra: 44
+>    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+>Missing: 48
+>    - Example: 
+>10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+>
+>
+>Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+>---
+>Common: 1393
+>Extra: 231
+>    - Example: 
+>10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+>Missing: 615
+>    - Example: 
+>10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+>
+>
+>Comparison of somatic.snv.mnv for DO50311 using DKFZ
+>---
+>Common: 51087
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.snv.mnv for DO50311 using DKFZ
+>---
+>Common: 3850992
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.indel for DO50311 using DKFZ
+>---
+>Common: 26469
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.indel for DO50311 using DKFZ
+>---
+>Common: 709060
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.cnv for DO50311 using DKFZ
+>---
+>Common: 731
+>Extra: 213
+>    - Example: 
+>10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+>Missing: 190
+>    - Example: 
+>10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+>
+>
+>
+>
+>
+>_________________________________
+>Jonas Demeulemeester, PhD
+>Postdoctoral Researcher
+>The Francis Crick Institute
+>1 Midland Road
+>London
+>NW1 1AT
+>
+>T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+>M: +44 (0)7482 070730<tel:+44%207482%20070730>
+>E: jonas.demeulemeester at crick.ac.uk
+>W: www.crick.ac.uk
+>
+>
+>
+>On 26 Jan 2017, at 13:41, Jonas Demeulemeester
+><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk>
+>> wrote:
+>
+>Hi all,
+>
+>I can now confirm Miguel?s results with the Sanger workflow on donors
+>DO50311 and DO52140.
+>The calls made by the dockerised version are identical for Indels and SVs
+>and produce only small discrepancies for SNV_MNVs and CNVs.
+>The discrepancies seem independent of the system infrastructure as the
+>number of missing/extra variants called are the same as Miguel?s reported
+>previously (on DO52140)
+>
+>I?ve also updated the wiki page accordingly.
+>
+>Best regards,
+>Jonas
+>
+>
+>
+>RESULTS - DO50311
+>------
+>
+>
+>Comparison of cnv for DO50311 using Sanger
+>---
+>Common: 138
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of indel for DO50311 using Sanger
+>---
+>Common: 812487
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of snv_mnv for DO50311 using Sanger
+>---
+>Common: 156313
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of sv for DO50311 using Sanger
+>---
+>Common: 260
+>Extra: 0
+>Missing: 0
+>
+>
+>
+>
+>
+>RESULTS - DO52140
+>------
+>
+>
+>Comparison of cnv for DO52140 using Sanger
+>---
+>Common: 36
+>Extra: 0
+>Missing: 2
+>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>
+>
+>Comparison of indel for DO52140 using Sanger
+>---
+>Common: 803986
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of svn_mnv for DO52140 using Sanger
+>---
+>Common: 87234
+>Extra: 5
+>    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+>Missing: 7
+>    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+>
+>
+>Comparison of sv for DO52140 using Sanger
+>---
+>Common: 6
+>Extra: 0
+>Missing: 0
+>
+>
+>
+>
+>
+>
+>For comparison, Miguel?s report on DO51240:
+>Report
+>~~~~~~
+>
+>Comparison of somatic.cnv for DO52140 using Sanger
+>---
+>Common: 36
+>Extra: 0
+>Missing: 2
+>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>
+>
+>Comparison of somatic.indel for DO52140 using Sanger
+>---
+>Common: 803986
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.snv.mnv for DO52140 using Sanger
+>---
+>Common: 87234
+>Extra: 5
+>    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+>Missing: 7
+>    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>
+>
+>Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+>---
+>Common: 6
+>Extra: 0
+>Missing: 0
+>
+>
+>_________________________________
+>Jonas Demeulemeester, PhD
+>Postdoctoral Researcher
+>The Francis Crick Institute
+>1 Midland Road
+>London
+>NW1 1AT
+>
+>T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+>M: +44 (0)7482 070730<tel:+44%207482%20070730>
+>E: jonas.demeulemeester at crick.ac.uk
+>W: www.crick.ac.uk
+>
+>
+>
+>On 16 Jan 2017, at 14:24, Miguel Vazquez
+><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+>
+>Dear all,
+>
+>Let me summarize the status of the testing for Sanger and DKFZ. The
+>validation has been run for two donors for each workflow: DO50311 DO52140
+>
+>Sanger:
+>----------
+>
+>Sanger call only somatic variants. The results are identical for Indels
+>and SVs but almost identical for SNV.MNV and CNV. The discrepancies are
+>reproducible (on the same machine at least), i.e. the same are found
+>after running the workflow a second time.
+>
+>DKFZ:
+>---------
+>DKFZ cals somatic and germline variants, except germline CNVs. For both
+>germline and somatic variants the results are identical for SNV.MNV and
+>Indels but with large discrepancies for SV and CNV.
+>
+>
+>Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+>investigating this issue I believe.
+>
+>BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+>Demeulemeester. Denis I believe is investigating this problem further. I
+>haven't had the chance to investigate this much myself.
+>
+>Best
+>
+>Miguel
+>
+>
+>
+>
+>---------------------
+>RESULTS
+>---------------------
+>
+>ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+>
+>Comparison of somatic.snv.mnv for DO50311 using DKFZ
+>---
+>Common: 51087
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.indel for DO50311 using DKFZ
+>---
+>Common: 26469
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+>---
+>Common: 231
+>Extra: 44
+>    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+>Missing: 48
+>    - Example: 
+>10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+>
+>
+>Comparison of somatic.cnv for DO50311 using DKFZ
+>---
+>Common: 731
+>Extra: 213
+>    - Example: 
+>10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+>Missing: 190
+>    - Example: 
+>10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+>
+>
+>Comparison of germline.snv.mnv for DO50311 using DKFZ
+>---
+>Common: 3850992
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.indel for DO50311 using DKFZ
+>---
+>Common: 709060
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+>---
+>Common: 1393
+>Extra: 231
+>    - Example: 
+>10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+>Missing: 615
+>    - Example: 
+>10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+>
+>File not found 
+>/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germli
+>ne.cnv.vcf.gz
+>
+>Comparison of somatic.snv.mnv for DO52140 using DKFZ
+>---
+>Common: 37160
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.indel for DO52140 using DKFZ
+>---
+>Common: 19347
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+>---
+>Common: 72
+>Extra: 23
+>    - Example: 
+>10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+>Missing: 61
+>    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>
+>
+>Comparison of somatic.cnv for DO52140 using DKFZ
+>---
+>Common: 275
+>Extra: 94
+>    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+>Missing: 286
+>    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>
+>
+>Comparison of germline.snv.mnv for DO52140 using DKFZ
+>---
+>Common: 3833896
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.indel for DO52140 using DKFZ
+>---
+>Common: 706572
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+>---
+>Common: 1108
+>Extra: 1116
+>    - Example: 
+>10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+>Missing: 2908
+>    - Example: 
+>10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+>
+>File not found 
+>/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germli
+>ne.cnv.vcf.gz
+>
+>Comparison of somatic.snv.mnv for DO50311 using Sanger
+>---
+>Common: 156299
+>Extra: 1
+>    - Example: Y:58885197:A:G
+>Missing: 14
+>    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+>
+>
+>Comparison of somatic.indel for DO50311 using Sanger
+>---
+>Common: 812487
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+>---
+>Common: 260
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.cnv for DO50311 using Sanger
+>---
+>Common: 138
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.snv.mnv for DO52140 using Sanger
+>---
+>Common: 87234
+>Extra: 5
+>    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+>Missing: 7
+>    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>
+>
+>Comparison of somatic.indel for DO52140 using Sanger
+>---
+>Common: 803986
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+>---
+>Common: 6
+>Extra: 0
+>Missing: 0
+>
+>
+>Comparison of somatic.cnv for DO52140 using Sanger
+>---
+>Common: 36
+>Extra: 0
+>Missing: 2
+>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>_______________________________________________
+>docktesters mailing list
+>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+>The Francis Crick Institute Limited is a registered charity in England
+>and Wales no. 1140062 and a company registered in England and Wales no.
+>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>
+>_______________________________________________
+>docktesters mailing list
+>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+>The Francis Crick Institute Limited is a registered charity in England
+>and Wales no. 1140062 and a company registered in England and Wales no.
+>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>
+>_______________________________________________
+>docktesters mailing list
+>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+>The Francis Crick Institute Limited is a registered charity in England
+>and Wales no. 1140062 and a company registered in England and Wales no.
+>06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+
+From m.schlesner at Dkfz-Heidelberg.de  Mon Feb 13 09:04:21 2017
+From: m.schlesner at Dkfz-Heidelberg.de (Schlesner, Matthias)
+Date: Mon, 13 Feb 2017 14:04:21 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <D4BDFBE6.66D91%junjun.zhang@oicr.on.ca>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+ <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+ <65CE38A2-A465-42CE-8058-EAFC893B15A0@crick.ac.uk>
+ <D4BD2137.665F3%junjun.zhang@oicr.on.ca> <D4BDD5A1.42C9B%m.schlesner@dkfz.de>
+ <D4BDFBE6.66D91%junjun.zhang@oicr.on.ca>
+Message-ID: <D4C77AEB.42F86%m.schlesner@dkfz.de>
+
+Hi Junjun,
+
+Please find attached some QC for DO51087. Except the very strong oxoG it
+has no striking problems. Some GC bias, but if we exclude on this
+something like 30% of the cohort would be out. And oxoG is well controlled
+by the Broad filter also in such strong cases. I think this donor could
+stay in.
+
+Best,
+Matthias
+
+
+Dr. Matthias Schlesner
+Division Theoretical Bioinformatics (B080)
+Head of Computational Oncology Group
+German Cancer Research Center (DKFZ)
+Foundation under Public Law
+Im Neuenheimer Feld 280
+69120 Heidelberg
+Germany
+office: Berliner Str. 41 (Mathematikon), room 02.MB.116
+phone: +49 6221 42-2720
+fax:      +49 6221 42-3626
+m.schlesner at dkfz.d <mailto:m.schlesner at dkfz.de>e
+www.dkfz.de <http://www.dkfz.de/>
+ 
+Management Board: Prof. Dr. Michael Baumann, Prof. Dr. Josef Puchta
+VAT-ID No.: DE143293537
+
+
+
+
+
+On 2/6/17, 4:24 PM, "Junjun Zhang" <Junjun.Zhang at oicr.on.ca> wrote:
+
+>Hi Matthias,
+>
+>Thanks for clarification.
+>
+>We had discussion about this donor (DO51087) during today?s tech call.
+>Lincoln suggests to ask you to help viewing the QC metrics of this donor,
+>if appropriate, this donor may be added to the exclusion list.
+>
+>Just an FYI, you can find more information about this donor here:
+>https://docs.google.com/spreadsheets/d/126V4Dke1IvfVZqHLvZPUUeo7PO1Hi8jg8Q
+>h
+>xiIDOFR4/edit#gid=1654136615 (search for DO51087).
+>
+>Can you please help with this?
+>
+>Thanks,
+>Junjun
+>
+>
+>
+>
+>On 2017-02-06, 1:28 AM, "Schlesner, Matthias"
+><m.schlesner at Dkfz-Heidelberg.de> wrote:
+>
+>>Hi Junjun,
+>>
+>>This sample has extreme OxoG which could  not be removed completely by
+>>our filter. Hence there is a huge number of artifacts remaining which
+>>blow up the file size.
+>>
+>>Best,
+>>Matthias
+>>
+>>
+>>Dr. Matthias Schlesner
+>>Division Theoretical Bioinformatics (B080)
+>>Head of Computational Oncology Group
+>>
+>>German Cancer Research Center (DKFZ)
+>>Foundation under Public Law
+>>Im Neuenheimer Feld 280
+>>69120 Heidelberg
+>>Germany
+>>office: Berliner Str. 41 (Mathematikon), room 02.MB.116
+>>phone: +49 6221 42-2720
+>>fax:      +49 6221 42-3626
+>>
+>>m.schlesner at dkfz.d<mailto:m.schlesner at dkfz.de>e
+>>www.dkfz.de<http://www.dkfz.de/>
+>>
+>> [unknown.png]
+>>
+>>Management Board: Prof. Dr. Michael Baumann, Prof. Dr. Josef Puchta
+>>
+>>VAT-ID No.: DE143293537
+>>
+>>From: Junjun Zhang
+>><Junjun.Zhang at oicr.on.ca<mailto:Junjun.Zhang at oicr.on.ca>>
+>>Date: Monday, February 6, 2017 at 12:52 AM
+>>To: Jonas Demeulemeester
+>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk
+>>>
+>>>, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+>>Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>"
+>><docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>,
+>>"joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.dk
+>>>
+>>" 
+>><joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.dk
+>>>
+>>>, "Schlesner, Matthias"
+>>><m.schlesner at Dkfz-Heidelberg.de<mailto:m.schlesner at Dkfz-Heidelberg.de>>
+>>Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+>>DKFZ(+Delly)
+>>
+>>Hi Miguel and Jonas,
+>>
+>>I hope DKFZ pipeline authors (cc?d here) would be able to figure out the
+>>differences of the calls for DO52140
+>>
+>>Here I have another donor: DO51087. The size of the somatic SNV/MNV DKFZ
+>>call seems to be surprisingly large, the GZ?d VCF file is greater than
+>>500MB. Here you can find more information about the file:
+>>https://dcc.icgc.org/repositories/files/FI500885. You can verify that in
+>>GNOS as well: 
+>>https://gtrepo-dkfz.annailabs.com/cghub/metadata/analysisFull/e1e9062e-35
+>>e
+>>6-447d-bc61-591e76fbeee0.
+>>
+>>Matthias, can you please take a look of the VCF? Hope you may be able to
+>>spot something abnormal there.
+>>
+>>Maybe Miguel/Jonas, if you plan to test more donors for the DKFZ
+>>pipeline, can you please choose this donor? Tumour aligned BAM is:
+>>https://dcc.icgc.org/repositories/files/FI37278, normal aligned BAM is
+>>https://dcc.icgc.org/repositories/files/FI37277
+>>
+>>Thanks,
+>>Junjun
+>>
+>>
+>>
+>>From: 
+>><docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org<mailto:dockte
+>>s
+>>ters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org>> on behalf of Jonas
+>>Demeulemeester 
+>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk
+>>>
+>>>
+>>Date: Saturday, February 4, 2017 at 10:14 AM
+>>To: Miguel Vazquez
+>><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+>>Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>"
+>><docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>
+>>Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+>>DKFZ(+Delly)
+>>
+>>Hi Miguel,
+>>
+>>The comparison was indeed run largely using your scripts.
+>>I didn't notice any missteps but you never know of course.
+>>Hope they can pinpoint the issue.
+>>
+>>Cheers,
+>>Jonas
+>>
+>>
+>>On 3 Feb 2017, at 19:06, Miguel Vazquez
+>><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+>>
+>>Excellent Jonas, this is very useful info.
+>>
+>> I guess you are using my own scripts for this. The possibility remains
+>>that there is a misstep in them regarding delly. Let's see what turns out
+>>of the checks by our friends at DKFZ.
+>>
+>>Best regards
+>>
+>>Have a great weekend
+>>
+>>Miguel
+>>
+>>On Feb 3, 2017 6:10 PM, "Jonas Demeulemeester"
+>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk
+>>>
+>>> wrote:
+>>Dear all,
+>>
+>>Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on
+>>samples DO52140 and DO50311.
+>>The dockerised pipelines return identical calls for SNV.MNVs and indels
+>>but partly different ones for SVs and CNVs, independent of the
+>>infrastructure.
+>>
+>>Best regards,
+>>Jonas
+>>
+>>
+>>
+>>
+>>
+>>RESULTS DO52140
+>>---------------
+>>
+>>Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+>>---
+>>Common: 72
+>>Extra: 23
+>>    - Example: 
+>>10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+>>Missing: 61
+>>    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>>
+>>
+>>Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+>>---
+>>Common: 1108
+>>Extra: 1116
+>>    - Example: 
+>>10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+>>Missing: 2908
+>>    - Example: 
+>>10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+>>
+>>
+>>Comparison of somatic.snv.mnv for DO52140 using DKFZ
+>>---
+>>Common: 37160
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.snv.mnv for DO52140 using DKFZ
+>>---
+>>Common: 3833896
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.indel for DO52140 using DKFZ
+>>---
+>>Common: 19347
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.indel for DO52140 using DKFZ
+>>---
+>>Common: 706572
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.cnv for DO52140 using DKFZ
+>>---
+>>Common: 275
+>>Extra: 94
+>>    - Example: 
+>>1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+>>Missing: 286
+>>    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>>
+>>
+>>
+>>
+>>RESULTS DO50311
+>>---------------
+>>
+>>Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+>>---
+>>Common: 231
+>>Extra: 44
+>>    - Example: 
+>>10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+>>Missing: 48
+>>    - Example: 
+>>10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+>>
+>>
+>>Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+>>---
+>>Common: 1393
+>>Extra: 231
+>>    - Example: 
+>>10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+>>Missing: 615
+>>    - Example: 
+>>10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+>>
+>>
+>>Comparison of somatic.snv.mnv for DO50311 using DKFZ
+>>---
+>>Common: 51087
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.snv.mnv for DO50311 using DKFZ
+>>---
+>>Common: 3850992
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.indel for DO50311 using DKFZ
+>>---
+>>Common: 26469
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.indel for DO50311 using DKFZ
+>>---
+>>Common: 709060
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.cnv for DO50311 using DKFZ
+>>---
+>>Common: 731
+>>Extra: 213
+>>    - Example: 
+>>10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+>>Missing: 190
+>>    - Example: 
+>>10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL
+>>>
+>>
+>>
+>>
+>>
+>>
+>>_________________________________
+>>Jonas Demeulemeester, PhD
+>>Postdoctoral Researcher
+>>The Francis Crick Institute
+>>1 Midland Road
+>>London
+>>NW1 1AT
+>>
+>>T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+>>M: +44 (0)7482 070730<tel:+44%207482%20070730>
+>>E: jonas.demeulemeester at crick.ac.uk
+>>W: www.crick.ac.uk
+>>
+>>
+>>
+>>On 26 Jan 2017, at 13:41, Jonas Demeulemeester
+>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.uk
+>>>
+>>> wrote:
+>>
+>>Hi all,
+>>
+>>I can now confirm Miguel?s results with the Sanger workflow on donors
+>>DO50311 and DO52140.
+>>The calls made by the dockerised version are identical for Indels and SVs
+>>and produce only small discrepancies for SNV_MNVs and CNVs.
+>>The discrepancies seem independent of the system infrastructure as the
+>>number of missing/extra variants called are the same as Miguel?s reported
+>>previously (on DO52140)
+>>
+>>I?ve also updated the wiki page accordingly.
+>>
+>>Best regards,
+>>Jonas
+>>
+>>
+>>
+>>RESULTS - DO50311
+>>------
+>>
+>>
+>>Comparison of cnv for DO50311 using Sanger
+>>---
+>>Common: 138
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of indel for DO50311 using Sanger
+>>---
+>>Common: 812487
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of snv_mnv for DO50311 using Sanger
+>>---
+>>Common: 156313
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of sv for DO50311 using Sanger
+>>---
+>>Common: 260
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>
+>>
+>>
+>>RESULTS - DO52140
+>>------
+>>
+>>
+>>Comparison of cnv for DO52140 using Sanger
+>>---
+>>Common: 36
+>>Extra: 0
+>>Missing: 2
+>>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>>
+>>
+>>Comparison of indel for DO52140 using Sanger
+>>---
+>>Common: 803986
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of svn_mnv for DO52140 using Sanger
+>>---
+>>Common: 87234
+>>Extra: 5
+>>    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+>>Missing: 7
+>>    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+>>
+>>
+>>Comparison of sv for DO52140 using Sanger
+>>---
+>>Common: 6
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>
+>>
+>>
+>>
+>>For comparison, Miguel?s report on DO51240:
+>>Report
+>>~~~~~~
+>>
+>>Comparison of somatic.cnv for DO52140 using Sanger
+>>---
+>>Common: 36
+>>Extra: 0
+>>Missing: 2
+>>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>>
+>>
+>>Comparison of somatic.indel for DO52140 using Sanger
+>>---
+>>Common: 803986
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.snv.mnv for DO52140 using Sanger
+>>---
+>>Common: 87234
+>>Extra: 5
+>>    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+>>Missing: 7
+>>    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>>
+>>
+>>Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+>>---
+>>Common: 6
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>_________________________________
+>>Jonas Demeulemeester, PhD
+>>Postdoctoral Researcher
+>>The Francis Crick Institute
+>>1 Midland Road
+>>London
+>>NW1 1AT
+>>
+>>T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+>>M: +44 (0)7482 070730<tel:+44%207482%20070730>
+>>E: jonas.demeulemeester at crick.ac.uk
+>>W: www.crick.ac.uk
+>>
+>>
+>>
+>>On 16 Jan 2017, at 14:24, Miguel Vazquez
+>><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+>>
+>>Dear all,
+>>
+>>Let me summarize the status of the testing for Sanger and DKFZ. The
+>>validation has been run for two donors for each workflow: DO50311 DO52140
+>>
+>>Sanger:
+>>----------
+>>
+>>Sanger call only somatic variants. The results are identical for Indels
+>>and SVs but almost identical for SNV.MNV and CNV. The discrepancies are
+>>reproducible (on the same machine at least), i.e. the same are found
+>>after running the workflow a second time.
+>>
+>>DKFZ:
+>>---------
+>>DKFZ cals somatic and germline variants, except germline CNVs. For both
+>>germline and somatic variants the results are identical for SNV.MNV and
+>>Indels but with large discrepancies for SV and CNV.
+>>
+>>
+>>Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+>>investigating this issue I believe.
+>>
+>>BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+>>Demeulemeester. Denis I believe is investigating this problem further. I
+>>haven't had the chance to investigate this much myself.
+>>
+>>Best
+>>
+>>Miguel
+>>
+>>
+>>
+>>
+>>---------------------
+>>RESULTS
+>>---------------------
+>>
+>>ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+>>
+>>Comparison of somatic.snv.mnv for DO50311 using DKFZ
+>>---
+>>Common: 51087
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.indel for DO50311 using DKFZ
+>>---
+>>Common: 26469
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+>>---
+>>Common: 231
+>>Extra: 44
+>>    - Example: 
+>>10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+>>Missing: 48
+>>    - Example: 
+>>10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+>>
+>>
+>>Comparison of somatic.cnv for DO50311 using DKFZ
+>>---
+>>Common: 731
+>>Extra: 213
+>>    - Example: 
+>>10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+>>Missing: 190
+>>    - Example: 
+>>10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL
+>>>
+>>
+>>
+>>Comparison of germline.snv.mnv for DO50311 using DKFZ
+>>---
+>>Common: 3850992
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.indel for DO50311 using DKFZ
+>>---
+>>Common: 709060
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+>>---
+>>Common: 1393
+>>Extra: 231
+>>    - Example: 
+>>10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+>>Missing: 615
+>>    - Example: 
+>>10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+>>
+>>File not found 
+>>/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germl
+>>i
+>>ne.cnv.vcf.gz
+>>
+>>Comparison of somatic.snv.mnv for DO52140 using DKFZ
+>>---
+>>Common: 37160
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.indel for DO52140 using DKFZ
+>>---
+>>Common: 19347
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+>>---
+>>Common: 72
+>>Extra: 23
+>>    - Example: 
+>>10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+>>Missing: 61
+>>    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>>
+>>
+>>Comparison of somatic.cnv for DO52140 using DKFZ
+>>---
+>>Common: 275
+>>Extra: 94
+>>    - Example: 
+>>1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+>>Missing: 286
+>>    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>>
+>>
+>>Comparison of germline.snv.mnv for DO52140 using DKFZ
+>>---
+>>Common: 3833896
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.indel for DO52140 using DKFZ
+>>---
+>>Common: 706572
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+>>---
+>>Common: 1108
+>>Extra: 1116
+>>    - Example: 
+>>10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+>>Missing: 2908
+>>    - Example: 
+>>10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+>>
+>>File not found 
+>>/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germl
+>>i
+>>ne.cnv.vcf.gz
+>>
+>>Comparison of somatic.snv.mnv for DO50311 using Sanger
+>>---
+>>Common: 156299
+>>Extra: 1
+>>    - Example: Y:58885197:A:G
+>>Missing: 14
+>>    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+>>
+>>
+>>Comparison of somatic.indel for DO50311 using Sanger
+>>---
+>>Common: 812487
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+>>---
+>>Common: 260
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.cnv for DO50311 using Sanger
+>>---
+>>Common: 138
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.snv.mnv for DO52140 using Sanger
+>>---
+>>Common: 87234
+>>Extra: 5
+>>    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+>>Missing: 7
+>>    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>>
+>>
+>>Comparison of somatic.indel for DO52140 using Sanger
+>>---
+>>Common: 803986
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+>>---
+>>Common: 6
+>>Extra: 0
+>>Missing: 0
+>>
+>>
+>>Comparison of somatic.cnv for DO52140 using Sanger
+>>---
+>>Common: 36
+>>Extra: 0
+>>Missing: 2
+>>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>>_______________________________________________
+>>docktesters mailing list
+>>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>>https://lists.icgc.org/mailman/listinfo/docktesters
+>>
+>>
+>>The Francis Crick Institute Limited is a registered charity in England
+>>and Wales no. 1140062 and a company registered in England and Wales no.
+>>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>>
+>>_______________________________________________
+>>docktesters mailing list
+>>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>>https://lists.icgc.org/mailman/listinfo/docktesters
+>>
+>>
+>>The Francis Crick Institute Limited is a registered charity in England
+>>and Wales no. 1140062 and a company registered in England and Wales no.
+>>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>>
+>>_______________________________________________
+>>docktesters mailing list
+>>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>>https://lists.icgc.org/mailman/listinfo/docktesters
+>>
+>>
+>>The Francis Crick Institute Limited is a registered charity in England
+>>and Wales no. 1140062 and a company registered in England and Wales no.
+>>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: DO51087.pptx
+Type: application/vnd.openxmlformats-officedocument.presentationml.presentation
+Size: 617957 bytes
+Desc: DO51087.pptx
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170213/22f7e7f0/attachment-0001.pptx>
+
+From Junjun.Zhang at oicr.on.ca  Mon Feb 13 10:09:25 2017
+From: Junjun.Zhang at oicr.on.ca (Junjun Zhang)
+Date: Mon, 13 Feb 2017 15:09:25 +0000
+Subject: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+ DKFZ(+Delly)
+In-Reply-To: <D4C77AEB.42F86%m.schlesner@dkfz.de>
+References: <CA+dx8mYaPOXg=gO2m2NJW2+WC66Gsh4yVLOkSyTBV8wnXgibvg@mail.gmail.com>
+ <F121C00E-05CF-460D-92E6-ED2053172A98@crick.ac.uk>
+ <1C092747-60FB-4A06-BCB4-7BD50D6D228F@crick.ac.uk>
+ <CA+dx8mZFh5AuyBZ-odYihObV_XcDyc=BUDScV77TMOM=w0DA8g@mail.gmail.com>
+ <65CE38A2-A465-42CE-8058-EAFC893B15A0@crick.ac.uk>
+ <D4BD2137.665F3%junjun.zhang@oicr.on.ca> <D4BDD5A1.42C9B%m.schlesner@dkfz.de>
+ <D4BDFBE6.66D91%junjun.zhang@oicr.on.ca> <D4C77AEB.42F86%m.schlesner@dkfz.de>
+Message-ID: <D4C7360C.67219%junjun.zhang@oicr.on.ca>
+
+Thanks Matthias! That?s good, no action needed.
+Best regards,
+Junjun
+
+
+
+On 2017-02-13, 9:04 AM, "Schlesner, Matthias"
+<m.schlesner at Dkfz-Heidelberg.de> wrote:
+
+>Hi Junjun,
+>
+>Please find attached some QC for DO51087. Except the very strong oxoG it
+>has no striking problems. Some GC bias, but if we exclude on this
+>something like 30% of the cohort would be out. And oxoG is well controlled
+>by the Broad filter also in such strong cases. I think this donor could
+>stay in.
+>
+>Best,
+>Matthias
+>
+>
+>Dr. Matthias Schlesner
+>Division Theoretical Bioinformatics (B080)
+>Head of Computational Oncology Group
+>German Cancer Research Center (DKFZ)
+>Foundation under Public Law
+>Im Neuenheimer Feld 280
+>69120 Heidelberg
+>Germany
+>office: Berliner Str. 41 (Mathematikon), room 02.MB.116
+>phone: +49 6221 42-2720
+>fax:      +49 6221 42-3626
+>m.schlesner at dkfz.d <mailto:m.schlesner at dkfz.de>e
+>www.dkfz.de <http://www.dkfz.de/>
+> 
+>Management Board: Prof. Dr. Michael Baumann, Prof. Dr. Josef Puchta
+>VAT-ID No.: DE143293537
+>
+>
+>
+>
+>
+>On 2/6/17, 4:24 PM, "Junjun Zhang" <Junjun.Zhang at oicr.on.ca> wrote:
+>
+>>Hi Matthias,
+>>
+>>Thanks for clarification.
+>>
+>>We had discussion about this donor (DO51087) during today?s tech call.
+>>Lincoln suggests to ask you to help viewing the QC metrics of this donor,
+>>if appropriate, this donor may be added to the exclusion list.
+>>
+>>Just an FYI, you can find more information about this donor here:
+>>https://docs.google.com/spreadsheets/d/126V4Dke1IvfVZqHLvZPUUeo7PO1Hi8jg8
+>>Q
+>>h
+>>xiIDOFR4/edit#gid=1654136615 (search for DO51087).
+>>
+>>Can you please help with this?
+>>
+>>Thanks,
+>>Junjun
+>>
+>>
+>>
+>>
+>>On 2017-02-06, 1:28 AM, "Schlesner, Matthias"
+>><m.schlesner at Dkfz-Heidelberg.de> wrote:
+>>
+>>>Hi Junjun,
+>>>
+>>>This sample has extreme OxoG which could  not be removed completely by
+>>>our filter. Hence there is a huge number of artifacts remaining which
+>>>blow up the file size.
+>>>
+>>>Best,
+>>>Matthias
+>>>
+>>>
+>>>Dr. Matthias Schlesner
+>>>Division Theoretical Bioinformatics (B080)
+>>>Head of Computational Oncology Group
+>>>
+>>>German Cancer Research Center (DKFZ)
+>>>Foundation under Public Law
+>>>Im Neuenheimer Feld 280
+>>>69120 Heidelberg
+>>>Germany
+>>>office: Berliner Str. 41 (Mathematikon), room 02.MB.116
+>>>phone: +49 6221 42-2720
+>>>fax:      +49 6221 42-3626
+>>>
+>>>m.schlesner at dkfz.d<mailto:m.schlesner at dkfz.de>e
+>>>www.dkfz.de<http://www.dkfz.de/>
+>>>
+>>> [unknown.png]
+>>>
+>>>Management Board: Prof. Dr. Michael Baumann, Prof. Dr. Josef Puchta
+>>>
+>>>VAT-ID No.: DE143293537
+>>>
+>>>From: Junjun Zhang
+>>><Junjun.Zhang at oicr.on.ca<mailto:Junjun.Zhang at oicr.on.ca>>
+>>>Date: Monday, February 6, 2017 at 12:52 AM
+>>>To: Jonas Demeulemeester
+>>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.u
+>>>k
+>>>>
+>>>>, Miguel Vazquez
+>>>><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+>>>Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>"
+>>><docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>,
+>>>"joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.d
+>>>k
+>>>>
+>>>" 
+>>><joachim.weischenfeldt at bric.ku.dk<mailto:joachim.weischenfeldt at bric.ku.d
+>>>k
+>>>>
+>>>>, "Schlesner, Matthias"
+>>>><m.schlesner at Dkfz-Heidelberg.de<mailto:m.schlesner at Dkfz-Heidelberg.de>>
+>>>Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+>>>DKFZ(+Delly)
+>>>
+>>>Hi Miguel and Jonas,
+>>>
+>>>I hope DKFZ pipeline authors (cc?d here) would be able to figure out the
+>>>differences of the calls for DO52140
+>>>
+>>>Here I have another donor: DO51087. The size of the somatic SNV/MNV DKFZ
+>>>call seems to be surprisingly large, the GZ?d VCF file is greater than
+>>>500MB. Here you can find more information about the file:
+>>>https://dcc.icgc.org/repositories/files/FI500885. You can verify that in
+>>>GNOS as well: 
+>>>https://gtrepo-dkfz.annailabs.com/cghub/metadata/analysisFull/e1e9062e-3
+>>>5
+>>>e
+>>>6-447d-bc61-591e76fbeee0.
+>>>
+>>>Matthias, can you please take a look of the VCF? Hope you may be able to
+>>>spot something abnormal there.
+>>>
+>>>Maybe Miguel/Jonas, if you plan to test more donors for the DKFZ
+>>>pipeline, can you please choose this donor? Tumour aligned BAM is:
+>>>https://dcc.icgc.org/repositories/files/FI37278, normal aligned BAM is
+>>>https://dcc.icgc.org/repositories/files/FI37277
+>>>
+>>>Thanks,
+>>>Junjun
+>>>
+>>>
+>>>
+>>>From: 
+>>><docktesters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org<mailto:dockt
+>>>e
+>>>s
+>>>ters-bounces+junjun.zhang=oicr.on.ca at lists.icgc.org>> on behalf of Jonas
+>>>Demeulemeester 
+>>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.u
+>>>k
+>>>>
+>>>>
+>>>Date: Saturday, February 4, 2017 at 10:14 AM
+>>>To: Miguel Vazquez
+>>><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>>
+>>>Cc: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>"
+>>><docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>
+>>>Subject: Re: [DOCKTESTERS] Summary of validation of Dockers Sanger and
+>>>DKFZ(+Delly)
+>>>
+>>>Hi Miguel,
+>>>
+>>>The comparison was indeed run largely using your scripts.
+>>>I didn't notice any missteps but you never know of course.
+>>>Hope they can pinpoint the issue.
+>>>
+>>>Cheers,
+>>>Jonas
+>>>
+>>>
+>>>On 3 Feb 2017, at 19:06, Miguel Vazquez
+>>><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+>>>
+>>>Excellent Jonas, this is very useful info.
+>>>
+>>> I guess you are using my own scripts for this. The possibility remains
+>>>that there is a misstep in them regarding delly. Let's see what turns
+>>>out
+>>>of the checks by our friends at DKFZ.
+>>>
+>>>Best regards
+>>>
+>>>Have a great weekend
+>>>
+>>>Miguel
+>>>
+>>>On Feb 3, 2017 6:10 PM, "Jonas Demeulemeester"
+>>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.u
+>>>k
+>>>>
+>>>> wrote:
+>>>Dear all,
+>>>
+>>>Also for the DKFZ (+Delly) workflow, I can confirm Miguel?s results on
+>>>samples DO52140 and DO50311.
+>>>The dockerised pipelines return identical calls for SNV.MNVs and indels
+>>>but partly different ones for SVs and CNVs, independent of the
+>>>infrastructure.
+>>>
+>>>Best regards,
+>>>Jonas
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>RESULTS DO52140
+>>>---------------
+>>>
+>>>Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+>>>---
+>>>Common: 72
+>>>Extra: 23
+>>>    - Example: 
+>>>10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+>>>Missing: 61
+>>>    - Example: 
+>>>10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>>>
+>>>
+>>>Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+>>>---
+>>>Common: 1108
+>>>Extra: 1116
+>>>    - Example: 
+>>>10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+>>>Missing: 2908
+>>>    - Example: 
+>>>10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+>>>
+>>>
+>>>Comparison of somatic.snv.mnv for DO52140 using DKFZ
+>>>---
+>>>Common: 37160
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.snv.mnv for DO52140 using DKFZ
+>>>---
+>>>Common: 3833896
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.indel for DO52140 using DKFZ
+>>>---
+>>>Common: 19347
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.indel for DO52140 using DKFZ
+>>>---
+>>>Common: 706572
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.cnv for DO52140 using DKFZ
+>>>---
+>>>Common: 275
+>>>Extra: 94
+>>>    - Example: 
+>>>1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+>>>Missing: 286
+>>>    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>>>
+>>>
+>>>
+>>>
+>>>RESULTS DO50311
+>>>---------------
+>>>
+>>>Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+>>>---
+>>>Common: 231
+>>>Extra: 44
+>>>    - Example: 
+>>>10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+>>>Missing: 48
+>>>    - Example: 
+>>>10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+>>>
+>>>
+>>>Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+>>>---
+>>>Common: 1393
+>>>Extra: 231
+>>>    - Example: 
+>>>10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+>>>Missing: 615
+>>>    - Example: 
+>>>10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+>>>
+>>>
+>>>Comparison of somatic.snv.mnv for DO50311 using DKFZ
+>>>---
+>>>Common: 51087
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.snv.mnv for DO50311 using DKFZ
+>>>---
+>>>Common: 3850992
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.indel for DO50311 using DKFZ
+>>>---
+>>>Common: 26469
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.indel for DO50311 using DKFZ
+>>>---
+>>>Common: 709060
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.cnv for DO50311 using DKFZ
+>>>---
+>>>Common: 731
+>>>Extra: 213
+>>>    - Example: 
+>>>10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+>>>Missing: 190
+>>>    - Example: 
+>>>10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRA
+>>>L
+>>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>_________________________________
+>>>Jonas Demeulemeester, PhD
+>>>Postdoctoral Researcher
+>>>The Francis Crick Institute
+>>>1 Midland Road
+>>>London
+>>>NW1 1AT
+>>>
+>>>T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+>>>M: +44 (0)7482 070730<tel:+44%207482%20070730>
+>>>E: jonas.demeulemeester at crick.ac.uk
+>>>W: www.crick.ac.uk
+>>>
+>>>
+>>>
+>>>On 26 Jan 2017, at 13:41, Jonas Demeulemeester
+>>><Jonas.Demeulemeester at crick.ac.uk<mailto:Jonas.Demeulemeester at crick.ac.u
+>>>k
+>>>>
+>>>> wrote:
+>>>
+>>>Hi all,
+>>>
+>>>I can now confirm Miguel?s results with the Sanger workflow on donors
+>>>DO50311 and DO52140.
+>>>The calls made by the dockerised version are identical for Indels and
+>>>SVs
+>>>and produce only small discrepancies for SNV_MNVs and CNVs.
+>>>The discrepancies seem independent of the system infrastructure as the
+>>>number of missing/extra variants called are the same as Miguel?s
+>>>reported
+>>>previously (on DO52140)
+>>>
+>>>I?ve also updated the wiki page accordingly.
+>>>
+>>>Best regards,
+>>>Jonas
+>>>
+>>>
+>>>
+>>>RESULTS - DO50311
+>>>------
+>>>
+>>>
+>>>Comparison of cnv for DO50311 using Sanger
+>>>---
+>>>Common: 138
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of indel for DO50311 using Sanger
+>>>---
+>>>Common: 812487
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of snv_mnv for DO50311 using Sanger
+>>>---
+>>>Common: 156313
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of sv for DO50311 using Sanger
+>>>---
+>>>Common: 260
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>RESULTS - DO52140
+>>>------
+>>>
+>>>
+>>>Comparison of cnv for DO52140 using Sanger
+>>>---
+>>>Common: 36
+>>>Extra: 0
+>>>Missing: 2
+>>>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>>>
+>>>
+>>>Comparison of indel for DO52140 using Sanger
+>>>---
+>>>Common: 803986
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of svn_mnv for DO52140 using Sanger
+>>>---
+>>>Common: 87234
+>>>Extra: 5
+>>>    - Example: 1:23719098:G,12:43715930:A,20:4058335:A
+>>>Missing: 7
+>>>    - Example: 10:6881937:T,1:148579866:G,11:9271589:A
+>>>
+>>>
+>>>Comparison of sv for DO52140 using Sanger
+>>>---
+>>>Common: 6
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>For comparison, Miguel?s report on DO51240:
+>>>Report
+>>>~~~~~~
+>>>
+>>>Comparison of somatic.cnv for DO52140 using Sanger
+>>>---
+>>>Common: 36
+>>>Extra: 0
+>>>Missing: 2
+>>>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>>>
+>>>
+>>>Comparison of somatic.indel for DO52140 using Sanger
+>>>---
+>>>Common: 803986
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.snv.mnv for DO52140 using Sanger
+>>>---
+>>>Common: 87234
+>>>Extra: 5
+>>>    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+>>>Missing: 7
+>>>    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>>>
+>>>
+>>>Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+>>>---
+>>>Common: 6
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>_________________________________
+>>>Jonas Demeulemeester, PhD
+>>>Postdoctoral Researcher
+>>>The Francis Crick Institute
+>>>1 Midland Road
+>>>London
+>>>NW1 1AT
+>>>
+>>>T: +44 (0)20 3796 2594<tel:+44%2020%203796%202594>
+>>>M: +44 (0)7482 070730<tel:+44%207482%20070730>
+>>>E: jonas.demeulemeester at crick.ac.uk
+>>>W: www.crick.ac.uk
+>>>
+>>>
+>>>
+>>>On 16 Jan 2017, at 14:24, Miguel Vazquez
+>>><miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+>>>
+>>>Dear all,
+>>>
+>>>Let me summarize the status of the testing for Sanger and DKFZ. The
+>>>validation has been run for two donors for each workflow: DO50311
+>>>DO52140
+>>>
+>>>Sanger:
+>>>----------
+>>>
+>>>Sanger call only somatic variants. The results are identical for Indels
+>>>and SVs but almost identical for SNV.MNV and CNV. The discrepancies are
+>>>reproducible (on the same machine at least), i.e. the same are found
+>>>after running the workflow a second time.
+>>>
+>>>DKFZ:
+>>>---------
+>>>DKFZ cals somatic and germline variants, except germline CNVs. For both
+>>>germline and somatic variants the results are identical for SNV.MNV and
+>>>Indels but with large discrepancies for SV and CNV.
+>>>
+>>>
+>>>Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+>>>investigating this issue I believe.
+>>>
+>>>BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+>>>Demeulemeester. Denis I believe is investigating this problem further. I
+>>>haven't had the chance to investigate this much myself.
+>>>
+>>>Best
+>>>
+>>>Miguel
+>>>
+>>>
+>>>
+>>>
+>>>---------------------
+>>>RESULTS
+>>>---------------------
+>>>
+>>>ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+>>>
+>>>Comparison of somatic.snv.mnv for DO50311 using DKFZ
+>>>---
+>>>Common: 51087
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.indel for DO50311 using DKFZ
+>>>---
+>>>Common: 26469
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.sv<http://somatic.sv/> for DO50311 using DKFZ
+>>>---
+>>>Common: 231
+>>>Extra: 44
+>>>    - Example: 
+>>>10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+>>>Missing: 48
+>>>    - Example: 
+>>>10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+>>>
+>>>
+>>>Comparison of somatic.cnv for DO50311 using DKFZ
+>>>---
+>>>Common: 731
+>>>Extra: 213
+>>>    - Example: 
+>>>10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+>>>Missing: 190
+>>>    - Example: 
+>>>10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRA
+>>>L
+>>>>
+>>>
+>>>
+>>>Comparison of germline.snv.mnv for DO50311 using DKFZ
+>>>---
+>>>Common: 3850992
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.indel for DO50311 using DKFZ
+>>>---
+>>>Common: 709060
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.sv<http://germline.sv/> for DO50311 using DKFZ
+>>>---
+>>>Common: 1393
+>>>Extra: 231
+>>>    - Example: 
+>>>10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+>>>Missing: 615
+>>>    - Example: 
+>>>10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+>>>
+>>>File not found 
+>>>/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germ
+>>>l
+>>>i
+>>>ne.cnv.vcf.gz
+>>>
+>>>Comparison of somatic.snv.mnv for DO52140 using DKFZ
+>>>---
+>>>Common: 37160
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.indel for DO52140 using DKFZ
+>>>---
+>>>Common: 19347
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.sv<http://somatic.sv/> for DO52140 using DKFZ
+>>>---
+>>>Common: 72
+>>>Extra: 23
+>>>    - Example: 
+>>>10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+>>>Missing: 61
+>>>    - Example: 
+>>>10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>>>
+>>>
+>>>Comparison of somatic.cnv for DO52140 using DKFZ
+>>>---
+>>>Common: 275
+>>>Extra: 94
+>>>    - Example: 
+>>>1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+>>>Missing: 286
+>>>    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>>>
+>>>
+>>>Comparison of germline.snv.mnv for DO52140 using DKFZ
+>>>---
+>>>Common: 3833896
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.indel for DO52140 using DKFZ
+>>>---
+>>>Common: 706572
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of germline.sv<http://germline.sv/> for DO52140 using DKFZ
+>>>---
+>>>Common: 1108
+>>>Extra: 1116
+>>>    - Example: 
+>>>10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+>>>Missing: 2908
+>>>    - Example: 
+>>>10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+>>>
+>>>File not found 
+>>>/mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germ
+>>>l
+>>>i
+>>>ne.cnv.vcf.gz
+>>>
+>>>Comparison of somatic.snv.mnv for DO50311 using Sanger
+>>>---
+>>>Common: 156299
+>>>Extra: 1
+>>>    - Example: Y:58885197:A:G
+>>>Missing: 14
+>>>    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+>>>
+>>>
+>>>Comparison of somatic.indel for DO50311 using Sanger
+>>>---
+>>>Common: 812487
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.sv<http://somatic.sv/> for DO50311 using Sanger
+>>>---
+>>>Common: 260
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.cnv for DO50311 using Sanger
+>>>---
+>>>Common: 138
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.snv.mnv for DO52140 using Sanger
+>>>---
+>>>Common: 87234
+>>>Extra: 5
+>>>    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+>>>Missing: 7
+>>>    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>>>
+>>>
+>>>Comparison of somatic.indel for DO52140 using Sanger
+>>>---
+>>>Common: 803986
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.sv<http://somatic.sv/> for DO52140 using Sanger
+>>>---
+>>>Common: 6
+>>>Extra: 0
+>>>Missing: 0
+>>>
+>>>
+>>>Comparison of somatic.cnv for DO52140 using Sanger
+>>>---
+>>>Common: 36
+>>>Extra: 0
+>>>Missing: 2
+>>>    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>>>_______________________________________________
+>>>docktesters mailing list
+>>>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>>>https://lists.icgc.org/mailman/listinfo/docktesters
+>>>
+>>>
+>>>The Francis Crick Institute Limited is a registered charity in England
+>>>and Wales no. 1140062 and a company registered in England and Wales no.
+>>>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>>>
+>>>_______________________________________________
+>>>docktesters mailing list
+>>>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>>>https://lists.icgc.org/mailman/listinfo/docktesters
+>>>
+>>>
+>>>The Francis Crick Institute Limited is a registered charity in England
+>>>and Wales no. 1140062 and a company registered in England and Wales no.
+>>>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>>>
+>>>_______________________________________________
+>>>docktesters mailing list
+>>>docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+>>>https://lists.icgc.org/mailman/listinfo/docktesters
+>>>
+>>>
+>>>The Francis Crick Institute Limited is a registered charity in England
+>>>and Wales no. 1140062 and a company registered in England and Wales no.
+>>>06885462, with its registered office at 1 Midland Road London NW1 1AT
+>>
+>
+
+
+From miguel.vazquez at cnio.es  Tue Feb 14 09:30:43 2017
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Tue, 14 Feb 2017 15:30:43 +0100
+Subject: [DOCKTESTERS]  BWA-Mem validation of HCC1143. 95% matches,
+ 3.6% miss-matches, and 1.3% soft-matches
+Message-ID: <CA+dx8maQHrC6wzhUyJmZnbMTEWycoieJBLH5TLj96TvsJap-7w@mail.gmail.com>
+
+Dear colleagues,
+
+I'm very happy to say that the BWA-Mem pipeline finished for the HCC1143
+data.
+
+I think what solved the problem was setting the headers to the unaligned
+BAM files. I'm currently trying it out with the DO35937 donor, but its too
+early to say if its working or not.
+
+To compare BAM files I've followed some advice that I found on the internet
+https://www.biostars.org/p/166221/. I will detail them a bit below because
+I would like some advice as to how appropriate the approach is, but first
+here are the numbers:
+
+*Lines*: 74264390
+*Matches*: 70565742
+*Misses*: 2693687
+*Soft*: 1004961
+
+
+Which means *95% matches, 3.6% miss-matches, and 1.3% soft-matches*.
+Matches are when the chromosome and position are the same, soft-matches are
+when they are not the same but the position from one of the alignments is
+included in the list of alternative positions for the other alignment (e.g
+XA:Z:15,-102516528,76M,0), and misses are the rest.
+
+Here is the detailed process from the start. The comparison script is here
+https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_bwa_bam.sh
+
+1) Un-align tumor and normal BAM files, retaining the original aligned BAM
+files
+2) Run BWA-Mem wich produces a file called HCC1143.merged_output.bam with
+alignments from both tumor and normal
+3) use samtools to extract the entries, limited for the first in pair (?),
+cut the read-name, chromosome, position (??) and extra information (for
+additional alignments) and sort them. We do this for the original files and
+for the BWA-Mem merged_output file, but separating tumor and normal entries
+(marked with the codes 'tumor' and 'normal', I believe from the headers I
+set when un-aligning them)
+4) join the lines by read-name, separately for the tumor and normal pairs
+of files, and check for matches
+
+I've two questions:
+(?) Is it OK to select only the first in pair, its what the guy in the
+example did, and it did simplify the code without repeated read-names
+(??) I guess its OK to only check chromosome and position, the cigar would
+be necessarily the same.
+
+Best regards
+
+Miguel
+
+On Mon, Jan 16, 2017 at 3:24 PM, Miguel Vazquez <miguel.vazquez at cnio.es>
+wrote:
+
+> Dear all,
+>
+> Let me summarize the status of the testing for Sanger and DKFZ. The
+> validation has been run for two donors for each workflow: DO50311 DO52140
+>
+> Sanger:
+> ----------
+>
+> Sanger call only somatic variants. The results are *identical for Indels
+> and SVs* but *almost identical for SNV.MNV and CNV*. The discrepancies
+> are reproducible (on the same machine at least), i.e. the same are found
+> after running the workflow a second time.
+>
+> DKFZ:
+> ---------
+> DKFZ cals somatic and germline variants, except germline CNVs. For both
+> germline and somatic variants the results are *identical for SNV.MNV and
+> Indels* but with *large discrepancies for SV and CNV*.
+>
+> Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+> investigating this issue I believe.
+>
+> BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+> Demeulemeester. Denis I believe is investigating this problem further. I
+> haven't had the chance to investigate this much myself.
+>
+> Best
+>
+> Miguel
+>
+>
+>
+>
+> ---------------------
+> RESULTS
+> ---------------------
+>
+> ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+>
+> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 51087
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO50311 using DKFZ
+> ---
+> Common: 26469
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO50311 using DKFZ
+> ---
+> Common: 231
+> Extra: 44
+>     - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+> Missing: 48
+>     - Example: 10:119704959:N:<INV>,10:131163
+> 22:N:<TRA>,10:47063485:N:<TRA>
+>
+>
+> Comparison of somatic.cnv for DO50311 using DKFZ
+> ---
+> Common: 731
+> Extra: 213
+>     - Example: 10:132510034:N:<DEL>,10:205968
+> 01:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+> Missing: 190
+>     - Example: 10:100891940:N:<NEUTRAL>,10:10
+> 4975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+>
+>
+> Comparison of germline.snv.mnv for DO50311 using DKFZ
+> ---
+> Common: 3850992
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO50311 using DKFZ
+> ---
+> Common: 709060
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.sv for DO50311 using DKFZ
+> ---
+> Common: 1393
+> Extra: 231
+>     - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<
+> DEL>
+> Missing: 615
+>     - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<
+> DUP>
+>
+> File not found /mnt/1TB/work/DockerTest-Migue
+> l/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+>
+> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 37160
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.indel for DO52140 using DKFZ
+> ---
+> Common: 19347
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO52140 using DKFZ
+> ---
+> Common: 72
+> Extra: 23
+>     - Example: 10:132840774:N:<DEL>,11:382520
+> 19:N:<TRA>,11:47700673:N:<TRA>
+> Missing: 61
+>     - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>
+>
+> Comparison of somatic.cnv for DO52140 using DKFZ
+> ---
+> Common: 275
+> Extra: 94
+>     - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+> Missing: 286
+>     - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>
+>
+> Comparison of germline.snv.mnv for DO52140 using DKFZ
+> ---
+> Common: 3833896
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.indel for DO52140 using DKFZ
+> ---
+> Common: 706572
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of germline.sv for DO52140 using DKFZ
+> ---
+> Common: 1108
+> Extra: 1116
+>     - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<
+> DEL>
+> Missing: 2908
+>     - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<
+> DEL>
+>
+> File not found /mnt/1TB/work/DockerTest-Migue
+> l/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+>
+> Comparison of somatic.snv.mnv for DO50311 using Sanger
+> ---
+> Common: 156299
+> Extra: 1
+>     - Example: Y:58885197:A:G
+> Missing: 14
+>     - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+>
+>
+> Comparison of somatic.indel for DO50311 using Sanger
+> ---
+> Common: 812487
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO50311 using Sanger
+> ---
+> Common: 260
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO50311 using Sanger
+> ---
+> Common: 138
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.snv.mnv for DO52140 using Sanger
+> ---
+> Common: 87234
+> Extra: 5
+>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+> Missing: 7
+>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>
+>
+> Comparison of somatic.indel for DO52140 using Sanger
+> ---
+> Common: 803986
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.sv for DO52140 using Sanger
+> ---
+> Common: 6
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of somatic.cnv for DO52140 using Sanger
+> ---
+> Common: 36
+> Extra: 0
+> Missing: 2
+>     - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170214/3e30d00d/attachment-0001.html>
+
+From Denis.Yuen at oicr.on.ca  Tue Feb 14 10:25:46 2017
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Tue, 14 Feb 2017 15:25:46 +0000
+Subject: [DOCKTESTERS] BWA-Mem validation of HCC1143. 95% matches,
+ 3.6% miss-matches, and 1.3% soft-matches
+In-Reply-To: <CA+dx8maQHrC6wzhUyJmZnbMTEWycoieJBLH5TLj96TvsJap-7w@mail.gmail.com>
+References: <CA+dx8maQHrC6wzhUyJmZnbMTEWycoieJBLH5TLj96TvsJap-7w@mail.gmail.com>
+Message-ID: <98b4640c026d46bdbc567d7b5f46bc77@oicr.on.ca>
+
+Hi,
+
+Thanks for the update. I haven't had as much time to work through the BWA procedure as I'd like.
+
+This sounds like good progress.
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org <docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org> on behalf of Miguel Vazquez <miguel.vazquez at cnio.es>
+Sent: February 14, 2017 9:30 AM
+To: Lincoln Stein; Francis Ouellette; Brian O'Connor
+Cc: docktesters at lists.icgc.org
+Subject: [DOCKTESTERS] BWA-Mem validation of HCC1143. 95% matches, 3.6% miss-matches, and 1.3% soft-matches
+
+Dear colleagues,
+
+I'm very happy to say that the BWA-Mem pipeline finished for the HCC1143 data.
+
+I think what solved the problem was setting the headers to the unaligned BAM files. I'm currently trying it out with the DO35937 donor, but its too early to say if its working or not.
+
+To compare BAM files I've followed some advice that I found on the internet https://www.biostars.org/p/166221/. I will detail them a bit below because I would like some advice as to how appropriate the approach is, but first here are the numbers:
+
+Lines: 74264390
+Matches: 70565742
+Misses: 2693687
+Soft: 1004961
+
+
+Which means 95% matches, 3.6% miss-matches, and 1.3% soft-matches. Matches are when the chromosome and position are the same, soft-matches are when they are not the same but the position from one of the alignments is included in the list of alternative positions for the other alignment (e.g  XA:Z:15,-102516528,76M,0), and misses are the rest.
+
+Here is the detailed process from the start. The comparison script is here https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_bwa_bam.sh
+
+1) Un-align tumor and normal BAM files, retaining the original aligned BAM files
+2) Run BWA-Mem wich produces a file called HCC1143.merged_output.bam with alignments from both tumor and normal
+3) use samtools to extract the entries, limited for the first in pair (?), cut the read-name, chromosome, position (??) and extra information (for additional alignments) and sort them. We do this for the original files and for the BWA-Mem merged_output file, but separating tumor and normal entries (marked with the codes 'tumor' and 'normal', I believe from the headers I set when un-aligning them)
+4) join the lines by read-name, separately for the tumor and normal pairs of files, and check for matches
+
+I've two questions:
+(?) Is it OK to select only the first in pair, its what the guy in the example did, and it did simplify the code without repeated read-names
+(??) I guess its OK to only check chromosome and position, the cigar would be necessarily the same.
+
+Best regards
+
+Miguel
+
+On Mon, Jan 16, 2017 at 3:24 PM, Miguel Vazquez <miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>> wrote:
+Dear all,
+
+Let me summarize the status of the testing for Sanger and DKFZ. The validation has been run for two donors for each workflow: DO50311 DO52140
+
+Sanger:
+----------
+
+Sanger call only somatic variants. The results are identical for Indels and SVs but almost identical for SNV.MNV and CNV. The discrepancies are reproducible (on the same machine at least), i.e. the same are found after running the workflow a second time.
+
+DKFZ:
+---------
+DKFZ cals somatic and germline variants, except germline CNVs. For both germline and somatic variants the results are identical for SNV.MNV and Indels but with large discrepancies for SV and CNV.
+
+
+Kortine Kleinheinz and Joachim Weischenfeldt are in the process of investigating this issue I believe.
+
+BWA-Mem failed for me and has also failed for Denis Yuen and Jonas Demeulemeester. Denis I believe is investigating this problem further. I haven't had the chance to investigate this much myself.
+
+Best
+
+Miguel
+
+
+
+
+---------------------
+RESULTS
+---------------------
+
+ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+
+Comparison of somatic.snv.mnv for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO50311 using DKFZ
+---
+Common: 26469
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO50311 using DKFZ
+---
+Common: 231
+Extra: 44
+    - Example: 10:20596800:N:<TRA>,10:56066821:N:<TRA>,11:16776092:N:<TRA>
+Missing: 48
+    - Example: 10:119704959:N:<INV>,10:13116322:N:<TRA>,10:47063485:N:<TRA>
+
+
+Comparison of somatic.cnv for DO50311 using DKFZ
+---
+Common: 731
+Extra: 213
+    - Example: 10:132510034:N:<DEL>,10:20596801:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+Missing: 190
+    - Example: 10:100891940:N:<NEUTRAL>,10:104975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+
+
+Comparison of germline.snv.mnv for DO50311 using DKFZ
+---
+Common: 3850992
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO50311 using DKFZ
+---
+Common: 709060
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv> for DO50311 using DKFZ
+---
+Common: 1393
+Extra: 231
+    - Example: 10:134319313:N:<DEL>,10:134948976:N:<DEL>,10:19996638:N:<DEL>
+Missing: 615
+    - Example: 10:101851839:N:<TRA>,10:101851884:N:<TRA>,10:10745225:N:<DUP>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO52140 using DKFZ
+---
+Common: 37160
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.indel for DO52140 using DKFZ
+---
+Common: 19347
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using DKFZ
+---
+Common: 72
+Extra: 23
+    - Example: 10:132840774:N:<DEL>,11:38252019:N:<TRA>,11:47700673:N:<TRA>
+Missing: 61
+    - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+
+
+Comparison of somatic.cnv for DO52140 using DKFZ
+---
+Common: 275
+Extra: 94
+    - Example: 1:106505931:N:<LOH>,1:109068899:N:<DEL>,1:109359995:N:<DEL>
+Missing: 286
+    - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+
+
+Comparison of germline.snv.mnv for DO52140 using DKFZ
+---
+Common: 3833896
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.indel for DO52140 using DKFZ
+---
+Common: 706572
+Extra: 0
+Missing: 0
+
+
+Comparison of germline.sv<http://germline.sv> for DO52140 using DKFZ
+---
+Common: 1108
+Extra: 1116
+    - Example: 10:102158308:N:<DEL>,10:104645247:N:<DEL>,10:105097522:N:<DEL>
+Missing: 2908
+    - Example: 10:100107032:N:<TRA>,10:100107151:N:<TRA>,10:102158345:N:<DEL>
+
+File not found /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+
+Comparison of somatic.snv.mnv for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:A:G
+Missing: 14
+    - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+
+
+Comparison of somatic.indel for DO50311 using Sanger
+---
+Common: 812487
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO50311 using Sanger
+---
+Common: 260
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO50311 using Sanger
+---
+Common: 138
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.sv<http://somatic.sv> for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170214/60652d6f/attachment.html>
+
+From miguel.vazquez at cnio.es  Sun Feb 19 07:43:11 2017
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Sun, 19 Feb 2017 13:43:11 +0100
+Subject: [DOCKTESTERS]  BWA-Mem validation of DO35937. 93% matches,
+ 3.6% miss-matches, and 3.2% soft-matches
+Message-ID: <CA+dx8mb2SJqrA-xYf_SLGuooD2mG5byyu4t+UBywjbXMKxXBvQ@mail.gmail.com>
+
+Dear all,
+
+Great news! The BWA-Mem test on a real PCAWG donor succeed in running;
+achieving an overlap with the original BAM alignment similar to the
+HCC1143 test. The numbers are:
+
+Lines: 1708047647
+Matches: 1589172843
+Misses: 62726130
+Soft: 56148674
+
+Which mean 93% matches, 3.6% miss-matches, and 3.2% soft-matches. Compared
+to the HCC1143 test there are a few percentage points in matches that turn
+into soft-matches (95% and 1.3% to 93% and 3.2%), but the ratio of misses
+is very close 3.6%.
+
+I'm running this test on a second donor.
+
+Best regards
+
+Miguel
+
+On Tue, Feb 14, 2017 at 3:30 PM, Miguel Vazquez <miguel.vazquez at cnio.es>
+wrote:
+
+> Dear colleagues,
+>
+> I'm very happy to say that the BWA-Mem pipeline finished for the HCC1143
+> data.
+>
+> I think what solved the problem was setting the headers to the unaligned
+> BAM files. I'm currently trying it out with the DO35937 donor, but its too
+> early to say if its working or not.
+>
+> To compare BAM files I've followed some advice that I found on the
+> internet https://www.biostars.org/p/166221/. I will detail them a bit
+> below because I would like some advice as to how appropriate the approach
+> is, but first here are the numbers:
+>
+> *Lines*: 74264390
+> *Matches*: 70565742
+> *Misses*: 2693687
+> *Soft*: 1004961
+>
+>
+> Which means *95% matches, 3.6% miss-matches, and 1.3% soft-matches*.
+> Matches are when the chromosome and position are the same, soft-matches are
+> when they are not the same but the position from one of the alignments is
+> included in the list of alternative positions for the other alignment (e.g
+> XA:Z:15,-102516528,76M,0), and misses are the rest.
+>
+> Here is the detailed process from the start. The comparison script is here
+> https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/
+> bin/compare_bwa_bam.sh
+>
+> 1) Un-align tumor and normal BAM files, retaining the original aligned BAM
+> files
+> 2) Run BWA-Mem wich produces a file called HCC1143.merged_output.bam with
+> alignments from both tumor and normal
+> 3) use samtools to extract the entries, limited for the first in pair (?),
+> cut the read-name, chromosome, position (??) and extra information (for
+> additional alignments) and sort them. We do this for the original files and
+> for the BWA-Mem merged_output file, but separating tumor and normal entries
+> (marked with the codes 'tumor' and 'normal', I believe from the headers I
+> set when un-aligning them)
+> 4) join the lines by read-name, separately for the tumor and normal pairs
+> of files, and check for matches
+>
+> I've two questions:
+> (?) Is it OK to select only the first in pair, its what the guy in the
+> example did, and it did simplify the code without repeated read-names
+> (??) I guess its OK to only check chromosome and position, the cigar would
+> be necessarily the same.
+>
+> Best regards
+>
+> Miguel
+>
+> On Mon, Jan 16, 2017 at 3:24 PM, Miguel Vazquez <miguel.vazquez at cnio.es>
+> wrote:
+>
+>> Dear all,
+>>
+>> Let me summarize the status of the testing for Sanger and DKFZ. The
+>> validation has been run for two donors for each workflow: DO50311 DO52140
+>>
+>> Sanger:
+>> ----------
+>>
+>> Sanger call only somatic variants. The results are *identical for Indels
+>> and SVs* but *almost identical for SNV.MNV and CNV*. The discrepancies
+>> are reproducible (on the same machine at least), i.e. the same are found
+>> after running the workflow a second time.
+>>
+>> DKFZ:
+>> ---------
+>> DKFZ cals somatic and germline variants, except germline CNVs. For both
+>> germline and somatic variants the results are *identical for SNV.MNV and
+>> Indels* but with *large discrepancies for SV and CNV*.
+>>
+>> Kortine Kleinheinz and Joachim Weischenfeldt are in the process of
+>> investigating this issue I believe.
+>>
+>> BWA-Mem failed for me and has also failed for Denis Yuen and Jonas
+>> Demeulemeester. Denis I believe is investigating this problem further. I
+>> haven't had the chance to investigate this much myself.
+>>
+>> Best
+>>
+>> Miguel
+>>
+>>
+>>
+>>
+>> ---------------------
+>> RESULTS
+>> ---------------------
+>>
+>> ubuntu at ip-10-253-35-14:~/DockerTest-Miguel$ cat results.txt
+>>
+>> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+>> ---
+>> Common: 51087
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.indel for DO50311 using DKFZ
+>> ---
+>> Common: 26469
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.sv for DO50311 using DKFZ
+>> ---
+>> Common: 231
+>> Extra: 44
+>>     - Example: 10:20596800:N:<TRA>,10:5606682
+>> 1:N:<TRA>,11:16776092:N:<TRA>
+>> Missing: 48
+>>     - Example: 10:119704959:N:<INV>,10:131163
+>> 22:N:<TRA>,10:47063485:N:<TRA>
+>>
+>>
+>> Comparison of somatic.cnv for DO50311 using DKFZ
+>> ---
+>> Common: 731
+>> Extra: 213
+>>     - Example: 10:132510034:N:<DEL>,10:205968
+>> 01:N:<NEUTRAL>,10:47674883:N:<NEUTRAL>
+>> Missing: 190
+>>     - Example: 10:100891940:N:<NEUTRAL>,10:10
+>> 4975905:N:<NEUTRAL>,10:119704960:N:<NEUTRAL>
+>>
+>>
+>> Comparison of germline.snv.mnv for DO50311 using DKFZ
+>> ---
+>> Common: 3850992
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of germline.indel for DO50311 using DKFZ
+>> ---
+>> Common: 709060
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of germline.sv for DO50311 using DKFZ
+>> ---
+>> Common: 1393
+>> Extra: 231
+>>     - Example: 10:134319313:N:<DEL>,10:134948
+>> 976:N:<DEL>,10:19996638:N:<DEL>
+>> Missing: 615
+>>     - Example: 10:101851839:N:<TRA>,10:101851
+>> 884:N:<TRA>,10:10745225:N:<DUP>
+>>
+>> File not found /mnt/1TB/work/DockerTest-Migue
+>> l/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+>>
+>> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+>> ---
+>> Common: 37160
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.indel for DO52140 using DKFZ
+>> ---
+>> Common: 19347
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.sv for DO52140 using DKFZ
+>> ---
+>> Common: 72
+>> Extra: 23
+>>     - Example: 10:132840774:N:<DEL>,11:382520
+>> 19:N:<TRA>,11:47700673:N:<TRA>
+>> Missing: 61
+>>     - Example: 10:134749140:N:<DEL>,11:179191:N:<TRA>,11:38252005:N:<TRA>
+>>
+>>
+>> Comparison of somatic.cnv for DO52140 using DKFZ
+>> ---
+>> Common: 275
+>> Extra: 94
+>>     - Example: 1:106505931:N:<LOH>,1:10906889
+>> 9:N:<DEL>,1:109359995:N:<DEL>
+>> Missing: 286
+>>     - Example: 10:88653561:N:<LOH>,11:179192:N:<LOH>,11:38252006:N:<LOH>
+>>
+>>
+>> Comparison of germline.snv.mnv for DO52140 using DKFZ
+>> ---
+>> Common: 3833896
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of germline.indel for DO52140 using DKFZ
+>> ---
+>> Common: 706572
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of germline.sv for DO52140 using DKFZ
+>> ---
+>> Common: 1108
+>> Extra: 1116
+>>     - Example: 10:102158308:N:<DEL>,10:104645
+>> 247:N:<DEL>,10:105097522:N:<DEL>
+>> Missing: 2908
+>>     - Example: 10:100107032:N:<TRA>,10:100107
+>> 151:N:<TRA>,10:102158345:N:<DEL>
+>>
+>> File not found /mnt/1TB/work/DockerTest-Migue
+>> l/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+>>
+>> Comparison of somatic.snv.mnv for DO50311 using Sanger
+>> ---
+>> Common: 156299
+>> Extra: 1
+>>     - Example: Y:58885197:A:G
+>> Missing: 14
+>>     - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+>>
+>>
+>> Comparison of somatic.indel for DO50311 using Sanger
+>> ---
+>> Common: 812487
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.sv for DO50311 using Sanger
+>> ---
+>> Common: 260
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.cnv for DO50311 using Sanger
+>> ---
+>> Common: 138
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.snv.mnv for DO52140 using Sanger
+>> ---
+>> Common: 87234
+>> Extra: 5
+>>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+>> Missing: 7
+>>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+>>
+>>
+>> Comparison of somatic.indel for DO52140 using Sanger
+>> ---
+>> Common: 803986
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.sv for DO52140 using Sanger
+>> ---
+>> Common: 6
+>> Extra: 0
+>> Missing: 0
+>>
+>>
+>> Comparison of somatic.cnv for DO52140 using Sanger
+>> ---
+>> Common: 36
+>> Extra: 0
+>> Missing: 2
+>>     - Example: 10:11767915:T:<CNV>,10:11779907:G:<CNV>
+>>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170219/9f75dc01/attachment-0001.html>
+
+From mikisvaz at gmail.com  Mon Feb 27 10:13:30 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Mon, 27 Feb 2017 16:13:30 +0100
+Subject: [DOCKTESTERS] Questions about BiasFilter
+Message-ID: <CA+dx8mZgWG5A_X162mVT+pcfnmQBK4fOBT9c+g=yp_ouQHJuLw@mail.gmail.com>
+
+Dear Matthias,
+
+I'm sorry that my sound was bad, it turns out I was using a Bluetooth
+headset and was pacing away from my phone.
+
+1) The first question I had regards the files hs37d5.fa and hs37d5.fa.fai
+that are used by the docker file. On other workflows I was able to find
+resource files such as these at the ICGC DCC
+
+https://dcc.icgc.org/releases/PCAWG/reference_data/
+
+Should these two file be placed there? right now I've configured it to use
+the ones in the 1000 Genomes ftp
+
+http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/
+
+2) The other question is how should I validate the results. From what I
+understood you suggest using the final merged VCF, correct?. I suppose I
+can get it from GNOS using the information in ICGC, and I seem to remember
+a field is present there indicating the filtering status.
+
+Best regards
+
+Miguel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170227/1c994a14/attachment.html>
+
+From miguel.vazquez at cnio.es  Mon Feb 27 13:30:38 2017
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Mon, 27 Feb 2017 19:30:38 +0100
+Subject: [DOCKTESTERS]  DKFZ BiasFilter Validation of DO52140. 100% match
+Message-ID: <CA+dx8mZAWFLvdJXw49OJF-7FRR-vOh+qvv46ysBDCHrxOUQZNQ@mail.gmail.com>
+
+Dear friends,
+
+I've performed the first test with the DKFZ BiasFilter and got a perfect
+match. There are 55 variants annotated with OXOGFAIL and they are the same
+in the input VCF file (consensus SNV/MNV VCF for that donor) and the output
+of the BiasFilter. I'm running the test on a second donor.
+
+Best regards
+
+Miguel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170227/741b9594/attachment.html>
+

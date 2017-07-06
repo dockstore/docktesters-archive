@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Core workflow icgc reference data location and	gosu
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Core%20workflow%20icgc%20reference%20data%20location%20and%0A%09gosu&In-Reply-To=%3CCA%2Bdx8mZ26CAdamHsp9ZH%2B2Bg5gbKe97Ote7f3wHpvYzDDdF_ZA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000170.html">
+   <LINK REL="Next"  HREF="000172.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Core workflow icgc reference data location and	gosu</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Core%20workflow%20icgc%20reference%20data%20location%20and%0A%09gosu&In-Reply-To=%3CCA%2Bdx8mZ26CAdamHsp9ZH%2B2Bg5gbKe97Ote7f3wHpvYzDDdF_ZA%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Core workflow icgc reference data location and	gosu">mikisvaz at gmail.com
+       </A><BR>
+    <I>Fri Dec  2 17:38:50 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000170.html">[DOCKTESTERS] Core workflow icgc reference data location and gosu
+</A></li>
+        <LI>Next message: <A HREF="000172.html">[DOCKTESTERS] Core workflow icgc reference data location and	gosu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#171">[ date ]</a>
+              <a href="thread.html#171">[ thread ]</a>
+              <a href="subject.html#171">[ subject ]</a>
+              <a href="author.html#171">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Francis, I'll rerun the test. I'm still waiting for the Sanger wf test that
+has been running for about 10 days. I'll see if it completes by Monday,
+ otherwise I'll think if I abort and retest dkfz and see if I can debug
+ bwa-mem.
+
+Best
+
+Miguel
+
+On Dec 2, 2016 9:39 PM, &quot;Francis Ouellette&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt; wrote:
+
+&gt;<i>
+</I>&gt;<i> OHSU people: any chance some of these will be tested before Monday AM&#8217;s
+</I>&gt;<i> call?
+</I>&gt;<i>
+</I>&gt;<i> Miguel: Can you rerun some of your successful tests with this new
+</I>&gt;<i> dockstore?
+</I>&gt;<i>
+</I>&gt;<i> All: any testing possible?
+</I>&gt;<i>
+</I>&gt;<i> Gordon: What is up with broady docker containers?
+</I>&gt;<i>
+</I>&gt;<i> We also have a request from Peter van Loo, to join this group &#8212; I said
+</I>&gt;<i> yes, but he wants to test other containers from his group &#8230; Which is great!
+</I>&gt;<i>
+</I>&gt;<i> After I get some specifics from him I will add peter and other(s) from his
+</I>&gt;<i> group.
+</I>&gt;<i>
+</I>&gt;<i> Stay tuned,
+</I>&gt;<i>
+</I>&gt;<i> Also, please update things on wiki/google doc as you progress forward,
+</I>&gt;<i>
+</I>&gt;<i> Thank you,
+</I>&gt;<i>
+</I>&gt;<i> @bffo
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Dec 2, 2016, at 12:15 PM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> I've gone through and created a new release for each of the core tools
+</I>&gt;<i> (bwa-mem, delly, dkfz, sanger) with two (non-scientific) changes.
+</I>&gt;<i>
+</I>&gt;<i> 1) Each of these tools has been redirected to use reference data hosted on
+</I>&gt;<i> the icgc portal ( <A HREF="https://dcc.icgc.org/releases/PCAWG">https://dcc.icgc.org/releases/PCAWG</A> ) rather than aws
+</I>&gt;<i> in order to conserve our use of S3. This means that sample json parameter
+</I>&gt;<i> files have been updated and any references inside the Docker images that
+</I>&gt;<i> we're aware of also have been updated. As usual, if re-running workflows
+</I>&gt;<i> frequently, you'll want to host these files locally.
+</I>&gt;<i>
+</I>&gt;<i> If you are using the Dockstore command-line interface, you'll need to
+</I>&gt;<i> upgrade to the latest release of dockstore (1.2) to use this new file
+</I>&gt;<i> location.
+</I>&gt;<i>
+</I>&gt;<i> 2) A number of users have run into problems running the workflow when
+</I>&gt;<i> running in a multi-user environment (i.e. not running Docker containers
+</I>&gt;<i> with the first user on a host). This release replaces most usage of sudo
+</I>&gt;<i> inside the tools with gosu to deal with this issue.
+</I>&gt;<i>
+</I>&gt;<i> The new release numbers are documented at <A HREF="https://wiki.oicr.on.ca/">https://wiki.oicr.on.ca/</A>
+</I>&gt;<i> display/PANCANCER/Workflow+Testing+Data
+</I>&gt;<i> In particular:
+</I>&gt;<i>
+</I>&gt;<i>    - bwa-mem 2.6.8_1.2
+</I>&gt;<i>    - dkfz 2.0.1_cwl1.0
+</I>&gt;<i>    - sanger 2.0.3
+</I>&gt;<i>    - embl 2.0.1-cwl1.0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *Denis Yuen*
+</I>&gt;<i> Bioinformatics Software Developer
+</I>&gt;<i>
+</I>&gt;<i> *Ontario* *Institute* *for* *Cancer* *Research*
+</I>&gt;<i> MaRS Centre
+</I>&gt;<i> 661 University Avenue
+</I>&gt;<i> Suite 510
+</I>&gt;<i> Toronto, Ontario, Canada M5G 0A3
+</I>&gt;<i> Toll-free: 1-866-678-6427
+</I>&gt;<i> Twitter: @OICR_news
+</I>&gt;<i> *www.oicr.on.ca &lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;*
+</I>&gt;<i> This message and any attachments may contain confidential and/or
+</I>&gt;<i> privileged information for the sole use of the intended recipient. Any
+</I>&gt;<i> review or distribution by anyone other than the person for whom it was
+</I>&gt;<i> originally intended is strictly prohibited. If you have received this
+</I>&gt;<i> message in error, please contact the sender and delete all copies.
+</I>&gt;<i> Opinions, conclusions or other information contained in this message may
+</I>&gt;<i> not be that of the organization.
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161202/ebf97e38/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161202/ebf97e38/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000170.html">[DOCKTESTERS] Core workflow icgc reference data location and gosu
+</A></li>
+	<LI>Next message: <A HREF="000172.html">[DOCKTESTERS] Core workflow icgc reference data location and	gosu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#171">[ date ]</a>
+              <a href="thread.html#171">[ thread ]</a>
+              <a href="subject.html#171">[ subject ]</a>
+              <a href="author.html#171">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

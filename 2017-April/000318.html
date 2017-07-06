@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013% miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64% soft-matches
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20validation%20of%20DO51057%20normal%29%200.013%25%0A%20miss-matches%2C%20and%203.7%25%20soft-matches%2C%20tumor%29%200.043%25%20miss-matches%2C%0A%20and%204.64%25%20soft-matches&In-Reply-To=%3CCA%2Bdx8mZ%3DVMaAYhj-8w7sTOz7_UHnaYcrg4y1ox9Morb-VrYdxA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000317.html">
+   <LINK REL="Next"  HREF="000319.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013% miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64% soft-matches</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20validation%20of%20DO51057%20normal%29%200.013%25%0A%20miss-matches%2C%20and%203.7%25%20soft-matches%2C%20tumor%29%200.043%25%20miss-matches%2C%0A%20and%204.64%25%20soft-matches&In-Reply-To=%3CCA%2Bdx8mZ%3DVMaAYhj-8w7sTOz7_UHnaYcrg4y1ox9Morb-VrYdxA%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013% miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64% soft-matches">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Wed Apr 12 09:11:54 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000317.html">[DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013% miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64% soft-matches
+</A></li>
+        <LI>Next message: <A HREF="000319.html">[DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013% miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64% soft-matches
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#318">[ date ]</a>
+              <a href="thread.html#318">[ thread ]</a>
+              <a href="subject.html#318">[ subject ]</a>
+              <a href="author.html#318">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Keiran,
+
+I don't quite follow all the details but I understand that you think that
+in working back from the aligned BAMs we should make sure we split the BAM
+files. I think our tests with splitting the BAM when working back from the
+aligned BAM did not seem to affect positively the match rate of aligned
+reads, however, if I understood you correctly, downstream algorithms like
+SVN and Indel callers could still be affected by not splitting the BAM. If
+so this is an interesting observation, though I don't think our testing
+will cover running these methods over the re-aligned BAM files, so we would
+not run into this scenario.
+
+Finally Keiran, what is your opinion on the discussion about working back
+from the aligned BAMs? could you summarize for us again what is the reason
+you think there is for the 3% miss-matched reads when using the rolled back
+splitted BAMs and only 0.01% when using the original unaligned BAMS, and if
+there is any possibility of addressing this or not?
+
+Thanks for your input
+
+Miguel
+
+
+
+
+
+On Tue, Apr 11, 2017 at 10:37 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Please be aware that failure to split the BAM's by readgroup for remapping
+</I>&gt;<i> so that lanes/readgroups are tagged appropriately had implications for
+</I>&gt;<i> analysis algorithms.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I'm unsure how you would remap without splitting by readgroup when
+</I>&gt;<i> libraries can be different between readgroups (which would result in a loss
+</I>&gt;<i> of metadata).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> For example, the CaVEMan (SNV) caller uses the readgroup as a co-variate
+</I>&gt;<i> to ensure that lane to lane artefacts are modelled correctly.  In both
+</I>&gt;<i> cgpPindel (indel) and BRASS (SV) the insert size for the individual
+</I>&gt;<i> readgroups needs to be correct, this is skewed if data is merged during
+</I>&gt;<i> mapping.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> An example from cgpPindel in our internal test process showed that
+</I>&gt;<i> starting from the exact same read order in the individual lane/readgroup
+</I>&gt;<i> BAMs but merging the files in a different order could result in minor
+</I>&gt;<i> changes to indel calls (items that failed filtering).  We found this was
+</I>&gt;<i> due to the order that reads from the same location being presented to the
+</I>&gt;<i> core algorithm in a different order.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hope this is useful.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i>
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i>
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i>
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;+44%201223%20834244&gt;
+</I>&gt;<i>
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *From: *&lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt; on behalf of Miguel Vazquez &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;<i> *Date: *Tuesday, 11 April 2017 at 17:31
+</I>&gt;<i> *To: *Christina Yung &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Christina.Yung at oicr.on.ca</A>&gt;
+</I>&gt;<i> *Cc: *Lincoln Stein &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">lincoln.stein at gmail.com</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot;
+</I>&gt;<i> &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt;,
+</I>&gt;<i> Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt;, George Mihaiescu &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;<i> *Subject: *Re: [DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013%
+</I>&gt;<i> miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64%
+</I>&gt;<i> soft-matches
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Hi Christina,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> There are two issues:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 1- Splitting the BAM files and running them in the right order. Can do
+</I>&gt;<i>
+</I>&gt;<i> 2- That the order of the reads *inside* a BAM is the same. Can not fix
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> So if we would like the inquisitive user to reproduce the alignment
+</I>&gt;<i> process from the available aligned BAM we need to tell him that the *reads*
+</I>&gt;<i> are not in the same order and that about 3% of the reads will be aligned
+</I>&gt;<i> differently.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Compared to the problem of the read order, the problem with the BAM
+</I>&gt;<i> splitting and ordering is negligible, in fact, splitting the BAM i believe
+</I>&gt;<i> did nothing at all to our numbers, so we might as well not even bother I
+</I>&gt;<i> think, but there are people better suited than me to make this call.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> In short, we can claim:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> 1) that the process is reproducible to a 99.99 percent using the original
+</I>&gt;<i> unaligned BAM files
+</I>&gt;<i>
+</I>&gt;<i> 2) that working back from the aligned BAM one is able to reproduce the
+</I>&gt;<i> results to a 96% accuracy, the lack on accuracy apparently due to different
+</I>&gt;<i> read ordering.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The process to reproduce in 2) could be the simple one, just unalign the
+</I>&gt;<i> BAM, or the more elaborate one that involves splitting the BAM an feeding
+</I>&gt;<i> it in the right order, which does not seem to improve anything.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170412/62f963fe/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170412/62f963fe/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000317.html">[DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013% miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64% soft-matches
+</A></li>
+	<LI>Next message: <A HREF="000319.html">[DOCKTESTERS] BWA-Mem validation of DO51057 normal) 0.013% miss-matches, and 3.7% soft-matches, tumor) 0.043% miss-matches, and 4.64% soft-matches
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#318">[ date ]</a>
+              <a href="thread.html#318">[ thread ]</a>
+              <a href="subject.html#318">[ subject ]</a>
+              <a href="author.html#318">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

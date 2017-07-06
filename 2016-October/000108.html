@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] [PAWG-TECH] Draft agenda for	PCAWG-TECH	teleconference
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%0A%09PCAWG-TECH%09teleconference&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A1297%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000107.html">
+   <LINK REL="Next"  HREF="000109.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] [PAWG-TECH] Draft agenda for	PCAWG-TECH	teleconference</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%0A%09PCAWG-TECH%09teleconference&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A1297%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] [PAWG-TECH] Draft agenda for	PCAWG-TECH	teleconference">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Wed Oct 12 10:36:58 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000107.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+        <LI>Next message: <A HREF="000109.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108">[ date ]</a>
+              <a href="thread.html#108">[ thread ]</a>
+              <a href="subject.html#108">[ subject ]</a>
+              <a href="author.html#108">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+I can make the modification, I'll run it through the test data and that should finish in roughly a day.
+In the meantime though, I am puzzled. Why would an issue like this affect a donor dataset, but not the test data?
+
+
+________________________________
+From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>] on behalf of Keiran Raine [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>]
+Sent: October 12, 2016 6:16 AM
+To: Miguel Vazquez
+Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+Subject: Re: [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH teleconference
+
+Hi,
+
+This is assuming that it is possible to write to the location the BAM are in.
+
+I think Denis would be best placed to make the minor modification as I don't know the process they are using for build and deploy of the images (I made modifications and then handed over for CWL).
+
+Regards,
+
+Keiran Raine
+Principal Bioinformatician
+Cancer Genome Project
+Wellcome Trust Sanger Institute
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;redir.aspx?REF=tMZ0FjU7Kgm89it3zX1rIeGk_Zd2_xzeB1YH6GIYBZo-dzeqrPLTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..&gt;
+Tel:+44 (0)1223 834244 Ext: 4983
+Office: H104
+
+On 12 Oct 2016, at 10:37, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;redir.aspx?REF=F46rw9DX4AXQvEjmTDF0k8PzjFoocSnJlahDqCMSnlA-dzeqrPLTCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..&gt;&gt; wrote:
+
+[The rest of the list where out of the loop for this part of the conversation, I'm putting them back in. In short, the Sanger pipeline produces the BAS file but not co-located with the BAM]
+
+Hi Keiran,
+
+Would it be possible then to change this and try again? what needs to happen? I guess you'll need to change the code and a new docker image be produced. Would this be our best alternative?
+
+
+Miguel
+
+
+
+On Tue, Oct 11, 2016 at 4:07 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;redir.aspx?REF=tMZ0FjU7Kgm89it3zX1rIeGk_Zd2_xzeB1YH6GIYBZo-dzeqrPLTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..&gt;&gt; wrote:
+In the original version we didn't do this step, if we have write access it can be made to do that
+
+Keiran Raine
+Principal Bioinformatician
+Cancer Genome Project
+Wellcome Trust Sanger Institute
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;redir.aspx?REF=tMZ0FjU7Kgm89it3zX1rIeGk_Zd2_xzeB1YH6GIYBZo-dzeqrPLTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..&gt;
+Tel:+44 (0)1223 834244 Ext: 4983&lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+Office: H104
+
+On 11 Oct 2016, at 13:49, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;redir.aspx?REF=F46rw9DX4AXQvEjmTDF0k8PzjFoocSnJlahDqCMSnlA-dzeqrPLTCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..&gt;&gt; wrote:
+
+Hi Keiran,
+
+If the BAS and BAM files need to be collocated, why is it not created next to the BAM file?
+
+Would it not be better if it read
+
+private Job basFileBaseJob(int tumourCount, String sampleBam, String process, int index) {
+Job thisJob = prepTimedJob(tumourCount, &quot;basFileGenerate&quot;, process, index);
+File f = new File(sampleBam);
+thisJob.getCommand()
+.addArgument(getWorkflowBaseDir()+ &quot;/bin/wrapper.sh&quot;)
+.addArgument(installBase)
+.addArgument(&quot;bam_stats&quot;)
+.addArgument(&quot;-i &quot; + sampleBam)
+.addArgument(&quot;-o &quot; + sampleBam + &quot;.bas&quot;)
+;
+return thisJob;
+}
+
+Best
+
+Miguel
+
+On Tue, Oct 11, 2016 at 2:44 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;redir.aspx?REF=tMZ0FjU7Kgm89it3zX1rIeGk_Zd2_xzeB1YH6GIYBZo-dzeqrPLTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..&gt;&gt; wrote:
+Relevant section of code:
+
+<A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L769-L780&lt;redir.aspx?REF=zCVU_6JvYkLiMhy3OP2CK3EOh5uPDCaP0xoAupVCznI-dzeqrPLTCAFodHRwczovL2dpdGh1Yi5jb20vSUNHQy1UQ0dBLVBhbkNhbmNlci9DR1AtU29tYXRpYy1Eb2NrZXIvYmxvYi9kZXZlbG9wL3NyYy9tYWluL2phdmEvaW8vc2Vxd2FyZS9wYW5jYW5jZXIvQ2dwU29tYXRpY0NvcmUuamF2YSNMNzY5LUw3ODA.">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore.java#L769-L780&lt;redir.aspx?REF=zCVU_6JvYkLiMhy3OP2CK3EOh5uPDCaP0xoAupVCznI-dzeqrPLTCAFodHRwczovL2dpdGh1Yi5jb20vSUNHQy1UQ0dBLVBhbkNhbmNlci9DR1AtU29tYXRpYy1Eb2NrZXIvYmxvYi9kZXZlbG9wL3NyYy9tYWluL2phdmEvaW8vc2Vxd2FyZS9wYW5jYW5jZXIvQ2dwU29tYXRpY0NvcmUuamF2YSNMNzY5LUw3ODA.</A>&gt;
+
+Keiran Raine
+Principal Bioinformatician
+Cancer Genome Project
+Wellcome Trust Sanger Institute
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;redir.aspx?REF=tMZ0FjU7Kgm89it3zX1rIeGk_Zd2_xzeB1YH6GIYBZo-dzeqrPLTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..&gt;
+Tel:+44 (0)1223 834244 Ext: 4983&lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+Office: H104
+
+On 11 Oct 2016, at 13:40, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;redir.aspx?REF=tMZ0FjU7Kgm89it3zX1rIeGk_Zd2_xzeB1YH6GIYBZo-dzeqrPLTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..&gt;&gt; wrote:
+
+Hi,
+
+There is a step generating the BAS files:
+
+[2016/10/10 07:28:37] |  Running command: bash /datastore/oozie-6599f0b9-8af7-44ca-a608-03c5bbc159c6/generated-scripts/s58_basFileGenerate_control_11-runner.sh
+[2016/10/10 07:28:37] |  Running command: bash /datastore/oozie-6599f0b9-8af7-44ca-a608-03c5bbc159c6/generated-scripts/s58_basFileGenerate_tumours_12-runner.sh
+
+But if the BAM files and BAS aren't co-located then you have a problem.  You could symlink the BAM files into the work space and have all tools work from that path instead, deleting the symlinks at the end.
+
+This is one of the changes we had to implement differently as the BAS file data was being held in the GNOS xml data structures during the initial processing.  Moving to this means that any BAM input is sufficient.
+
+Hope this is easier to solve now,
+
+Keiran Raine
+Principal Bioinformatician
+Cancer Genome Project
+Wellcome Trust Sanger Institute
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;redir.aspx?REF=tMZ0FjU7Kgm89it3zX1rIeGk_Zd2_xzeB1YH6GIYBZo-dzeqrPLTCAFtYWlsdG86a3IyQHNhbmdlci5hYy51aw..&gt;
+Tel:+44 (0)1223 834244 Ext: 4983&lt;tel:%2B44%20%280%291223%20834244%20Ext%3A%204983&gt;
+Office: H104
+
+On 11 Oct 2016, at 13:31, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;redir.aspx?REF=F46rw9DX4AXQvEjmTDF0k8PzjFoocSnJlahDqCMSnlA-dzeqrPLTCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..&gt;&gt; wrote:
+
+Keiran,
+
+Its downloading the files still but in fact it does not seem to download any BAS file. Could you please educate me a bit on what are these and how I can create them?
+
+Best
+
+Miguel
+
+On Tue, Oct 11, 2016 at 2:22 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;redir.aspx?REF=F46rw9DX4AXQvEjmTDF0k8PzjFoocSnJlahDqCMSnlA-dzeqrPLTCAFtYWlsdG86bWlndWVsLnZhenF1ZXpAY25pby5lcw..&gt;&gt; wrote:
+
+4. It looks like the *_pindel_input_* steps run for only 22-23 seconds which could indicate a problem with either the headers or the absence of the BAS file from the expected location.
+
+
+I think that you just revealed the problem. There is in fact no BAS files only BAM and BAI. There where BAS files for the test data HCC1143 which is the one that in fact work. It seems like BAS files are not gathered by gnos, could that be? or that my script fails to copy them. I'll try to gather a different sample with my client and check.
+
+Not knowing a thing about these files explains why I didn't notice. I'll get back to you when I know more.
+
+Best
+
+Miguel
+
+
+
+
+-- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE.
+
+
+
+-- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE.
+
+
+
+-- The Wellcome Trust Sanger Institute is operated by Genome Research Limited, a charity registered in England with number 1021457 and a company registered in England with number 2742969, whose registered office is 215 Euston Road, London, NW1 2BE.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161012/9077d260/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161012/9077d260/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000107.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+	<LI>Next message: <A HREF="000109.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#108">[ date ]</a>
+              <a href="thread.html#108">[ thread ]</a>
+              <a href="subject.html#108">[ subject ]</a>
+              <a href="author.html#108">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

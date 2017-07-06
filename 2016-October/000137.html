@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Broad PCAWG Tokens definition?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20PCAWG%20Tokens%20definition%3F&In-Reply-To=%3CCAJkv8nBZHUDzBuh%2B18asJDCaNc%3DL8caM4-PE49os%2BhQpMBKbcg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000136.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Broad PCAWG Tokens definition?</H1>
+    <B>Gordon Saksena</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20PCAWG%20Tokens%20definition%3F&In-Reply-To=%3CCAJkv8nBZHUDzBuh%2B18asJDCaNc%3DL8caM4-PE49os%2BhQpMBKbcg%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Broad PCAWG Tokens definition?">gsaksena at broadinstitute.org
+       </A><BR>
+    <I>Thu Oct 20 17:32:50 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000136.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#137">[ date ]</a>
+              <a href="thread.html#137">[ thread ]</a>
+              <a href="subject.html#137">[ subject ]</a>
+              <a href="author.html#137">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Tokens is the only one ready for testing.
+
+Yes, I need to sync the Dockerhub repo with the code updates from GIT.
+
+I am using a debian7bp environment for my builds and testing.
+
+The readme is for creating and debugging new tasks.  Your test environment
+is probably going to be quite different.
+
+There is a .tok.gz file included in the Broad intermediate files for each
+donor.  The intermediate files currently live on GNOS, in the form of one
+tarfile per donor.  Either you can pull it from there, or I could post one
+to Jamboree for some donor.
+
+Gordon
+
+On Thu, Oct 20, 2016 at 5:19 PM, Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;
+wrote:
+
+&gt;<i> I forgot to add: the tokens task is the only part that&#8217;s ready for
+</I>&gt;<i> testing, correct?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *From: *&lt;docktesters-bounces+buchanae=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ohsu.edu at lists.icgc.org</A>&gt; on behalf
+</I>&gt;<i> of Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;
+</I>&gt;<i> *Date: *Thursday, October 20, 2016 at 2:18 PM
+</I>&gt;<i> *To: *Gordon Saksena &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">gsaksena at broadinstitute.org</A>&gt;
+</I>&gt;<i> *Cc: *&quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> *Subject: *Re: [DOCKTESTERS] Broad PCAWG Tokens definition?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Great, thanks Gordon.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Fyi, I just finished a successful run of the tokens wdl with a relatively
+</I>&gt;<i> small BAM file. I had to rebuild the docker image, because the one hosted
+</I>&gt;<i> on Dockerhub was missing a source file. I filed a github issue for that
+</I>&gt;<i> here: <A HREF="https://github.com/broadinstitute/pcawg/issues/10">https://github.com/broadinstitute/pcawg/issues/10</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> A rebuild of the image seemed to do the trick. I had some issues building
+</I>&gt;<i> it (now resolved), probably because my build environment was different
+</I>&gt;<i> (Mac) and/or broken (mysterious network issues with Bioconductor.org).
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Is there some expected input/output pair I should be using to validate
+</I>&gt;<i> that it&#8217;s working as expected?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I don&#8217;t have any feedback on the internals of the docker images
+</I>&gt;<i> necessarily (pipette, single wdl task, etc). I think my first impression
+</I>&gt;<i> was just being a little confused looking at the repo and not knowing where
+</I>&gt;<i> to start. The docs mention Firecloud, GCE, make, etc. which doesn&#8217;t match
+</I>&gt;<i> my environment, so I didn&#8217;t easily know where to start. But, after a day or
+</I>&gt;<i> poking around I figured it out. I guess that&#8217;s to be expected when opening
+</I>&gt;<i> up a new codebase on an unfamiliar and unreleased project.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thanks again,
+</I>&gt;<i>
+</I>&gt;<i> Alex Buchanan
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *From: *Gordon Saksena &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">gsaksena at broadinstitute.org</A>&gt;
+</I>&gt;<i> *Date: *Thursday, October 20, 2016 at 2:03 PM
+</I>&gt;<i> *To: *Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;
+</I>&gt;<i> *Cc: *&quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> *Subject: *Re: Broad PCAWG Tokens definition?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The tokens task is part of the PoN (Panel of Normals) filter.  It is a
+</I>&gt;<i> Java program that collects stats on the Normal BAM for the current donor.
+</I>&gt;<i> These stats are later aggregated with stats from the other samples (in
+</I>&gt;<i> another docker), and then used to flag certain variants in a VCF as suspect
+</I>&gt;<i> (in a third docker).  The overall algorithm is in the process of being
+</I>&gt;<i> published.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> It should be one of the more straightforward algorithms to test - it has
+</I>&gt;<i> very predictable CPU time and RAM usage, and should produce outputs that
+</I>&gt;<i> can be tested via an exact binary match.  It accepts just the normal BAM
+</I>&gt;<i> for its input.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I'm planning later dockers to have a similar structure, though with
+</I>&gt;<i> increased memory and core requirements.  The .wdl file will continue to
+</I>&gt;<i> contain a single task, with the bulk of the pipeline wiring embedded inside
+</I>&gt;<i> the docker.  The dockers will either accept the source BAMs (for callers)
+</I>&gt;<i> or VCFs (for filters) as inputs.  If you have feedback I can incorporate it
+</I>&gt;<i> into the other dockers.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Gordon
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Thu, Oct 20, 2016 at 4:08 PM, Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hey Gordon,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I&#8217;m new here so maybe I missed this, but what is the tokens task? How
+</I>&gt;<i> would you describe what it does and the results it produces?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thanks!
+</I>&gt;<i>
+</I>&gt;<i> Alex Buchanan
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161020/120b34d9/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161020/120b34d9/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000136.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#137">[ date ]</a>
+              <a href="thread.html#137">[ thread ]</a>
+              <a href="subject.html#137">[ subject ]</a>
+              <a href="author.html#137">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

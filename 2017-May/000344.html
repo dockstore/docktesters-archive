@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BDOCKTERTERS%5D%20Issues%20with%20Consensus%20workflow&In-Reply-To=%3C16bd1f91-006c-3f98-250c-02c0c7776cf7%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000343.html">
+   <LINK REL="Next"  HREF="000345.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow</H1>
+    <B>Solomon Shorser</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BDOCKTERTERS%5D%20Issues%20with%20Consensus%20workflow&In-Reply-To=%3C16bd1f91-006c-3f98-250c-02c0c7776cf7%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow">solomon.shorser at oicr.on.ca
+       </A><BR>
+    <I>Tue May 23 10:28:15 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000343.html">[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+</A></li>
+        <LI>Next message: <A HREF="000345.html">[DOCKTESTERS] [DOCKTERTERS] Sucessful run for Consensus workflow.	Validation pending
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#344">[ date ]</a>
+              <a href="thread.html#344">[ thread ]</a>
+              <a href="subject.html#344">[ subject ]</a>
+              <a href="author.html#344">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Miguel,
+
+I am not sure about the COSMIC error. Did it prompt you for your 
+username and password? Are you able to access the files with sftp 
+/outside/ of a docker-container context? I was not the author of this 
+docker image or the scripts within, but I can talk to the original 
+author if we cannot solve this ourselves.
+
+As for the CWLTool error:
+
+This error:
+
+||<i>
+</I>
+|<i>*KeyError: 'output_file_name'*|
+</I>|<i>
+</I>*Workflow error, try again with --debug for more information:*
+*'output_file_name'*
+|<i>
+</I>
+...suggests that the variable named &quot;output_file_name&quot; was missing, 
+probably from the input json &quot;workflow_params.json&quot;.
+If your workflow_params.json file does not have an &quot;output_file_name&quot;, 
+please try adding one (it should look like: 
+...&quot;output_file_name&quot;:&quot;myConsensus.vcf&quot;,... in JSON) to the 
+workflow_params.json file, and let me know how that works.
+
+Thanks,
+Solomon Shorser.
+
+On 2017-05-21 07:45 AM, Miguel Vazquez wrote:
+&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> I've ran into some more trouble with the Consensus workflow. In 
+</I>&gt;<i> particular its two issues that I'm not sure if they are related.
+</I>&gt;<i>
+</I>&gt;<i> First of all is that I followed the advice to download the data 
+</I>&gt;<i> necessary before hand:
+</I>&gt;<i>
+</I>&gt;<i> |mkdir dbs docker run -it -v &quot;${PWD}/dbs&quot;:/dbs consensus_call download 
+</I>&gt;<i> reference /dbs docker run -it -v &quot;${PWD}/dbs&quot;:/dbs consensus_call 
+</I>&gt;<i> download annotations /dbs docker run -it -v &quot;${PWD}/dbs&quot;:/dbs 
+</I>&gt;<i> consensus_call download cosmic /dbs |
+</I>&gt;<i> |However the last part that download COSMIC give me an error. I tried 
+</I>&gt;<i> using my login email address and password and I get 'Permission 
+</I>&gt;<i> denied, please try again.' I've check COSMIC several times and reset 
+</I>&gt;<i> my password. I have SFTP access enabled and everything. I'm not sure 
+</I>&gt;<i> what is happening. |
+</I>&gt;<i> |
+</I>&gt;<i> |
+</I>&gt;<i> |Despite this I though that the workflow might be able to run, since 
+</I>&gt;<i> the COSMIC data is optional, but I get the following error|
+</I>&gt;<i> |
+</I>&gt;<i> |
+</I>&gt;<i> |
+</I>&gt;<i> |
+</I>&gt;<i> |
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-42-6-176</A>:~/DockerTest-Miguel$ cd 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/ &amp;&amp; dockstore 
+</I>&gt;<i> tool launch --script --entry 
+</I>&gt;<i> quay.io/pancancer/pcawg-consensus-caller:latest 
+</I>&gt;<i> &lt;<A HREF="http://quay.io/pancancer/pcawg-consensus-caller:latest">http://quay.io/pancancer/pcawg-consensus-caller:latest</A>&gt;  --json 
+</I>&gt;<i> Dockstore.json
+</I>&gt;<i> Creating directories for run of Dockstore launcher at: 
+</I>&gt;<i> ./datastore//launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0
+</I>&gt;<i> Provisioning your input files to your local machine
+</I>&gt;<i> Calling out to cwltool to run your tool
+</I>&gt;<i> Executing: cwltool --enable-dev --non-strict --outdir 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/ 
+</I>&gt;<i> --tmpdir-prefix 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/ 
+</I>&gt;<i> --tmp-outdir-prefix 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/ 
+</I>&gt;<i> /tmp/1495367250976-0/temp3097766058272663834.cwl 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+</I>&gt;<i> /usr/local/bin/cwltool 1.0.20161202203310
+</I>&gt;<i> Resolved '/tmp/1495367250976-0/temp3097766058272663834.cwl' to 
+</I>&gt;<i> '<A HREF="file:///tmp/1495367250976-0/temp3097766058272663834.cwl">file:///tmp/1495367250976-0/temp3097766058272663834.cwl</A>'
+</I>&gt;<i> Got workflow error
+</I>&gt;<i> Traceback (most recent call last):
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/main.py&quot;, line 
+</I>&gt;<i> 227, in single_job_executor
+</I>&gt;<i>     for r in jobiter:
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/draft2tool.py&quot;, 
+</I>&gt;<i> line 370, in job
+</I>&gt;<i> j.command_line = flatten(map(builder.generate_arg, builder.bindings))
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/builder.py&quot;, 
+</I>&gt;<i> line 158, in generate_arg
+</I>&gt;<i>     value = self.do_eval(binding[&quot;valueFrom&quot;], context=value)
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/builder.py&quot;, 
+</I>&gt;<i> line 206, in do_eval
+</I>&gt;<i> timeout=self.timeout)
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, 
+</I>&gt;<i> line 186, in do_eval
+</I>&gt;<i> jslib=jslib)
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, 
+</I>&gt;<i> line 144, in interpolate
+</I>&gt;<i> timeout=timeout)
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, 
+</I>&gt;<i> line 127, in evaluator
+</I>&gt;<i>     return next_seg(m.group(0)[m.end(1) - m.start(0):-1], obj[m.group(1)])
+</I>&gt;<i>   File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, 
+</I>&gt;<i> line 113, in next_seg
+</I>&gt;<i>     return next_seg(remain[m.end(0):], obj[m.group(0)[1:]])
+</I>&gt;<i> *KeyError: 'output_file_name'*
+</I>&gt;<i> *Workflow error, try again with --debug for more information:*
+</I>&gt;<i> *'output_file_name'*
+</I>&gt;<i> org.apache.commons.exec.ExecuteException: Process exited with an 
+</I>&gt;<i> error: 1 (Exit value: 1)
+</I>&gt;<i>         at 
+</I>&gt;<i> org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+</I>&gt;<i>         at 
+</I>&gt;<i> org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+</I>&gt;<i>         at 
+</I>&gt;<i> org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+</I>&gt;<i>         at java.lang.Thread.run(Thread.java:745)
+</I>&gt;<i> java.lang.RuntimeException: problems running command: cwltool 
+</I>&gt;<i> --enable-dev --non-strict --outdir 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/ 
+</I>&gt;<i> --tmpdir-prefix 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/ 
+</I>&gt;<i> --tmp-outdir-prefix 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/ 
+</I>&gt;<i> /tmp/1495367250976-0/temp3097766058272663834.cwl 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+</I>&gt;<i>
+</I>&gt;<i> Could this be related to the problem with COSMIC?
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i> |
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>
+*Solomon Shorser*
+Software Developer
+
+*Ontario Institute for Cancer Research*
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Email: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">solomon.shorser at oicr.on.ca</A>
+Telephone: (647) 258-4319
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+
+www.oicr.on.ca &lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or 
+privileged information for the sole use of the intended recipient. Any 
+review or distribution by anyone other than the person for whom it was 
+originally intended is strictly prohibited. If you have received this 
+message in error, please contact the sender and delete all copies. 
+Opinions, conclusions or other information contained in this message may 
+not be that of the organization.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170523/6e37a1ce/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170523/6e37a1ce/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000343.html">[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+</A></li>
+	<LI>Next message: <A HREF="000345.html">[DOCKTESTERS] [DOCKTERTERS] Sucessful run for Consensus workflow.	Validation pending
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#344">[ date ]</a>
+              <a href="thread.html#344">[ thread ]</a>
+              <a href="subject.html#344">[ subject ]</a>
+              <a href="author.html#344">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

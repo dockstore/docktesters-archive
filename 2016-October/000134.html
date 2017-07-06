@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Broad PCAWG Tokens definition?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20PCAWG%20Tokens%20definition%3F&In-Reply-To=%3CCAJkv8nANUpiejxtL9zE1qTmyYEW7xDhnBggGKkCARd7%2BoO8Jpw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000133.html">
+   <LINK REL="Next"  HREF="000135.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Broad PCAWG Tokens definition?</H1>
+    <B>Gordon Saksena</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20PCAWG%20Tokens%20definition%3F&In-Reply-To=%3CCAJkv8nANUpiejxtL9zE1qTmyYEW7xDhnBggGKkCARd7%2BoO8Jpw%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Broad PCAWG Tokens definition?">gsaksena at broadinstitute.org
+       </A><BR>
+    <I>Thu Oct 20 17:03:42 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000133.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+        <LI>Next message: <A HREF="000135.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>The tokens task is part of the PoN (Panel of Normals) filter.  It is a Java
+program that collects stats on the Normal BAM for the current donor.  These
+stats are later aggregated with stats from the other samples (in another
+docker), and then used to flag certain variants in a VCF as suspect (in a
+third docker).  The overall algorithm is in the process of being published.
+
+
+It should be one of the more straightforward algorithms to test - it has
+very predictable CPU time and RAM usage, and should produce outputs that
+can be tested via an exact binary match.  It accepts just the normal BAM
+for its input.
+
+I'm planning later dockers to have a similar structure, though with
+increased memory and core requirements.  The .wdl file will continue to
+contain a single task, with the bulk of the pipeline wiring embedded inside
+the docker.  The dockers will either accept the source BAMs (for callers)
+or VCFs (for filters) as inputs.  If you have feedback I can incorporate it
+into the other dockers.
+
+Gordon
+
+On Thu, Oct 20, 2016 at 4:08 PM, Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;
+wrote:
+
+&gt;<i> Hey Gordon,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I&#8217;m new here so maybe I missed this, but what is the tokens task? How
+</I>&gt;<i> would you describe what it does and the results it produces?
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Thanks!
+</I>&gt;<i>
+</I>&gt;<i> Alex Buchanan
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161020/d4676f4d/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161020/d4676f4d/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000133.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+	<LI>Next message: <A HREF="000135.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#134">[ date ]</a>
+              <a href="thread.html#134">[ thread ]</a>
+              <a href="subject.html#134">[ subject ]</a>
+              <a href="author.html#134">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Sanger extended validation for 1 sample. Only differences in SNV
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20extended%20validation%20for%201%20sample.%20Only%0A%20differences%20in%20SNV&In-Reply-To=%3CCA%2Bdx8mZhLLRbqKdJpvg1py_38-y1S4eQB1P5VSgk-RoyzY_p9Q%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000201.html">
+   <LINK REL="Next"  HREF="000203.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Sanger extended validation for 1 sample. Only differences in SNV</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20extended%20validation%20for%201%20sample.%20Only%0A%20differences%20in%20SNV&In-Reply-To=%3CCA%2Bdx8mZhLLRbqKdJpvg1py_38-y1S4eQB1P5VSgk-RoyzY_p9Q%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Sanger extended validation for 1 sample. Only differences in SNV">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Fri Dec 16 08:29:09 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000201.html">[DOCKTESTERS] Sanger extended validation for 1 sample. Only	differences in SNV
+</A></li>
+        <LI>Next message: <A HREF="000203.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#202">[ date ]</a>
+              <a href="thread.html#202">[ thread ]</a>
+              <a href="subject.html#202">[ subject ]</a>
+              <a href="author.html#202">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks for your input Keiran. Indeed none of the extra or missing mutations
+are marked 'PASS'.
+
+Best
+
+Miguel
+
+On Fri, Dec 16, 2016 at 12:33 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt; wrote:
+
+&gt;<i> Hi Miguel,
+</I>&gt;<i>
+</I>&gt;<i> Please be aware that we agreed to include the last version of the
+</I>&gt;<i> algorithms used in the core analysis for the final docker (as there were
+</I>&gt;<i> fixes along the way).
+</I>&gt;<i>
+</I>&gt;<i> There were several versions of the core SNV caller fixing edge cases.  I
+</I>&gt;<i> don't see these discrepancies being an issue, especially if they aren't
+</I>&gt;<i> marked as 'PASS'.
+</I>&gt;<i>
+</I>&gt;<i> It's theoretically possible for some of these to be floating-point
+</I>&gt;<i> differences (esp. if different CPU arch), this can cause a call to flip
+</I>&gt;<i> between the SNP and SUB output if very close to the cut-off.
+</I>&gt;<i>
+</I>&gt;<i> Sending the physical VCF records (with the VCF header) for these from the
+</I>&gt;<i> relevant run (missing from the old run, Extra from the new) would allow a
+</I>&gt;<i> confirmation, but as I say if they aren't marked 'PASS' we wouldn't be
+</I>&gt;<i> planning to do any thing about them.
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;+44%201223%20834244&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i> On 16 Dec 2016, at 10:50, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Dear Christina and Keiran,
+</I>&gt;<i>
+</I>&gt;<i> I've extended the analysis also for the Sanger workflow. I only have one
+</I>&gt;<i> sample (DO50311) since the second one (DO52140) its still computing since
+</I>&gt;<i> December 8 (8 days)
+</I>&gt;<i>
+</I>&gt;<i> Keiran I believed you asked me about how indels and CNVs matched. Is this
+</I>&gt;<i> what you needed?
+</I>&gt;<i>
+</I>&gt;<i> All matches except for the +1 -14 differences I reported before
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i> Report
+</I>&gt;<i> ~~~~~
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 138
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 812487
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 156299
+</I>&gt;<i> Extra: 1
+</I>&gt;<i>     - Example: Y:58885197:A:G
+</I>&gt;<i> Missing: 14
+</I>&gt;<i>     - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 260
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *Note. To make matching more stringent in indels I've added the reference
+</I>&gt;<i> to the mutation code end up comparing. This extends to SNV as well so where
+</I>&gt;<i> previously I wrote *16:87047601:C I* now write *16:87047601:A:C.* The
+</I>&gt;<i> extremely thorough reader will notice that the reports for DKFZ bellow show
+</I>&gt;<i> the discrepancies in CNV not following this new format. I've introduced
+</I>&gt;<i> this afterwards, but the results have not changed for DKFZ; I've checked.
+</I>&gt;<i>
+</I>&gt;<i> On Fri, Dec 16, 2016 at 11:07 AM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Excuse me, obviously I meant
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> *For the two samples all matches perfectly except CNV where we find some
+</I>&gt;&gt;<i> large differences. *
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Fri, Dec 16, 2016 at 11:05 AM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Hi Christina et al.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Like you asked me I've extended the validation from SNV to Indel and SNV
+</I>&gt;&gt;&gt;<i> and also for germline
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> For the two samples all matches perfectly except SNV where we find some
+</I>&gt;&gt;&gt;<i> large differences.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Best regards
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Miguel
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Report
+</I>&gt;&gt;&gt;<i> ~~~~~
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of germline.indel for DO50311 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 709060
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of germline.snv.mnv for DO50311 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 3850992
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of somatic.cnv for DO50311 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 731
+</I>&gt;&gt;&gt;<i> Extra: 213
+</I>&gt;&gt;&gt;<i>     - Example: 10:132510034:&lt;DEL&gt;,10:20596801
+</I>&gt;&gt;&gt;<i> :&lt;NEUTRAL&gt;,10:47674883:&lt;NEUTRAL&gt;
+</I>&gt;&gt;&gt;<i> Missing: 190
+</I>&gt;&gt;&gt;<i>     - Example: 10:100891940:&lt;NEUTRAL&gt;,10:1049
+</I>&gt;&gt;&gt;<i> 75905:&lt;NEUTRAL&gt;,10:119704960:&lt;NEUTRAL&gt;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of somatic.indel for DO50311 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 26469
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 51087
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of germline.indel for DO52140 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 706572
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of germline.snv.mnv for DO52140 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 3833896
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of somatic.cnv for DO52140 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 275
+</I>&gt;&gt;&gt;<i> Extra: 94
+</I>&gt;&gt;&gt;<i>     - Example: 1:106505931:&lt;LOH&gt;,1:109068899:&lt;DEL&gt;,1:109359995:&lt;DEL&gt;
+</I>&gt;&gt;&gt;<i> Missing: 286
+</I>&gt;&gt;&gt;<i>     - Example: 10:88653561:&lt;LOH&gt;,11:179192:&lt;LOH&gt;,11:38252006:&lt;LOH&gt;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of somatic.indel for DO52140 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 19347
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+</I>&gt;&gt;&gt;<i> ---
+</I>&gt;&gt;&gt;<i> Common: 37160
+</I>&gt;&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161216/58e6d7d9/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161216/58e6d7d9/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000201.html">[DOCKTESTERS] Sanger extended validation for 1 sample. Only	differences in SNV
+</A></li>
+	<LI>Next message: <A HREF="000203.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#202">[ date ]</a>
+              <a href="thread.html#202">[ thread ]</a>
+              <a href="subject.html#202">[ subject ]</a>
+              <a href="author.html#202">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

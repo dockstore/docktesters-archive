@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3CCA%2Bdx8mYQTjPXu6cVs3n5L9sYP7S6v5qK%3D4Y-9R%3DJoj9t55abdw%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000104.html">
+   <LINK REL="Next"  HREF="000106.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BPAWG-TECH%5D%20Draft%20agenda%20for%20PCAWG-TECH%0A%09teleconference&In-Reply-To=%3CCA%2Bdx8mYQTjPXu6cVs3n5L9sYP7S6v5qK%3D4Y-9R%3DJoj9t55abdw%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Wed Oct 12 05:37:26 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000104.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for	PCAWG-TECH	teleconference
+</A></li>
+        <LI>Next message: <A HREF="000106.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#105">[ date ]</a>
+              <a href="thread.html#105">[ thread ]</a>
+              <a href="subject.html#105">[ subject ]</a>
+              <a href="author.html#105">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>[The rest of the list where out of the loop for this part of the
+conversation, I'm putting them back in. In short, the Sanger pipeline
+produces the BAS file but not co-located with the BAM]
+
+Hi Keiran,
+
+Would it be possible then to change this and try again? what needs to
+happen? I guess you'll need to change the code and a new docker image be
+produced. Would this be our best alternative?
+
+
+Miguel
+
+
+
+On Tue, Oct 11, 2016 at 4:07 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt; wrote:
+
+&gt;<i> In the original version we didn't do this step, if we have write access it
+</I>&gt;<i> can be made to do that
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i> On 11 Oct 2016, at 13:49, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi Keiran,
+</I>&gt;<i>
+</I>&gt;<i> If the BAS and BAM files need to be collocated, why is it not created next
+</I>&gt;<i> to the BAM file?
+</I>&gt;<i>
+</I>&gt;<i> Would it not be better if it read
+</I>&gt;<i>
+</I>&gt;<i> private Job basFileBaseJob(int tumourCount, String sampleBam, String
+</I>&gt;<i> process, int index) {
+</I>&gt;<i> Job thisJob = prepTimedJob(tumourCount, &quot;basFileGenerate&quot;, process,
+</I>&gt;<i> index);
+</I>&gt;<i> File f = new File(sampleBam);
+</I>&gt;<i> thisJob.getCommand()
+</I>&gt;<i> .addArgument(getWorkflowBaseDir()+ &quot;/bin/wrapper.sh&quot;)
+</I>&gt;<i> .addArgument(installBase)
+</I>&gt;<i> .addArgument(&quot;bam_stats&quot;)
+</I>&gt;<i> .addArgument(&quot;-i &quot; + sampleBam)
+</I>&gt;<i> .addArgument(&quot;-o &quot; + sampleBam + &quot;.bas&quot;)
+</I>&gt;<i> ;
+</I>&gt;<i> return thisJob;
+</I>&gt;<i> }
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i> On Tue, Oct 11, 2016 at 2:44 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Relevant section of code:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/bl">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/bl</A>
+</I>&gt;&gt;<i> ob/develop/src/main/java/io/seqware/pancancer/CgpSomaticCore
+</I>&gt;&gt;<i> .java#L769-L780
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Keiran Raine
+</I>&gt;&gt;<i> Principal Bioinformatician
+</I>&gt;&gt;<i> Cancer Genome Project
+</I>&gt;&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;&gt;<i> Office: H104
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 11 Oct 2016, at 13:40, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> There is a step generating the BAS files:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> [2016/10/10 07:28:37] |  Running command: bash
+</I>&gt;&gt;<i> /datastore/oozie-6599f0b9-8af7-44ca-a608-03c5bbc159c6/genera
+</I>&gt;&gt;<i> ted-scripts/s58_basFileGenerate_control_11-runner.sh
+</I>&gt;&gt;<i> [2016/10/10 07:28:37] |  Running command: bash
+</I>&gt;&gt;<i> /datastore/oozie-6599f0b9-8af7-44ca-a608-03c5bbc159c6/genera
+</I>&gt;&gt;<i> ted-scripts/s58_basFileGenerate_tumours_12-runner.sh
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> But if the BAM files and BAS aren't co-located then you have a problem.
+</I>&gt;&gt;<i> You could symlink the BAM files into the work space and have all tools work
+</I>&gt;&gt;<i> from that path instead, deleting the symlinks at the end.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> This is one of the changes we had to implement differently as the BAS
+</I>&gt;&gt;<i> file data was being held in the GNOS xml data structures during the initial
+</I>&gt;&gt;<i> processing.  Moving to this means that any BAM input is sufficient.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hope this is easier to solve now,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Keiran Raine
+</I>&gt;&gt;<i> Principal Bioinformatician
+</I>&gt;&gt;<i> Cancer Genome Project
+</I>&gt;&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983
+</I>&gt;&gt;<i> Office: H104
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On 11 Oct 2016, at 13:31, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Keiran,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Its downloading the files still but in fact it does not seem to download
+</I>&gt;&gt;<i> any BAS file. Could you please educate me a bit on what are these and how I
+</I>&gt;&gt;<i> can create them?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Miguel
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Tue, Oct 11, 2016 at 2:22 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> 4. It looks like the *_pindel_input_* steps run for only 22-23 seconds
+</I>&gt;&gt;&gt;&gt;<i> which could indicate a problem with either the headers or the absence of
+</I>&gt;&gt;&gt;&gt;<i> the BAS file from the expected location.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> I think that you just revealed the problem. There is in fact no BAS
+</I>&gt;&gt;&gt;<i> files only BAM and BAI. There where BAS files for the test data HCC1143
+</I>&gt;&gt;&gt;<i> which is the one that in fact work. It seems like BAS files are not
+</I>&gt;&gt;&gt;<i> gathered by gnos, could that be? or that my script fails to copy them. I'll
+</I>&gt;&gt;&gt;<i> try to gather a different sample with my client and check.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Not knowing a thing about these files explains why I didn't notice. I'll
+</I>&gt;&gt;&gt;<i> get back to you when I know more.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Best
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Miguel
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161012/dbf1043e/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161012/dbf1043e/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000104.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for	PCAWG-TECH	teleconference
+</A></li>
+	<LI>Next message: <A HREF="000106.html">[DOCKTESTERS] [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#105">[ date ]</a>
+              <a href="thread.html#105">[ thread ]</a>
+              <a href="subject.html#105">[ subject ]</a>
+              <a href="author.html#105">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Issues with Consensus Docker
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Issues%20with%20Consensus%20Docker&In-Reply-To=%3Cae4ea33d-a658-4227-4e97-7fdf31c7bbc0%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000339.html">
+   <LINK REL="Next"  HREF="000341.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Issues with Consensus Docker</H1>
+    <B>Solomon Shorser</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Issues%20with%20Consensus%20Docker&In-Reply-To=%3Cae4ea33d-a658-4227-4e97-7fdf31c7bbc0%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Issues with Consensus Docker">solomon.shorser at oicr.on.ca
+       </A><BR>
+    <I>Thu May 11 10:30:29 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000339.html">[DOCKTESTERS]  Issues with Consensus Docker
+</A></li>
+        <LI>Next message: <A HREF="000341.html">[DOCKTESTERS] Issues with Consensus Docker
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#340">[ date ]</a>
+              <a href="thread.html#340">[ thread ]</a>
+              <a href="subject.html#340">[ subject ]</a>
+              <a href="author.html#340">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Miguel,
+
+The .tbi files need to be there, but they do not need to be /explicitly/ 
+included in the input JSON file.
+
+CWL has the option to specify &quot;secondary&quot; files that go with a main 
+file. In the CWL, an input VCF is defined like this example:
+
+     dkfz_embl_input_file:
+       type: File
+       inputBinding:
+         position: 3
+         prefix: &quot;-d&quot;
+_*      secondaryFiles:*__*
+*__*        - .tbi*__*
+*_
+
+
+Specifying &quot;.tbi&quot; as secondary files indicates to CWL that it should 
+look for any .tbi file that matches the same name as the actual file 
+bound to this input should also be included (see: 
+<A HREF="http://www.commonwl.org/v1.0/CommandLineTool.html#Expressions">http://www.commonwl.org/v1.0/CommandLineTool.html#Expressions</A> section 
+5.2 CommandOutputParameter , &quot;secondaryFiles&quot;).
+
+As for the error related to creating the .tbi files: the format is 
+similar to gzip but they should actually be created with a tool named 
+&quot;tabix&quot; (I think you can install with apt on linux). Creating the tabix 
+file can probably be done with a command that looks like this: &quot;tabix -p 
+vcf myDataFile.vcf.gz&quot;.
+
+
+
+dbs_dir is supposed to be a Directory that contains the necessary 
+references files. The original documentation from Jonathan Dursi shows 
+there is a command to create this directory:
+
+|<i>mkdir dbs docker run -it -v &quot;${PWD}/dbs&quot;:/dbs consensus_call download 
+</I>reference /dbs docker run -it -v &quot;${PWD}/dbs&quot;:/dbs consensus_call 
+download annotations /dbs docker run -it -v &quot;${PWD}/dbs&quot;:/dbs 
+consensus_call download cosmic /dbs|
+
+(see: 
+<A HREF="https://github.com/SolomonShorser-OICR/consensus_call_docker#downloading-auxiliary-files">https://github.com/SolomonShorser-OICR/consensus_call_docker#downloading-auxiliary-files</A>)
+
+This is /not/ done within the dockstore tool as downloading this 
+directory could take a long time (it is about 6 GB on my system) so I 
+would recommend running the commands above before running the dockstore 
+tool, then pointing the &quot;dbs_dir&quot; parameter to this directory.
+
+I've attached a sample of the input JSON file I used.
+
+Can you send me the link to the documentation you were reading? I think 
+the dockstore usage needs to be made more clear, so please let me know 
+where you were reading so I can update the right file.
+
+
+Thanks,
+Solomon Shorser.
+
+On 2017-05-11 10:07 AM, Miguel Vazquez wrote:
+&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> I've started trying to test the Consensus Docker and I've ran into a 
+</I>&gt;<i> few difficulties. Some pertain the application itself and some I are 
+</I>&gt;<i> questions I have related to CWL or Docker.
+</I>&gt;<i>
+</I>&gt;<i> 1- Missing input dbs_dir: The documentation suggests that this is a 
+</I>&gt;<i> directory with resources that need to be set up beforehand using the 
+</I>&gt;<i> same docker container with different parameters. I'm not sure how to 
+</I>&gt;<i> handle this. To keep going I've just pointed to some arbitrary directory
+</I>&gt;<i>
+</I>&gt;<i> 2- Missing tbi files on input VCFs: The CWL explicitly asks for the 
+</I>&gt;<i> input VCF. In the documentation it seems like the inputs are in fact 
+</I>&gt;<i> compressed with gzip. Up to here is fine, though I wonder if there 
+</I>&gt;<i> would not be a more explicit way to indicate this in. The problem 
+</I>&gt;<i> comes when I run it that I get an error complaining about a missing 
+</I>&gt;<i> tbi file:
+</I>&gt;<i>
+</I>&gt;<i>   Missing input file [Errno 2] No such file or directory: 
+</I>&gt;<i> '/mnt/1TB/work/DockerTest-Miguel/data/DO52621//broad.oxoG.annotated.vcf.gz*.tbi*'
+</I>&gt;<i>
+</I>&gt;<i> It is not a problem to produce it using tabix but what is confusing to 
+</I>&gt;<i> me is that there is no mention of any tbi file in the Dockstore.json 
+</I>&gt;<i> file. How does this work?
+</I>&gt;<i>
+</I>&gt;<i> 3- After producing the tbi files I get this error, which I think is 
+</I>&gt;<i> related to (1)
+</I>&gt;<i>
+</I>&gt;<i>   Invalid filename: '' contains illegal characters
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i> ----Dockstore.json-----
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> {
+</I>&gt;<i>   &quot;broad_input_file&quot;: {
+</I>&gt;<i>     &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+</I>&gt;<i>     &quot;class&quot;: &quot;File&quot;
+</I>&gt;<i>   },
+</I>&gt;<i>   &quot;dkfz_embl_input_file&quot;: {
+</I>&gt;<i>     &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+</I>&gt;<i>     &quot;class&quot;: &quot;File&quot;
+</I>&gt;<i>   },
+</I>&gt;<i>   &quot;variant_type&quot;: &quot;fill me in&quot;,
+</I>&gt;<i>   &quot;consensus_vcf_index&quot;: {
+</I>&gt;<i>     &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+</I>&gt;<i>     &quot;class&quot;: &quot;File&quot;
+</I>&gt;<i>   },
+</I>&gt;<i> *  &quot;dbs_dir&quot;: {
+</I>&gt;<i>     &quot;path&quot;: &quot;/tmp/fill_directory_in&quot;,
+</I>&gt;<i>     &quot;class&quot;: &quot;Directory&quot;
+</I>&gt;<i>   },*
+</I>&gt;<i>   &quot;muse_input_file&quot;: {
+</I>&gt;<i>     &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+</I>&gt;<i>     &quot;class&quot;: &quot;File&quot;
+</I>&gt;<i>   },
+</I>&gt;<i>   &quot;consensus_zipped_vcf&quot;: {
+</I>&gt;<i>     &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+</I>&gt;<i>     &quot;class&quot;: &quot;File&quot;
+</I>&gt;<i>   },
+</I>&gt;<i>   &quot;sanger_input_file&quot;: {
+</I>&gt;<i>     &quot;path&quot;: &quot;/tmp/fill_me_in.txt&quot;,
+</I>&gt;<i>     &quot;class&quot;: &quot;File&quot;
+</I>&gt;<i>   }
+</I>&gt;<i> }
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>
+*Solomon Shorser*
+Software Developer
+
+*Ontario Institute for Cancer Research*
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Email: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">solomon.shorser at oicr.on.ca</A>
+Telephone: (647) 258-4319
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+
+www.oicr.on.ca &lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or 
+privileged information for the sole use of the intended recipient. Any 
+review or distribution by anyone other than the person for whom it was 
+originally intended is strictly prohibited. If you have received this 
+message in error, please contact the sender and delete all copies. 
+Opinions, conclusions or other information contained in this message may 
+not be that of the organization.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/8c80b723/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/8c80b723/attachment-0001.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: consensus_calling_input0.json
+Type: application/json
+Size: 922 bytes
+Desc: not available
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/8c80b723/attachment-0001.json">https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/8c80b723/attachment-0001.json</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000339.html">[DOCKTESTERS]  Issues with Consensus Docker
+</A></li>
+	<LI>Next message: <A HREF="000341.html">[DOCKTESTERS] Issues with Consensus Docker
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#340">[ date ]</a>
+              <a href="thread.html#340">[ thread ]</a>
+              <a href="subject.html#340">[ subject ]</a>
+              <a href="author.html#340">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

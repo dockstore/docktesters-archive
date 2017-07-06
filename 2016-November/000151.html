@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Preliminary%20results%20for%20overlap%20between%20testing%0A%20and%20original%20VCF&In-Reply-To=%3CCA%2Bdx8mZAv4Wpt-%3DTxQjvXCOdLSz3%2B1LZuc6_AT3JxfGYmEAqjg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000150.html">
+   <LINK REL="Next"  HREF="000152.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Preliminary results for overlap between testing and original VCF</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Preliminary%20results%20for%20overlap%20between%20testing%0A%20and%20original%20VCF&In-Reply-To=%3CCA%2Bdx8mZAv4Wpt-%3DTxQjvXCOdLSz3%2B1LZuc6_AT3JxfGYmEAqjg%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Preliminary results for overlap between testing and original VCF">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Fri Nov 18 10:06:44 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000150.html">[DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+</A></li>
+        <LI>Next message: <A HREF="000152.html">[DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#151">[ date ]</a>
+              <a href="thread.html#151">[ thread ]</a>
+              <a href="subject.html#151">[ subject ]</a>
+              <a href="author.html#151">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I've added a description on the google doc. Next week I'll try to put it
+properly into my scripts so I can run a bunch of these.
+
+What is the status of the Sanger pipeline, is it fixed already?
+
+On Fri, Nov 18, 2016 at 3:37 PM, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt;
+wrote:
+
+&gt;<i>
+</I>&gt;<i> Great,
+</I>&gt;<i>
+</I>&gt;<i> Thank you Miguel!  I would call this one a success!
+</I>&gt;<i>
+</I>&gt;<i> I think we need two such success for each pipeline.
+</I>&gt;<i>
+</I>&gt;<i> I will update table with this one.
+</I>&gt;<i>
+</I>&gt;<i> Let&#8217;s get it done for the others. I will send more mail today.
+</I>&gt;<i>
+</I>&gt;<i> Miguel: I imagine you documented what you did on google doc?
+</I>&gt;<i>
+</I>&gt;<i> Thank you all,
+</I>&gt;<i>
+</I>&gt;<i> francis
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Nov 18, 2016, at 8:48 AM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi again
+</I>&gt;<i>
+</I>&gt;<i> I've done some more investigating and it turns out that there is a was
+</I>&gt;<i> ignoring the quite obvious 'FILTER' tag. Silly me. Filtering now for
+</I>&gt;<i> mutations that 'PASS' I get
+</I>&gt;<i>
+</I>&gt;<i> Comparison
+</I>&gt;<i> ----------
+</I>&gt;<i> Total original (dkfz): 16090
+</I>&gt;<i> Total this: 16088
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *Common: 16088 Missing: 2. Example: 10:86361665:T, 3:168842417:G Extra: 0.
+</I>&gt;<i> Example: *
+</I>&gt;<i> Not a perfect match, but very close!!!!
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Fri, Nov 18, 2016 at 2:06 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Dear Francis and friends,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Given that Francis was eager to see some inital estimates on how well the
+</I>&gt;&gt;<i> testing where in terms of overlap I have made some advances. Let me show
+</I>&gt;&gt;<i> you some of my initial results.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> For sample DO50311 with the pipeline from DKFZ (using Delly first to
+</I>&gt;&gt;<i> produce the BEDPE file) I get the following result:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> *Comparison ----------*
+</I>&gt;&gt;&gt;<i> Total original (dkfz): 16090
+</I>&gt;&gt;&gt;<i> Total this: 51087
+</I>&gt;&gt;&gt;<i> *Common: 16090*
+</I>&gt;&gt;&gt;<i> *Missing: 0*. Example:
+</I>&gt;&gt;&gt;<i> *Extra: 34997*. Example: 1:10157:C, 1:725511:A, 1:725971:T, 1:726707:A
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i> Whit means that in the original VCF there are 16K mutations, all of them
+</I>&gt;&gt;<i> are found in our new VCF (this), however our new file contains 35K extra
+</I>&gt;&gt;<i> mutations. Listed are some examples of extra mutations, going back to our
+</I>&gt;&gt;<i> VCF here is a sample line
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> #CHROM  POS     ID      REF     ALT     QUAL    FILTER  INFO    FORMAT
+</I>&gt;&gt;<i> CONTROL TUMOR
+</I>&gt;&gt;<i> 1       725971  .       G       T       .
+</I>&gt;&gt;<i> RE;BL;TAC;HSDEPTH;SBAF;FRQ;VAF  SOMATIC;SNP;AF=0.02,0.03;MQ=57
+</I>&gt;&gt;<i> GT:DP:DP4       0/0:115:60,53,2,0       0/0:114:49,62,0,3
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I take it this is a good result. Finding all the reported mutations is a
+</I>&gt;&gt;<i> great sign I think, and the extra mutations must be a filtering step that
+</I>&gt;&gt;<i> we need to account for. *I hope someone can point out from the VCF line
+</I>&gt;&gt;<i> above what is it that I need to use for the filtering.*
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The *VCF files I took from a file I have named
+</I>&gt;&gt;<i> 'preliminary_final_release.snvs.tgz' from May 30* that contains VCF file
+</I>&gt;&gt;<i> with the merged results from all callers. I simply subset the lines for
+</I>&gt;&gt;<i> each caller, in this case dkfz. Also the files are listed by aliquote so I
+</I>&gt;&gt;<i> have to translate the donor to aliquote ID. I've script this quickly using
+</I>&gt;&gt;<i> my Rbbt framework but I'll rewrite it all in bash and add it to my repo of
+</I>&gt;&gt;<i> testing scripts at <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test">https://github.com/mikisvaz/PCAWG-Docker-Test</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Summary of my progress
+</I>&gt;&gt;<i> -----------------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - Pipelines: DKFZ (works), Sanger (doesn't work. fixed?), BWM-Mem (not
+</I>&gt;&gt;<i> integrated; missing data-preparation step), Broad (??)
+</I>&gt;&gt;<i> - Donor integration: GNOS (works), IGCG (works)
+</I>&gt;&gt;<i> - Comparison: DKFZ (missing filtering?), rest (waiting)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I have everything scripted so I can iterate a list of donors and download
+</I>&gt;&gt;<i> the data, run pipelines, erase data, compare results.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Missing things on my ToDo list
+</I>&gt;&gt;<i> -------------------------------------------
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> - Integrate BWM-Mem by incorporating the initial step to de-align the BAM
+</I>&gt;&gt;<i> files
+</I>&gt;&gt;<i> - Find a programmatic way to access the bundle-id files for each donor
+</I>&gt;&gt;<i> from ICGC data portal, righ now I have to go to the web page
+</I>&gt;&gt;<i> - Add filtering step to DKFZ and other pipelines as they become usable.
+</I>&gt;&gt;<i> - Change the scripting of the comparison to bash and add it to
+</I>&gt;&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test">https://github.com/mikisvaz/PCAWG-Docker-Test</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Best regards to all
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Miguel
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Tue, Nov 8, 2016 at 3:40 PM, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt;
+</I>&gt;&gt;<i> wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Anybody else on our poll for next call?
+</I>&gt;&gt;&gt;<i> Looks like Friday at 11:00. I will close poll later today.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> @bffo
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> &lt;Screenshot 2016-11-08 09.38.56.png&gt;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;<i> docktesters mailing list
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/10112cec/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161118/10112cec/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000150.html">[DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+</A></li>
+	<LI>Next message: <A HREF="000152.html">[DOCKTESTERS] Preliminary results for overlap between testing and original VCF
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#151">[ date ]</a>
+              <a href="thread.html#151">[ thread ]</a>
+              <a href="subject.html#151">[ subject ]</a>
+              <a href="author.html#151">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

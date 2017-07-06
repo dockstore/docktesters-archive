@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3CCA%2Bdx8mZN_mc90wTNZ0%3Djsw151OLygXBjGC9r1vJocCTcyFctrQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000191.html">
+   <LINK REL="Next"  HREF="000197.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3CCA%2Bdx8mZN_mc90wTNZ0%3Djsw151OLygXBjGC9r1vJocCTcyFctrQ%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Mon Dec 12 09:51:36 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000191.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger	pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+        <LI>Next message: <A HREF="000197.html">[DOCKTESTERS] updates
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#192">[ date ]</a>
+              <a href="thread.html#192">[ thread ]</a>
+              <a href="subject.html#192">[ subject ]</a>
+              <a href="author.html#192">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Keiran,
+
+No, I've not filtered for PASS, so these are all variants as far as I know.
+
+Best
+
+M
+
+On Mon, Dec 12, 2016 at 3:48 PM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt; wrote:
+
+&gt;<i> Additionally, are these stats based on PASSED SUB variants?  A couple of
+</I>&gt;<i> the missing items are clear SNPs which would be filtered.
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;+44%201223%20834244&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i> On 12 Dec 2016, at 14:12, Brian O'Connor &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Brian.OConnor at oicr.on.ca</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi Francis,
+</I>&gt;<i>
+</I>&gt;<i> I agree with you, I think Miguel is showing what this group needs to show,
+</I>&gt;<i> that someone else can run the tools from Dockstore, have that be
+</I>&gt;<i> successful, and the results are largely in agreement with previous results
+</I>&gt;<i> (or duplicate runs).  I think maybe a statement about the possibility of
+</I>&gt;<i> stochastic results in the README for each tool would be sufficient.  This
+</I>&gt;<i> could be something that Keiran can craft/comment for Sanger&#8217;s pipeline
+</I>&gt;<i> since he&#8217;s in the best position for this one.
+</I>&gt;<i>
+</I>&gt;<i> Brian
+</I>&gt;<i>
+</I>&gt;<i> On Dec 12, 2016, at 7:38 AM, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> I know I'm not suppose to be there (and I'm not :-), but one slippery
+</I>&gt;<i> slope I want this dockerstore testing working group to be wary about (and
+</I>&gt;<i> Christina, this is really directed at you, chairing the discussion today)
+</I>&gt;<i> is that the request from Lincoln for this to reproduce what we are doing is
+</I>&gt;<i> fine, but I don't think it is this working group's task to reproduce and
+</I>&gt;<i> explain all of the discrepancies we see. I don't think we ever saw that
+</I>&gt;<i> kind of data from the people that ran the original workflow.
+</I>&gt;<i>
+</I>&gt;<i> If this group can ascertain that a dock store container basically works, I
+</I>&gt;<i> think we need to call that test a success, and move on to the next one.
+</I>&gt;<i> What Miguel is suggesting/asking below is very good, but I could see this
+</I>&gt;<i> becoming into a very slippery slope, which I would advise us against
+</I>&gt;<i> slipping down.
+</I>&gt;<i>
+</I>&gt;<i> Anyway, going off to my day off,
+</I>&gt;<i>
+</I>&gt;<i> Have a ghre at discussion,
+</I>&gt;<i>
+</I>&gt;<i> Francis
+</I>&gt;<i>
+</I>&gt;<i> --
+</I>&gt;<i> B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A>
+</I>&gt;<i>
+</I>&gt;<i> On Dec 12, 2016, at 05:44, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> I was wondering if someone here was acquainted with the Sanger workflow
+</I>&gt;<i> and could help explain these discrepancies. I've skimmed through the code,
+</I>&gt;<i> and it seems like uses EM but I didn't find anything random in it, such as
+</I>&gt;<i> during initialization, which was my initial guess. The other thing I though
+</I>&gt;<i> is that when it splits the work for parallel processing it might choose a
+</I>&gt;<i> different number of splits to accommodate the number of CPUs, and that this
+</I>&gt;<i> might affect the calculations.
+</I>&gt;<i>
+</I>&gt;<i> Is there someone here that could help shed some light? As soon as some
+</I>&gt;<i> other tests finish I'll be running the process again, but since it takes so
+</I>&gt;<i> long perhaps a little insight would help.
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Mon, Dec 5, 2016 at 1:41 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> The Sanger pipeline completed, after about 2 weeks of computing, for donor
+</I>&gt;<i> DO50311
+</I>&gt;<i>
+</I>&gt;<i> The results are the following:
+</I>&gt;<i>
+</I>&gt;<i> Comparison for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 156299
+</I>&gt;<i> Extra: 1
+</I>&gt;<i>    - Example: Y:58885197:G
+</I>&gt;<i> Missing: 14
+</I>&gt;<i>    - Example: 1:102887902:T,1:143165228:G,16:87047601:C
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The donor results for DKFZ yielded
+</I>&gt;<i>
+</I>&gt;<i> Comparison for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 51087
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> In both cases I'm comparing agains the VCF file downloaded from GNOS. I've
+</I>&gt;<i> updated the information here
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> -- The Wellcome Trust Sanger Institute is operated by Genome Research
+</I>&gt;<i> Limited, a charity registered in England with number 1021457 and a company
+</I>&gt;<i> registered in England with number 2742969, whose registered office is 215
+</I>&gt;<i> Euston Road, London, NW1 2BE.
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161212/f6f52cd4/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161212/f6f52cd4/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000191.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger	pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+	<LI>Next message: <A HREF="000197.html">[DOCKTESTERS] updates
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#192">[ date ]</a>
+              <a href="thread.html#192">[ thread ]</a>
+              <a href="subject.html#192">[ subject ]</a>
+              <a href="author.html#192">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

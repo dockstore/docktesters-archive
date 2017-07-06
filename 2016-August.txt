@@ -1,0 +1,388 @@
+From Brian.OConnor at oicr.on.ca  Mon Aug  8 10:05:56 2016
+From: Brian.OConnor at oicr.on.ca (Brian O'Connor)
+Date: Mon, 8 Aug 2016 14:05:56 +0000
+Subject: [DOCKTESTERS] PCAWG Testing Group
+Message-ID: <1DA6E119-D6A2-4414-913D-A86C9B9052DF@oicr.on.ca>
+
+RESENDING: apologies if you get this again...
+
+Hi All,
+
+This group has been fairly inactive over the last few months.  Since the PCAWG tech group is rapidly wrapping up, I think it would be great to validate the workflows we leave the community before we all move on to other things.  It will also be helpful for the PCAWG tech infrastructure paper which any contributors to this group will be included on.  Can we have a call this week to go over the testing plan and who will do what?
+
+I think the plan will be something like the following:
+
+* identify the workflows we?re going to test, write an SOP: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+* identify the test data we?re going to use, write this up: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+* divide the task of testing each available workflow, upload the results to GNOS or Jamboree
+* writing a script/process to cross-check results these calls with the final from PCAWG
+
+After talking with Jonathan this morning, his ETA for the consensus calling/filtering workflow is 3-4 weeks. Same ETA from Gordon for the final Broad workflow.  That fits in with a general timeline of the end of September for this group to finish it?s testing activities.  So we can have this testing completed before the Nov/Dec timeframe for submitting our papers. We can test in parallel with Gordon and Jonathan?s work given that BWA, Sanger, EMBL, and DKFZ are available now.
+
+I propose we have a call this week to go over the testing process plan and see who has bandwidth to help (I?m out for vacation/conference 8/19-9/2).  Please select a time:
+
+http://doodle.com/poll/mmwxcv69szve4ipb
+
+Thanks for your help testing the PCAWG workflows!
+
+Brian
+
+From briandoconnor at gmail.com  Mon Aug  8 10:06:43 2016
+From: briandoconnor at gmail.com (Brian O'Connor)
+Date: Mon, 8 Aug 2016 07:06:43 -0700
+Subject: [DOCKTESTERS] PCAWG Testing Group
+Message-ID: <5ABC7C49-1A16-4D1C-8B71-8287ABC81ECD@gmail.com>
+
+RESENDING: apologies if you get this again...
+
+Hi All,
+
+This group has been fairly inactive over the last few months.  Since the PCAWG tech group is rapidly wrapping up, I think it would be great to validate the workflows we leave the community before we all move on to other things.  It will also be helpful for the PCAWG tech infrastructure paper which any contributors to this group will be included on.  Can we have a call this week to go over the testing plan and who will do what?
+
+I think the plan will be something like the following:
+
+* identify the workflows we?re going to test, write an SOP: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+* identify the test data we?re going to use, write this up: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+* divide the task of testing each available workflow, upload the results to GNOS or Jamboree
+* writing a script/process to cross-check results these calls with the final from PCAWG
+
+After talking with Jonathan this morning, his ETA for the consensus calling/filtering workflow is 3-4 weeks. Same ETA from Gordon for the final Broad workflow.  That fits in with a general timeline of the end of September for this group to finish it?s testing activities.  So we can have this testing completed before the Nov/Dec timeframe for submitting our papers. We can test in parallel with Gordon and Jonathan?s work given that BWA, Sanger, EMBL, and DKFZ are available now.
+
+I propose we have a call this week to go over the testing process plan and see who has bandwidth to help (I?m out for vacation/conference 8/19-9/2).  Please select a time:
+
+http://doodle.com/poll/mmwxcv69szve4ipb
+
+Thanks for your help testing the PCAWG workflows!
+
+Brian
+
+From Brian.OConnor at oicr.on.ca  Thu Aug 11 03:46:48 2016
+From: Brian.OConnor at oicr.on.ca (Brian O'Connor)
+Date: Thu, 11 Aug 2016 07:46:48 +0000
+Subject: [DOCKTESTERS] PCAWG Testing Group
+In-Reply-To: <5ABC7C49-1A16-4D1C-8B71-8287ABC81ECD@gmail.com>
+References: <5ABC7C49-1A16-4D1C-8B71-8287ABC81ECD@gmail.com>
+Message-ID: <00FA8B1B-E27B-4CA8-B50E-8B01EB7FCE8A@oicr.on.ca>
+
+Hi,
+
+I only heard from Denis, Junjun, and Oliver for the testing group doodle poll.  The best time is tomorrow (Thursday) at 10am pacific time.  I suggest we have a brief call for those that are available since the summer is slipping away quickly.
+
+Here?s a google hangouts link:
+
+https://plus.google.com/hangouts/_/ucsc.edu/broconno?hceid=YnJvY29ubm9AdWNzYy5lZHU._6cq30e9n6os34ba688pj2b9k60sj8b9p88r3gba16ks34e9k68s30gpp70&authuser=1
+
+Brian
+
+> On Aug 8, 2016, at 7:06 AM, Brian O'Connor <briandoconnor at gmail.com> wrote:
+> 
+> RESENDING: apologies if you get this again...
+> 
+> Hi All,
+> 
+> This group has been fairly inactive over the last few months.  Since the PCAWG tech group is rapidly wrapping up, I think it would be great to validate the workflows we leave the community before we all move on to other things.  It will also be helpful for the PCAWG tech infrastructure paper which any contributors to this group will be included on.  Can we have a call this week to go over the testing plan and who will do what?
+> 
+> I think the plan will be something like the following:
+> 
+> * identify the workflows we?re going to test, write an SOP: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+> * identify the test data we?re going to use, write this up: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+> * divide the task of testing each available workflow, upload the results to GNOS or Jamboree
+> * writing a script/process to cross-check results these calls with the final from PCAWG
+> 
+> After talking with Jonathan this morning, his ETA for the consensus calling/filtering workflow is 3-4 weeks. Same ETA from Gordon for the final Broad workflow.  That fits in with a general timeline of the end of September for this group to finish it?s testing activities.  So we can have this testing completed before the Nov/Dec timeframe for submitting our papers. We can test in parallel with Gordon and Jonathan?s work given that BWA, Sanger, EMBL, and DKFZ are available now.
+> 
+> I propose we have a call this week to go over the testing process plan and see who has bandwidth to help (I?m out for vacation/conference 8/19-9/2).  Please select a time:
+> 
+> http://doodle.com/poll/mmwxcv69szve4ipb
+> 
+> Thanks for your help testing the PCAWG workflows!
+> 
+> Brian
+
+
+From briandoconnor at gmail.com  Thu Aug 11 03:44:36 2016
+From: briandoconnor at gmail.com (Brian O'Connor)
+Date: Thu, 11 Aug 2016 00:44:36 -0700
+Subject: [DOCKTESTERS] PCAWG Testing Group
+In-Reply-To: <5ABC7C49-1A16-4D1C-8B71-8287ABC81ECD@gmail.com>
+References: <5ABC7C49-1A16-4D1C-8B71-8287ABC81ECD@gmail.com>
+Message-ID: <540E53AF-7A11-4D89-A2FB-58E27E1CB781@gmail.com>
+
+Hi,
+
+I only heard from Denis, Junjun, and Oliver for the testing group doodle poll.  The best time is tomorrow at 10am pacific time.  I suggest we have a brief call for those that are available since the summer is slipping away quickly.
+
+Here?s a google hangouts link:
+
+https://plus.google.com/hangouts/_/ucsc.edu/broconno?hceid=YnJvY29ubm9AdWNzYy5lZHU._6cq30e9n6os34ba688pj2b9k60sj8b9p88r3gba16ks34e9k68s30gpp70&authuser=1
+
+Brian
+
+> On Aug 8, 2016, at 7:06 AM, Brian O'Connor <briandoconnor at gmail.com> wrote:
+> 
+> RESENDING: apologies if you get this again...
+> 
+> Hi All,
+> 
+> This group has been fairly inactive over the last few months.  Since the PCAWG tech group is rapidly wrapping up, I think it would be great to validate the workflows we leave the community before we all move on to other things.  It will also be helpful for the PCAWG tech infrastructure paper which any contributors to this group will be included on.  Can we have a call this week to go over the testing plan and who will do what?
+> 
+> I think the plan will be something like the following:
+> 
+> * identify the workflows we?re going to test, write an SOP: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+> * identify the test data we?re going to use, write this up: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+> * divide the task of testing each available workflow, upload the results to GNOS or Jamboree
+> * writing a script/process to cross-check results these calls with the final from PCAWG
+> 
+> After talking with Jonathan this morning, his ETA for the consensus calling/filtering workflow is 3-4 weeks. Same ETA from Gordon for the final Broad workflow.  That fits in with a general timeline of the end of September for this group to finish it?s testing activities.  So we can have this testing completed before the Nov/Dec timeframe for submitting our papers. We can test in parallel with Gordon and Jonathan?s work given that BWA, Sanger, EMBL, and DKFZ are available now.
+> 
+> I propose we have a call this week to go over the testing process plan and see who has bandwidth to help (I?m out for vacation/conference 8/19-9/2).  Please select a time:
+> 
+> http://doodle.com/poll/mmwxcv69szve4ipb
+> 
+> Thanks for your help testing the PCAWG workflows!
+> 
+> Brian
+
+
+From Brian.OConnor at oicr.on.ca  Thu Aug 11 13:41:39 2016
+From: Brian.OConnor at oicr.on.ca (Brian O'Connor)
+Date: Thu, 11 Aug 2016 17:41:39 +0000
+Subject: [DOCKTESTERS] PCAWG Testing Group
+In-Reply-To: <00FA8B1B-E27B-4CA8-B50E-8B01EB7FCE8A@oicr.on.ca>
+References: <5ABC7C49-1A16-4D1C-8B71-8287ABC81ECD@gmail.com>,
+ <00FA8B1B-E27B-4CA8-B50E-8B01EB7FCE8A@oicr.on.ca>
+Message-ID: <8DEDCD000FC3904D90FA6D29DEB94ECD495F8350@exmb2.ad.oicr.on.ca>
+
+Hi Everyone
+
+Just as a heads up we had the call today with Oliver, Denis, and Adam.  We came up with a very basic testing plan to get us started.  See the wiki pages below if you'd like to participate:
+
+* https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+* https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+
+We'll regroup with a call in early Sept to see how each are doing on the testing (and communicate via this mailing list along the way).
+
+Thanks for everyone's help testing these workflows!
+
+Brian
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+________________________________________
+From: docktesters-bounces+brian.oconnor=oicr.on.ca at lists.icgc.org [docktesters-bounces+brian.oconnor=oicr.on.ca at lists.icgc.org] on behalf of Brian O'Connor [Brian.OConnor at oicr.on.ca]
+Sent: Thursday, August 11, 2016 3:46 AM
+To: docktesters at lists.icgc.org
+Subject: Re: [DOCKTESTERS] PCAWG Testing Group
+
+Hi,
+
+I only heard from Denis, Junjun, and Oliver for the testing group doodle poll.  The best time is tomorrow (Thursday) at 10am pacific time.  I suggest we have a brief call for those that are available since the summer is slipping away quickly.
+
+Here?s a google hangouts link:
+
+https://plus.google.com/hangouts/_/ucsc.edu/broconno?hceid=YnJvY29ubm9AdWNzYy5lZHU._6cq30e9n6os34ba688pj2b9k60sj8b9p88r3gba16ks34e9k68s30gpp70&authuser=1
+
+Brian
+
+> On Aug 8, 2016, at 7:06 AM, Brian O'Connor <briandoconnor at gmail.com> wrote:
+>
+> RESENDING: apologies if you get this again...
+>
+> Hi All,
+>
+> This group has been fairly inactive over the last few months.  Since the PCAWG tech group is rapidly wrapping up, I think it would be great to validate the workflows we leave the community before we all move on to other things.  It will also be helpful for the PCAWG tech infrastructure paper which any contributors to this group will be included on.  Can we have a call this week to go over the testing plan and who will do what?
+>
+> I think the plan will be something like the following:
+>
+> * identify the workflows we?re going to test, write an SOP: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+> * identify the test data we?re going to use, write this up: https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+> * divide the task of testing each available workflow, upload the results to GNOS or Jamboree
+> * writing a script/process to cross-check results these calls with the final from PCAWG
+>
+> After talking with Jonathan this morning, his ETA for the consensus calling/filtering workflow is 3-4 weeks. Same ETA from Gordon for the final Broad workflow.  That fits in with a general timeline of the end of September for this group to finish it?s testing activities.  So we can have this testing completed before the Nov/Dec timeframe for submitting our papers. We can test in parallel with Gordon and Jonathan?s work given that BWA, Sanger, EMBL, and DKFZ are available now.
+>
+> I propose we have a call this week to go over the testing process plan and see who has bandwidth to help (I?m out for vacation/conference 8/19-9/2).  Please select a time:
+>
+> http://doodle.com/poll/mmwxcv69szve4ipb
+>
+> Thanks for your help testing the PCAWG workflows!
+>
+> Brian
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+From miguel.vazquez at cnio.es  Wed Aug 17 04:30:53 2016
+From: miguel.vazquez at cnio.es (Miguel Vazquez)
+Date: Wed, 17 Aug 2016 10:30:53 +0200
+Subject: [DOCKTESTERS] PCAWG Testing Group
+In-Reply-To: <8DEDCD000FC3904D90FA6D29DEB94ECD495F8350@exmb2.ad.oicr.on.ca>
+References: <5ABC7C49-1A16-4D1C-8B71-8287ABC81ECD@gmail.com>
+ <00FA8B1B-E27B-4CA8-B50E-8B01EB7FCE8A@oicr.on.ca>
+ <8DEDCD000FC3904D90FA6D29DEB94ECD495F8350@exmb2.ad.oicr.on.ca>
+Message-ID: <CA+dx8manZpuMKTt--628j5e4n8Ta6wC+2AmuvgfMXtoaQLqUkA@mail.gmail.com>
+
+Dear Brian,
+
+I just got back from holidays and missed the latest action. I'm quite busy,
+as I'm sure we all are, but I'm going to try to perform the tests as you
+suggested. I'll keep you posted if I finally find the time.
+
+Best regards
+
+Miguel
+
+On Thu, Aug 11, 2016 at 7:41 PM, Brian O'Connor <Brian.OConnor at oicr.on.ca>
+wrote:
+
+> Hi Everyone
+>
+> Just as a heads up we had the call today with Oliver, Denis, and Adam.  We
+> came up with a very basic testing plan to get us started.  See the wiki
+> pages below if you'd like to participate:
+>
+> * https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+> * https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+>
+> We'll regroup with a call in early Sept to see how each are doing on the
+> testing (and communicate via this mailing list along the way).
+>
+> Thanks for everyone's help testing these workflows!
+>
+> Brian
+>
+> This message and any attachments may contain confidential and/or
+> privileged information for the sole use of the intended recipient. Any
+> review or distribution by anyone other than the person for whom it was
+> originally intended is strictly prohibited. If you have received this
+> message in error, please contact the sender and delete all copies.
+> Opinions, conclusions or other information contained in this message may
+> not be that of the organization.
+> ________________________________________
+> From: docktesters-bounces+brian.oconnor=oicr.on.ca at lists.icgc.org
+> [docktesters-bounces+brian.oconnor=oicr.on.ca at lists.icgc.org] on behalf
+> of Brian O'Connor [Brian.OConnor at oicr.on.ca]
+> Sent: Thursday, August 11, 2016 3:46 AM
+> To: docktesters at lists.icgc.org
+> Subject: Re: [DOCKTESTERS] PCAWG Testing Group
+>
+> Hi,
+>
+> I only heard from Denis, Junjun, and Oliver for the testing group doodle
+> poll.  The best time is tomorrow (Thursday) at 10am pacific time.  I
+> suggest we have a brief call for those that are available since the summer
+> is slipping away quickly.
+>
+> Here?s a google hangouts link:
+>
+> https://plus.google.com/hangouts/_/ucsc.edu/broconno?
+> hceid=YnJvY29ubm9AdWNzYy5lZHU._6cq30e9n6os34ba688pj2b9k60sj8b
+> 9p88r3gba16ks34e9k68s30gpp70&authuser=1
+>
+> Brian
+>
+> > On Aug 8, 2016, at 7:06 AM, Brian O'Connor <briandoconnor at gmail.com>
+> wrote:
+> >
+> > RESENDING: apologies if you get this again...
+> >
+> > Hi All,
+> >
+> > This group has been fairly inactive over the last few months.  Since the
+> PCAWG tech group is rapidly wrapping up, I think it would be great to
+> validate the workflows we leave the community before we all move on to
+> other things.  It will also be helpful for the PCAWG tech infrastructure
+> paper which any contributors to this group will be included on.  Can we
+> have a call this week to go over the testing plan and who will do what?
+> >
+> > I think the plan will be something like the following:
+> >
+> > * identify the workflows we?re going to test, write an SOP:
+> https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP
+> > * identify the test data we?re going to use, write this up:
+> https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data
+> > * divide the task of testing each available workflow, upload the results
+> to GNOS or Jamboree
+> > * writing a script/process to cross-check results these calls with the
+> final from PCAWG
+> >
+> > After talking with Jonathan this morning, his ETA for the consensus
+> calling/filtering workflow is 3-4 weeks. Same ETA from Gordon for the final
+> Broad workflow.  That fits in with a general timeline of the end of
+> September for this group to finish it?s testing activities.  So we can have
+> this testing completed before the Nov/Dec timeframe for submitting our
+> papers. We can test in parallel with Gordon and Jonathan?s work given that
+> BWA, Sanger, EMBL, and DKFZ are available now.
+> >
+> > I propose we have a call this week to go over the testing process plan
+> and see who has bandwidth to help (I?m out for vacation/conference
+> 8/19-9/2).  Please select a time:
+> >
+> > http://doodle.com/poll/mmwxcv69szve4ipb
+> >
+> > Thanks for your help testing the PCAWG workflows!
+> >
+> > Brian
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20160817/b34f6f41/attachment.html>
+
+From francis at oicr.on.ca  Mon Aug 29 07:17:24 2016
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 29 Aug 2016 11:17:24 +0000
+Subject: [DOCKTESTERS] getting some testing done!
+Message-ID: <A63E2834-922C-48A1-9138-D63181DB1EC0@oicr.on.ca>
+
+
+Dear Docktesters,
+
+Sorry I?ve quiet for last couple of months. I?ve been at the hospital supporting my partner,
+and she passed away 2.5 weeks ago, and i am now getting back into the swing of things.
+
+She died of complications related to her breast/bone and liver cancer, and so I am
+now even more (although I was already very much there) dedicated to doing something
+about this friggen disease!
+
+So, what do we need to do? Well, first and foremost we need to agree on an SOP on what
+we need to do to test these containers. For that I would like for us to meet this week.
+Meeting with people from west coast to Europe time zones is difficult, but we should manage
+at least once, and then, we can follow-up via e-mail, or documentation on the wiki.
+
+As a reminder, the docktester?s wiki page is here: https://wiki.oicr.on.ca/x/9pfnAw
+
+And on this page I added two recent links that Brian put together in my absence:
+
+
+  *   Workflow testing SOP<https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+SOP>
+  *   Workflow testing Data<https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data>
+
+We need to agree on the SOP, and that is what our next discussion will be about.
+
+I?ve added Zhibin Lu to this mailing list. Zhibin is somebody from my group that will work
+with you and provide you, should you need it, some AWS dollars/CPU etc should you need
+somewhere to test.
+
+I will set up a doodle later today, and I would really like for us to meet this week.
+
+Thank you for your effort in making this happen, and getting this testing started.
+
+Talk to some of you later today on the PCAWG-tech call,
+
+@bffo
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20160829/4d65f811/attachment-0001.html>
+

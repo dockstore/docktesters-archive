@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] - Crick
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20-%20Crick&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C0C0ECEB%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000210.html">
+   <LINK REL="Next"  HREF="000212.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] - Crick</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20-%20Crick&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C0C0ECEB%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] - Crick">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Tue Jan 10 10:22:38 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000210.html">[DOCKTESTERS]  - Crick
+</A></li>
+        <LI>Next message: <A HREF="000212.html">[DOCKTESTERS] - Crick
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#211">[ date ]</a>
+              <a href="thread.html#211">[ thread ]</a>
+              <a href="subject.html#211">[ subject ]</a>
+              <a href="author.html#211">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+For bwa-mem, do you (or Miguel) have a copy of the error message that you ran into?
+Also, in your case, did bwa fail with the test data (  <A HREF="https://github.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/blob/2.6.8_1.2/Dockstore_cwl.json">https://github.com/ICGC-TCGA-PanCancer/Seqware-BWA-Workflow/blob/2.6.8_1.2/Dockstore_cwl.json</A> ) or was this with the DO218695 donor?
+
+Thanks
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+________________________________
+From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>] on behalf of Jonas Demeulemeester [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>]
+Sent: January 10, 2017 5:55 AM
+To: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+Subject: [DOCKTESTERS] - Crick
+
+Hi all,
+
+We&#8217;ve just joined in on the testing.
+
+To give you a brief overview.
+Mainly to test whether we could actually run containers locally, we&#8217;ve succesully run the DKFZ(+Delly) 2.0.1_cwl1.0 and Sanger 2.0.3 workflows for donor DO218695 (which was just one for which I had the files locally).
+The BWA-Mem 2.6.8_1.2 workflow exited with an error.
+
+We&#8217;re working on Openstack (CentOS-7.2-1604, Docker 1.12, 20 CPUs, 200GB RAM).
+
+I&#8217;ll get cracking on the two test donors Miguel was using (DO50311 and DO52140) or two others from the test 62 set if you prefer.
+Is the current main goal still to check consistency of the outputs?
+If so, I&#8217;ll send the comparison script outputs to the list and will update the wiki accordingly when the runs complete.
+
+Best,
+Jonas
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>&lt;UrlBlockedError.aspx&gt;
+W: www.crick.ac.uk&lt;UrlBlockedError.aspx&gt;
+
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170110/6dc8b2e2/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170110/6dc8b2e2/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000210.html">[DOCKTESTERS]  - Crick
+</A></li>
+	<LI>Next message: <A HREF="000212.html">[DOCKTESTERS] - Crick
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#211">[ date ]</a>
+              <a href="thread.html#211">[ thread ]</a>
+              <a href="subject.html#211">[ subject ]</a>
+              <a href="author.html#211">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

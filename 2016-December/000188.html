@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3C65F9A62D-04DB-4BD1-A196-F628FF46FAA0%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000187.html">
+   <LINK REL="Next"  HREF="000189.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)</H1>
+    <B>Francis Ouellette</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3C65F9A62D-04DB-4BD1-A196-F628FF46FAA0%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)">francis at oicr.on.ca
+       </A><BR>
+    <I>Mon Dec 12 07:38:46 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000187.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+        <LI>Next message: <A HREF="000189.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#188">[ date ]</a>
+              <a href="thread.html#188">[ thread ]</a>
+              <a href="subject.html#188">[ subject ]</a>
+              <a href="author.html#188">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I know I'm not suppose to be there (and I'm not :-), but one slippery slope I want this dockerstore testing working group to be wary about (and Christina, this is really directed at you, chairing the discussion today) is that the request from Lincoln for this to reproduce what we are doing is fine, but I don't think it is this working group's task to reproduce and explain all of the discrepancies we see. I don't think we ever saw that kind of data from the people that ran the original workflow.
+
+If this group can ascertain that a dock store container basically works, I think we need to call that test a success, and move on to the next one. What Miguel is suggesting/asking below is very good, but I could see this becoming into a very slippery slope, which I would advise us against slipping down.
+
+Anyway, going off to my day off,
+
+Have a ghre at discussion,
+
+Francis
+
+--
+B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A>
+
+On Dec 12, 2016, at 05:44, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+
+Dear all,
+
+I was wondering if someone here was acquainted with the Sanger workflow and could help explain these discrepancies. I've skimmed through the code, and it seems like uses EM but I didn't find anything random in it, such as during initialization, which was my initial guess. The other thing I though is that when it splits the work for parallel processing it might choose a different number of splits to accommodate the number of CPUs, and that this might affect the calculations.
+
+Is there someone here that could help shed some light? As soon as some other tests finish I'll be running the process again, but since it takes so long perhaps a little insight would help.
+
+Best regards
+
+Miguel
+
+
+
+On Mon, Dec 5, 2016 at 1:41 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+Dear all,
+
+The Sanger pipeline completed, after about 2 weeks of computing, for donor DO50311
+
+The results are the following:
+
+Comparison for DO50311 using Sanger
+---
+Common: 156299
+Extra: 1
+    - Example: Y:58885197:G
+Missing: 14
+    - Example: 1:102887902:T,1:143165228:G,16:87047601:C
+
+
+The donor results for DKFZ yielded
+
+Comparison for DO50311 using DKFZ
+---
+Common: 51087
+Extra: 0
+Missing: 0
+
+
+In both cases I'm comparing agains the VCF file downloaded from GNOS. I've updated the information here
+
+<A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+
+
+Best regards
+
+Miguel
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161212/4f7453fd/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161212/4f7453fd/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000187.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+	<LI>Next message: <A HREF="000189.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#188">[ date ]</a>
+              <a href="thread.html#188">[ thread ]</a>
+              <a href="subject.html#188">[ subject ]</a>
+              <a href="author.html#188">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

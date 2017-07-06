@@ -1,0 +1,417 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Thanks!
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Thanks%21&In-Reply-To=%3CD4FE9ACD.1A534%25george.mihaiescu%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000287.html">
+   <LINK REL="Next"  HREF="000288.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Thanks!</H1>
+    <B>George Mihaiescu</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Thanks%21&In-Reply-To=%3CD4FE9ACD.1A534%25george.mihaiescu%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Thanks!">George.Mihaiescu at oicr.on.ca
+       </A><BR>
+    <I>Mon Mar 27 10:36:29 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000287.html">[DOCKTESTERS] Thanks!
+</A></li>
+        <LI>Next message: <A HREF="000288.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#286">[ date ]</a>
+              <a href="thread.html#286">[ thread ]</a>
+              <a href="subject.html#286">[ subject ]</a>
+              <a href="author.html#286">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Last week thanks to Denis who provided the DKFZ dependencies, I was able to start that workflow.
+
+It ran for about 10 hours at 100% CPU, but then it failed with the following errors:
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">root at dockstore4-dkfz</A>:~/PCAWG-Docker-Test#
++ cntSuccessful=4
+++ expr 4 - 4
++ cntErrornous=0
++ [[ 0 -gt 0 ]]
++ [[ 0 == 0 ]]
++ echo 'No errors found for /mnt/datastore/testdata/run_id/roddyExecutionStore/exec_170322_175138477_roddy_snvCalling/jobStateLogfile.txt'
+No errors found for /mnt/datastore/testdata/run_id/roddyExecutionStore/exec_170322_175138477_roddy_snvCalling/jobStateLogfile.txt
++ for logfile in '${jobstateFiles[@]}'
+++ cat /mnt/datastore/testdata/run_id/roddyExecutionStore/exec_170322_175637640_roddy_indelCalling/jobStateLogfile.txt
+++ grep -v null:
+++ grep :STARTED:
+++ wc -l
++ cntStarted=2
+++ cat /mnt/datastore/testdata/run_id/roddyExecutionStore/exec_170322_175637640_roddy_indelCalling/jobStateLogfile.txt
+++ grep -v null:
+++ grep :0:
+++ wc -l
++ cntSuccessful=2
+++ expr 2 - 2
++ cntErrornous=0
++ [[ 0 -gt 0 ]]
++ [[ 0 == 0 ]]
++ echo 'No errors found for /mnt/datastore/testdata/run_id/roddyExecutionStore/exec_170322_175637640_roddy_indelCalling/jobStateLogfile.txt'
++ [[ true == true ]]
+No errors found for /mnt/datastore/testdata/run_id/roddyExecutionStore/exec_170322_175637640_roddy_indelCalling/jobStateLogfile.txt
+There was at least one error in a job status logfile. Will exit now!
++ echo 'There was at least one error in a job status logfile. Will exit now!'
++ exit 5
+mv: cannot stat `/mnt/datastore/resultdata/*': No such file or directory
+Result directory listing is:
++ gosu root chmod -R a+wrx /var/spool/cwl
+Error while running job: Error collecting output for parameter 'germline_indel_vcf_gz': Did not find output file with glob pattern: '['*.germline.indel.vcf.gz']'
+[job temp5679700718223668526.cwl] completed permanentFail
+Final process status is permanentFail
+Workflow error, try again with --debug for more information:
+  Process status is ['permanentFail']
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1)
+        at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+        at org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+        at org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+        at java.lang.Thread.run(Thread.java:745)
+java.lang.RuntimeException: problems running command: cwltool --enable-dev --non-strict --outdir /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-e1ebdf3e-6f35-43f7-8ba2-1fb559d0d948/outputs/ --tmpdir-prefix /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-e1ebdf3e-6f35-43f7-8ba2-1fb559d0d948/working/ /tmp/1490197113216-0/temp5679700718223668526.cwl /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-e1ebdf3e-6f35-43f7-8ba2-1fb559d0d948/workflow_params.json
+
+
+Any idea what went wrong?
+
+Thank you,
+George
+
+From: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;
+Date: Monday, March 20, 2017 at 3:13 PM
+To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;
+Cc: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;&gt;, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] Thanks!
+
+Hi George,
+
+Do you have the DKFZ workflow dependencies tarball in place (and named correctly)?
+That's the file it's clearly not finding:
+
+17:06:08.641 [main] ERROR io.dockstore.common.FileProvisioning - Could not copy /root/PCAWG-Docker-Test/resources//dkfz-workflow-dependencies_150318_0951.tar.gz to /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/ee5564fe-ba17-4383-afd8-e785394e365f/dkfz-workflow-dependencies_150318_0951.tar.gz
+java.nio.file.NoSuchFileException: /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/ee5564fe-ba17-4383-afd8-e785394e365f/dkfz-workflow-dependencies_150318_0951.tar.gz
+
+You can find the link to this reference tarball on the DKFZ pipeline github page (<A HREF="https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows">https://github.com/ICGC-TCGA-PanCancer/dkfz_dockered_workflows</A>)
+
+Hope this helps,
+Jonas
+
+
+On 20 Mar 2017, at 17:19, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt; wrote:
+
+Hi,
+
+How do I run the DKFZ workflow?
+I first ran the DELLY which ended with the following output:
+Uploading: #somatic_sv_vcf from /root/PCAWG-Docker-Test/tests/Delly/DO218695/./datastore/launcher-0ce3d535-bd87-4234-a5c0-a3df48d7c5a5/outputs/run_id.embl-delly_1-3-0-preFilter.20150318.somatic.sv.vcf.gz to : /root/PCAWG-Docker-Test/tests/Delly/DO218695//output//DO218695.delly.somatic.sv.vcf.gz
+[##################################################] 100%
+Uploading: #cov_plots from /root/PCAWG-Docker-Test/tests/Delly/DO218695/./datastore/launcher-0ce3d535-bd87-4234-a5c0-a3df48d7c5a5/outputs/run_id.embl-delly_1-3-0-preFilter.20150318.sv.cov.plots.tar.gz to : /root/PCAWG-Docker-Test/tests/Delly/DO218695//output//DO218695.delly.sv.cov.plots.tar.gz
+
+After that, I tried to run the DKFZ but it errors as below:
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">root at dockstore4-dkfz</A>:~/PCAWG-Docker-Test# bin/run_test.sh DKFZ DO218695
+Running:
+cd /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/ &amp;&amp; dockstore tool launch --script --entry quay.io/pancancer/pcawg-dkfz-workflow:2.0.1_cwl1.0&lt;<A HREF="http://quay.io/pancancer/pcawg-dkfz-workflow:2.0.1_cwl1.0">http://quay.io/pancancer/pcawg-dkfz-workflow:2.0.1_cwl1.0</A>&gt;quay.io/jwerner_dkfz/DKFZBiasFilter:1.2.2&lt;<A HREF="http://quay.io/jwerner_dkfz/DKFZBiasFilter:1.2.2">http://quay.io/jwerner_dkfz/DKFZBiasFilter:1.2.2</A>&gt;   --json Dockstore.json
+WARNING: You're currently running as root; probably by accident.
+Press control-C to abort or Enter to continue as root.
+Set DOCKSTORE_ROOT to disable this warning.
+
+Creating directories for run of Dockstore launcher at: ./datastore//launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2
+Provisioning your input files to your local machine
+Downloading: #delly-bedpe from /root/PCAWG-Docker-Test/tests/Delly/DO218695/output//DO218695.delly.somatic.sv.bedpe.txt into directory: /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/9c1f2887-bce0-41dd-a4d2-52f000d79e65
+Downloading: #normal-bam from /root/PCAWG-Docker-Test/data/DO218695/normal.bam into directory: /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/0a43e408-0cdf-4d99-99a3-e9860161a246
+Downloading: #reference-gz from /root/PCAWG-Docker-Test/resources//dkfz-workflow-dependencies_150318_0951.tar.gz into directory: /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/ee5564fe-ba17-4383-afd8-e785394e365f
+17:06:08.641 [main] ERROR io.dockstore.common.FileProvisioning - Could not copy /root/PCAWG-Docker-Test/resources//dkfz-workflow-dependencies_150318_0951.tar.gz to /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/ee5564fe-ba17-4383-afd8-e785394e365f/dkfz-workflow-dependencies_150318_0951.tar.gz
+java.nio.file.NoSuchFileException: /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/ee5564fe-ba17-4383-afd8-e785394e365f/dkfz-workflow-dependencies_150318_0951.tar.gz -&gt; /root/PCAWG-Docker-Test/resources/dkfz-workflow-dependencies_150318_0951.tar.gz
+        at sun.nio.fs.UnixException.translateToIOException(UnixException.java:86)
+        at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+        at sun.nio.fs.UnixFileSystemProvider.createLink(UnixFileSystemProvider.java:476)
+        at java.nio.file.Files.createLink(Files.java:1086)
+        at io.dockstore.common.FileProvisioning.provisionInputFile(FileProvisioning.java:273)
+        at io.github.collaboratory.LauncherCWL.copyIndividualFile(LauncherCWL.java:726)
+        at io.github.collaboratory.LauncherCWL.doProcessFile(LauncherCWL.java:688)
+        at io.github.collaboratory.LauncherCWL.pullFilesHelper(LauncherCWL.java:659)
+        at io.github.collaboratory.LauncherCWL.pullFiles(LauncherCWL.java:586)
+        at io.github.collaboratory.LauncherCWL.run(LauncherCWL.java:185)
+        at io.dockstore.client.cli.nested.AbstractEntryClient.handleCWLLaunch(AbstractEntryClient.java:1028)
+        at io.dockstore.client.cli.nested.AbstractEntryClient.launchCwl(AbstractEntryClient.java:968)
+        at io.dockstore.client.cli.nested.AbstractEntryClient.launchCwl(AbstractEntryClient.java:951)
+        at io.dockstore.client.cli.nested.AbstractEntryClient.launch(AbstractEntryClient.java:935)
+        at io.dockstore.client.cli.nested.AbstractEntryClient.processEntryCommands(AbstractEntryClient.java:247)
+        at io.dockstore.client.cli.Client.run(Client.java:704)
+        at io.dockstore.client.cli.Client.main(Client.java:796)
+java.lang.RuntimeException: Could not copy /root/PCAWG-Docker-Test/resources//dkfz-workflow-dependencies_150318_0951.tar.gz to /root/PCAWG-Docker-Test/tests/DKFZ/DO218695/./datastore/launcher-81c42580-21ad-4480-9ee9-a0d2a7a14bf2/inputs/ee5564fe-ba17-4383-afd8-e785394e365f/dkfz-workflow-dependencies_150318_0951.tar.gz
+
+
+P.S. I have three other Sanger tests running that were started at different intervals (and on VMs with different CPU/memory/disk), but none of them has completed yet.
+
+Thank you,
+George
+
+
+From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;&gt;
+Date: Monday, March 13, 2017 at 8:52 AM
+To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;
+Cc: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt;, Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] Thanks!
+
+Hi George,
+
+Answers inline
+
+On Mon, Mar 13, 2017 at 2:43 PM, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt; wrote:
+Hi Miguel,
+
+I've started the test by running &quot;bin/run_test.sh Sanger DO50398&quot;, so I guess with just one workflow running it should complete faster than two weeks.
+
+I think it still should take a long time. My scripts will run one workflow after another.
+
+
+Because I'm running in Collaboratory I've changed the &quot;get_icgc_donor.sh&quot; script to use a docker container that has the icgc client inside and pull data from Collaboratory. There is no &quot;bam.bas&quot; file downloaded, just a &quot;.bam&quot; and a &quot;.bam.bai&quot; files, not sure if this is an issue.
+
+
+I wondered the same thing first time I did this, but this file is produced by the pipeline. There was some problem with this that was dealt with by the developers and updated in the docker. So I think you won't have a problem
+
+By looking at the &quot;bin/compare_result_type.sh&quot; it looks like it's using the gnos client to pull down the existing VCF files for comparison reasons, but I think we store those files in Collaboratory as well, so I'll work with Junjun to adapt the script for this.
+
+
+Let me know if you need any help
+
+I think I initially tried to run the DKFZ workflow, but it complained about having to run Delly first, so I abandoned this for now.
+
+Yes, if you look at the run_batch.sh you will see that when using DKFZ it will always run Delly first. Delly prepares some files the the  DKFZ file needs, namely related to copy number I believe.
+
+
+I'll set up a new VM and run the &quot;run_batch.sh&quot; on the DO52140 donor.
+
+Remember that you will need to add the relevant has-keys for the different files in the etc/donor_files.csv. Its a bit tedious right now. You need to go to the ICGC DCC and find these codes manually for the files you need. Ask me if you need help. Once you have all you can run all the workflows for that donor and evaluate results.
+
+<A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/etc/donor_files.csv">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/etc/donor_files.csv</A>
+
+
+Regards
+
+Miguel
+
+
+George
+
+From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;&gt;
+Date: Monday, March 13, 2017 at 6:53 AM
+To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;
+Cc: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt;, Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] Thanks!
+
+Hi George,
+
+The Sanger workflow is very lengthy, it takes about two weeks in my tests.
+
+About correctness, my scripts also cover that part, if you are not using them they might still help you to clarify how we do it. The idea is to take each of the output files produced: SNV_MNV, Indel, SV, and CNV, for both germline and somatic and compare it with the result uploaded to GNOS (not all pipelines produce all files). This is the relevant part in the run_batch.sh script:
+
+<A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/run_batch.sh#L42-L46">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/run_batch.sh#L42-L46</A>
+
+The bin/compare_result_type.sh script will take care of downloading the correct file from GNOS and running the comparison. The comparison itself is simple since all files are VCFs, it consists in taking out the variants in terms of chromosome, position, reference and alternative allele and measuring the overlaps.
+
+<A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_result_type.sh">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_result_type.sh</A>
+
+About which donors to test, DO52140 is one Jonas and I have both tested and could be interesting to get a third opinion. Also, any other donor could be interesting to see if something new comes up. I'm not sure which options is best.
+
+Miguel
+
+
+
+
+On Mon, Mar 13, 2017 at 5:12 AM, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt; wrote:
+Hi,
+
+I've started Sanger on DO50398 and it's been running for more than 24 hours, currently at &quot;Workflow step succeeded: s58_bbAllele_merge_59&quot;
+
+I just started a second run on a different VM on same donor, just to compare run times.
+The VM used has 8 cores, 48 GB of RAM and 1.1 TB disk and I'll send some monitoring graphs when it finishes the workflow, but I have no idea how to check its correctness.
+
+Give me a list of donors and what workflows you want me to run and I'll try to schedule them tomorrow.
+
+George
+
+
+From: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt;
+Date: Sunday, March 12, 2017 at 10:45 PM
+To: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;
+Cc: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt;, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] Thanks!
+
+Thanks Miguel and Jonas for your help here!
+
+Do you have any update on the latest testing? Please feel free updating the wiki with any update: <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/2017-03-13+PCAWG-TECH+Teleconference">https://wiki.oicr.on.ca/display/PANCANCER/2017-03-13+PCAWG-TECH+Teleconference</A>
+
+Regards,
+Junjun
+
+
+
+From: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;
+Date: Saturday, March 11, 2017 at 7:15 PM
+To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;
+Cc: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt;, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">junjun.zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">junjun.zhang at oicr.on.ca</A>&gt;&gt;, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] Thanks!
+
+Hi George,
+
+Yup, I've been running the PCAWG dockers mainly using Miguel's set of scripts.
+Give them a go and if you run into issues, just let us know!
+
+Cheers,
+Jonas
+
+
+On 11 Mar 2017, at 17:00, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt; wrote:
+
+Sure, I'll give it a try and report later.
+
+Thank you,
+George Mihaiescu
+Senior Cloud Architect
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Email: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca">http://www.oicr.on.ca</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+
+
+From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt;
+Date: Saturday, March 11, 2017 at 10:57 AM
+To: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt;
+Cc: Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;&gt;, Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>&gt;&gt;, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] Thanks!
+
+Hi Junjun,
+
+I think Jonas has been using my scripts to run some of the tests, maybe George could try them as well, it should be very easy for him to try the Sanger, Delly+DKFZ, BWA-Mem, and the BiasFilter.
+
+<A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test">https://github.com/mikisvaz/PCAWG-Docker-Test</A>
+
+He would just need to update the tokens for DACO access and the scripts will take care of downloading the BAM files, running the workflows and evaluating the result.
+
+The documentation there is reasonably updated, but if this sounds good then perhaps he could contact me and I could walk him through the details.
+
+Best regards
+
+Miguel
+
+On Fri, Mar 10, 2017 at 9:51 PM, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt; wrote:
+Dear Docktesters,
+
+George Mihaiescu, cloud architect, of the Collaboratory at OICR plans to run some bioinformatics workflows to test Collab environment.
+
+Just thought this is a good opportunity to use as extra help for testing out the PCAWG dockerized workflows.
+
+Miguel, Denis and others, what workflows / datasets do you think would be good for George to run?
+
+Thanks,
+Junjun
+
+
+
+From: &lt;docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&lt;mailto:docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&gt;&gt; on behalf of Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;&gt;
+Date: Wednesday, March 1, 2017 at 10:26 AM
+To: &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: [DOCKTESTERS] Thanks!
+
+
+Hi,
+
+Just wanted to say thanks to Miguel and Jonas for keeping the workflow testing data page up-to-date.
+
+<A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+
+
+As we work on new versions or debugging, it is invaluable to know what versions of the workflows have worked outside OICR, thanks!
+
+
+
+Denis Yuen
+Senior Software Developer
+
+OntarioInstituteforCancerResearch
+MaRSCentre
+661 University Avenue
+Suite510
+Toronto, Ontario,Canada M5G0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170327/fd53b2b1/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170327/fd53b2b1/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000287.html">[DOCKTESTERS] Thanks!
+</A></li>
+	<LI>Next message: <A HREF="000288.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#286">[ date ]</a>
+              <a href="thread.html#286">[ thread ]</a>
+              <a href="subject.html#286">[ subject ]</a>
+              <a href="author.html#286">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

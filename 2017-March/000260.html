@@ -1,0 +1,590 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Thanks!
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Thanks%21&In-Reply-To=%3CCA%2Bdx8mZsLYdtaFLWO0h2i9Fc1p64W2pLUapYbscufY6%3Dhr-gyA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000259.html">
+   <LINK REL="Next"  HREF="000261.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Thanks!</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Thanks%21&In-Reply-To=%3CCA%2Bdx8mZsLYdtaFLWO0h2i9Fc1p64W2pLUapYbscufY6%3Dhr-gyA%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Thanks!">mikisvaz at gmail.com
+       </A><BR>
+    <I>Tue Mar 14 08:44:13 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000259.html">[DOCKTESTERS] Thanks!
+</A></li>
+        <LI>Next message: <A HREF="000261.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#260">[ date ]</a>
+              <a href="thread.html#260">[ thread ]</a>
+              <a href="subject.html#260">[ subject ]</a>
+              <a href="author.html#260">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Junjun and Keiran,
+
+I'm sorry guys, but his is too alien for me, this was never my area of
+expertise. I'm going to need someone to write a script for me that takes a
+BAM file and turns it into what ever I need to run BWA-Mem on. At least
+pseudo-code or something that I can start with.
+
+I think perhaps someone more knowledgeable than me should consider if this
+procedure as a whole is acceptable in terms of reproducibility, and how
+would be best to document it or if it could possibly be improved.
+
+Also, I don't think I understand the nature of the problem because from
+what I can fathom this problem should have either broken the process or
+render a much larger of discrepancies than 3%. Can someone explain in
+layman words how can only 3% of reads be affected?
+
+Best regards
+
+Miguel
+
+
+
+On Tue, Mar 14, 2017 at 1:28 PM, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;
+wrote:
+
+&gt;<i> Hi Kieran,
+</I>&gt;<i>
+</I>&gt;<i> Thanks for the detailed explanation. So, in order to reproduce PCAWG BWA
+</I>&gt;<i> MEM alignment result, one must use lane level BAMs (one lane one BAM) as
+</I>&gt;<i> input.
+</I>&gt;<i>
+</I>&gt;<i> A processing is needed to prepare lane level BAMs from merged BAM.
+</I>&gt;<i>
+</I>&gt;<i> @Migual, hope this is helpful. Let us know if you have any other
+</I>&gt;<i> questions.
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i> Junjun
+</I>&gt;<i>
+</I>&gt;<i> On Mar 14, 2017, at 5:16 AM, Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi Junjun,
+</I>&gt;<i>
+</I>&gt;<i> You won't be able to separate out the readgroups in the headers if the
+</I>&gt;<i> input is a merged BAM file .  If there are different libraries, read
+</I>&gt;<i> lengths etc it will cause problems for insert-size determination (used in
+</I>&gt;<i> determining proper-pairs) and result in inter-library duplicate removal (by
+</I>&gt;<i> definition reads from different libraries can't be duplicates).
+</I>&gt;<i>
+</I>&gt;<i> If you really need to do it this way you'd have to add a pre-processing
+</I>&gt;<i> step, bamtofastq can split a BAM into it's component readgroups in a single
+</I>&gt;<i> pass.
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i>
+</I>&gt;<i> Keiran Raine
+</I>&gt;<i> Principal Bioinformatician
+</I>&gt;<i> Cancer Genome Project
+</I>&gt;<i> Wellcome Trust Sanger Institute
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>
+</I>&gt;<i> Tel:+44 (0)1223 834244 Ext: 4983 &lt;+44%201223%20834244&gt;
+</I>&gt;<i> Office: H104
+</I>&gt;<i>
+</I>&gt;<i> On 13 Mar 2017, at 21:16, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt; wrote:
+</I>&gt;<i>
+</I>&gt;<i> Hi Keiran,
+</I>&gt;<i>
+</I>&gt;<i> Can you please comment on this, i.e., comparison between alignment done
+</I>&gt;<i> lane by lane v.s. done with all lanes mixed?
+</I>&gt;<i>
+</I>&gt;<i> Basically, we are trying to prepare input BAMs for testing PCAWG BWA MEM
+</I>&gt;<i> workflow. The starting point is the aligned BAM because we don't have the
+</I>&gt;<i> unaligned lane BAM any more. The key point here is: should input BAM
+</I>&gt;<i> organized by lanes, one lane one BAM? Or just one BAM containing all lanes?
+</I>&gt;<i>
+</I>&gt;<i> Thanks,
+</I>&gt;<i> Junjun
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;
+</I>&gt;<i> Date: Monday, March 13, 2017 at 2:31 PM
+</I>&gt;<i> To: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">junjun.zhang at oicr.on.ca</A>&gt;
+</I>&gt;<i> Cc: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;, Jonas Demeulemeester &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;<i>
+</I>&gt;<i> Hi Junjun
+</I>&gt;<i>
+</I>&gt;<i> About the unaligned BAM files, in fact I do have them for the two test
+</I>&gt;<i> I've ran. I could put them available for George but I think he could just
+</I>&gt;<i> as well produce them on site, since he might have to do that anyway. But we
+</I>&gt;<i> can always explore that option, though right now I don't know of a simple
+</I>&gt;<i> way to move these files around.
+</I>&gt;<i>
+</I>&gt;<i> About the number of lanes let me just say good grief! This is the first
+</I>&gt;<i> time I hear about it. So if I understand you correctly I need to:
+</I>&gt;<i>
+</I>&gt;<i> 1- Download the metadata for the BAM file
+</I>&gt;<i> 2- Determine the read_groups
+</I>&gt;<i> 3- Split the BAM file according to these read_groups
+</I>&gt;<i> 4- Unalign these BAM files and produce header files with different lanes
+</I>&gt;<i> 5- Run BWA-Mem
+</I>&gt;<i> 6- Compare collectively the reads from these BAM files with the original
+</I>&gt;<i> BAM
+</I>&gt;<i>
+</I>&gt;<i> Could you please confirm that this is the case? Is this consistent with
+</I>&gt;<i> the 3% mismatches? A similar percentage was found in the HCC1143, could
+</I>&gt;<i> this be the reason for that as well? Also I asked Keiran about these
+</I>&gt;<i> headers and he said there where OK. If you could please confirm that I need
+</I>&gt;<i> to do this extended process I'd be grateful, because its quite involved and
+</I>&gt;<i> there are concepts here I'm not familiar with.
+</I>&gt;<i>
+</I>&gt;<i> Regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On Mon, Mar 13, 2017 at 6:51 PM, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Hi Miguel,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I thought you kept the unaligned sequence you prepared for the testing.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Following your link about preparing unaligned input, I found this:
+</I>&gt;&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/mas">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/mas</A>
+</I>&gt;&gt;<i> ter/bin/prepare_unaligned.sh#L16-L35, which actually could explain the
+</I>&gt;&gt;<i> high mismatch rate.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> When BWA MEM workflow runs, the alignments are done one lane level BAM at
+</I>&gt;&gt;<i> a time, then merge the aligned BAM later: <A HREF="https://github.com/ICGC">https://github.com/ICGC</A>
+</I>&gt;&gt;<i> -TCGA-PanCancer/Seqware-BWA-Workflow/blob/develop/src/main/
+</I>&gt;&gt;<i> java/com/github/seqware/WorkflowClient.java#L201
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> I see the script prepare_unaligned.sh always generates one read group
+</I>&gt;&gt;<i> (i.e., lane) for normal or tumour, no matter how many read groups (lanes)
+</I>&gt;&gt;<i> in the aligned BAMs. This has big impact on the alignment result when lanes
+</I>&gt;&gt;<i> are aligned independently comparing aligned altogether.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The PCAWG Sequence Submission SOP has a step to prepare unaligned BAM,
+</I>&gt;&gt;<i> but it only works when the input is *single lane BAM file*:
+</I>&gt;&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+P">https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+P</A>
+</I>&gt;&gt;<i> CAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG(a.k.a.PC
+</I>&gt;&gt;<i> APorPAWG)SequenceSubmissionSOP-v1.0-a)Followthisifyoustartfr
+</I>&gt;&gt;<i> omsinglelaneBAMfiles
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> So, I think in order to perform testing alignment workflow properly, we
+</I>&gt;&gt;<i> will need to prepare *lane level *unaligned BAM (one lane one BAM) as
+</I>&gt;&gt;<i> inputs. For example, this aligned BAM: <A HREF="https://gtrepo-ebi.annail">https://gtrepo-ebi.annail</A>
+</I>&gt;&gt;<i> abs.com/cghub/metadata/analysisFull/c9fa1c22-6432-4851-af67-30f4b4812c63,
+</I>&gt;&gt;<i> it has 7 read groups (search for read_group). It needs to be converted to 7
+</I>&gt;&gt;<i> individual lane level BAM files.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Not sure whether it's the best way to do BAM splitting, but here is
+</I>&gt;&gt;<i> someone's Python code to do it: <A HREF="https://gist.github.com/seandavi/2014542">https://gist.github.com/seandavi/2014542</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hope this helps,
+</I>&gt;&gt;<i> Junjun
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;
+</I>&gt;&gt;<i> Date: Monday, March 13, 2017 at 1:01 PM
+</I>&gt;&gt;<i> To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;&gt;<i> Cc: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;, Junjun
+</I>&gt;&gt;<i> Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">junjun.zhang at oicr.on.ca</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi George,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> The analigned BAM files are not available as far as I know, rather you
+</I>&gt;&gt;<i> must unalign the final BAM files, the normal ones you get from ICGC or
+</I>&gt;&gt;<i> GNOS. This process is also in my scripts, as you see here:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bi">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bi</A>
+</I>&gt;&gt;<i> n/run_batch.sh#L32
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> About the steps in the workflows, I don't know them myself. I think
+</I>&gt;&gt;<i> you'll need to ask the developers, and not all workflows use the same
+</I>&gt;&gt;<i> underlying workflow enactment tool. Not an easy answer
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> On Mon, Mar 13, 2017 at 5:57 PM, George Mihaiescu &lt;
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt; wrote:
+</I>&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Junjun told me this would provide value to the testing process, so I
+</I>&gt;&gt;&gt;<i> would like to kick off a test of the BWA_mem docker.
+</I>&gt;&gt;&gt;<i> Can somebody provide some quick instructions and the location of the
+</I>&gt;&gt;&gt;<i> unaligned BAM files that were used already?
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Also, do we have somewhere the steps involved in each workflow, so I can
+</I>&gt;&gt;&gt;<i> get an idea of how far they are while running?
+</I>&gt;&gt;&gt;<i> For example, s58_cgpPindel_pin2vcf_95 is three steps from finish, or 50
+</I>&gt;&gt;&gt;<i> steps from finish&#8230;
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Thank you,
+</I>&gt;&gt;&gt;<i> George
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;
+</I>&gt;&gt;&gt;<i> Date: Monday, March 13, 2017 at 8:52 AM
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;&gt;&gt;<i> Cc: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;, Jonas Demeulemeester &lt;
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Hi George,
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Answers inline
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> On Mon, Mar 13, 2017 at 2:43 PM, George Mihaiescu &lt;
+</I>&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt; wrote:
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Hi Miguel,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> I've started the test by running &quot;bin/run_test.sh Sanger DO50398&quot;, so I
+</I>&gt;&gt;&gt;&gt;<i> guess with just one workflow running it should complete faster than two
+</I>&gt;&gt;&gt;&gt;<i> weeks.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> I think it still should take a long time. My scripts will run one
+</I>&gt;&gt;&gt;<i> workflow after another.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Because I'm running in Collaboratory I've changed the
+</I>&gt;&gt;&gt;&gt;<i> &quot;get_icgc_donor.sh&quot; script to use a docker container that has the icgc
+</I>&gt;&gt;&gt;&gt;<i> client inside and pull data from Collaboratory. There is no &quot;bam.bas&quot; file
+</I>&gt;&gt;&gt;&gt;<i> downloaded, just a &quot;.bam&quot; and a &quot;.bam.bai&quot; files, not sure if this is an
+</I>&gt;&gt;&gt;&gt;<i> issue.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> I wondered the same thing first time I did this, but this file is
+</I>&gt;&gt;&gt;<i> produced by the pipeline. There was some problem with this that was dealt
+</I>&gt;&gt;&gt;<i> with by the developers and updated in the docker. So I think you won't have
+</I>&gt;&gt;&gt;<i> a problem
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> By looking at the &quot;bin/compare_result_type.sh&quot; it looks like it's using
+</I>&gt;&gt;&gt;&gt;<i> the gnos client to pull down the existing VCF files for comparison reasons,
+</I>&gt;&gt;&gt;&gt;<i> but I think we store those files in Collaboratory as well, so I'll work
+</I>&gt;&gt;&gt;&gt;<i> with Junjun to adapt the script for this.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Let me know if you need any help
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> I think I initially tried to run the DKFZ workflow, but it complained
+</I>&gt;&gt;&gt;&gt;<i> about having to run Delly first, so I abandoned this for now.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Yes, if you look at the run_batch.sh you will see that when using DKFZ
+</I>&gt;&gt;&gt;<i> it will always run Delly first. Delly prepares some files the the  DKFZ
+</I>&gt;&gt;&gt;<i> file needs, namely related to copy number I believe.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> I'll set up a new VM and run the &quot;run_batch.sh&quot; on the DO52140 donor.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Remember that you will need to add the relevant has-keys for the
+</I>&gt;&gt;&gt;<i> different files in the etc/donor_files.csv. Its a bit tedious right now.
+</I>&gt;&gt;&gt;<i> You need to go to the ICGC DCC and find these codes manually for the files
+</I>&gt;&gt;&gt;<i> you need. Ask me if you need help. Once you have all you can run all the
+</I>&gt;&gt;&gt;<i> workflows for that donor and evaluate results.
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/et">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/et</A>
+</I>&gt;&gt;&gt;<i> c/donor_files.csv
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Regards
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i> Miguel
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> George
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;
+</I>&gt;&gt;&gt;&gt;<i> Date: Monday, March 13, 2017 at 6:53 AM
+</I>&gt;&gt;&gt;&gt;<i> To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;&gt;&gt;&gt;<i> Cc: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;, Jonas Demeulemeester &lt;
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;&gt;&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Hi George,
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The Sanger workflow is very lengthy, it takes about two weeks in my
+</I>&gt;&gt;&gt;&gt;<i> tests.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> About correctness, my scripts also cover that part, if you are not
+</I>&gt;&gt;&gt;&gt;<i> using them they might still help you to clarify how we do it. The idea is
+</I>&gt;&gt;&gt;&gt;<i> to take each of the output files produced: SNV_MNV, Indel, SV, and CNV, for
+</I>&gt;&gt;&gt;&gt;<i> both germline and somatic and compare it with the result uploaded to GNOS
+</I>&gt;&gt;&gt;&gt;<i> (not all pipelines produce all files). This is the relevant part in the
+</I>&gt;&gt;&gt;&gt;<i> run_batch.sh script:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bi">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bi</A>
+</I>&gt;&gt;&gt;&gt;<i> n/run_batch.sh#L42-L46
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> The bin/compare_result_type.sh script will take care of downloading the
+</I>&gt;&gt;&gt;&gt;<i> correct file from GNOS and running the comparison. The comparison itself is
+</I>&gt;&gt;&gt;&gt;<i> simple since all files are VCFs, it consists in taking out the variants in
+</I>&gt;&gt;&gt;&gt;<i> terms of chromosome, position, reference and alternative allele and
+</I>&gt;&gt;&gt;&gt;<i> measuring the overlaps.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bi">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bi</A>
+</I>&gt;&gt;&gt;&gt;<i> n/compare_result_type.sh
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> About which donors to test, DO52140 is one Jonas and I have both tested
+</I>&gt;&gt;&gt;&gt;<i> and could be interesting to get a third opinion. Also, any other donor
+</I>&gt;&gt;&gt;&gt;<i> could be interesting to see if something new comes up. I'm not sure which
+</I>&gt;&gt;&gt;&gt;<i> options is best.
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> Miguel
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i> On Mon, Mar 13, 2017 at 5:12 AM, George Mihaiescu &lt;
+</I>&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt; wrote:
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Hi,
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> I've started Sanger on DO50398 and it's been running for more than 24
+</I>&gt;&gt;&gt;&gt;&gt;<i> hours, currently at &quot;Workflow step succeeded: s58_bbAllele_merge_59&quot;
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> I just started a second run on a different VM on same donor, just to
+</I>&gt;&gt;&gt;&gt;&gt;<i> compare run times.
+</I>&gt;&gt;&gt;&gt;&gt;<i> The VM used has 8 cores, 48 GB of RAM and 1.1 TB disk and I'll send
+</I>&gt;&gt;&gt;&gt;&gt;<i> some monitoring graphs when it finishes the workflow, but I have no idea
+</I>&gt;&gt;&gt;&gt;&gt;<i> how to check its correctness.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Give me a list of donors and what workflows you want me to run and
+</I>&gt;&gt;&gt;&gt;&gt;<i> I'll try to schedule them tomorrow.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> George
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> From: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Date: Sunday, March 12, 2017 at 10:45 PM
+</I>&gt;&gt;&gt;&gt;&gt;<i> To: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;, George
+</I>&gt;&gt;&gt;&gt;&gt;<i> Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Cc: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;, Denis Yuen &lt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Thanks Miguel and Jonas for your help here!
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Do you have any update on the latest testing? Please feel free
+</I>&gt;&gt;&gt;&gt;&gt;<i> updating the wiki with any update: <A HREF="https://wiki.oicr.on.c">https://wiki.oicr.on.c</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> a/display/PANCANCER/2017-03-13+PCAWG-TECH+Teleconference
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Regards,
+</I>&gt;&gt;&gt;&gt;&gt;<i> Junjun
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> From: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Date: Saturday, March 11, 2017 at 7:15 PM
+</I>&gt;&gt;&gt;&gt;&gt;<i> To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Cc: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;, Junjun Zhang &lt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">junjun.zhang at oicr.on.ca</A>&gt;, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;, &quot;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Hi George,
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Yup, I've been running the PCAWG dockers mainly using Miguel's set of
+</I>&gt;&gt;&gt;&gt;&gt;<i> scripts.
+</I>&gt;&gt;&gt;&gt;&gt;<i> Give them a go and if you run into issues, just let us know!
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Cheers,
+</I>&gt;&gt;&gt;&gt;&gt;<i> Jonas
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> On 11 Mar 2017, at 17:00, George Mihaiescu &lt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt; wrote:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Sure, I'll give it a try and report later.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Thank you,
+</I>&gt;&gt;&gt;&gt;&gt;<i> *George Mihaiescu*
+</I>&gt;&gt;&gt;&gt;&gt;<i> Senior Cloud Architect
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> *Ontario Institute for Cancer Research*
+</I>&gt;&gt;&gt;&gt;&gt;<i> MaRS Centre
+</I>&gt;&gt;&gt;&gt;&gt;<i> 661 University Avenue
+</I>&gt;&gt;&gt;&gt;&gt;<i> Suite 510
+</I>&gt;&gt;&gt;&gt;&gt;<i> Toronto, Ontario
+</I>&gt;&gt;&gt;&gt;&gt;<i> Canada M5G 0A3
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Email: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Toll-free: 1-866-678-6427
+</I>&gt;&gt;&gt;&gt;&gt;<i> Twitter: @OICR_news
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> www.oicr.on.ca
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> This message and any attachments may contain confidential and/or
+</I>&gt;&gt;&gt;&gt;&gt;<i> privileged information for the sole use of the intended recipient. Any
+</I>&gt;&gt;&gt;&gt;&gt;<i> review or distribution by anyone other than the person for whom it was
+</I>&gt;&gt;&gt;&gt;&gt;<i> originally intended is strictly prohibited. If you have received this
+</I>&gt;&gt;&gt;&gt;&gt;<i> message in error, please contact the sender and delete all copies.
+</I>&gt;&gt;&gt;&gt;&gt;<i> Opinions, conclusions or other information contained in this message may
+</I>&gt;&gt;&gt;&gt;&gt;<i> not be that of the organization.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Date: Saturday, March 11, 2017 at 10:57 AM
+</I>&gt;&gt;&gt;&gt;&gt;<i> To: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Cc: Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;, Jonas Demeulemeester &lt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>&gt;, George Mihaiescu &lt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Hi Junjun,
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> I think Jonas has been using my scripts to run some of the tests,
+</I>&gt;&gt;&gt;&gt;&gt;<i> maybe George could try them as well, it should be very easy for him to try
+</I>&gt;&gt;&gt;&gt;&gt;<i> the Sanger, Delly+DKFZ, BWA-Mem, and the BiasFilter.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test">https://github.com/mikisvaz/PCAWG-Docker-Test</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> He would just need to update the tokens for DACO access and the
+</I>&gt;&gt;&gt;&gt;&gt;<i> scripts will take care of downloading the BAM files, running the workflows
+</I>&gt;&gt;&gt;&gt;&gt;<i> and evaluating the result.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> The documentation there is reasonably updated, but if this sounds good
+</I>&gt;&gt;&gt;&gt;&gt;<i> then perhaps he could contact me and I could walk him through the details.
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Best regards
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> Miguel
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> On Fri, Mar 10, 2017 at 9:51 PM, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> &gt; wrote:
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Dear Docktesters,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> George Mihaiescu, cloud architect, of the Collaboratory at OICR plans
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> to run some bioinformatics workflows to test Collab environment.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Just thought this is a good opportunity to use as extra help for
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> testing out the PCAWG dockerized workflows.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Miguel, Denis and others, what workflows / datasets do you think
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> would be good for George to run?
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Thanks,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Junjun
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> From: &lt;docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> on behalf of Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Date: Wednesday, March 1, 2017 at 10:26 AM
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> To: &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Subject: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Hi,
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Just wanted to say thanks to Miguel and Jonas for keeping the
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> workflow testing data page up-to-date.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> As we work on new versions or debugging, it is invaluable to know
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> what versions of the workflows have worked outside OICR, thanks!
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> *Denis Yuen*
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Senior Software Developer
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> *Ontario**Institute**for**Cancer**Research*
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> MaRSCentre
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> 661 University Avenue
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Suite510
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Toronto, Ontario,Canada M5G0A3
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Toll-free: 1-866-678-6427
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Twitter: @OICR_news
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> *www.oicr.on.ca &lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;*
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> This message and any attachments may contain confidential and/or
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> privileged information for the sole use of the intended recipient. Any
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> review or distribution by anyone other than the person for whom it was
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> originally intended is strictly prohibited. If you have received this
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> message in error, please contact the sender and delete all copies.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> Opinions, conclusions or other information contained in this message may
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> not be that of the organization.
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> docktesters mailing list
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> The Francis Crick Institute Limited is a registered charity in England
+</I>&gt;&gt;&gt;&gt;&gt;<i> and Wales no. 1140062 and a company registered in England and Wales no.
+</I>&gt;&gt;&gt;&gt;&gt;<i> 06885462, with its registered office at 1 Midland Road London NW1 1AT
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;&gt;&gt;&gt;<i> docktesters mailing list
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;&gt;<i>
+</I>&gt;&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170314/4b65ff9b/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170314/4b65ff9b/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000259.html">[DOCKTESTERS] Thanks!
+</A></li>
+	<LI>Next message: <A HREF="000261.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#260">[ date ]</a>
+              <a href="thread.html#260">[ thread ]</a>
+              <a href="subject.html#260">[ subject ]</a>
+              <a href="author.html#260">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Sanger validation (DO52140) repeated:	Same	discrepancies
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20validation%20%28DO52140%29%20repeated%3A%0A%09Same%09discrepancies&In-Reply-To=%3Ced1ea3bca6b1437d8ab16953296e8123%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000215.html">
+   <LINK REL="Next"  HREF="000218.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Sanger validation (DO52140) repeated:	Same	discrepancies</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20validation%20%28DO52140%29%20repeated%3A%0A%09Same%09discrepancies&In-Reply-To=%3Ced1ea3bca6b1437d8ab16953296e8123%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Sanger validation (DO52140) repeated:	Same	discrepancies">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Fri Jan 13 13:36:02 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000215.html">[DOCKTESTERS] Sanger validation (DO52140) repeated: Same	discrepancies
+</A></li>
+        <LI>Next message: <A HREF="000218.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and	DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#217">[ date ]</a>
+              <a href="thread.html#217">[ thread ]</a>
+              <a href="subject.html#217">[ subject ]</a>
+              <a href="author.html#217">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+
+FYI I've also added Jonas's results from January 10th to <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+
+(Not sure if Jonas can see this page)
+
+
+________________________________
+From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> &lt;docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&gt; on behalf of Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+Sent: January 13, 2017 11:37 AM
+To: Francis Ouellette
+Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+Subject: Re: [DOCKTESTERS] Sanger validation (DO52140) repeated: Same discrepancies
+
+Hi all,
+
+I've completed a second run of the Sanger pipeline for donor DO52140 and have obtained the same discrepancies as detailed below.
+
+Jonas from Crick has agreed to repeat one of the donors I have ran in his infrastructure to see if the discrepancies are dependent on the setup.
+
+Best regards
+
+Miguel
+
+On Tue, Dec 27, 2016 at 7:16 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+Francis,
+
+This was on a new donor. I decided to get a second donor  before repeating the first. The first  donor also had differences in SNVs, but no differences in CNV.
+
+Since the discrepancies for the first donor were not deemed too critical, I've actually moved onto trying the bwa-mem workflow, which I couldn't make to run on test data and so I'm trying on real data.  Should I instead try a second run on a donor to test if the differences are the same?
+
+Best
+
+Miguel
+
+On Dec 27, 2016 5:30 PM, &quot;Francis Ouellette&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt;&gt; wrote:
+
+Are the differences the same or different then the last time you ran this?
+Was this Sanger workflow run on the same infrastructure as the last
+one you did?
+
+@bffo
+
+
+
+On Dec 27, 2016, at 08:24, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+
+Dear all,
+
+The test for the Sanger workflow on the second sample is complete. The results are posted below.
+
+In brief, somatic indels and SV are a 100% match (803986 and 6 respectively matches) there are small differences in somatic.snv.mnv (+5 -7 with 87234 matches) and somatic.cnv (-2 and 36 matches)
+
+Best regards
+
+Report
+~~~~~~
+
+Comparison of somatic.cnv for DO52140 using Sanger
+---
+Common: 36
+Extra: 0
+Missing: 2
+    - Example: 10:11767915:T:&lt;CNV&gt;,10:11779907:G:&lt;CNV&gt;
+
+
+Comparison of somatic.indel for DO52140 using Sanger
+---
+Common: 803986
+Extra: 0
+Missing: 0
+
+
+Comparison of somatic.snv.mnv for DO52140 using Sanger
+---
+Common: 87234
+Extra: 5
+    - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+Missing: 7
+    - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+
+
+Comparison of somatic.sv&lt;<A HREF="http://somatic.sv/">http://somatic.sv/</A>&gt; for DO52140 using Sanger
+---
+Common: 6
+Extra: 0
+Missing: 0
+
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170113/ea34c6ca/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170113/ea34c6ca/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000215.html">[DOCKTESTERS] Sanger validation (DO52140) repeated: Same	discrepancies
+</A></li>
+	<LI>Next message: <A HREF="000218.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and	DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#217">[ date ]</a>
+              <a href="thread.html#217">[ thread ]</a>
+              <a href="subject.html#217">[ subject ]</a>
+              <a href="author.html#217">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

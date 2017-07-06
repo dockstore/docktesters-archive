@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20pipeline%20taking%20a%20very%20long%20on%20DO50311%20and%0A%20issue%20with%20BWA-Mem&In-Reply-To=%3CCA%2Bdx8mZGveBuYwZeND8FTewP3OZHXvu6KqLuW_QPem2xzUC_7w%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000165.html">
+   <LINK REL="Next"  HREF="000167.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Sanger%20pipeline%20taking%20a%20very%20long%20on%20DO50311%20and%0A%20issue%20with%20BWA-Mem&In-Reply-To=%3CCA%2Bdx8mZGveBuYwZeND8FTewP3OZHXvu6KqLuW_QPem2xzUC_7w%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Tue Nov 29 06:08:10 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000165.html">[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+</A></li>
+        <LI>Next message: <A HREF="000167.html">[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#166">[ date ]</a>
+              <a href="thread.html#166">[ thread ]</a>
+              <a href="subject.html#166">[ subject ]</a>
+              <a href="author.html#166">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Excuse me,
+
+I meant:
+
+(...)
+I skipped all the stuff about the SAM header, which I didn't fully
+understood but it seemed like housekeeping stuff that *shouldn't* affect
+the variant calling and didn't quite apply to this test data. Could that be
+the issue?
+(...)
+
+On Tue, Nov 29, 2016 at 12:06 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+wrote:
+
+&gt;<i> Hi all,
+</I>&gt;<i>
+</I>&gt;<i> I just wanted to give a partial update on my side and ask about two
+</I>&gt;<i> issues.
+</I>&gt;<i>
+</I>&gt;<i> 1) I've ran BAW-Mem on the test data HCC1143 and the process has failed,
+</I>&gt;<i> should it work for that dataset or is there a reason it shouldn't. About
+</I>&gt;<i> unaligning the BAM files I've checked the instructions on
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=">https://wiki.oicr.on.ca/pages/viewpage.action?spaceKey=</A>
+</I>&gt;<i> PANCANCER&amp;title=Preparing+paired-end+data+for+upload
+</I>&gt;<i>
+</I>&gt;<i> and I ended up just doing
+</I>&gt;<i>
+</I>&gt;<i> cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY  &gt;
+</I>&gt;<i> cleaned.bam
+</I>&gt;<i>
+</I>&gt;<i> I skipped all the stuff about the SAM header, which I didn't fully
+</I>&gt;<i> understood but it seemed like housekeeping stuff that should affect the
+</I>&gt;<i> variant calling and didn't quite apply to this test data. Could that be
+</I>&gt;<i> the issue?
+</I>&gt;<i>
+</I>&gt;<i> I tried to run it on a normal donor but it turns out I had first to finish
+</I>&gt;<i> the test on Sanger. When I do I can save the container, thanks to Denis tip
+</I>&gt;<i> on a previous thread, and help debug it if need be. I'm sorry that I cannot
+</I>&gt;<i> give more details on the error but at the time I could not find the log
+</I>&gt;<i> files that where supposed to be there; when the next issue is resolved I'll
+</I>&gt;<i> come back to this.
+</I>&gt;<i>
+</I>&gt;<i> 2) I'm running Sanger on donor DO50311. I put the job on November 22,
+</I>&gt;<i> about a week ago, and it is still running. It seems to be doing caveman for
+</I>&gt;<i> the last few days. It going full throttle using 100% of the CPU and with
+</I>&gt;<i> running jobs not older than 15 hours, so I guess its not stuck or anything.
+</I>&gt;<i> But just in case, is taking this long normal?
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/57ac8184/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161129/57ac8184/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000165.html">[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+</A></li>
+	<LI>Next message: <A HREF="000167.html">[DOCKTESTERS] Sanger pipeline taking a very long on DO50311 and issue with BWA-Mem
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#166">[ date ]</a>
+              <a href="thread.html#166">[ thread ]</a>
+              <a href="subject.html#166">[ subject ]</a>
+              <a href="author.html#166">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

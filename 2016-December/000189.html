@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3CB2B5D5EF-F0A6-4956-9B8B-E32BF98754DE%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000188.html">
+   <LINK REL="Next"  HREF="000190.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)</H1>
+    <B>Brian O'Connor</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3CB2B5D5EF-F0A6-4956-9B8B-E32BF98754DE%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)">Brian.OConnor at oicr.on.ca
+       </A><BR>
+    <I>Mon Dec 12 09:12:48 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000188.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+        <LI>Next message: <A HREF="000190.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger	pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#189">[ date ]</a>
+              <a href="thread.html#189">[ thread ]</a>
+              <a href="subject.html#189">[ subject ]</a>
+              <a href="author.html#189">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Francis,
+
+I agree with you, I think Miguel is showing what this group needs to show, that someone else can run the tools from Dockstore, have that be successful, and the results are largely in agreement with previous results (or duplicate runs).  I think maybe a statement about the possibility of stochastic results in the README for each tool would be sufficient.  This could be something that Keiran can craft/comment for Sanger&#8217;s pipeline since he&#8217;s in the best position for this one.
+
+Brian
+
+&gt;<i> On Dec 12, 2016, at 7:38 AM, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;<i> I know I'm not suppose to be there (and I'm not :-), but one slippery slope I want this dockerstore testing working group to be wary about (and Christina, this is really directed at you, chairing the discussion today) is that the request from Lincoln for this to reproduce what we are doing is fine, but I don't think it is this working group's task to reproduce and explain all of the discrepancies we see. I don't think we ever saw that kind of data from the people that ran the original workflow. 
+</I>&gt;<i> 
+</I>&gt;<i> If this group can ascertain that a dock store container basically works, I think we need to call that test a success, and move on to the next one. What Miguel is suggesting/asking below is very good, but I could see this becoming into a very slippery slope, which I would advise us against slipping down.
+</I>&gt;<i> 
+</I>&gt;<i> Anyway, going off to my day off,
+</I>&gt;<i> 
+</I>&gt;<i> Have a ghre at discussion,
+</I>&gt;<i> 
+</I>&gt;<i> Francis
+</I>&gt;<i> 
+</I>&gt;<i> -- 
+</I>&gt;<i> B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A> 
+</I>&gt;<i> 
+</I>&gt;<i> On Dec 12, 2016, at 05:44, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;<i> 
+</I>&gt;&gt;<i> Dear all,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> I was wondering if someone here was acquainted with the Sanger workflow and could help explain these discrepancies. I've skimmed through the code, and it seems like uses EM but I didn't find anything random in it, such as during initialization, which was my initial guess. The other thing I though is that when it splits the work for parallel processing it might choose a different number of splits to accommodate the number of CPUs, and that this might affect the calculations.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Is there someone here that could help shed some light? As soon as some other tests finish I'll be running the process again, but since it takes so long perhaps a little insight would help.
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Best regards
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Miguel
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> On Mon, Dec 5, 2016 at 1:41 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt; wrote:
+</I>&gt;&gt;<i> Dear all,
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> The Sanger pipeline completed, after about 2 weeks of computing, for donor DO50311
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> The results are the following:
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Comparison for DO50311 using Sanger
+</I>&gt;&gt;<i> ---
+</I>&gt;&gt;<i> Common: 156299
+</I>&gt;&gt;<i> Extra: 1
+</I>&gt;&gt;<i>     - Example: Y:58885197:G
+</I>&gt;&gt;<i> Missing: 14
+</I>&gt;&gt;<i>     - Example: 1:102887902:T,1:143165228:G,16:87047601:C
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> The donor results for DKFZ yielded
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Comparison for DO50311 using DKFZ
+</I>&gt;&gt;<i> ---
+</I>&gt;&gt;<i> Common: 51087
+</I>&gt;&gt;<i> Extra: 0
+</I>&gt;&gt;<i> Missing: 0
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> In both cases I'm comparing agains the VCF file downloaded from GNOS. I've updated the information here
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Best regards
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> Miguel
+</I>&gt;&gt;<i> 
+</I>&gt;&gt;<i> 
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000188.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+	<LI>Next message: <A HREF="000190.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger	pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#189">[ date ]</a>
+              <a href="thread.html#189">[ thread ]</a>
+              <a href="subject.html#189">[ subject ]</a>
+              <a href="author.html#189">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

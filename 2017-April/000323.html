@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] sv-merge parameter questions
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20sv-merge%20parameter%20questions&In-Reply-To=%3CCA%2Bdx8mYSW4qOeYuorA3Yws_%2Ba9thGeQzwhrKOTgYGWKkJ8mJXg%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000322.html">
+   <LINK REL="Next"  HREF="000324.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] sv-merge parameter questions</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20sv-merge%20parameter%20questions&In-Reply-To=%3CCA%2Bdx8mYSW4qOeYuorA3Yws_%2Ba9thGeQzwhrKOTgYGWKkJ8mJXg%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] sv-merge parameter questions">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Mon Apr 17 10:20:17 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000322.html">[DOCKTESTERS] sv-merge parameter questions
+</A></li>
+        <LI>Next message: <A HREF="000324.html">[DOCKTESTERS] Problems with Dockstore
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#323">[ date ]</a>
+              <a href="thread.html#323">[ thread ]</a>
+              <a href="subject.html#323">[ subject ]</a>
+              <a href="author.html#323">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Thanks Denis for putting us in contact.
+
+If it helps here is a list of the files I find in the ICGC DCC for a
+particular donor (in format $type.$specimen.$filename)
+
+CNSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.dkfz-copyNumberEstimation_1-0-189.20150817.somatic.cnv.vcf.gz
+CNSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.svcp_1-0-5.20150701.somatic.cnv.vcf.gz
+SGV.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.broad-snowman-10.20151223.germline.indel.vcf.gz
+SGV.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.dkfz-indelCalling_1-0-132-1.20150817.germline.indel.vcf.gz
+SGV.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.dkfz-snvCalling_1-0-132-1.20150817.germline.snv_mnv.vcf.gz
+SSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.broad-mutect-v3.20160222.somatic.snv_mnv.vcf.gz
+SSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.broad-snowman-10.20151223.somatic.indel.vcf.gz
+SSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.consensus.20160830.somatic.snv_mnv.vcf.gz
+SSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.dkfz-indelCalling_1-0-132-1.20150817.somatic.indel.vcf.gz
+SSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.MUSE_1-0rc-b391201-vcf.20151223.somatic.snv_mnv.vcf.gz
+SSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.svcp_1-0-5.20150701.somatic.indel.vcf.gz
+SSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.svcp_1-0-5.20150701.somatic.snv_mnv.vcf.gz
+StGV.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.broad-snowman-10.20151223.germline.sv.vcf.gz
+StGV.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.embl-delly_1-3-0-preFilter.20150817.germline.sv.vcf.gz
+StSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.broad-dRanger-10.20151223.somatic.sv.vcf.gz
+StSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.broad-dRanger_snowman-10.20151223.somatic.sv.vcf.gz
+StSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.broad-snowman-10.20151223.somatic.sv.vcf.gz
+StSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.embl-delly_1-3-0-preFilter.20150817.somatic.sv.vcf.gz
+StSM.Primary tumour - solid
+tissue.2ea2294d-fab9-43ae-a222-370487495b06.svfix2_4-0-12.20160208.somatic.sv.vcf.gz
+
+
+On Mon, Apr 17, 2017 at 3:57 PM, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Miguel is currently testing out the sv-merge workflow  (
+</I>&gt;<i> <A HREF="https://bitbucket.org/weischenfeldt/pcawg_sv_merge">https://bitbucket.org/weischenfeldt/pcawg_sv_merge</A>) with real data (as
+</I>&gt;<i> opposed to the testing data in <A HREF="https://bitbucket.org/">https://bitbucket.org/</A>
+</I>&gt;<i> weischenfeldt/pcawg_sv_merge/src/ced14ae88a2fbfb7274eb71834121d
+</I>&gt;<i> ca0de81236/Dockstore.json?at=docker&amp;fileviewer=file-view-default )
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> I believe that he has some questions about where to find the vcf parameter
+</I>&gt;<i> files on either the icgc-portal or on GNOS for a particular donor. Could
+</I>&gt;<i> either of you shed some light on this? Thanks!
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *Denis Yuen*
+</I>&gt;<i> Senior Software Developer
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *Ontario* *Institute* *for* *Cancer* *Research*
+</I>&gt;<i> MaRS Centre
+</I>&gt;<i> 661 University Avenue
+</I>&gt;<i> Suite 510
+</I>&gt;<i> Toronto, Ontario, Canada M5G 0A3
+</I>&gt;<i>
+</I>&gt;<i> Toll-free: 1-866-678-6427
+</I>&gt;<i> Twitter: @OICR_news
+</I>&gt;<i> *www.oicr.on.ca &lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;*
+</I>&gt;<i>
+</I>&gt;<i> This message and any attachments may contain confidential and/or
+</I>&gt;<i> privileged information for the sole use of the intended recipient. Any
+</I>&gt;<i> review or distribution by anyone other than the person for whom it was
+</I>&gt;<i> originally intended is strictly prohibited. If you have received this
+</I>&gt;<i> message in error, please contact the sender and delete all copies.
+</I>&gt;<i> Opinions, conclusions or other information contained in this message may
+</I>&gt;<i> not be that of the organization.
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170417/ede1a5a3/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170417/ede1a5a3/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000322.html">[DOCKTESTERS] sv-merge parameter questions
+</A></li>
+	<LI>Next message: <A HREF="000324.html">[DOCKTESTERS] Problems with Dockstore
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#323">[ date ]</a>
+              <a href="thread.html#323">[ thread ]</a>
+              <a href="subject.html#323">[ subject ]</a>
+              <a href="author.html#323">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Thanks!
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Thanks%21&In-Reply-To=%3CCA%2Bdx8mYVAGdnT%2BcRxVesMMfHswQ4nrKMv1xMwhiNKe-tG0om3Q%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000247.html">
+   <LINK REL="Next"  HREF="000249.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Thanks!</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Thanks%21&In-Reply-To=%3CCA%2Bdx8mYVAGdnT%2BcRxVesMMfHswQ4nrKMv1xMwhiNKe-tG0om3Q%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Thanks!">mikisvaz at gmail.com
+       </A><BR>
+    <I>Mon Mar 13 07:53:03 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000247.html">[DOCKTESTERS] Thanks!
+</A></li>
+        <LI>Next message: <A HREF="000249.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#248">[ date ]</a>
+              <a href="thread.html#248">[ thread ]</a>
+              <a href="subject.html#248">[ subject ]</a>
+              <a href="author.html#248">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi George,
+
+The Sanger workflow is very lengthy, it takes about two weeks in my tests.
+
+About correctness, my scripts also cover that part, if you are not using
+them they might still help you to clarify how we do it. The idea is to take
+each of the output files produced: SNV_MNV, Indel, SV, and CNV, for both
+germline and somatic and compare it with the result uploaded to GNOS (not
+all pipelines produce all files). This is the relevant part in the
+run_batch.sh script:
+
+<A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/</A>
+bin/run_batch.sh#L42-L46
+
+The bin/compare_result_type.sh script will take care of downloading the
+correct file from GNOS and running the comparison. The comparison itself is
+simple since all files are VCFs, it consists in taking out the variants in
+terms of chromosome, position, reference and alternative allele and
+measuring the overlaps.
+
+<A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_result_type.sh">https://github.com/mikisvaz/PCAWG-Docker-Test/blob/master/bin/compare_result_type.sh</A>
+
+About which donors to test, DO52140 is one Jonas and I have both tested and
+could be interesting to get a third opinion. Also, any other donor could be
+interesting to see if something new comes up. I'm not sure which options is
+best.
+
+Miguel
+
+
+
+
+On Mon, Mar 13, 2017 at 5:12 AM, George Mihaiescu &lt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt; wrote:
+
+&gt;<i> Hi,
+</I>&gt;<i>
+</I>&gt;<i> I've started Sanger on DO50398 and it's been running for more than 24
+</I>&gt;<i> hours, currently at &quot;Workflow step succeeded: s58_bbAllele_merge_59&quot;
+</I>&gt;<i>
+</I>&gt;<i> I just started a second run on a different VM on same donor, just to
+</I>&gt;<i> compare run times.
+</I>&gt;<i> The VM used has 8 cores, 48 GB of RAM and 1.1 TB disk and I'll send some
+</I>&gt;<i> monitoring graphs when it finishes the workflow, but I have no idea how to
+</I>&gt;<i> check its correctness.
+</I>&gt;<i>
+</I>&gt;<i> Give me a list of donors and what workflows you want me to run and I'll
+</I>&gt;<i> try to schedule them tomorrow.
+</I>&gt;<i>
+</I>&gt;<i> George
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> From: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;
+</I>&gt;<i> Date: Sunday, March 12, 2017 at 10:45 PM
+</I>&gt;<i> To: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;, George
+</I>&gt;<i> Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;<i> Cc: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;, Denis Yuen &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;<i>
+</I>&gt;<i> Thanks Miguel and Jonas for your help here!
+</I>&gt;<i>
+</I>&gt;<i> Do you have any update on the latest testing? Please feel free updating
+</I>&gt;<i> the wiki with any update: <A HREF="https://wiki.oicr.on.">https://wiki.oicr.on.</A>
+</I>&gt;<i> ca/display/PANCANCER/2017-03-13+PCAWG-TECH+Teleconference
+</I>&gt;<i>
+</I>&gt;<i> Regards,
+</I>&gt;<i> Junjun
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> From: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;
+</I>&gt;<i> Date: Saturday, March 11, 2017 at 7:15 PM
+</I>&gt;<i> To: George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;<i> Cc: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;, Junjun Zhang &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">junjun.zhang at oicr.on.ca</A>&gt;, Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;, &quot;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;<i>
+</I>&gt;<i> Hi George,
+</I>&gt;<i>
+</I>&gt;<i> Yup, I've been running the PCAWG dockers mainly using Miguel's set of
+</I>&gt;<i> scripts.
+</I>&gt;<i> Give them a go and if you run into issues, just let us know!
+</I>&gt;<i>
+</I>&gt;<i> Cheers,
+</I>&gt;<i> Jonas
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> On 11 Mar 2017, at 17:00, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;<i> Sure, I'll give it a try and report later.
+</I>&gt;<i>
+</I>&gt;<i> Thank you,
+</I>&gt;<i>
+</I>&gt;<i> *George Mihaiescu*
+</I>&gt;<i> Senior Cloud Architect
+</I>&gt;<i>
+</I>&gt;<i> *Ontario Institute for Cancer Research*
+</I>&gt;<i> MaRS Centre
+</I>&gt;<i> 661 University Avenue
+</I>&gt;<i> Suite 510
+</I>&gt;<i> Toronto, Ontario
+</I>&gt;<i> Canada M5G 0A3
+</I>&gt;<i>
+</I>&gt;<i> Email: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>
+</I>&gt;<i> Toll-free: 1-866-678-6427
+</I>&gt;<i> Twitter: @OICR_news
+</I>&gt;<i>
+</I>&gt;<i> www.oicr.on.ca
+</I>&gt;<i>
+</I>&gt;<i> This message and any attachments may contain confidential and/or
+</I>&gt;<i> privileged information for the sole use of the intended recipient. Any
+</I>&gt;<i> review or distribution by anyone other than the person for whom it was
+</I>&gt;<i> originally intended is strictly prohibited. If you have received this
+</I>&gt;<i> message in error, please contact the sender and delete all copies.
+</I>&gt;<i> Opinions, conclusions or other information contained in this message may
+</I>&gt;<i> not be that of the organization.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+</I>&gt;<i> Date: Saturday, March 11, 2017 at 10:57 AM
+</I>&gt;<i> To: Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;
+</I>&gt;<i> Cc: Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;, Jonas Demeulemeester &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>&gt;, George Mihaiescu &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;<i> Subject: Re: [DOCKTESTERS] Thanks!
+</I>&gt;<i>
+</I>&gt;<i> Hi Junjun,
+</I>&gt;<i>
+</I>&gt;<i> I think Jonas has been using my scripts to run some of the tests, maybe
+</I>&gt;<i> George could try them as well, it should be very easy for him to try the
+</I>&gt;<i> Sanger, Delly+DKFZ, BWA-Mem, and the BiasFilter.
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://github.com/mikisvaz/PCAWG-Docker-Test">https://github.com/mikisvaz/PCAWG-Docker-Test</A>
+</I>&gt;<i>
+</I>&gt;<i> He would just need to update the tokens for DACO access and the scripts
+</I>&gt;<i> will take care of downloading the BAM files, running the workflows and
+</I>&gt;<i> evaluating the result.
+</I>&gt;<i>
+</I>&gt;<i> The documentation there is reasonably updated, but if this sounds good
+</I>&gt;<i> then perhaps he could contact me and I could walk him through the details.
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i> On Fri, Mar 10, 2017 at 9:51 PM, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;
+</I>&gt;<i> wrote:
+</I>&gt;<i>
+</I>&gt;&gt;<i> Dear Docktesters,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> George Mihaiescu, cloud architect, of the Collaboratory at OICR plans to
+</I>&gt;&gt;<i> run some bioinformatics workflows to test Collab environment.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Just thought this is a good opportunity to use as extra help for testing
+</I>&gt;&gt;<i> out the PCAWG dockerized workflows.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Miguel, Denis and others, what workflows / datasets do you think would be
+</I>&gt;&gt;<i> good for George to run?
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Thanks,
+</I>&gt;&gt;<i> Junjun
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> From: &lt;docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>&gt; on
+</I>&gt;&gt;<i> behalf of Denis Yuen &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&gt;
+</I>&gt;&gt;<i> Date: Wednesday, March 1, 2017 at 10:26 AM
+</I>&gt;&gt;<i> To: &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+</I>&gt;&gt;<i> Subject: [DOCKTESTERS] Thanks!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Hi,
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Just wanted to say thanks to Miguel and Jonas for keeping the workflow
+</I>&gt;&gt;<i> testing data page up-to-date.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> As we work on new versions or debugging, it is invaluable to know what
+</I>&gt;&gt;<i> versions of the workflows have worked outside OICR, thanks!
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> *Denis Yuen*
+</I>&gt;&gt;<i> Senior Software Developer
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> *Ontario**Institute**for**Cancer**Research*
+</I>&gt;&gt;<i> MaRSCentre
+</I>&gt;&gt;<i> 661 University Avenue
+</I>&gt;&gt;<i> Suite510
+</I>&gt;&gt;<i> Toronto, Ontario,Canada M5G0A3
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Toll-free: 1-866-678-6427
+</I>&gt;&gt;<i> Twitter: @OICR_news
+</I>&gt;&gt;<i> *www.oicr.on.ca &lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;*
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> This message and any attachments may contain confidential and/or
+</I>&gt;&gt;<i> privileged information for the sole use of the intended recipient. Any
+</I>&gt;&gt;<i> review or distribution by anyone other than the person for whom it was
+</I>&gt;&gt;<i> originally intended is strictly prohibited. If you have received this
+</I>&gt;&gt;<i> message in error, please contact the sender and delete all copies.
+</I>&gt;&gt;<i> Opinions, conclusions or other information contained in this message may
+</I>&gt;&gt;<i> not be that of the organization.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> _______________________________________________
+</I>&gt;&gt;<i> docktesters mailing list
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>
+</I>&gt;<i> The Francis Crick Institute Limited is a registered charity in England and
+</I>&gt;<i> Wales no. 1140062 and a company registered in England and Wales no.
+</I>&gt;<i> 06885462, with its registered office at 1 Midland Road London NW1 1AT
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170313/1b5d83b9/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170313/1b5d83b9/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000247.html">[DOCKTESTERS] Thanks!
+</A></li>
+	<LI>Next message: <A HREF="000249.html">[DOCKTESTERS] Thanks!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#248">[ date ]</a>
+              <a href="thread.html#248">[ thread ]</a>
+              <a href="subject.html#248">[ subject ]</a>
+              <a href="author.html#248">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

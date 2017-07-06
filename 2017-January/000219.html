@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Summary%20of%20validation%20of%20Dockers%20Sanger%20and%0A%20DKFZ%28%2BDelly%29&In-Reply-To=%3C25ff7f43-716f-0022-f1ab-c6317a2290cf%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000218.html">
+   <LINK REL="Next"  HREF="000220.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)</H1>
+    <B>Christina Yung</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Summary%20of%20validation%20of%20Dockers%20Sanger%20and%0A%20DKFZ%28%2BDelly%29&In-Reply-To=%3C25ff7f43-716f-0022-f1ab-c6317a2290cf%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)">christina.yung at oicr.on.ca
+       </A><BR>
+    <I>Mon Jan 16 09:45:25 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000218.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and	DKFZ(+Delly)
+</A></li>
+        <LI>Next message: <A HREF="000220.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#219">[ date ]</a>
+              <a href="thread.html#219">[ thread ]</a>
+              <a href="subject.html#219">[ subject ]</a>
+              <a href="author.html#219">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Folks,
+
+Here are the instructions for preparing the data as input to BWA-Mem.  
+If you use a different protocol, please share.
+
+<A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload">https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload</A>
+
+Christina
+
+
+On 17-01-16 09:24 AM, Miguel Vazquez wrote:
+&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> Let me summarize the status of the testing for Sanger and DKFZ. The 
+</I>&gt;<i> validation has been run for two donors for each workflow: DO50311 DO52140
+</I>&gt;<i>
+</I>&gt;<i> Sanger:
+</I>&gt;<i> ----------
+</I>&gt;<i>
+</I>&gt;<i> Sanger call only somatic variants. The results are *identical for 
+</I>&gt;<i> Indels and SVs* but *almost identical for SNV.MNV and CNV*. The 
+</I>&gt;<i> discrepancies are reproducible (on the same machine at least), i.e. 
+</I>&gt;<i> the same are found after running the workflow a second time.
+</I>&gt;<i>
+</I>&gt;<i> DKFZ:
+</I>&gt;<i> ---------
+</I>&gt;<i> DKFZ cals somatic and germline variants, except germline CNVs. For 
+</I>&gt;<i> both germline and somatic variants the results are *identical for 
+</I>&gt;<i> SNV.MNV and Indels* but with *large discrepancies for SV and CNV*.
+</I>&gt;<i>
+</I>&gt;<i> Kortine Kleinheinz and Joachim Weischenfeldt are in the process of 
+</I>&gt;<i> investigating this issue I believe.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> BWA-Mem failed for me and has also failed for Denis Yuen and Jonas 
+</I>&gt;<i> Demeulemeester. Denis I believe is investigating this problem further. 
+</I>&gt;<i> I haven't had the chance to investigate this much myself.
+</I>&gt;<i>
+</I>&gt;<i> Best
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> ---------------------
+</I>&gt;<i> RESULTS
+</I>&gt;<i> ---------------------
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-253-35-14</A>:~/DockerTest-Miguel$ cat results.txt
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 51087
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 26469
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv &lt;<A HREF="http://somatic.sv">http://somatic.sv</A>&gt; for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 231
+</I>&gt;<i> Extra: 44
+</I>&gt;<i>     - Example: 10:20596800:N:&lt;TRA&gt;,10:56066821:N:&lt;TRA&gt;,11:16776092:N:&lt;TRA&gt;
+</I>&gt;<i> Missing: 48
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:119704959:N:&lt;INV&gt;,10:13116322:N:&lt;TRA&gt;,10:47063485:N:&lt;TRA&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 731
+</I>&gt;<i> Extra: 213
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:132510034:N:&lt;DEL&gt;,10:20596801:N:&lt;NEUTRAL&gt;,10:47674883:N:&lt;NEUTRAL&gt;
+</I>&gt;<i> Missing: 190
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:100891940:N:&lt;NEUTRAL&gt;,10:104975905:N:&lt;NEUTRAL&gt;,10:119704960:N:&lt;NEUTRAL&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.snv.mnv for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 3850992
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.indel for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 709060
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.sv &lt;<A HREF="http://germline.sv">http://germline.sv</A>&gt; for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 1393
+</I>&gt;<i> Extra: 231
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:134319313:N:&lt;DEL&gt;,10:134948976:N:&lt;DEL&gt;,10:19996638:N:&lt;DEL&gt;
+</I>&gt;<i> Missing: 615
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:101851839:N:&lt;TRA&gt;,10:101851884:N:&lt;TRA&gt;,10:10745225:N:&lt;DUP&gt;
+</I>&gt;<i>
+</I>&gt;<i> File not found 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO50311//output//DO50311.germline.cnv.vcf.gz
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 37160
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 19347
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv &lt;<A HREF="http://somatic.sv">http://somatic.sv</A>&gt; for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 72
+</I>&gt;<i> Extra: 23
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:132840774:N:&lt;DEL&gt;,11:38252019:N:&lt;TRA&gt;,11:47700673:N:&lt;TRA&gt;
+</I>&gt;<i> Missing: 61
+</I>&gt;<i>     - Example: 10:134749140:N:&lt;DEL&gt;,11:179191:N:&lt;TRA&gt;,11:38252005:N:&lt;TRA&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 275
+</I>&gt;<i> Extra: 94
+</I>&gt;<i>     - Example: 1:106505931:N:&lt;LOH&gt;,1:109068899:N:&lt;DEL&gt;,1:109359995:N:&lt;DEL&gt;
+</I>&gt;<i> Missing: 286
+</I>&gt;<i>     - Example: 10:88653561:N:&lt;LOH&gt;,11:179192:N:&lt;LOH&gt;,11:38252006:N:&lt;LOH&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.snv.mnv for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 3833896
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.indel for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 706572
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of germline.sv &lt;<A HREF="http://germline.sv">http://germline.sv</A>&gt; for DO52140 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 1108
+</I>&gt;<i> Extra: 1116
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:102158308:N:&lt;DEL&gt;,10:104645247:N:&lt;DEL&gt;,10:105097522:N:&lt;DEL&gt;
+</I>&gt;<i> Missing: 2908
+</I>&gt;<i>     - Example: 
+</I>&gt;<i> 10:100107032:N:&lt;TRA&gt;,10:100107151:N:&lt;TRA&gt;,10:102158345:N:&lt;DEL&gt;
+</I>&gt;<i>
+</I>&gt;<i> File not found 
+</I>&gt;<i> /mnt/1TB/work/DockerTest-Miguel/tests/DKFZ/DO52140//output//DO52140.germline.cnv.vcf.gz
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 156299
+</I>&gt;<i> Extra: 1
+</I>&gt;<i>     - Example: Y:58885197:A:G
+</I>&gt;<i> Missing: 14
+</I>&gt;<i>     - Example: 1:102887902:A:T,1:143165228:C:G,16:87047601:A:C
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 812487
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv &lt;<A HREF="http://somatic.sv">http://somatic.sv</A>&gt; for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 260
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO50311 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 138
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.snv.mnv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 87234
+</I>&gt;<i> Extra: 5
+</I>&gt;<i>     - Example: 1:23719098:A:G,12:43715930:T:A,20:4058335:T:A
+</I>&gt;<i> Missing: 7
+</I>&gt;<i>     - Example: 10:6881937:A:T,1:148579866:A:G,11:9271589:T:A
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.indel for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 803986
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.sv &lt;<A HREF="http://somatic.sv">http://somatic.sv</A>&gt; for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 6
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Comparison of somatic.cnv for DO52140 using Sanger
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 36
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 2
+</I>&gt;<i>     - Example: 10:11767915:T:&lt;CNV&gt;,10:11779907:G:&lt;CNV&gt;
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> This body part will be downloaded on demand.
+</I>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170116/79d87a62/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170116/79d87a62/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000218.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and	DKFZ(+Delly)
+</A></li>
+	<LI>Next message: <A HREF="000220.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#219">[ date ]</a>
+              <a href="thread.html#219">[ thread ]</a>
+              <a href="subject.html#219">[ subject ]</a>
+              <a href="author.html#219">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

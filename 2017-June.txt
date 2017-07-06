@@ -1,0 +1,40 @@
+From Denis.Yuen at oicr.on.ca  Fri Jun 16 21:04:57 2017
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Sat, 17 Jun 2017 01:04:57 +0000
+Subject: [DOCKTESTERS] Outside access
+Message-ID: <3033d21ff2a54d5aa1ee7ef961c2ca35@oicr.on.ca>
+
+Hi,
+
+
+We've had a few questions about the various PCAWG workflows and there is content here in the Docktesters archive that would be useful. However, to my surprise, it doesn't seem like the archives (linked from https://lists.icgc.org/mailman/listinfo/docktesters ) are actually browse-able from outside OICR. So I have a few follow-up questions.
+
+
+1) Is this correct or is there actually a simple way of viewing the mailing list archives outside OICR?
+
+2) Would people have any objection to exporting the content or somehow making the archives publicly available (maybe after the PCAWG-TECH paper is out?)
+
+3) Would it make sense for this group to evolve to something more publicly facing like Google Groups in the future?
+
+
+Thoughts?
+
+
+Denis Yuen
+Senior Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca<http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170617/46b3df35/attachment.html>
+

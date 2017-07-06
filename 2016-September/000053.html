@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Amazon account
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Amazon%20account&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C099E23C%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000052.html">
+   <LINK REL="Next"  HREF="000054.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Amazon account</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Amazon%20account&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C099E23C%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Amazon account">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Mon Sep 19 15:39:57 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000052.html">[DOCKTESTERS] Amazon account
+</A></li>
+        <LI>Next message: <A HREF="000054.html">[DOCKTESTERS] Amazon account
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#53">[ date ]</a>
+              <a href="thread.html#53">[ thread ]</a>
+              <a href="subject.html#53">[ subject ]</a>
+              <a href="author.html#53">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+Quoting myself from an email since it is applicable here too
+
+Hi,
+Sounds reasonable, the hardware requirements listed at <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker#hardware-requirements&lt;https://webmail.oicr.on.ca/owa/redir.aspx?REF=AHc0FxEAXN6gXKhVo_zS5s6AMhjsLQG2vVo10s6TvKN-ybixw-DTCAFodHRwczovL2dpdGh1Yi5jb20vSUNHQy1UQ0dBLVBhbkNhbmNlci9DR1AtU29tYXRpYy1Eb2NrZXIjaGFyZHdhcmUtcmVxdWlyZW1lbnRz">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker#hardware-requirements&lt;https://webmail.oicr.on.ca/owa/redir.aspx?REF=AHc0FxEAXN6gXKhVo_zS5s6AMhjsLQG2vVo10s6TvKN-ybixw-DTCAFodHRwczovL2dpdGh1Yi5jb20vSUNHQy1UQ0dBLVBhbkNhbmNlci9DR1AtU29tYXRpYy1Eb2NrZXIjaGFyZHdhcmUtcmVxdWlyZW1lbnRz</A>&gt; match my recollection and a r3.4xlarge matches that handily in terms of RAM and CPU
+
+The only thing I would check would be to make sure that the working directory (where you run Dockstore) is in a large 1TB volume. The workflow should be able to overwhelm 320 GB if that's all you have, causing it to crash.
+
+When we were running for Pan-cancer, we sometimes used lvm to merge all ephemeral drives on an AWS instance into one larger drive.
+But for testing, it would probably be simpler just to use one large EBS volume.
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+________________________________
+From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>] on behalf of Miguel Vazquez [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>]
+Sent: September 19, 2016 3:26 PM
+To: Francis Ouellette
+Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>; Zhibin
+Subject: Re: [DOCKTESTERS] Amazon account
+
+Thanks Francis.
+
+BTW Brian and Junjun, I think I might not have enough disk space in the instance you got for me, gtdownload croaks:
+
+Error:  The system *might* run out of disk space before all downloads are complete, Downloading will continue until less than 1.00 GB is available.
+
+and does not seem to download anything.
+
+I took the liberty to make a directory in /mn/, which has 95GB avai. but it does not seem to change things. Excuse my ignorance, but how big are these files?
+
+Miguel
+
+On Mon, Sep 19, 2016 at 9:22 PM, Francis Ouellette &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francis at oicr.on.ca</A>&lt;redir.aspx?REF=xlwMOFd8iSNLBeVjWs5mazhdi-FOtPd2TFV5aUdXawaSJ8fRw-DTCAFtYWlsdG86ZnJhbmNpc0BvaWNyLm9uLmNh&gt;&gt; wrote:
+Hi Miguel,
+
+I&#8217;m CCing docktester .. I think Junjun or Brian will be best to answer this &#8230;
+ I think a bit more RAM would be OK, so could do: m4.10xlarge (10 CPU and 160 GB RAM).
+
+Would that be good Brian?
+
+@bffo
+
+
+--
+B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette&lt;redir.aspx?REF=onkXrk-OoxUceppieiDdLCsFWPYf_Qt9I-5PG_DY2szsicnRw-DTCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.">http://oicr.on.ca/person/francis-ouellette&lt;redir.aspx?REF=onkXrk-OoxUceppieiDdLCsFWPYf_Qt9I-5PG_DY2szsicnRw-DTCAFodHRwOi8vb2ljci5vbi5jYS9wZXJzb24vZnJhbmNpcy1vdWVsbGV0dGU.</A>&gt;
+
+
+
+On Sep 19, 2016, at 3:09 PM, Zhibin &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">zhibin at gmail.com</A>&lt;redir.aspx?REF=VaJmwdzWJ4XpgKu753xQZSUG6mvLmv0xL_qrdlSbQJ7sicnRw-DTCAFtYWlsdG86emhpYmluQGdtYWlsLmNvbQ..&gt;&gt; wrote:
+
+Jo Miguel,
+
+I am not familiar with Sanger pipeline. You should launch instances based on the number of CPUs and memory you need.
+
+Best,
+
+Zhibin
+
+On Mon, Sep 19, 2016 at 3:05 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;redir.aspx?REF=v9sa9xQ5qAMq2yAnftJ1RqeX6Veg0cFEbCUi5T8D-irsicnRw-DTCAFtYWlsdG86bWlraXN2YXpAZ21haWwuY29t&gt;&gt; wrote:
+Hello again,
+
+What image will you suggest to run the Sanger pipeline? I'm not very used to AWS and I wouldn't want to burn through your credit accidentally. I was thinking of r3.4xlarge that has 16 cores, 122GB memmory and 1x320 (SSD), would that be a good choice?
+
+Best
+
+Miguel
+
+On Mon, Sep 19, 2016 at 8:42 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;redir.aspx?REF=v9sa9xQ5qAMq2yAnftJ1RqeX6Veg0cFEbCUi5T8D-irsicnRw-DTCAFtYWlsdG86bWlraXN2YXpAZ21haWwuY29t&gt;&gt; wrote:
+
+Thanks Zhibin
+
+Best regards
+
+Miguel
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20160919/57c73f49/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20160919/57c73f49/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000052.html">[DOCKTESTERS] Amazon account
+</A></li>
+	<LI>Next message: <A HREF="000054.html">[DOCKTESTERS] Amazon account
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#53">[ date ]</a>
+              <a href="thread.html#53">[ thread ]</a>
+              <a href="subject.html#53">[ subject ]</a>
+              <a href="author.html#53">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

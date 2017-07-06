@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Amazon account
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Amazon%20account&In-Reply-To=%3CCAFncXhfffBrJDFKavi4-x9K8hq8A7YJTkL5KK0OmWFgHs6EMUA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000055.html">
+   <LINK REL="Next"  HREF="000057.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Amazon account</H1>
+    <B>Oliver Hofmann</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Amazon%20account&In-Reply-To=%3CCAFncXhfffBrJDFKavi4-x9K8hq8A7YJTkL5KK0OmWFgHs6EMUA%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Amazon account">ohofmann72 at gmail.com
+       </A><BR>
+    <I>Tue Sep 20 09:44:28 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000055.html">[DOCKTESTERS] Amazon account
+</A></li>
+        <LI>Next message: <A HREF="000057.html">[DOCKTESTERS] Amazon account
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#56">[ date ]</a>
+              <a href="thread.html#56">[ thread ]</a>
+              <a href="subject.html#56">[ subject ]</a>
+              <a href="author.html#56">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I'll second that. A lot of this is specific to the ICGC samples as
+well (data access, etc.) whereas I expect many end users will want to
+just run this on their own WGS data.
+
+Oliver
+
+On 20 September 2016 at 09:43:02, Brian O'Connor
+(<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">brian.oconnor at oicr.on.ca</A>) wrote:
+&gt;<i> Hi Junjun,
+</I>&gt;<i>
+</I>&gt;<i> Great to hear this!
+</I>&gt;<i>
+</I>&gt;<i> I would recommend against trying to make this a docker in docker. It&#8217;s something to be
+</I>&gt;<i> avoided because it really causes problems running in various environments.
+</I>&gt;<i>
+</I>&gt;<i> Maybe a well commented bash script? I think the instructions are long but really we expect
+</I>&gt;<i> these workflows to run in a lot of different environments and it&#8217;s better to explain how
+</I>&gt;<i> it works so users can customize for their environment.
+</I>&gt;<i>
+</I>&gt;<i> What do you all think?
+</I>&gt;<i>
+</I>&gt;<i> Brian
+</I>&gt;<i>
+</I>&gt;<i> &gt; On Sep 19, 2016, at 11:02 PM, Junjun Zhang wrote:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Good news, both Miguel and myself have Sanger pipeline running on AWS and Collab respectively.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Here is the documentation on all steps we went through to get things set up: <A HREF="https://docs.google.com/document/d/1EPo2Wgh-WJz75GdykgTI1fpm89yIdoGGHAyVlJ9PbcA/edit">https://docs.google.com/document/d/1EPo2Wgh-WJz75GdykgTI1fpm89yIdoGGHAyVlJ9PbcA/edit</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; As you can see there are quite some steps to go through, does it make sense to build a docker
+</I>&gt;<i> image for setting up testing environment?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; It's kind of like docker in docker, is that OK?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Junjun
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; From: docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+junjun.zhang=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>]
+</I>&gt;<i> on behalf of Denis Yuen [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>]
+</I>&gt;<i> &gt; Sent: Monday, September 19, 2016 3:39 PM
+</I>&gt;<i> &gt; To: Miguel Vazquez
+</I>&gt;<i> &gt; Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> &gt; Subject: Re: [DOCKTESTERS] Amazon account
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Hi,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Quoting myself from an email since it is applicable here too
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Hi,
+</I>&gt;<i> &gt; Sounds reasonable, the hardware requirements listed at <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker#hardware-requirements">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker#hardware-requirements</A>
+</I>&gt;<i> match my recollection and a r3.4xlarge matches that handily in terms of RAM and CPU
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; The only thing I would check would be to make sure that the working directory (where you
+</I>&gt;<i> run Dockstore) is in a large 1TB volume. The workflow should be able to overwhelm 320 GB
+</I>&gt;<i> if that's all you have, causing it to crash.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; When we were running for Pan-cancer, we sometimes used lvm to merge all ephemeral drives
+</I>&gt;<i> on an AWS instance into one larger drive.
+</I>&gt;<i> &gt; But for testing, it would probably be simpler just to use one large EBS volume.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Denis Yuen
+</I>&gt;<i> &gt; Bioinformatics Software Developer
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Ontario Institute for Cancer Research
+</I>&gt;<i> &gt; MaRS Centre
+</I>&gt;<i> &gt; 661 University Avenue
+</I>&gt;<i> &gt; Suite 510
+</I>&gt;<i> &gt; Toronto, Ontario, Canada M5G 0A3
+</I>&gt;<i> &gt; Toll-free: 1-866-678-6427
+</I>&gt;<i> &gt; Twitter: @OICR_news
+</I>&gt;<i> &gt; www.oicr.on.ca
+</I>&gt;<i> &gt; This message and any attachments may contain confidential and/or privileged information
+</I>&gt;<i> for the sole use of the intended recipient. Any review or distribution by anyone other
+</I>&gt;<i> than the person for whom it was originally intended is strictly prohibited. If you have
+</I>&gt;<i> received this message in error, please contact the sender and delete all copies. Opinions,
+</I>&gt;<i> conclusions or other information contained in this message may not be that of the organization.
+</I>&gt;<i> &gt; From: docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A> [docktesters-bounces+denis.yuen=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">oicr.on.ca at lists.icgc.org</A>]
+</I>&gt;<i> on behalf of Miguel Vazquez [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>]
+</I>&gt;<i> &gt; Sent: September 19, 2016 3:26 PM
+</I>&gt;<i> &gt; To: Francis Ouellette
+</I>&gt;<i> &gt; Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>; Zhibin
+</I>&gt;<i> &gt; Subject: Re: [DOCKTESTERS] Amazon account
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Thanks Francis.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; BTW Brian and Junjun, I think I might not have enough disk space in the instance you got
+</I>&gt;<i> for me, gtdownload croaks:
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Error: The system *might* run out of disk space before all downloads are complete, Downloading
+</I>&gt;<i> will continue until less than 1.00 GB is available.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; and does not seem to download anything.
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I took the liberty to make a directory in /mn/, which has 95GB avai. but it does not seem
+</I>&gt;<i> to change things. Excuse my ignorance, but how big are these files?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Miguel
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; On Mon, Sep 19, 2016 at 9:22 PM, Francis Ouellette wrote:
+</I>&gt;<i> &gt; Hi Miguel,
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; I&#8217;m CCing docktester .. I think Junjun or Brian will be best to answer this &#8230;
+</I>&gt;<i> &gt; I think a bit more RAM would be OK, so could do: m4.10xlarge (10 CPU and 160 GB RAM).
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; Would that be good Brian?
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; @bffo
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; --
+</I>&gt;<i> &gt; B.F. Francis Ouellette <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A>
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;&gt; On Sep 19, 2016, at 3:09 PM, Zhibin wrote:
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Jo Miguel,
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; I am not familiar with Sanger pipeline. You should launch instances based on the number
+</I>&gt;<i> of CPUs and memory you need.
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Best,
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Zhibin
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; On Mon, Sep 19, 2016 at 3:05 PM, Miguel Vazquez wrote:
+</I>&gt;<i> &gt;&gt; Hello again,
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; What image will you suggest to run the Sanger pipeline? I'm not very used to AWS and I
+</I>&gt;<i> wouldn't want to burn through your credit accidentally. I was thinking of r3.4xlarge
+</I>&gt;<i> that has 16 cores, 122GB memmory and 1x320 (SSD), would that be a good choice?
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Best
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; Miguel
+</I>&gt;<i> &gt;&gt;
+</I>&gt;<i> &gt;&gt; On Mon, Sep 19, 2016 at 8:42 PM, Miguel Vazquez wrote:
+</I>&gt;<i> &gt;&gt; Thanks Zhibin
+</I>&gt;<i> &gt;&gt; Best regards
+</I>&gt;<i> &gt;&gt; Miguel
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt;
+</I>&gt;<i> &gt; _______________________________________________
+</I>&gt;<i> &gt; docktesters mailing list
+</I>&gt;<i> &gt; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> &gt; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> docktesters mailing list
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>
+</I>&gt;<i> <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+</I>&gt;<i>
+</I>
+--
+@fiamh
+Skype: ohofmann
++44 795 621 5540
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000055.html">[DOCKTESTERS] Amazon account
+</A></li>
+	<LI>Next message: <A HREF="000057.html">[DOCKTESTERS] Amazon account
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#56">[ date ]</a>
+              <a href="thread.html#56">[ thread ]</a>
+              <a href="subject.html#56">[ subject ]</a>
+              <a href="author.html#56">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

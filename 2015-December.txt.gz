@@ -1,0 +1,537 @@
+From francis at oicr.on.ca  Mon Dec  7 15:19:45 2015
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 7 Dec 2015 20:19:45 +0000
+Subject: [DOCKTESTERS] docktesters mailing list,
+Message-ID: <5DDC99B8-2265-42E0-A0F6-AD9EAD240862@oicr.on.ca>
+
+
+Dear All,
+
+You have been added to the docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org> mailman list.
+
+Kyle, I haven?t added you yet, as you haven?t responded to my invitation, and
+will keep you on the CC line until I hear from you. Nina is my admin assistant,
+and minds my schedule. Currently on the list I have these people:
+
+? ohofmann72 at gmail.com<mailto:ohofmann72 at gmail.com>
+? junjun.zhang at oicr.on.ca<mailto:junjun.zhang at oicr.on.ca>
+? marc.perry at oicr.on.ca<mailto:marc.perry at oicr.on.ca>
+? miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>
+? Brian.OConnor at oicr.on.ca<mailto:Brian.OConnor at oicr.on.ca>
+? francis at oicr.on.ca<mailto:francis at oicr.on.ca>
+
+I would like to have our first conference call after the next PCAWG-tech call
+(those are at 9:00 AM ETD, so next docktesters conf call would be at 10:00 EDT
+look at attached image for a time zone near you).
+
+I will also have an agenda up on wiki before then as well, but it will consist of us
+brainstorming on what it is we need to have to get the testing of a docker
+container from the dockstore tested by all of us.
+
+Our current wiki is here: https://goo.gl/3r553c
+
+Please complete data access permissions, as well as any note I should know
+about. Also feel free to recommend other people that should partake in this
+activity.
+
+Many thanks, and hope to talk to you all next week.
+
+@bffo
+
+
+
+
+
+[cid:6F24F8EA-F31E-46BC-B807-AF91A5A8862C at oicr.on.ca]
+
+
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151207/405796a4/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Screenshot 2015-12-07 15.13.11.png
+Type: image/png
+Size: 119096 bytes
+Desc: Screenshot 2015-12-07 15.13.11.png
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151207/405796a4/attachment-0001.png>
+
+From ohofmann72 at gmail.com  Mon Dec  7 15:30:54 2015
+From: ohofmann72 at gmail.com (Oliver Hofmann)
+Date: Mon, 07 Dec 2015 12:30:54 -0800 (PST)
+Subject: [DOCKTESTERS] docktesters mailing list,
+In-Reply-To: <5DDC99B8-2265-42E0-A0F6-AD9EAD240862@oicr.on.ca>
+References: <5DDC99B8-2265-42E0-A0F6-AD9EAD240862@oicr.on.ca>
+Message-ID: <1449520254500.5c4ec604@Nodemailer>
+
+Francis,
+
+
+
+
+thanks -- what _day_ is the next tech call? I don't have those on my calendar.
+
+
+
+
+Best, Oliver
+
+
+
+
+
+
+?@fiamh
+
+Skype: ohofmann?
+
++44 795 621 5540
+
+On Mon, Dec 7, 2015 at 8:19 PM, Francis Ouellette <francis at oicr.on.ca>
+wrote:
+
+> Dear All,
+> You have been added to the docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org> mailman list.
+> Kyle, I haven?t added you yet, as you haven?t responded to my invitation, and
+> will keep you on the CC line until I hear from you. Nina is my admin assistant,
+> and minds my schedule. Currently on the list I have these people:
+> ? ohofmann72 at gmail.com<mailto:ohofmann72 at gmail.com>
+> ? junjun.zhang at oicr.on.ca<mailto:junjun.zhang at oicr.on.ca>
+> ? marc.perry at oicr.on.ca<mailto:marc.perry at oicr.on.ca>
+> ? miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>
+> ? Brian.OConnor at oicr.on.ca<mailto:Brian.OConnor at oicr.on.ca>
+> ? francis at oicr.on.ca<mailto:francis at oicr.on.ca>
+> I would like to have our first conference call after the next PCAWG-tech call
+> (those are at 9:00 AM ETD, so next docktesters conf call would be at 10:00 EDT
+> look at attached image for a time zone near you).
+> I will also have an agenda up on wiki before then as well, but it will consist of us
+> brainstorming on what it is we need to have to get the testing of a docker
+> container from the dockstore tested by all of us.
+> Our current wiki is here: https://goo.gl/3r553c
+> Please complete data access permissions, as well as any note I should know
+> about. Also feel free to recommend other people that should partake in this
+> activity.
+> Many thanks, and hope to talk to you all next week.
+> @bffo
+> [cid:6F24F8EA-F31E-46BC-B807-AF91A5A8862C at oicr.on.ca]
+> --
+> B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151207/64560605/attachment.html>
+
+From francis at oicr.on.ca  Mon Dec  7 16:08:56 2015
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 7 Dec 2015 21:08:56 +0000
+Subject: [DOCKTESTERS] docktesters mailing list,
+In-Reply-To: <1449520254500.5c4ec604@Nodemailer>
+References: <5DDC99B8-2265-42E0-A0F6-AD9EAD240862@oicr.on.ca>,
+	<1449520254500.5c4ec604@Nodemailer>
+Message-ID: <EE2EDF57-933B-4329-A67A-B29078842C01@oicr.on.ca>
+
+Sorry, Monday's,
+
+@bffo
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+On Dec 7, 2015, at 15:30, Oliver Hofmann <ohofmann72 at gmail.com<mailto:ohofmann72 at gmail.com>> wrote:
+
+Francis,
+
+thanks -- what _day_ is the next tech call? I don't have those on my calendar.
+
+Best, Oliver
+
+
+?
+@fiamh
+Skype: ohofmann
++44 795 621 5540
+
+
+
+
+On Mon, Dec 7, 2015 at 8:19 PM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+Dear All,
+
+You have been added to the docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org> mailman list.
+
+Kyle, I haven?t added you yet, as you haven?t responded to my invitation, and
+will keep you on the CC line until I hear from you. Nina is my admin assistant,
+and minds my schedule. Currently on the list I have these people:
+
+? ohofmann72 at gmail.com<mailto:ohofmann72 at gmail.com>
+? junjun.zhang at oicr.on.ca<mailto:junjun.zhang at oicr.on.ca>
+? marc.perry at oicr.on.ca<mailto:marc.perry at oicr.on.ca>
+? miguel.vazquez at cnio.es<mailto:miguel.vazquez at cnio.es>
+? Brian.OConnor at oicr.on.ca<mailto:Brian.OConnor at oicr.on.ca>
+? francis at oicr.on.ca<mailto:francis at oicr.on.ca>
+
+I would like to have our first conference call after the next PCAWG-tech call
+(those are at 9:00 AM ETD, so next docktesters conf call would be at 10:00 EDT
+look at attached image for a time zone near you).
+
+I will also have an agenda up on wiki before then as well, but it will consist of us
+brainstorming on what it is we need to have to get the testing of a docker
+container from the dockstore tested by all of us.
+
+Our current wiki is here: https://goo.gl/3r553c
+
+Please complete data access permissions, as well as any note I should know
+about. Also feel free to recommend other people that should partake in this
+activity.
+
+Many thanks, and hope to talk to you all next week.
+
+@bffo
+
+
+
+
+
+<Screenshot 2015-12-07 15.13.11.png>
+
+
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151207/9fd9497f/attachment.html>
+
+From Nina.Palikuca at oicr.on.ca  Thu Dec 10 16:35:43 2015
+From: Nina.Palikuca at oicr.on.ca (Nina Palikuca)
+Date: Thu, 10 Dec 2015 21:35:43 +0000
+Subject: [DOCKTESTERS] Docktesters meeting
+Message-ID: <AB9C24830E3DD34B9B6EBD772ADA5F04B86E13EB@exmb2.ad.oicr.on.ca>
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151210/edc154b8/attachment.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: not available
+Type: text/calendar
+Size: 1602 bytes
+Desc: not available
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151210/edc154b8/attachment.ics>
+
+From francis at oicr.on.ca  Mon Dec 14 02:15:11 2015
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 14 Dec 2015 07:15:11 +0000
+Subject: [DOCKTESTERS] call tomorrow
+Message-ID: <1962FAA7-39C0-4696-8BB7-BDC7472CD151@oicr.on.ca>
+
+Dear Docktesters,
+
+There will be a call tomorrow, after the PCAWG-Tech call, and
+we have a meeting room set up for OICR people (5-21), and
+a schedule on wiki.
+
+Brian, I have you down for 5 min for a quick overview of
+the Dockstore, hope that is OK?
+
+
+  *   Notes for call on Monday Dec 14: https://goo.gl/ikEU16
+  *   Home of our new WG: https://goo.gl/eWJuii
+  *   Home of all Conference calls: https://goo.gl/3J8VzM
+
+Call details:
+
+
+Date: Dec 14th, 2015
+
+Time: 10:00 EDT
+
+Dial in from USA/Canada: 1-800-747-5150
+Dial in from UK: 08004960577
+Dial in from UK mobile: 02079040082
+Dial in from Spain: 900800371
+
+
+Access code: 3592059 #
+
+
+And I also attach the PDF I will present from, to get things started.
+
+Cheers,
+
+@bffo
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151214/2125253d/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: testing_wg_ver03.pdf
+Type: application/pdf
+Size: 1529218 bytes
+Desc: testing_wg_ver03.pdf
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151214/2125253d/attachment-0001.pdf>
+
+From francis at oicr.on.ca  Mon Dec 14 10:00:02 2015
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 14 Dec 2015 15:00:02 +0000
+Subject: [DOCKTESTERS] call tomorrow
+In-Reply-To: <1962FAA7-39C0-4696-8BB7-BDC7472CD151@oicr.on.ca>
+References: <1962FAA7-39C0-4696-8BB7-BDC7472CD151@oicr.on.ca>
+Message-ID: <7C266E92-8A6A-442B-833D-57D9E227548E@oicr.on.ca>
+
+OICR people: change of room , meeting will be in my office.
+
+@bffo
+
+
+On Dec 14, 2015, at 2:15 AM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+Dear Docktesters,
+
+There will be a call tomorrow, after the PCAWG-Tech call, and
+we have a meeting room set up for OICR people (5-21), and
+a schedule on wiki.
+
+Brian, I have you down for 5 min for a quick overview of
+the Dockstore, hope that is OK?
+
+
+  *   Notes for call on Monday Dec 14: https://goo.gl/ikEU16
+  *   Home of our new WG: https://goo.gl/eWJuii
+  *   Home of all Conference calls: https://goo.gl/3J8VzM
+
+Call details:
+
+
+Date: Dec 14th, 2015
+
+Time: 10:00 EDT
+
+Dial in from USA/Canada: 1-800-747-5150
+Dial in from UK: 08004960577
+Dial in from UK mobile: 02079040082
+Dial in from Spain: 900800371
+
+
+Access code: 3592059 #
+
+
+And I also attach the PDF I will present from, to get things started.
+
+Cheers,
+
+@bffo
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+<testing_wg_ver03.pdf>_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151214/550cbb5f/attachment.html>
+
+From francis at oicr.on.ca  Tue Dec 15 13:31:52 2015
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Tue, 15 Dec 2015 18:31:52 +0000
+Subject: [DOCKTESTERS] new edition
+Message-ID: <7F48FA77-A7B6-4049-934A-8F85EF5CE929@oicr.on.ca>
+
+
+Just received new edition, thought to share.
+
+@bffo
+
+-- 
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette    
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Using Docker.pdf
+Type: application/pdf
+Size: 7423283 bytes
+Desc: Using Docker.pdf
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151215/85fce31b/attachment-0001.pdf>
+
+From francis at oicr.on.ca  Tue Dec 15 13:31:52 2015
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Tue, 15 Dec 2015 18:31:52 +0000
+Subject: [DOCKTESTERS] new edition
+Message-ID: <7F48FA77-A7B6-4049-934A-8F85EF5CE929@oicr.on.ca>
+
+
+Just received new edition, thought to share.
+
+@bffo
+
+-- 
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette    
+
+
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: Using Docker.pdf
+Type: application/pdf
+Size: 7423283 bytes
+Desc: Using Docker.pdf
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151215/85fce31b/attachment-0003.pdf>
+
+From Brian.OConnor at oicr.on.ca  Mon Dec 21 09:47:06 2015
+From: Brian.OConnor at oicr.on.ca (Brian O'Connor)
+Date: Mon, 21 Dec 2015 14:47:06 +0000
+Subject: [DOCKTESTERS] new edition
+In-Reply-To: <7F48FA77-A7B6-4049-934A-8F85EF5CE929@oicr.on.ca>
+References: <7F48FA77-A7B6-4049-934A-8F85EF5CE929@oicr.on.ca>
+Message-ID: <47F13524-FF70-4BFE-9480-AB18A301183F@oicr.on.ca>
+
+Hi Frances,
+
+I don?t have a calendar invite for a testing group call today. When do the calls resume?  Sometime after the new year?  
+
+Thanks
+
+Brian
+
+> On Dec 15, 2015, at 1:31 PM, Francis Ouellette <francis at oicr.on.ca> wrote:
+> 
+> 
+> Just received new edition, thought to share.
+> 
+> @bffo
+> 
+> -- 
+> B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette    
+> 
+> 
+> <Using Docker.pdf>_______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+From francis at oicr.on.ca  Mon Dec 21 11:09:49 2015
+From: francis at oicr.on.ca (Francis Ouellette)
+Date: Mon, 21 Dec 2015 16:09:49 +0000
+Subject: [DOCKTESTERS] call tomorrow
+In-Reply-To: <CDC11151-503E-4D5F-AC91-526BA1ADA395@ohsu.edu>
+References: <1962FAA7-39C0-4696-8BB7-BDC7472CD151@oicr.on.ca>
+	<7C266E92-8A6A-442B-833D-57D9E227548E@oicr.on.ca>
+	<CDC11151-503E-4D5F-AC91-526BA1ADA395@ohsu.edu>
+Message-ID: <7A197A4F-99AF-4D86-BD4F-57DF5FD49BE0@oicr.on.ca>
+
+sorry, no call today!
+
+@bffo
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+On Dec 21, 2015, at 9:43 AM, Kyle Ellrott <ellrott at ohsu.edu<mailto:ellrott at ohsu.edu>> wrote:
+
+Is there a call today?
+
+Kyle
+
+From: <docktesters-bounces at lists.icgc.org<mailto:docktesters-bounces at lists.icgc.org>> on behalf of Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>>
+Date: Monday, December 14, 2015 at 7:00 AM
+To: "docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>" <docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>>
+Subject: Re: [DOCKTESTERS] call tomorrow
+
+OICR people: change of room , meeting will be in my office.
+
+@bffo
+
+
+On Dec 14, 2015, at 2:15 AM, Francis Ouellette <francis at oicr.on.ca<mailto:francis at oicr.on.ca>> wrote:
+
+Dear Docktesters,
+
+There will be a call tomorrow, after the PCAWG-Tech call, and
+we have a meeting room set up for OICR people (5-21), and
+a schedule on wiki.
+
+Brian, I have you down for 5 min for a quick overview of
+the Dockstore, hope that is OK?
+
+
+  *   Notes for call on Monday Dec 14: https://goo.gl/ikEU16
+  *   Home of our new WG: https://goo.gl/eWJuii
+  *   Home of all Conference calls: https://goo.gl/3J8VzM
+
+Call details:
+
+
+Date: Dec 14th, 2015
+
+Time: 10:00 EDT
+
+Dial in from USA/Canada: 1-800-747-5150
+Dial in from UK: 08004960577
+Dial in from UK mobile: 02079040082
+Dial in from Spain: 900800371
+
+
+Access code: 3592059 #
+
+
+And I also attach the PDF I will present from, to get things started.
+
+Cheers,
+
+@bffo
+
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+<testing_wg_ver03.pdf>_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+--
+B.F. Francis Ouellette          http://oicr.on.ca/person/francis-ouellette
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20151221/082c13d8/attachment.html>
+

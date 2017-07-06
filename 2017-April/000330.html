@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Succesfull run of SV-Merge workflow, but no validation, on donors DO50311 and DO52526
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Succesfull%20run%20of%20SV-Merge%20workflow%2C%0A%20but%20no%20validation%2C%20on%20donors%20DO50311%20and%20DO52526&In-Reply-To=%3C5e961612-0799-4566-bfbf-8b91fcb103bb%40P1KITHUB07W.unicph.domain%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000329.html">
+   <LINK REL="Next"  HREF="000331.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Succesfull run of SV-Merge workflow, but no validation, on donors DO50311 and DO52526</H1>
+    <B>Francesco Favero</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Succesfull%20run%20of%20SV-Merge%20workflow%2C%0A%20but%20no%20validation%2C%20on%20donors%20DO50311%20and%20DO52526&In-Reply-To=%3C5e961612-0799-4566-bfbf-8b91fcb103bb%40P1KITHUB07W.unicph.domain%3E"
+       TITLE="[DOCKTESTERS] Succesfull run of SV-Merge workflow, but no validation, on donors DO50311 and DO52526">francesco.favero at bric.ku.dk
+       </A><BR>
+    <I>Thu Apr 27 09:02:57 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000329.html">[DOCKTESTERS]  Succesfull run of SV-Merge workflow, but no validation, on donors DO50311 and DO52526
+</A></li>
+        <LI>Next message: <A HREF="000331.html">[DOCKTESTERS] SV-Merge validated 100% match on donors DO50311 and	DO52526
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#330">[ date ]</a>
+              <a href="thread.html#330">[ thread ]</a>
+              <a href="subject.html#330">[ subject ]</a>
+              <a href="author.html#330">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear Miguel,
+
+I&#8217;m glad it worked :).
+
+The final sv-merge call set to compare with is the one linked out here <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Linkouts+to+Most+Current+PCAWG+Data">https://wiki.oicr.on.ca/display/PANCANCER/Linkouts+to+Most+Current+PCAWG+Data</A> pointing to this sv-merge file set:
+
+<A HREF="https://www.synapse.org/#!Synapse:syn7596712">https://www.synapse.org/#!Synapse:syn7596712</A>
+
+&lt;<A HREF="https://www.synapse.org/#!Synapse:syn7596712">https://www.synapse.org/#!Synapse:syn7596712</A>&gt;
+The final SV-merge vcf files are named &lt;aliquot_id&gt;.pcawg_consensus_1.6.&lt;date&gt;.somatic.sv.vcf.gz and would be the ones to compare with DO52526.somatic.sv.vcf.gz from the Docker run.
+
+Best
+
+Francesco
+
+
+On 27 Apr 2017, at 13.42, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;&gt; wrote:
+
+Dear all,
+
+I'm very pleased to announce that the SV-Merge workflow now runs succesfully thanks to the changes from Francesco Favero. You can read bellow the details if you are interested.
+
+The next issue remaining is to validate these results against the official release. The files I have listed from ICGC for each donor are the following:
+
+CNSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.svcp_1-0-3.20150120.somatic.cnv.vcf.gz
+SGV.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.broad-snowman.20151023.germline.indel.vcf.gz
+SGV.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.dkfz-indelCalling_1-0-132-1-hpc.1510221331.germline.indel.vcf.gz
+SGV.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.dkfz-snvCalling_1-0-132-1-hpc.1510221331.germline.snv_mnv.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.broad-mutect-v3.20160222.somatic.snv_mnv.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.broad-snowman.20151023.somatic.indel.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.consensus.20160830.somatic.snv_mnv.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.consensus.20161006.somatic.indel.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.dkfz-indelCalling_1-0-132-1-hpc.1510221331.somatic.indel.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.dkfz-snvCalling_1-0-132-1-hpc.1510221331.somatic.snv_mnv.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.MUSE_1-0rc-vcf.20151023.somatic.snv_mnv.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.svcp_1-0-3.20150120.somatic.indel.vcf.gz
+SSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.svcp_1-0-3.20150120.somatic.snv_mnv.vcf.gz
+StGV.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.broad-snowman.20151023.germline.sv.vcf.gz
+StGV.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.embl-delly_1-0-0-preFilter-hpc.150715.germline.sv.vcf.gz
+StSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.broad-dRanger.20151023.somatic.sv.vcf.gz
+StSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.broad-dRanger_snowman.20151023.somatic.sv.vcf.gz
+StSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.broad-snowman.20151023.somatic.sv.vcf.gz
+StSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.embl-delly_1-0-0-preFilter-hpc.150715.somatic.sv.vcf.gz
+StSM.Primary tumour - solid tissue.131332b2-ff51-4bd7-a626-aff2ecea6135.svfix2_4-0-12.20160208.somatic.sv.vcf.gz
+
+While the resulting files from the workflow are:
+
+
+DO52526.log
+DO52526.somatic.sv.bedpe
+DO52526.somatic.sv_full.bedpe
+DO52526.somatic.sv_full.vcf.gz
+DO52526.somatic.sv_full.vcf.gz.tbi
+DO52526.somatic.sv.stat
+DO52526.somatic.sv.vcf.gz
+DO52526.somatic.sv.vcf.gz.tbi
+DO52526.sv.tar.gz
+
+Is there a correspondence of files that I can check for differences?
+
+Best
+
+Miguel
+
+
+On Thu, Apr 27, 2017 at 1:31 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;&gt; wrote:
+Hi Francesco,
+
+Thank you very much for promptly resolving this issue. I can confirm that the workflow runs nicely and the outputs are also collected correctly. I'll update the wiki to reflect that the workflow runs successfully.
+
+As with the filter workflows, the next issue is knowing what I need to compare this with to check if there were any differences with the official released file. Do you know?
+
+Best regards,
+
+Miguel
+
+
+
+On Thu, Apr 27, 2017 at 12:10 PM, Francesco Favero &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francesco.favero at bric.ku.dk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">francesco.favero at bric.ku.dk</A>&gt;&gt; wrote:
+Hi Miguel,
+
+I&#8217;ve added some text in the README in the git repo and slightly changed the behaviour of the tool to fix your problem.
+
+We had to change the url of the docker container, as we moved the image to our docker-hub group account.
+
+<A HREF="https://dockstore.org/containers/registry.hub.docker.com/weischenfeldt/pcawg_sv_merge">https://dockstore.org/containers/registry.hub.docker.com/weischenfeldt/pcawg_sv_merge</A>
+the stable version is 1.0.2 (it&#8217;s also the only one in dockstore so far)
+
+We have tested it, and it works for our end. I hope it will get better for you as well.
+
+The following is not a testing issue, but since Denis is in cc it's still useful to point it out:
+I believe we need to change the tool name to end with &#8220;workflow&quot;, as for the guidelines.
+I&#8217;m afraid to do so effectively, we need to change also the git repository name and/or the docker container image. Is that right?
+
+Thanks
+
+Best
+
+Francesco
+
+
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170427/7b5ee5f8/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170427/7b5ee5f8/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000329.html">[DOCKTESTERS]  Succesfull run of SV-Merge workflow, but no validation, on donors DO50311 and DO52526
+</A></li>
+	<LI>Next message: <A HREF="000331.html">[DOCKTESTERS] SV-Merge validated 100% match on donors DO50311 and	DO52526
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#330">[ date ]</a>
+              <a href="thread.html#330">[ thread ]</a>
+              <a href="subject.html#330">[ subject ]</a>
+              <a href="author.html#330">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

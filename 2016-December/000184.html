@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Variant call validation results for Sanger
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Variant%20call%20validation%20results%20for%20Sanger&In-Reply-To=%3C6AF31004-13C6-4EF0-B3A4-9988D284D8D2%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000182.html">
+   <LINK REL="Next"  HREF="000185.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Variant call validation results for Sanger</H1>
+    <B>Francis Ouellette</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Variant%20call%20validation%20results%20for%20Sanger&In-Reply-To=%3C6AF31004-13C6-4EF0-B3A4-9988D284D8D2%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Variant call validation results for Sanger">francis at oicr.on.ca
+       </A><BR>
+    <I>Tue Dec  6 10:52:52 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000182.html">[DOCKTESTERS] Variant call validation results for Sanger
+</A></li>
+        <LI>Next message: <A HREF="000185.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#184">[ date ]</a>
+              <a href="thread.html#184">[ thread ]</a>
+              <a href="subject.html#184">[ subject ]</a>
+              <a href="author.html#184">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Alex,
+
+Likewise here, on the test that &#8220;worked&#8221;, are the differences platform specific, and
+are they reproducible.
+
+I think we only need to do this a couple of times, to inform us if the differences are
+operator  and/or platform specific, or simply (which I think) more about the heuristics
+of the testing we are doing.
+
+Thank you for looking into this.
+
+@bffo
+
+--
+B.F. Francis Ouellette          <A HREF="http://oicr.on.ca/person/francis-ouellette">http://oicr.on.ca/person/francis-ouellette</A>
+
+
+
+
+
+
+
+
+On Dec 5, 2016, at 1:21 PM, Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;&gt; wrote:
+
+Regarding the validation results I posted last Friday, we think these poor results are likely due an upstream issue and not the Sanger workflow itself. Those variant call results were from a larger process including fastq prep., alignment, and then Sanger variant calling, and we think we introduced a problem early on during fastq prep.
+
+We have a different set of Sanger results that reused the existing alignments from GNOS, and those variants match the expected results much more closely (99.99% match).  One example output from USeq:
+
+82486    Key variants
+82486    Key variants in shared regions
+0.953626071716167    Shared key variants Ti/Tv
+82482    Test variants
+82482    Test variants in shared regions
+0.9536238749407864    Shared test variants Ti/Tv
+
+QUALThreshold    NumMatchTest    NumNonMatchTest    FDR=nonMatchTest/(matchTest+nonMatchTest)    decreasingFDR    TPR=matchTest/totalKeyFPR=nonMatchTest/totalKey    PPV=matchTest/(matchTest+nonMatchTest)
+none    82479    3    3.6371574E-5    3.6371574E-5    0.9999151    3.636981E-5    0.99996364
+
+
+
+From: &lt;docktesters-bounces+buchanae=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ohsu.edu at lists.icgc.org</A>&lt;mailto:docktesters-bounces+buchanae=<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ohsu.edu at lists.icgc.org</A>&gt;&gt; on behalf of Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;&gt;
+Date: Friday, December 2, 2016 at 4:11 PM
+To: &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: [DOCKTESTERS] Variant call validation results for Sanger
+
+I was able to run USeq on data output from running the sanger workflow on a Cromwell engine, for 5 donors. It&#8217;s reporting some pretty big differences, so I still need investigate. I&#8217;ll copy the USeq output at the end of this email.
+
+I also wrote a simple comparison script, similar to what Miguel is doing (but in python), and it also reports differences.
+
+At this point, I don&#8217;t know the source of the difference. Maybe I&#8217;m not comparing the data correctly, or maybe the workflows were run incorrectly. Maybe the tools have some element of randomness, but I&#8217;m not sure that would explain the substantial differences.
+
+Output from python:
+
+python test.py
+==================================================
+Donor:  DO50414
+intersection 17395
+key - test 10904
+test - key 6722
+==================================================
+Donor:  DO50415
+intersection 34721
+key - test 17806
+test - key 8755
+==================================================
+Donor:  DO50417
+intersection 81477
+key - test 39521
+test - key 15959
+==================================================
+Donor:  DO50419
+intersection 82705
+key - test 41674
+test - key 15262
+==================================================
+Donor:  DO50432
+intersection 3941
+key - test 24358
+test - key 138224
+
+Output from USeq:
+
+
+[2 Dec 2016 15:09] USeq_8.9.6 Arguments: -a key-data/DO50414/somatic_snv_mnv.vcf.gz -b human_chromosomes.bed -c ccc-output/DO50414/somatic_snv_mnv.vcf.gz -d human_chromosomes.bed
+
+VCF Comparator Settings:
+
+somatic_snv_mnv.vcf.gz  Key vcf file
+human_chromosomes.bed              Key interrogated regions file
+somatic_snv_mnv.vcf.gz  Test vcf file
+human_chromosomes.bed              Test interrogated regions file
+true        Require matching alternate bases
+false       Require matching genotypes
+false       Use record VQSLOD score as ranking statistic
+false       Exclude non PASS or . records
+true        Compare all variant
+
+Parsing and filtering variant data for common interrogated regions...
+Comparing calls...
+
+3137454505         Interrogated bps in key
+3137454505         Interrogated bps in test
+3137454505         Interrogated bps in common
+28299    Key variants
+28299    Key variants in shared regions
+0.904886914378029         Shared key variants Ti/Tv
+24117    Test variants
+24117    Test variants in shared regions
+0.919073764621628         Shared test variants Ti/Tv
+
+QUALThreshold   NumMatchTest   NumNonMatchTest           FDR=nonMatchTest/(matchTest+nonMatchTest)     decreasingFDR                TPR=matchTest/totalKey FPR=nonMatchTest/totalKey          PPV=matchTest/(matchTest+nonMatchTest)
+none       17395    6722       0.27872455          0.27872455          0.614686              0.2375349            0.72127545
+
+
+Done! 4 seconds
+
+
+[2 Dec 2016 15:09] USeq_8.9.6 Arguments: -a key-data/DO50415/somatic_snv_mnv.vcf.gz -b human_chromosomes.bed -c ccc-output/DO50415/somatic_snv_mnv.vcf.gz -d human_chromosomes.bed
+
+VCF Comparator Settings:
+
+somatic_snv_mnv.vcf.gz  Key vcf file
+human_chromosomes.bed              Key interrogated regions file
+somatic_snv_mnv.vcf.gz  Test vcf file
+human_chromosomes.bed              Test interrogated regions file
+true        Require matching alternate bases
+false       Require matching genotypes
+false       Use record VQSLOD score as ranking statistic
+false       Exclude non PASS or . records
+true        Compare all variant
+
+Parsing and filtering variant data for common interrogated regions...
+Comparing calls...
+
+3137454505         Interrogated bps in key
+3137454505         Interrogated bps in test
+3137454505         Interrogated bps in common
+52527    Key variants
+52527    Key variants in shared regions
+0.9612067356158758       Shared key variants Ti/Tv
+43476    Test variants
+43476    Test variants in shared regions
+0.9573203673689897       Shared test variants Ti/Tv
+
+QUALThreshold   NumMatchTest   NumNonMatchTest           FDR=nonMatchTest/(matchTest+nonMatchTest)     decreasingFDR                TPR=matchTest/totalKey FPR=nonMatchTest/totalKey          PPV=matchTest/(matchTest+nonMatchTest)
+none       34721    8755       0.20137547          0.20137547          0.6610124            0.16667618          0.7986245
+
+
+Done! 4 seconds
+
+
+[2 Dec 2016 15:09] USeq_8.9.6 Arguments: -a key-data/DO50417/somatic_snv_mnv.vcf.gz -b human_chromosomes.bed -c ccc-output/DO50417/somatic_snv_mnv.vcf.gz -d human_chromosomes.bed
+
+VCF Comparator Settings:
+
+somatic_snv_mnv.vcf.gz  Key vcf file
+human_chromosomes.bed              Key interrogated regions file
+somatic_snv_mnv.vcf.gz  Test vcf file
+human_chromosomes.bed              Test interrogated regions file
+true        Require matching alternate bases
+false       Require matching genotypes
+false       Use record VQSLOD score as ranking statistic
+false       Exclude non PASS or . records
+true        Compare all variant
+
+Parsing and filtering variant data for common interrogated regions...
+Comparing calls...
+
+3137454505         Interrogated bps in key
+3137454505         Interrogated bps in test
+3137454505         Interrogated bps in common
+120998  Key variants
+120998  Key variants in shared regions
+0.9540073962824799       Shared key variants Ti/Tv
+97436    Test variants
+97436    Test variants in shared regions
+0.9392950261728001       Shared test variants Ti/Tv
+
+QUALThreshold   NumMatchTest   NumNonMatchTest           FDR=nonMatchTest/(matchTest+nonMatchTest)     decreasingFDR                TPR=matchTest/totalKey FPR=nonMatchTest/totalKey          PPV=matchTest/(matchTest+nonMatchTest)
+none       81477    15959    0.16378957          0.16378957          0.6733748            0.13189474          0.8362104
+
+
+Done! 4 seconds
+
+
+[2 Dec 2016 15:09] USeq_8.9.6 Arguments: -a key-data/DO50419/somatic_snv_mnv.vcf.gz -b human_chromosomes.bed -c ccc-output/DO50419/somatic_snv_mnv.vcf.gz -d human_chromosomes.bed
+
+VCF Comparator Settings:
+
+somatic_snv_mnv.vcf.gz  Key vcf file
+human_chromosomes.bed              Key interrogated regions file
+somatic_snv_mnv.vcf.gz  Test vcf file
+human_chromosomes.bed              Test interrogated regions file
+true        Require matching alternate bases
+false       Require matching genotypes
+false       Use record VQSLOD score as ranking statistic
+false       Exclude non PASS or . records
+true        Compare all variant
+
+Parsing and filtering variant data for common interrogated regions...
+Comparing calls...
+
+3137454505         Interrogated bps in key
+3137454505         Interrogated bps in test
+3137454505         Interrogated bps in common
+124379  Key variants
+124379  Key variants in shared regions
+0.9678664662605807       Shared key variants Ti/Tv
+97967    Test variants
+97967    Test variants in shared regions
+0.9450632358488693       Shared test variants Ti/Tv
+
+QUALThreshold   NumMatchTest   NumNonMatchTest           FDR=nonMatchTest/(matchTest+nonMatchTest)     decreasingFDR                TPR=matchTest/totalKey FPR=nonMatchTest/totalKey          PPV=matchTest/(matchTest+nonMatchTest)
+none       82705    15262    0.15578716          0.15578716          0.66494346          0.1227056            0.84421283
+
+
+Done! 3 seconds
+
+
+[2 Dec 2016 15:09] USeq_8.9.6 Arguments: -a key-data/DO50432/somatic_snv_mnv.vcf.gz -b human_chromosomes.bed -c ccc-output/DO50432/somatic_snv_mnv.vcf.gz -d human_chromosomes.bed
+
+VCF Comparator Settings:
+
+somatic_snv_mnv.vcf.gz  Key vcf file
+human_chromosomes.bed              Key interrogated regions file
+somatic_snv_mnv.vcf.gz  Test vcf file
+human_chromosomes.bed              Test interrogated regions file
+true        Require matching alternate bases
+false       Require matching genotypes
+false       Use record VQSLOD score as ranking statistic
+false       Exclude non PASS or . records
+true        Compare all variant
+
+Parsing and filtering variant data for common interrogated regions...
+Comparing calls...
+
+3137454505         Interrogated bps in key
+3137454505         Interrogated bps in test
+3137454505         Interrogated bps in common
+28299    Key variants
+28299    Key variants in shared regions
+0.904886914378029         Shared key variants Ti/Tv
+142165  Test variants
+142165  Test variants in shared regions
+0.9905488658639037       Shared test variants Ti/Tv
+
+QUALThreshold   NumMatchTest   NumNonMatchTest           FDR=nonMatchTest/(matchTest+nonMatchTest)     decreasingFDR                TPR=matchTest/totalKey FPR=nonMatchTest/totalKey          PPV=matchTest/(matchTest+nonMatchTest)
+none       3940       138225  0.97228575          0.97228575          0.13922754          4.884448              0.027714275
+
+
+Done! 4 seconds
+
+_______________________________________________
+docktesters mailing list
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">https://lists.icgc.org/mailman/listinfo/docktesters</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161206/8ffcaa1b/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161206/8ffcaa1b/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000182.html">[DOCKTESTERS] Variant call validation results for Sanger
+</A></li>
+	<LI>Next message: <A HREF="000185.html">[DOCKTESTERS] Fwd: [PAWG-TECH] Draft agenda for PCAWG-TECH	teleconference
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#184">[ date ]</a>
+              <a href="thread.html#184">[ thread ]</a>
+              <a href="subject.html#184">[ subject ]</a>
+              <a href="author.html#184">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,1176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Amazon account
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Amazon%20account&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C099E3F9%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000066.html">
+   <LINK REL="Next"  HREF="000068.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Amazon account</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Amazon%20account&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C099E3F9%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Amazon account">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Wed Sep 21 10:15:00 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000066.html">[DOCKTESTERS] Amazon account
+</A></li>
+        <LI>Next message: <A HREF="000068.html">[DOCKTESTERS] Amazon account
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+One additional thought. Before investigating error code 25, try running the test data <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/test1.json">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/blob/develop/test1.json</A>
+This can help us narrow down whether there is an issue with the environment or whether there is an issue with the data.
+The test data can be downloaded from the link documented at <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker#running-with-the-dockstore-command-line">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker#running-with-the-dockstore-command-line</A>
+
+Also a reminder to send the output starting with &quot;docker run -i&quot;, this will let me see if there's anything obviously strange with the call to Docker.
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+________________________________
+From: Junjun Zhang
+Sent: September 20, 2016 4:09 PM
+To: Denis Yuen; Miguel Vazquez
+Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>; Brian O'Connor
+Subject: RE: [DOCKTESTERS] Amazon account
+
+My run failed with same error message.
+
+
+________________________________
+From: Denis Yuen
+Sent: Tuesday, September 20, 2016 3:20 PM
+To: Miguel Vazquez
+Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>; Brian O'Connor; Junjun Zhang
+Subject: RE: [DOCKTESTERS] Amazon account
+
+I think there are a few pieces of information that could be useful.
+
+Look in this ticket <A HREF="https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/issues/5&lt;UrlBlockedError.aspx">https://github.com/ICGC-TCGA-PanCancer/CGP-Somatic-Docker/issues/5&lt;UrlBlockedError.aspx</A>&gt; there's a section that starts with &quot;docker run -i&quot;, this will let me see if there's anything obviously strange with the call to Docker.
+
+Failing that, I think we'll have to see what exit code 25 denotes for Pindel.
+
+
+________________________________
+From: Miguel Vazquez [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>]
+Sent: September 20, 2016 3:15 PM
+To: Denis Yuen
+Cc: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>; Brian O'Connor; Junjun Zhang
+Subject: RE: [DOCKTESTERS] Amazon account
+
+
+Well, that's a bummer. Any ideas?
+
+On Sep 20, 2016 9:11 PM, &quot;Denis Yuen&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Denis.Yuen at oicr.on.ca</A>&lt;UrlBlockedError.aspx&gt;&gt; wrote:
+Hi,
+That's really just saying that cwltool was unable to find the output.
+Changing the entry will just save the output somewhere else.
+
+The real problem is probably in the section:
+----
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_cgpPindel_input_70.sh
+
+Output from command: /usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl&lt;UrlBlockedError.aspx&gt; -b /var/lib/cwl/stg33415604-d4eb-49aa-8f81-345b6fb2a6f3/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz
+
+[SeqWare Pipeline] ERROR [2016/09/20 13:50:00] | The exit value was 25
+Command exit code: 1
+
+Output from command: /usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl&lt;UrlBlockedError.aspx&gt; -b /var/lib/cwl/stg33415604-d4eb-49aa-8f81-345b6fb2a6f3/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz
+----
+
+That says that pindel failed, but there doesn't appear to be any more explanation as to why.
+
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;UrlBlockedError.aspx&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+________________________________
+From: Miguel Vazquez [<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;UrlBlockedError.aspx&gt;]
+Sent: September 20, 2016 2:55 PM
+To: Junjun Zhang
+Cc: Denis Yuen; Brian O'Connor; <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;UrlBlockedError.aspx&gt;
+Subject: Re: [DOCKTESTERS] Amazon account
+
+Just a heads up, the process failed.
+
+The complete log is bellow, but I think this is the culprit:
+
+Error while running job: Error collecting output for parameter 'somatic_cnv_tar_gz': Did not find output file with glob pattern: '['*.somatic.cnv.tar.gz']'
+
+I wrote something like this in Dockerstore.json
+
+  &quot;somatic_cnv_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.cnv.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  }
+
+I've replace those entries with this
+
+  &quot;somatic_cnv_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/DONOR.somatic.cnv.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  }
+
+so that the glob work. I'm trying again. I'll update the documentation
+
+Best
+
+Miguel
+
+
+
+
+
+------------------
+
+
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_25.stderr
+-----------------------------------------------------------------------
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_56.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_54
+Job ID:   335639174
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_54.e335639174
+Updated:  Tue Sep 20 03:55:15 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_54.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_54.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_13
+Job ID:   335639178
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_13.e335639178
+Updated:  Tue Sep 20 12:07:55 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_13.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_13.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_17
+Job ID:   335639179
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_17.e335639179
+Updated:  Tue Sep 20 12:05:07 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_17.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_17.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_15
+Job ID:   335639180
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_15.e335639180
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_48
+Job ID:   335639020
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_48.e335639020
+Updated:  Tue Sep 20 05:54:57 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_48.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_48.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_50
+Job ID:   335639025
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_50.e335639025
+Updated:  Tue Sep 20 04:48:39 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_50.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_50.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_52
+Job ID:   335639111
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_52.e335639111
+Updated:  Tue Sep 20 05:05:25 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_52.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_52.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_56
+Job ID:   335639173
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_56.e335639173
+Updated:  Tue Sep 20 03:39:33 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_56.sh
+Command exit code: 0
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_34.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_34.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_38
+Job ID:   335638783
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_38.e335638783
+Updated:  Tue Sep 20 06:49:18 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_38.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_38.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_42
+Job ID:   335638805
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_42.e335638805
+Updated:  Tue Sep 20 06:07:49 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_42.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_42.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_46
+Job ID:   335638826
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_46.e335638826
+Updated:  Tue Sep 20 05:40:42 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_46.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_46.stderr
+-----------------------------------------------------------------------
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_unpackRef_NA_10.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_22
+Job ID:   335638775
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_22.e335638775
+Updated:  Tue Sep 20 09:32:19 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_22.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_22.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_28
+Job ID:   335638776
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_28.e335638776
+Updated:  Tue Sep 20 08:57:31 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_28.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_28.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_32
+Job ID:   335638777
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_32.e335638777
+Updated:  Tue Sep 20 08:12:44 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_32.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_32.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_34
+Job ID:   335638778
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_34.e335638778
+Updated:  Tue Sep 20 08:24:35 UTC 2016
+Job Name: s58_unpackRef_NA_9
+Job ID:   331891142
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_unpackRef_NA_9.e331891142
+Updated:  Tue Sep 20 00:39:16 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_unpackRef_NA_9.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_unpackRef_NA_9.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_verifyBamHomChk_control_6
+Job ID:   331891143
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_verifyBamHomChk_control_6.e331891143
+Updated:  Tue Sep 20 00:44:52 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_verifyBamHomChk_control_6.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_verifyBamHomChk_control_6.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_basFileGenerate_control_11
+Job ID:   332292910
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_basFileGenerate_control_11.e332292910
+Updated:  Tue Sep 20 01:20:39 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_basFileGenerate_control_11.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_basFileGenerate_control_11.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_unpackRef_NA_10
+Job ID:   332292911
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_unpackRef_NA_10.e332292911
+Updated:  Tue Sep 20 00:44:57 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_unpackRef_NA_10.sh
+Command exit code: 0
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_start_0.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_start_0.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_mark_start_1
+Job ID:   331890603
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_mark_start_1.e331890603
+Updated:  Tue Sep 20 00:38:10 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_mark_start_1.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_mark_start_1.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_prepBam_control_3
+Job ID:   331890831
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_prepBam_control_3.e331890831
+Updated:  Tue Sep 20 00:38:11 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_prepBam_control_3.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_prepBam_control_3.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_prepBam_tumour_2
+Job ID:   331890832
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_prepBam_tumour_2.e331890832
+Updated:  Tue Sep 20 00:38:11 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_prepBam_tumour_2.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_prepBam_tumour_2.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_61.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_BRASS_input_99
+Job ID:   379374477
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_BRASS_input_99.o379374477
+Updated:  Tue Sep 20 16:49:15 UTC 2016
+Contents Excerpt:
+[V] 18  0.49745MB/s     1781.56
+[V] 19  0.525041MB/s    1879.07
+[V] 20  0.552722MB/s    1976.44
+[V] 21  0.579942MB/s    2072.21
+[V] 22  0.607543MB/s    2169.2
+[V] 23  0.635118MB/s    2266.04
+[V] 24264262
+[V] MemUsage(size=71.1484,rss=10.9336,peak=291.977) wall clock time 02:57:24:31175299
+11827.06user 310.09system 2:59:40elapsed 112%CPU (0avgtext+0avgdata 4265632maxresident)k
+117507424inputs+14421104outputs (84major+234838minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_BRASS_input_99.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_merge_59
+Job ID:   379374478
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.o379374478
+Updated:  Tue Sep 20 13:51:15 UTC 2016
+Contents Excerpt:
+87.14user 5.10system 1:41.25elapsed 91%CPU (0avgtext+0avgdata 66448maxresident)k
+2720952inputs+4360560outputs (5major+7600minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.stdout
+-----------------------------------------------------------------------
+
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 54.9M  100 54.9M    0     0  1016k      0  0:00:55  0:00:55 --:--:-- 1047k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  174k  100  174k    0     0   174k      0  0:00:01  0:00:01 --:--:--  567k
+[2016/09/20 16:49:15] | Output for stderr due to workflow run failure:
+ -----------------------------------------------------------------------
+Job Name: s58_start_0
+Job ID:   331890362
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_start_0.e331890362
+Updated:  Tue Sep 20 00:38:10 UTC 2016
+Contents Excerpt:
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_renameSampleFile_208.o373317274
+Updated:  Tue Sep 20 12:08:37 UTC 2016
+Contents Excerpt:
+Modified command: cp /var/spool/cwl/b02b4bba-6e66-44fb-a48f-38c309aaaac5.genotype.tar.gz /var/spool/cwl/b02b4bba-6e66-44fb-a48f-38c309aaaac5.csc_0-0-0.20160920.somatic.genotype.tar.gz
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_renameSampleFile_208.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_57
+Job ID:   373317275
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_57.o373317275
+Updated:  Tue Sep 20 13:29:27 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr23.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.23.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+4798.51user 50.73system 1:20:50elapsed 99%CPU (0avgtext+0avgdata 3115856maxresident)k
+9833328inputs+56328outputs (0major+199552minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_57.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_ASCAT_allele_count_60
+Job ID:   379374473
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_60.o379374473
+Updated:  Tue Sep 20 15:34:45 UTC 2016
+Contents Excerpt:
+
+Errors from command: /opt/wtsi-cgp/bin/alleleCounter -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam -o /var/spool/cwl/0/ascat/tmpAscat/allele_count/b02b4bba-6e66-44fb-a48f-38c309aaaac5.allct -l /var/spool/cwl/reference_files/ascat/SnpLocus.tsv -m 20
+
+5928.09user 101.55system 1:45:10elapsed 95%CPU (0avgtext+0avgdata 2345888maxresident)k
+221140208inputs+43144outputs (37major+169349minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_60.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_ASCAT_allele_count_61
+Job ID:   379374475
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_61.o379374475
+Updated:  Tue Sep 20 14:58:41 UTC 2016
+Contents Excerpt:
+
+Errors from command: /opt/wtsi-cgp/bin/alleleCounter -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/ascat/tmpAscat/allele_count/8c0354eb-6a3e-4a98-b41c-f8add599884c.allct -l /var/spool/cwl/reference_files/ascat/SnpLocus.tsv -m 20
+
+3864.82user 67.24system 1:09:07elapsed 94%CPU (0avgtext+0avgdata 2350544maxresident)k
+157460240inputs+43120outputs (57major+167795minor)pagefaults 0swaps
+11476.37user 140.61system 6:48:23elapsed 47%CPU (0avgtext+0avgdata 3035728maxresident)k
+7380072inputs+56816outputs (0major+196640minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_39.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_41
+Job ID:   335639489
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_41.o335639489
+Updated:  Tue Sep 20 07:35:04 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr15.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.15.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+9429.90user 117.09system 5:54:22elapsed 44%CPU (0avgtext+0avgdata 2739152maxresident)k
+5273744inputs+51000outputs (0major+177355minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_41.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_45
+Job ID:   335639845
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_45.o335639845
+Updated:  Tue Sep 20 07:29:41 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr17.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.17.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+9231.30user 116.04system 5:49:00elapsed 44%CPU (0avgtext+0avgdata 2540400maxresident)k
+5255296inputs+46736outputs (0major+165277minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_45.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_43
+Job ID:   335639853
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_43.o335639853
+Updated:  Tue Sep 20 08:28:45 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr16.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.16.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+11465.31user 146.48system 6:48:03elapsed 47%CPU (0avgtext+0avgdata 2945712maxresident)k
+6906080inputs+54432outputs (0major+190932minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_43.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_renameSampleFile_208
+Job ID:   373317274
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_33
+Job ID:   335639420
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_33.o335639420
+Updated:  Tue Sep 20 10:42:41 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr11.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.11.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+18904.62user 233.41system 9:02:00elapsed 58%CPU (0avgtext+0avgdata 4537600maxresident)k
+15888800inputs+86400outputs (0major+292553minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_33.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_35
+Job ID:   335639430
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_35.o335639430
+Updated:  Tue Sep 20 10:03:48 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr12.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.12.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+16584.76user 210.26system 8:23:07elapsed 55%CPU (0avgtext+0avgdata 4373600maxresident)k
+12917040inputs+82896outputs (0major+281480minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_35.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_37
+Job ID:   335639431
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_37.o335639431
+Updated:  Tue Sep 20 08:26:17 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr13.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.13.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+11361.18user 138.30system 6:45:36elapsed 47%CPU (0avgtext+0avgdata 3301008maxresident)k
+7418080inputs+62192outputs (0major+212951minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_37.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_39
+Job ID:   335639452
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_39.o335639452
+Updated:  Tue Sep 20 08:29:04 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr14.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.14.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+Updated:  Tue Sep 20 11:02:29 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr7.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.7.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+20088.69user 242.69system 9:21:48elapsed 60%CPU (0avgtext+0avgdata 5281504maxresident)k
+18604808inputs+96776outputs (0major+339332minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_25.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_27
+Job ID:   335639400
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_27.o335639400
+Updated:  Tue Sep 20 11:02:53 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr8.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.8.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+20108.48user 243.42system 9:22:11elapsed 60%CPU (0avgtext+0avgdata 5228912maxresident)k
+17295080inputs+95440outputs (0major+335764minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_27.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_29
+Job ID:   335639401
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_29.o335639401
+Updated:  Tue Sep 20 09:18:32 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr9.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.9.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+13962.23user 175.03system 7:37:51elapsed 51%CPU (0avgtext+0avgdata 3971872maxresident)k
+12246072inputs+72144outputs (0major+255173minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_29.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_31
+Job ID:   335639417
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_31.o335639417
+Updated:  Tue Sep 20 10:11:08 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr10.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.10.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+17052.42user 207.86system 8:30:26elapsed 56%CPU (0avgtext+0avgdata 4504144maxresident)k
+13931760inputs+85488outputs (0major+289717minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_31.stdout
+-----------------------------------------------------------------------
+23593416inputs+121608outputs (0major+421477minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_17.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_15
+Job ID:   335639180
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_15.o335639180
+Updated:  Tue Sep 20 12:08:37 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr2.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.2.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+24021.20user 275.32system 10:27:56elapsed 64%CPU (0avgtext+0avgdata 7851136maxresident)k
+24358016inputs+146264outputs (0major+499924minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_15.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_19
+Job ID:   335639200
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_19.o335639200
+Updated:  Tue Sep 20 11:57:43 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr4.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.4.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+23336.68user 273.00system 10:17:02elapsed 63%CPU (0avgtext+0avgdata 6501344maxresident)k
+22397816inputs+120192outputs (0major+416448minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_19.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_23
+Job ID:   335639375
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_23.o335639375
+Updated:  Tue Sep 20 11:14:37 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr6.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.6.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+20846.11user 251.83system 9:33:55elapsed 61%CPU (0avgtext+0avgdata 5765024maxresident)k
+19462064inputs+106080outputs (0major+369701minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_23.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_25
+Job ID:   335639387
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_25.o335639387
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_56
+Job ID:   335639173
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_56.o335639173
+Updated:  Tue Sep 20 03:39:33 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr22.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.22.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+2810.79user 34.33system 1:58:52elapsed 39%CPU (0avgtext+0avgdata 1250144maxresident)k
+1243552inputs+22208outputs (0major+82726minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_56.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_54
+Job ID:   335639174
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_54.o335639174
+Updated:  Tue Sep 20 03:55:15 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr21.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.21.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+3187.08user 39.68system 2:14:34elapsed 39%CPU (0avgtext+0avgdata 1302656maxresident)k
+1689216inputs+23256outputs (0major+86038minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_54.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_58
+Job ID:   335639178
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_58.o335639178
+Updated:  Tue Sep 20 04:41:10 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr23.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.23.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+4375.73user 53.14system 3:00:29elapsed 40%CPU (0avgtext+0avgdata 3123136maxresident)k
+4325272inputs+56240outputs (0major+199643minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_58.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_tumour_17
+Job ID:   335639179
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_tumour_17.o335639179
+Updated:  Tue Sep 20 12:05:07 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr3.txt -o /var/spool/cwl/bbCounts/b02b4bba-6e66-44fb-a48f-38c309aaaac5.3.tsv -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam
+23819.53user 283.10system 10:24:27elapsed 64%CPU (0avgtext+0avgdata 6576048maxresident)k
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr17.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.17.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+5945.65user 71.96system 4:00:01elapsed 41%CPU (0avgtext+0avgdata 2544496maxresident)k
+5572568inputs+46720outputs (0major+163875minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_46.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_48
+Job ID:   335639020
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_48.o335639020
+Updated:  Tue Sep 20 05:54:57 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr18.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.18.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+6337.11user 77.66system 4:14:16elapsed 42%CPU (0avgtext+0avgdata 2647504maxresident)k
+5337616inputs+48704outputs (0major+170347minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_48.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_50
+Job ID:   335639025
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_50.o335639025
+Updated:  Tue Sep 20 04:48:39 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr19.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.19.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+4542.91user 55.47system 3:07:58elapsed 40%CPU (0avgtext+0avgdata 1995904maxresident)k
+3514080inputs+36192outputs (0major+129470minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_50.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_52
+Job ID:   335639111
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_52.o335639111
+Updated:  Tue Sep 20 05:05:25 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr20.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.20.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+4979.15user 61.39system 3:24:44elapsed 41%CPU (0avgtext+0avgdata 2102832maxresident)k
+3653168inputs+38272outputs (0major+136206minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_52.stdout
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-6a3e-4a98-b41c-f8add599884c.11.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+11287.76user 142.04system 6:43:55elapsed 47%CPU (0avgtext+0avgdata 4543376maxresident)k
+9747344inputs+86048outputs (0major+289230minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_34.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_38
+Job ID:   335638783
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_38.o335638783
+Updated:  Tue Sep 20 06:49:18 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr13.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.13.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+7981.44user 98.27system 5:08:39elapsed 43%CPU (0avgtext+0avgdata 3310512maxresident)k
+6948640inputs+62176outputs (7major+211942minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_38.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_42
+Job ID:   335638805
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_42.o335638805
+Updated:  Tue Sep 20 06:07:49 UTC 2016
+Contents Excerpt:
+Modified command: alleleCounter -l /var/spool/cwl/reference_files/battenberg/1000genomesloci/1000genomesloci2012_chr15.txt -o /var/spool/cwl/bbCounts/8c0354eb-6a3e-4a98-b41c-f8add599884c.15.tsv -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam
+6705.59user 83.09system 4:27:09elapsed 42%CPU (0avgtext+0avgdata 2746816maxresident)k
+6146600inputs+50992outputs (0major+176574minor)pagefaults 0swaps
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_control_42.stdout
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_control_46
+Job ID:   379374477
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_cgpPindel_input_70.e379374477
+Updated:  Tue Sep 20 13:50:00 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_cgpPindel_input_70.sh
+
+Output from command: /usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl&lt;UrlBlockedError.aspx&gt; -b /var/lib/cwl/stg33415604-d4eb-49aa-8f81-345b6fb2a6f3/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz
+
+[SeqWare Pipeline] ERROR [2016/09/20 13:50:00] | The exit value was 25
+Command exit code: 1
+
+Output from command: /usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl&lt;UrlBlockedError.aspx&gt; -b /var/lib/cwl/stg33415604-d4eb-49aa-8f81-345b6fb2a6f3/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_cgpPindel_input_70.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_merge_59
+Job ID:   379374478
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.e379374478
+Updated:  Tue Sep 20 13:51:15 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.stderr
+-----------------------------------------------------------------------
+
+
+The method 'do_run' exited abnormally so the Runner will terminate here!
+Return value was: 15
+
+[WARNING] command: seqware bundle launch --dir /home/seqware/CGP-Somatic-Docker/target/Workflow_Bundle_CgpSomaticCore_0.0.0_SeqWare_1.1.1/ --engine whitestar-parallel --ini /var/spool/cwl/workflow.ini --no-metadata exited with code: 15
+Error while running job: Error collecting output for parameter 'somatic_cnv_tar_gz': Did not find output file with glob pattern: '['*.somatic.cnv.tar.gz']'
+[job temp319312608049643386.cwl] completed permanentFail
+Final process status is permanentFail
+Workflow error, try again with --debug for more information:
+  Process status is ['permanentFail']
+
+stdout :
+java.lang.RuntimeException: problems running command: cwltool --enable-dev --non-strict --enable-net --outdir /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/outputs/ --tmpdir-prefix /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/working/ /tmp/1474331255066-0/temp319312608049643386.cwl /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/workflow_params.json
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ f
+f: command not found
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ df
+Filesystem      1K-blocks      Used Available Use% Mounted on
+udev             62947280        12  62947268   1% /dev
+tmpfs            12590448       364  12590084   1% /run
+/dev/xvda1        8115168   6093092   1586800  80% /
+none                    4         0         4   0% /sys/fs/cgroup
+none                 5120         0      5120   0% /run/lock
+none             62952228         0  62952228   0% /run/shm
+none               102400         0    102400   0% /run/user
+/dev/xvdb      1031992064 303267080 676279800&lt;tel:676279800&gt;  31% /mnt/1TB
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev             61G   12K   61G   1% /dev
+tmpfs            13G  364K   13G   1% /run
+/dev/xvda1      7.8G  5.9G  1.6G  80% /
+none            4.0K     0  4.0K   0% /sys/fs/cgroup
+none            5.0M     0  5.0M   0% /run/lock
+none             61G     0   61G   0% /run/shm
+none            100M     0  100M   0% /run/user
+/dev/xvdb       985G  290G  645G  31% /mnt/1TB
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ vi Dockstore.json
+{
+  &quot;bbFrom&quot;: {
+  &quot;bbFrom&quot;: {
+    &quot;path&quot;: &quot;<A HREF="https://s3-eu-west-1.amazonaws.com/wtsi-pancancer/reference/GRCh37d5_battenberg.tar.gz&lt;UrlBlockedError.aspx">https://s3-eu-west-1.amazonaws.com/wtsi-pancancer/reference/GRCh37d5_battenberg.tar.gz&lt;UrlBlockedError.aspx</A>&gt;&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;refFrom&quot;: {
+    &quot;path&quot;: &quot;<A HREF="https://s3-eu-west-1.amazonaws.com/wtsi-pancancer/reference/GRCh37d5_CGP_refBundle.tar.gz&lt;UrlBlockedError.aspx">https://s3-eu-west-1.amazonaws.com/wtsi-pancancer/reference/GRCh37d5_CGP_refBundle.tar.gz&lt;UrlBlockedError.aspx</A>&gt;&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;tumor&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/data/7875b5196f6b8b52847f99bf370aada0.bam&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;normal&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/data/fdcb1bd7cffca69d15383ca9566c58e0.bam&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;somatic_sv_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.sv.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;somatic_snv_mnv_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.snv.mnv.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;somatic_verifyBamId_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.verifyBamId.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;somatic_cnv_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.cnv.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;somatic_imputeCounts_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.imputeCounts.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;somatic_genotype_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.genotype.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  },
+  &quot;somatic_indel_tar_gz&quot;: {
+    &quot;path&quot;: &quot;/home/ubuntu/DockerTest-Miguel/Sanger/results/somatic.indel.tar.gz&quot;,
+    &quot;class&quot;: &quot;File&quot;
+  }
+}
+~
+~
+~
+~
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ l results/
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ vi Dockstore.json ^C
+Updated:  Tue Sep 20 13:51:15 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.stderr
+-----------------------------------------------------------------------
+
+
+The method 'do_run' exited abnormally so the Runner will terminate here!
+Return value was: 15
+
+[WARNING] command: seqware bundle launch --dir /home/seqware/CGP-Somatic-Docker/target/Workflow_Bundle_CgpSomaticCore_0.0.0_SeqWare_1.1.1/ --engine whitestar-parallel --ini /var/spool/cwl/workflow.ini --no-metadata exited with code: 15
+Error while running job: Error collecting output for parameter 'somatic_cnv_tar_gz': Did not find output file with glob pattern: '['*.somatic.cnv.tar.gz']'
+[job temp319312608049643386.cwl] completed permanentFail
+Final process status is permanentFail
+Workflow error, try again with --debug for more information:
+  Process status is ['permanentFail']
+
+stdout :
+java.lang.RuntimeException: problems running command: cwltool --enable-dev --non-strict --enable-net --outdir /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/outputs/ --tmpdir-prefix /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/working/ /tmp/1474331255066-0/temp319312608049643386.cwl /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/workflow_params.json
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ f
+f: command not found
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ df
+Filesystem      1K-blocks      Used Available Use% Mounted on
+udev             62947280        12  62947268   1% /dev
+tmpfs            12590448       364  12590084   1% /run
+/dev/xvda1        8115168   6093092   1586800  80% /
+none                    4         0         4   0% /sys/fs/cgroup
+none                 5120         0      5120   0% /run/lock
+none             62952228         0  62952228   0% /run/shm
+none               102400         0    102400   0% /run/user
+/dev/xvdb      1031992064 303267080 676279800&lt;tel:676279800&gt;  31% /mnt/1TB
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev             61G   12K   61G   1% /dev
+tmpfs            13G  364K   13G   1% /run
+/dev/xvda1      7.8G  5.9G  1.6G  80% /
+none            4.0K     0  4.0K   0% /sys/fs/cgroup
+none            5.0M     0  5.0M   0% /run/lock
+none             61G     0   61G   0% /run/shm
+none            100M     0  100M   0% /run/user
+/dev/xvdb       985G  290G  645G  31% /mnt/1TB
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-24-20-69</A>:~/DockerTest-Miguel/Sanger$ vi Dockstore.json
+
+{
+
+Output from command: /opt/wtsi-cgp/bin/alleleCounter -b /var/spool/cwl/7875b5196f6b8b52847f99bf370aada0.bam -o /var/spool/cwl/0/ascat/tmpAscat/allele_count/b02b4bba-6e66-44fb-a48f-38c309aaaac5.allct -l /var/spool/cwl/reference_files/ascat/SnpLocus.tsv -m 20
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_60.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_ASCAT_allele_count_61
+Job ID:   379374475
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_61.e379374475
+Updated:  Tue Sep 20 14:58:41 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_61.sh
+Command exit code: 0
+
+Output from command: /opt/wtsi-cgp/bin/alleleCounter -b /var/spool/cwl/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/ascat/tmpAscat/allele_count/8c0354eb-6a3e-4a98-b41c-f8add599884c.allct -l /var/spool/cwl/reference_files/ascat/SnpLocus.tsv -m 20
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_ASCAT_allele_count_61.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_cgpPindel_input_70
+Job ID:   379374477
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_cgpPindel_input_70.e379374477
+Updated:  Tue Sep 20 13:50:00 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_cgpPindel_input_70.sh
+
+Output from command: /usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl&lt;UrlBlockedError.aspx&gt; -b /var/lib/cwl/stg33415604-d4eb-49aa-8f81-345b6fb2a6f3/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz
+
+[SeqWare Pipeline] ERROR [2016/09/20 13:50:00] | The exit value was 25
+Command exit code: 1
+
+Output from command: /usr/bin/perl /opt/wtsi-cgp/bin/pindel_input_gen.pl&lt;UrlBlockedError.aspx&gt; -b /var/lib/cwl/stg33415604-d4eb-49aa-8f81-345b6fb2a6f3/fdcb1bd7cffca69d15383ca9566c58e0.bam -o /var/spool/cwl/0/pindel/tmpPindel/8c0354eb-6a3e-4a98-b41c-f8add599884c -t 4 -e /var/spool/cwl/reference_files/brass/ucscHiDepth_0.01_mrg1000_no_exon_coreChrs.bed.gz
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_cgpPindel_input_70.stderr
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+Job Name: s58_bbAllele_merge_59
+Job ID:   379374478
+File:     /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.e379374478
+Updated:  Tue Sep 20 13:51:15 UTC 2016
+Contents Excerpt:
+Command run:
+bash -lc /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.sh
+Command exit code: 0
+
+
+Full output: /datastore/oozie-729e0a3c-fd0e-46ee-8c3f-fde2322fe848/generated-scripts/s58_bbAllele_merge_59.stderr
+-----------------------------------------------------------------------
+
+
+The method 'do_run' exited abnormally so the Runner will terminate here!
+Return value was: 15
+
+[WARNING] command: seqware bundle launch --dir /home/seqware/CGP-Somatic-Docker/target/Workflow_Bundle_CgpSomaticCore_0.0.0_SeqWare_1.1.1/ --engine whitestar-parallel --ini /var/spool/cwl/workflow.ini --no-metadata exited with code: 15
+Error while running job: Error collecting output for parameter 'somatic_cnv_tar_gz': Did not find output file with glob pattern: '['*.somatic.cnv.tar.gz']'
+[job temp319312608049643386.cwl] completed permanentFail
+Final process status is permanentFail
+Workflow error, try again with --debug for more information:
+  Process status is ['permanentFail']
+
+stdout :
+java.lang.RuntimeException: problems running command: cwltool --enable-dev --non-strict --enable-net --outdir /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/outputs/ --tmpdir-prefix /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/working/ /tmp/1474331255066-0/temp319312608049643386.cwl /mnt/1TB/work/DockerTest-Miguel/Sanger/./datastore/launcher-780ac637-b999-4a70-8ab7-79b51c64f428/workflow_params.json
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20160921/0d6428e5/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20160921/0d6428e5/attachment-0001.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000066.html">[DOCKTESTERS] Amazon account
+</A></li>
+	<LI>Next message: <A HREF="000068.html">[DOCKTESTERS] Amazon account
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#67">[ date ]</a>
+              <a href="thread.html#67">[ thread ]</a>
+              <a href="subject.html#67">[ subject ]</a>
+              <a href="author.html#67">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

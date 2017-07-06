@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] BWA-Mem update
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20update&In-Reply-To=%3CE60EE8F6-002D-4BFB-A6A4-66B5DF470751%40crick.ac.uk%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000300.html">
+   <LINK REL="Next"  HREF="000303.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] BWA-Mem update</H1>
+    <B>Jonas Demeulemeester</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20BWA-Mem%20update&In-Reply-To=%3CE60EE8F6-002D-4BFB-A6A4-66B5DF470751%40crick.ac.uk%3E"
+       TITLE="[DOCKTESTERS] BWA-Mem update">Jonas.Demeulemeester at crick.ac.uk
+       </A><BR>
+    <I>Mon Apr 10 12:33:16 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000300.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+        <LI>Next message: <A HREF="000303.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#301">[ date ]</a>
+              <a href="thread.html#301">[ thread ]</a>
+              <a href="subject.html#301">[ subject ]</a>
+              <a href="author.html#301">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi George,
+
+We should be able to provide you with a final answer on this tomorrow by the latest :)
+Would that be OK for you?
+
+You could already download the relevant unaligned bam files as this will anyhow take some time.
+Miguel and I have been running on donor DO51057 and you can find GNOS IDs for the unaligned files in the attached JSON file.
+Get all of the bams defined under the &#8220;unaligned_bams&#8221; headers (there will be 2 of these headers in the JSON, one for the normal and one for the tumor).
+
+The BWA-Mem docker is internally set to run on 8 cores, so using a large VM is unlikely to affect run-time.
+
+Best wishes,
+Jonas
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>
+W: www.crick.ac.uk
+
+
+
+On 10 Apr 2017, at 17:11, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt; wrote:
+
+Hi,
+
+I would like to run the BWA-mem dockerized workflow in the Collaboratory environment, but I need some help in order to do this:
+
+  *   A ready-to-run script or instructions
+  *   The input files: single file or multiple files, whatever the script needs as an input
+  *   The donor ID, preferably the same donor that was already used in order to prove the reproducibility of the results
+
+I can start the workflow on a large VM in order to speed up the result.
+
+Also, I'm currently running the DKFZ workflow on DO50398 because I've already ran Sanger on it, and I want to compare the run times for the two workflows on the same data set.
+
+Thank you,
+George
+
+
+From: Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">mikisvaz at gmail.com</A>&gt;&gt;
+Date: Wednesday, March 22, 2017 at 2:08 PM
+To: Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt;
+Cc: Keiran Raine &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">kr2 at sanger.ac.uk</A>&gt;&gt;, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt;, George Mihaiescu &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">George.Mihaiescu at oicr.on.ca</A>&gt;&gt;, &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;&gt;
+Subject: Re: [DOCKTESTERS] BWA-Mem update
+
+Thanks Jonas for this information.
+
+I hope that someone here can provide us with some suggestion on what to try next. Perhaps the version issue that Jonas point out is the key.
+
+I just want to add that, as I told Jonas earlier, my own tests using the new split BAM files also gave 3% mismatches.
+
+Best regards
+
+Miguel
+
+On Wed, Mar 22, 2017 at 6:56 PM, Jonas Demeulemeester &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Jonas.Demeulemeester at crick.ac.uk</A>&gt;&gt; wrote:
+Hi all,
+
+A brief update on the BWA-Mem docker tests.
+I prepared normal + tumor lane-level unaligned bams for DO503011 and ran the BWA-Mem workflow for normal and tumor seperately.
+Doing the comparison however, I am still getting 3% of reads that are aligned differently (see below for a few examples).
+However, when checking the headers of the original and newly mapped bam files (attached) I noticed that the original is mapped using a different version of BWA and SeqWare.
+I&#8217;m hoping the mapping differences can be ascribed to this.
+
+Is there a list available somewhere detailing which samples were mapped using which versions?
+That way we could select a relevant test sample without having to sort through the headers of all different bams.
+
+Best wishes,
+Jonas
+
+
+
+
+
+newly aligned:
+
+IDflagchrpos
+HS2000-1012_275:7:1101:17411:15403993112743126
+HS2000-1012_275:7:1101:17411:154031473112743376
+HS2000-1012_275:7:1101:11883:83640991628672999
+HS2000-1012_275:7:1101:11883:836401471628673223
+HS2000-1012_275:7:1101:16576:28476163GL000238.121309
+HS2000-1012_275:7:1101:16576:2847683GL000238.121664
+
+vs the original:
+
+IDflagchrpos
+HS2000-1012_275:7:1101:17411:1540399854944243
+HS2000-1012_275:7:1101:17411:15403147854944493
+HS2000-1012_275:7:1101:11883:836401631628464362
+HS2000-1012_275:7:1101:11883:83640831628464586
+HS2000-1012_275:7:1101:16576:2847699126124549
+HS2000-1012_275:7:1101:16576:28476147126124903
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594&lt;tel:+44%2020%203796%202594&gt;
+M: +44 (0)7482 070730&lt;tel:+44%207482%20070730&gt;
+E: <A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">jonas.demeulemeester at crick.ac.uk</A>
+W: www.crick.ac.uk
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170410/be15eda5/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170410/be15eda5/attachment-0001.html</A>&gt;
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: DO51057.json.gz
+Type: application/x-gzip
+Size: 33031 bytes
+Desc: DO51057.json.gz
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170410/be15eda5/attachment-0001.bin">https://lists.icgc.org/mailman/private/docktesters/attachments/20170410/be15eda5/attachment-0001.bin</A>&gt;
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000300.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+	<LI>Next message: <A HREF="000303.html">[DOCKTESTERS] BWA-Mem update
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#301">[ date ]</a>
+              <a href="thread.html#301">[ thread ]</a>
+              <a href="subject.html#301">[ subject ]</a>
+              <a href="author.html#301">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

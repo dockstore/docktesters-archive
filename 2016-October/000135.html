@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Broad PCAWG Tokens definition?
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20PCAWG%20Tokens%20definition%3F&In-Reply-To=%3CD416E883-52AD-41BE-A7B1-A36F5AD9A112%40ohsu.edu%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000134.html">
+   <LINK REL="Next"  HREF="000136.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Broad PCAWG Tokens definition?</H1>
+    <B>Alexander Buchanan</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Broad%20PCAWG%20Tokens%20definition%3F&In-Reply-To=%3CD416E883-52AD-41BE-A7B1-A36F5AD9A112%40ohsu.edu%3E"
+       TITLE="[DOCKTESTERS] Broad PCAWG Tokens definition?">buchanae at ohsu.edu
+       </A><BR>
+    <I>Thu Oct 20 17:18:55 EDT 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000134.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+        <LI>Next message: <A HREF="000136.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#135">[ date ]</a>
+              <a href="thread.html#135">[ thread ]</a>
+              <a href="subject.html#135">[ subject ]</a>
+              <a href="author.html#135">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Great, thanks Gordon.
+
+Fyi, I just finished a successful run of the tokens wdl with a relatively small BAM file. I had to rebuild the docker image, because the one hosted on Dockerhub was missing a source file. I filed a github issue for that here: <A HREF="https://github.com/broadinstitute/pcawg/issues/10">https://github.com/broadinstitute/pcawg/issues/10</A>
+
+A rebuild of the image seemed to do the trick. I had some issues building it (now resolved), probably because my build environment was different (Mac) and/or broken (mysterious network issues with Bioconductor.org).
+
+Is there some expected input/output pair I should be using to validate that it&#8217;s working as expected?
+
+I don&#8217;t have any feedback on the internals of the docker images necessarily (pipette, single wdl task, etc). I think my first impression was just being a little confused looking at the repo and not knowing where to start. The docs mention Firecloud, GCE, make, etc. which doesn&#8217;t match my environment, so I didn&#8217;t easily know where to start. But, after a day or poking around I figured it out. I guess that&#8217;s to be expected when opening up a new codebase on an unfamiliar and unreleased project.
+
+Thanks again,
+Alex Buchanan
+
+From: Gordon Saksena &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">gsaksena at broadinstitute.org</A>&gt;
+Date: Thursday, October 20, 2016 at 2:03 PM
+To: Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;
+Cc: &quot;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&quot; &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">docktesters at lists.icgc.org</A>&gt;
+Subject: Re: Broad PCAWG Tokens definition?
+
+The tokens task is part of the PoN (Panel of Normals) filter.  It is a Java program that collects stats on the Normal BAM for the current donor.  These stats are later aggregated with stats from the other samples (in another docker), and then used to flag certain variants in a VCF as suspect (in a third docker).  The overall algorithm is in the process of being published.
+
+It should be one of the more straightforward algorithms to test - it has very predictable CPU time and RAM usage, and should produce outputs that can be tested via an exact binary match.  It accepts just the normal BAM for its input.
+
+I'm planning later dockers to have a similar structure, though with increased memory and core requirements.  The .wdl file will continue to contain a single task, with the bulk of the pipeline wiring embedded inside the docker.  The dockers will either accept the source BAMs (for callers) or VCFs (for filters) as inputs.  If you have feedback I can incorporate it into the other dockers.
+
+Gordon
+
+On Thu, Oct 20, 2016 at 4:08 PM, Alexander Buchanan &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">buchanae at ohsu.edu</A>&gt;&gt; wrote:
+Hey Gordon,
+
+I&#8217;m new here so maybe I missed this, but what is the tokens task? How would you describe what it does and the results it produces?
+
+Thanks!
+Alex Buchanan
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161020/2910fd2f/attachment-0001.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161020/2910fd2f/attachment-0001.html</A>&gt;
+</PRE>
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000134.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+	<LI>Next message: <A HREF="000136.html">[DOCKTESTERS] Broad PCAWG Tokens definition?
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#135">[ date ]</a>
+              <a href="thread.html#135">[ thread ]</a>
+              <a href="subject.html#135">[ subject ]</a>
+              <a href="author.html#135">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

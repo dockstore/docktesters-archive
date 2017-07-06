@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Core workflow icgc reference data location and gosu
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Core%20workflow%20icgc%20reference%20data%20location%20and%20gosu&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A54A3%40exmb2.ad.oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000170.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Core workflow icgc reference data location and gosu</H1>
+    <B>Denis Yuen</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Core%20workflow%20icgc%20reference%20data%20location%20and%20gosu&In-Reply-To=%3C27512884B2D81B41AAB7BB266248F240C09A54A3%40exmb2.ad.oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Core workflow icgc reference data location and gosu">Denis.Yuen at oicr.on.ca
+       </A><BR>
+    <I>Fri Dec  2 12:15:35 EST 2016</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000170.html">[DOCKTESTERS] Core workflow icgc reference data location and gosu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#169">[ date ]</a>
+              <a href="thread.html#169">[ thread ]</a>
+              <a href="subject.html#169">[ subject ]</a>
+              <a href="author.html#169">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi,
+
+I've gone through and created a new release for each of the core tools (bwa-mem, delly, dkfz, sanger) with two (non-scientific) changes.
+
+1) Each of these tools has been redirected to use reference data hosted on the icgc portal ( <A HREF="https://dcc.icgc.org/releases/PCAWG">https://dcc.icgc.org/releases/PCAWG</A> ) rather than aws in order to conserve our use of S3. This means that sample json parameter files have been updated and any references inside the Docker images that we're aware of also have been updated. As usual, if re-running workflows frequently, you'll want to host these files locally.
+
+If you are using the Dockstore command-line interface, you'll need to upgrade to the latest release of dockstore (1.2) to use this new file location.
+
+2) A number of users have run into problems running the workflow when running in a multi-user environment (i.e. not running Docker containers with the first user on a host). This release replaces most usage of sudo inside the tools with gosu to deal with this issue.
+
+The new release numbers are documented at <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+In particular:
+
+  *   bwa-mem 2.6.8_1.2
+  *   dkfz 2.0.1_cwl1.0
+  *   sanger 2.0.3
+  *   embl 2.0.1-cwl1.0
+
+
+
+Denis Yuen
+Bioinformatics Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario, Canada M5G 0A3
+
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161202/d17b5fc2/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161202/d17b5fc2/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000170.html">[DOCKTESTERS] Core workflow icgc reference data location and gosu
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#169">[ date ]</a>
+              <a href="thread.html#169">[ thread ]</a>
+              <a href="subject.html#169">[ subject ]</a>
+              <a href="author.html#169">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

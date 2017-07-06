@@ -1,0 +1,1751 @@
+From Jonas.Demeulemeester at crick.ac.uk  Thu May  4 05:26:19 2017
+From: Jonas.Demeulemeester at crick.ac.uk (Jonas Demeulemeester)
+Date: Thu, 4 May 2017 09:26:19 +0000
+Subject: [DOCKTESTERS]  BWA-Mem final
+In-Reply-To: <D528D707.74FFB%junjun.zhang@oicr.on.ca>
+References: <D4F99479.1A4BC%george.mihaiescu@oicr.on.ca>
+ <D5279164.1B306%george.mihaiescu@oicr.on.ca>
+ <D528D707.74FFB%junjun.zhang@oicr.on.ca>
+Message-ID: <4D1F0763-E42B-4550-8EC0-9BF4CF36439C@crick.ac.uk>
+
+Hi all,
+
+Apologies for the delay in reporting back on this, I was out and we?re currently in the process of upgrading our compute infrastructure to OpenStack 10.
+Before documenting our findings, I ran one last test on the BWA-Mem docker to confirm that it is indeed the read order in the BAMs that was causing the 3?4% mismatch rates, and not some artefact/error of our BAM resetting procedures.
+
+Briefly, I simply shuffled the read order in the original unmapped lane-level BAMs for DO51057 (keeping pairs together) and remapped them using the BWA-Mem docker (BAMs fed in the same order).
+Results for the normal are:
+
+Lines: 1124984372
+Matches: 1049339853
+Misses: 41820223
+Soft: 33824296
+
+
+and for the tumour:
+
+Lines: 1010510325
+Matches: 933112344
+Misses: 38856341
+Soft: 38541640
+
+Which show 3.7% and 3.8% mismatch rates, respectively ? approx. two orders of magnitude higher than when using the same BAM files with the reads in the original order.
+These rates are similar to what we saw in the initial tests when running on our own unaligned BAM files generated from the final mapped ones.
+Taken together with our previous results, this confirms read order within BAMs as the main source of the original discrepancies.
+
+I?ll now proceed to document the results on the BWA-Mem workflow docker github page and in the manuscript, and will continue with the other docker containers as well.
+
+Cheers,
+Jonas
+
+
+
+_________________________________
+Jonas Demeulemeester, PhD
+Postdoctoral Researcher
+The Francis Crick Institute
+1 Midland Road
+London
+NW1 1AT
+
+T: +44 (0)20 3796 2594
+M: +44 (0)7482 070730
+E: jonas.demeulemeester at crick.ac.uk<%22mailto:>
+W: www.crick.ac.uk<%22http://>
+
+
+The Francis Crick Institute Limited is a registered charity in England and Wales no. 1140062 and a company registered in England and Wales no. 06885462, with its registered office at 1 Midland Road London NW1 1AT
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170504/61d7814e/attachment.html>
+
+From mikisvaz at gmail.com  Thu May  4 05:28:28 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Thu, 4 May 2017 11:28:28 +0200
+Subject: [DOCKTESTERS] BWA-Mem final
+In-Reply-To: <4D1F0763-E42B-4550-8EC0-9BF4CF36439C@crick.ac.uk>
+References: <D4F99479.1A4BC%george.mihaiescu@oicr.on.ca>
+ <D5279164.1B306%george.mihaiescu@oicr.on.ca>
+ <D528D707.74FFB%junjun.zhang@oicr.on.ca>
+ <4D1F0763-E42B-4550-8EC0-9BF4CF36439C@crick.ac.uk>
+Message-ID: <CA+dx8mb0-bib=ryT+sA8QDEMSE9itPdM16exec_KkBQs83ndtg@mail.gmail.com>
+
+Thank you for this extra effort Jonas, I think this closes this discussion
+very nicely.
+
+Best regards
+
+Miguel
+
+On Thu, May 4, 2017 at 11:26 AM, Jonas Demeulemeester <
+Jonas.Demeulemeester at crick.ac.uk> wrote:
+
+> Hi all,
+>
+> Apologies for the delay in reporting back on this, I was out and we?re
+> currently in the process of upgrading our compute infrastructure to
+> OpenStack 10.
+> Before documenting our findings, I ran one last test on the BWA-Mem docker
+> to confirm that it is indeed the read order in the BAMs that was causing
+> the 3?4% mismatch rates, and not some artefact/error of our BAM resetting
+> procedures.
+>
+> Briefly, I simply shuffled the read order in the original unmapped
+> lane-level BAMs for DO51057 (keeping pairs together) and remapped them
+> using the BWA-Mem docker (BAMs fed in the same order).
+> Results for the normal are:
+>
+> Lines: 1124984372
+> Matches: 1049339853
+> Misses: 41820223
+> Soft: 33824296
+>
+>
+> and for the tumour:
+>
+> Lines: 1010510325
+> Matches: 933112344 <933%2011%2023%2044>
+> Misses: 38856341
+> Soft: 38541640
+>
+> Which show 3.7% and 3.8% mismatch rates, respectively ? approx. two orders
+> of magnitude higher than when using the same BAM files with the reads in
+> the original order.
+> These rates are similar to what we saw in the initial tests when running
+> on our own unaligned BAM files generated from the final mapped ones.
+> Taken together with our previous results, this confirms read order within
+> BAMs as the main source of the original discrepancies.
+>
+> I?ll now proceed to document the results on the BWA-Mem workflow docker
+> github page and in the manuscript, and will continue with the other docker
+> containers as well.
+>
+> Cheers,
+> Jonas
+>
+>
+>
+> _________________________________
+> Jonas Demeulemeester, PhD
+> Postdoctoral Researcher
+> The Francis Crick Institute
+> 1 Midland Road
+> London
+> NW1 1AT
+>
+> *T:* +44 (0)20 3796 2594 <+44%2020%203796%202594>
+> M: +44 (0)7482 070730 <+44%207482%20070730>
+> *E:* jonas.demeulemeester at crick.ac.uk
+> *W:* www.crick.ac.uk
+>
+> The Francis Crick Institute Limited is a registered charity in England and
+> Wales no. 1140062 and a company registered in England and Wales no.
+> 06885462, with its registered office at 1 Midland Road London NW1 1AT
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170504/f771a7f0/attachment-0001.html>
+
+From mikisvaz at gmail.com  Fri May  5 11:53:17 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Fri, 5 May 2017 17:53:17 +0200
+Subject: [DOCKTESTERS] [DOCKTERTERS] 'pretty good' validation of
+	Merge-Annotate for donor DO52621
+Message-ID: <CA+dx8mZXO9H-wGM9z4pnjubK-O-1tqaOQGVJGdXjXVa6qcS=8w@mail.gmail.com>
+
+Dear all,
+
+I've completed the validation for Merge-Annotate. The results for the SNV
+providers Broad and DKFZ is a perfect match, and for Muse there are only 3
+small discrepancies (see below).
+
+For Sanger there is something odd. There is a file for the annotated VCF
+but not for the non-annotated, instead there is a file called SVCP. Are
+these equivalent:
+
+fc876f51-0577-3b53-e040-11ac0d48515e_annotated_*sanger*_SNV.vcf.gz
+fc876f51-0577-3b53-e040-11ac0d48515e.*svcp*
+_1-0-3.20150102.somatic.snv_mnv.pass-filtered.oxoG.vcf.gz
+
+Best regards
+
+Miguel
+
+----RESULTS-----
+
+
+Comparison of Merge-Annotate for DO52621 provider broad
+---
+Common: 2764
+Extra: 0
+Missing: 0
+
+
+Comparison of Merge-Annotate for DO52621 provider dkfz
+---
+Common: 1953
+Extra: 0
+Missing: 0
+
+
+Comparison of Merge-Annotate for DO52621 provider muse
+---
+Common: 5982
+Extra: 3
+    - Example:
+* GL000193.1    94864   .       C       G       .       Tier4
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=14;TumourAvgVarBaseQ=35.0;TumourAvgVarMapQ=28.8;TumourAvgVarPosn=
+*0.6*;TumourEvidenceReads=5,0;TumourReads=35      GT:DP:AD:BQ:SS
+0/1:35:30,5:28,30:2     0/0:14:14,0:29,0:.
+* GL000195.1    150483  .       A       G       .       PASS
+SOMATIC;NormalEvidenceReads=1,0;NormalReads=66;TumourAvgVarBaseQ=39.2;TumourAvgVarMapQ=10.8;TumourAvgVarPosn=
+*0.56*;TumourEvidenceReads=9,11;TumourReads=163   GT:DP:AD:BQ:SS
+0/1:163:143,20:30,30:2  0/0:66:65,1:29,32:.
+* GL000225.1    104343  .       C       A       .       Tier1
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=31;TumourAvgVarBaseQ=36.0;TumourAvgVarMapQ=44.17;TumourAvgVarPosn=
+*0.38*;TumourEvidenceReads=2,4;TumourReads=50    GT:DP:AD:BQ:SS
+0/1:50:44,6:30,30:2     0/0:31:31,0:28,0:.
+Missing: 3
+    - Example:
+* GL000193.1    94864   .       C       G       .       Tier4
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=14;TumourAvgVarBaseQ=35.0;TumourAvgVarMapQ=28.8;TumourAvgVarPosn=
+*0.54*;TumourEvidenceReads=5,0;TumourReads=35     GT:DP:AD:BQ:SS
+0/1:35:30,5:28,30:2     0/0:14:14,0:29,0:.
+* GL000195.1    150483  .       A       G       .       PASS
+SOMATIC;NormalEvidenceReads=1,0;NormalReads=66;TumourAvgVarBaseQ=39.2;TumourAvgVarMapQ=10.8;TumourAvgVarPosn=
+*0.57*;TumourEvidenceReads=9,11;TumourReads=163   GT:DP:AD:BQ:SS
+0/1:163:143,20:30,30:2  0/0:66:65,1:29,32:.
+* GL000225.1    104343  .       C       A       .       Tier1
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=31;TumourAvgVarBaseQ=36.0;TumourAvgVarMapQ=44.17;TumourAvgVarPosn=
+*0.42*;TumourEvidenceReads=2,4;TumourReads=50    GT:DP:AD:BQ:SS
+0/1:50:44,6:30,30:2     0/0:31:31,0:28,0:.
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170505/9341a1fe/attachment.html>
+
+From solomon.shorser at oicr.on.ca  Mon May  8 10:19:24 2017
+From: solomon.shorser at oicr.on.ca (Solomon Shorser)
+Date: Mon, 8 May 2017 10:19:24 -0400
+Subject: [DOCKTESTERS] pcawg-consensus-caller now available
+Message-ID: <7b781c49-f4ef-09c1-94f2-d5b4fee1963e@oicr.on.ca>
+
+Hello,
+
+The PCAWG consensus-caller by Jonathan Dursi is now available on 
+dockstore: 
+https://dockstore.org/containers/quay.io/pancancer/pcawg-consensus-caller
+
+Thanks,
+Solomon Shorser.
+
+
+*Solomon Shorser*
+Software Developer
+
+*Ontario Institute for Cancer Research*
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Email: solomon.shorser at oicr.on.ca
+Telephone: (647) 258-4319
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+
+www.oicr.on.ca <http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or 
+privileged information for the sole use of the intended recipient. Any 
+review or distribution by anyone other than the person for whom it was 
+originally intended is strictly prohibited. If you have received this 
+message in error, please contact the sender and delete all copies. 
+Opinions, conclusions or other information contained in this message may 
+not be that of the organization.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170508/46643e40/attachment.html>
+
+From mikisvaz at gmail.com  Thu May 11 10:07:45 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Thu, 11 May 2017 16:07:45 +0200
+Subject: [DOCKTESTERS]  Issues with Consensus Docker
+Message-ID: <CA+dx8mb7M2zupxT3iT1J8seOQoo7LvyNWxzc57v_Yp9y9+0z9Q@mail.gmail.com>
+
+Hi all,
+
+I've started trying to test the Consensus Docker and I've ran into a few
+difficulties. Some pertain the application itself and some I are questions
+I have related to CWL or Docker.
+
+1- Missing input dbs_dir: The documentation suggests that this is a
+directory with resources that need to be set up beforehand using the same
+docker container with different parameters. I'm not sure how to handle
+this. To keep going I've just pointed to some arbitrary directory
+
+2- Missing tbi files on input VCFs: The CWL explicitly asks for the input
+VCF. In the documentation it seems like the inputs are in fact compressed
+with gzip. Up to here is fine, though I wonder if there would not be a more
+explicit way to indicate this in. The problem comes when I run it that I
+get an error complaining about a missing tbi file:
+
+  Missing input file [Errno 2] No such file or directory:
+'/mnt/1TB/work/DockerTest-Miguel/data/DO52621//broad.oxoG.annotated.vcf.gz
+*.tbi*'
+
+It is not a problem to produce it using tabix but what is confusing to me
+is that there is no mention of any tbi file in the Dockstore.json file. How
+does this work?
+
+3- After producing the tbi files I get this error, which I think is related
+to (1)
+
+  Invalid filename: '' contains illegal characters
+
+
+Best regards
+
+Miguel
+
+----Dockstore.json-----
+
+
+{
+  "broad_input_file": {
+    "path": "/tmp/fill_me_in.txt",
+    "class": "File"
+  },
+  "dkfz_embl_input_file": {
+    "path": "/tmp/fill_me_in.txt",
+    "class": "File"
+  },
+  "variant_type": "fill me in",
+  "consensus_vcf_index": {
+    "path": "/tmp/fill_me_in.txt",
+    "class": "File"
+  },
+
+
+
+*  "dbs_dir": {    "path": "/tmp/fill_directory_in",    "class":
+"Directory"  },*
+  "muse_input_file": {
+    "path": "/tmp/fill_me_in.txt",
+    "class": "File"
+  },
+  "consensus_zipped_vcf": {
+    "path": "/tmp/fill_me_in.txt",
+    "class": "File"
+  },
+  "sanger_input_file": {
+    "path": "/tmp/fill_me_in.txt",
+    "class": "File"
+  }
+}
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/e5736990/attachment.html>
+
+From solomon.shorser at oicr.on.ca  Thu May 11 10:30:29 2017
+From: solomon.shorser at oicr.on.ca (Solomon Shorser)
+Date: Thu, 11 May 2017 10:30:29 -0400
+Subject: [DOCKTESTERS] Issues with Consensus Docker
+In-Reply-To: <CA+dx8mb7M2zupxT3iT1J8seOQoo7LvyNWxzc57v_Yp9y9+0z9Q@mail.gmail.com>
+References: <CA+dx8mb7M2zupxT3iT1J8seOQoo7LvyNWxzc57v_Yp9y9+0z9Q@mail.gmail.com>
+Message-ID: <ae4ea33d-a658-4227-4e97-7fdf31c7bbc0@oicr.on.ca>
+
+Hi Miguel,
+
+The .tbi files need to be there, but they do not need to be /explicitly/ 
+included in the input JSON file.
+
+CWL has the option to specify "secondary" files that go with a main 
+file. In the CWL, an input VCF is defined like this example:
+
+     dkfz_embl_input_file:
+       type: File
+       inputBinding:
+         position: 3
+         prefix: "-d"
+_*      secondaryFiles:*__*
+*__*        - .tbi*__*
+*_
+
+
+Specifying ".tbi" as secondary files indicates to CWL that it should 
+look for any .tbi file that matches the same name as the actual file 
+bound to this input should also be included (see: 
+http://www.commonwl.org/v1.0/CommandLineTool.html#Expressions section 
+5.2 CommandOutputParameter , "secondaryFiles").
+
+As for the error related to creating the .tbi files: the format is 
+similar to gzip but they should actually be created with a tool named 
+"tabix" (I think you can install with apt on linux). Creating the tabix 
+file can probably be done with a command that looks like this: "tabix -p 
+vcf myDataFile.vcf.gz".
+
+
+
+dbs_dir is supposed to be a Directory that contains the necessary 
+references files. The original documentation from Jonathan Dursi shows 
+there is a command to create this directory:
+
+|mkdir dbs docker run -it -v "${PWD}/dbs":/dbs consensus_call download 
+reference /dbs docker run -it -v "${PWD}/dbs":/dbs consensus_call 
+download annotations /dbs docker run -it -v "${PWD}/dbs":/dbs 
+consensus_call download cosmic /dbs|
+
+(see: 
+https://github.com/SolomonShorser-OICR/consensus_call_docker#downloading-auxiliary-files)
+
+This is /not/ done within the dockstore tool as downloading this 
+directory could take a long time (it is about 6 GB on my system) so I 
+would recommend running the commands above before running the dockstore 
+tool, then pointing the "dbs_dir" parameter to this directory.
+
+I've attached a sample of the input JSON file I used.
+
+Can you send me the link to the documentation you were reading? I think 
+the dockstore usage needs to be made more clear, so please let me know 
+where you were reading so I can update the right file.
+
+
+Thanks,
+Solomon Shorser.
+
+On 2017-05-11 10:07 AM, Miguel Vazquez wrote:
+> Hi all,
+>
+> I've started trying to test the Consensus Docker and I've ran into a 
+> few difficulties. Some pertain the application itself and some I are 
+> questions I have related to CWL or Docker.
+>
+> 1- Missing input dbs_dir: The documentation suggests that this is a 
+> directory with resources that need to be set up beforehand using the 
+> same docker container with different parameters. I'm not sure how to 
+> handle this. To keep going I've just pointed to some arbitrary directory
+>
+> 2- Missing tbi files on input VCFs: The CWL explicitly asks for the 
+> input VCF. In the documentation it seems like the inputs are in fact 
+> compressed with gzip. Up to here is fine, though I wonder if there 
+> would not be a more explicit way to indicate this in. The problem 
+> comes when I run it that I get an error complaining about a missing 
+> tbi file:
+>
+>   Missing input file [Errno 2] No such file or directory: 
+> '/mnt/1TB/work/DockerTest-Miguel/data/DO52621//broad.oxoG.annotated.vcf.gz*.tbi*'
+>
+> It is not a problem to produce it using tabix but what is confusing to 
+> me is that there is no mention of any tbi file in the Dockstore.json 
+> file. How does this work?
+>
+> 3- After producing the tbi files I get this error, which I think is 
+> related to (1)
+>
+>   Invalid filename: '' contains illegal characters
+>
+>
+> Best regards
+>
+> Miguel
+>
+> ----Dockstore.json-----
+>
+>
+> {
+>   "broad_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "dkfz_embl_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "variant_type": "fill me in",
+>   "consensus_vcf_index": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+> *  "dbs_dir": {
+>     "path": "/tmp/fill_directory_in",
+>     "class": "Directory"
+>   },*
+>   "muse_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "consensus_zipped_vcf": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "sanger_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   }
+> }
+>
+>
+>
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+
+*Solomon Shorser*
+Software Developer
+
+*Ontario Institute for Cancer Research*
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Email: solomon.shorser at oicr.on.ca
+Telephone: (647) 258-4319
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+
+www.oicr.on.ca <http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or 
+privileged information for the sole use of the intended recipient. Any 
+review or distribution by anyone other than the person for whom it was 
+originally intended is strictly prohibited. If you have received this 
+message in error, please contact the sender and delete all copies. 
+Opinions, conclusions or other information contained in this message may 
+not be that of the organization.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/8c80b723/attachment-0001.html>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: consensus_calling_input0.json
+Type: application/json
+Size: 922 bytes
+Desc: not available
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/8c80b723/attachment-0001.json>
+
+From mikisvaz at gmail.com  Thu May 11 10:43:29 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Thu, 11 May 2017 16:43:29 +0200
+Subject: [DOCKTESTERS] Issues with Consensus Docker
+In-Reply-To: <ae4ea33d-a658-4227-4e97-7fdf31c7bbc0@oicr.on.ca>
+References: <CA+dx8mb7M2zupxT3iT1J8seOQoo7LvyNWxzc57v_Yp9y9+0z9Q@mail.gmail.com>
+ <ae4ea33d-a658-4227-4e97-7fdf31c7bbc0@oicr.on.ca>
+Message-ID: <CA+dx8ma+iZ08+CdvfRtR5Ptgqm1Eyiiyut-OaTAJpRpHmQt3Yw@mail.gmail.com>
+
+Thanks Solomon for your explanations. I've produced the tbi files with
+tabix and I've now prepared a script that downloads the resources following
+your instructions. I'll let you know how it goes.
+
+
+
+
+On Thu, May 11, 2017 at 4:30 PM, Solomon Shorser <solomon.shorser at oicr.on.ca
+> wrote:
+
+> Hi Miguel,
+>
+> The .tbi files need to be there, but they do not need to be *explicitly*
+> included in the input JSON file.
+>
+> CWL has the option to specify "secondary" files that go with a main file.
+> In the CWL, an input VCF is defined like this example:
+>
+>     dkfz_embl_input_file:
+>       type: File
+>       inputBinding:
+>         position: 3
+>         prefix: "-d"
+> *      secondaryFiles:*
+> *        - .tbi*
+>
+> Specifying ".tbi" as secondary files indicates to CWL that it should look
+> for any .tbi file that matches the same name as the actual file bound to
+> this input should also be included (see: http://www.commonwl.org/v1.0/
+> CommandLineTool.html#Expressions section 5.2 CommandOutputParameter ,
+> "secondaryFiles").
+>
+> As for the error related to creating the .tbi files: the format is similar
+> to gzip but they should actually be created with a tool named "tabix" (I
+> think you can install with apt on linux). Creating the tabix file can
+> probably be done with a command that looks like this: "tabix -p vcf
+> myDataFile.vcf.gz".
+>
+>
+>
+> dbs_dir is supposed to be a Directory that contains the necessary
+> references files. The original documentation from Jonathan Dursi shows
+> there is a command to create this directory:
+>
+> mkdir dbs
+> docker run -it -v "${PWD}/dbs":/dbs consensus_call download reference /dbs
+> docker run -it -v "${PWD}/dbs":/dbs consensus_call download annotations /dbs
+> docker run -it -v "${PWD}/dbs":/dbs consensus_call download cosmic /dbs
+>
+> (see: https://github.com/SolomonShorser-OICR/consensus_
+> call_docker#downloading-auxiliary-files)
+>
+> This is *not* done within the dockstore tool as downloading this
+> directory could take a long time (it is about 6 GB on my system) so I would
+> recommend running the commands above before running the dockstore tool,
+> then pointing the "dbs_dir" parameter to this directory.
+>
+> I've attached a sample of the input JSON file I used.
+>
+> Can you send me the link to the documentation you were reading? I think
+> the dockstore usage needs to be made more clear, so please let me know
+> where you were reading so I can update the right file.
+>
+>
+> Thanks,
+> Solomon Shorser.
+>
+>
+> On 2017-05-11 10:07 AM, Miguel Vazquez wrote:
+>
+> Hi all,
+>
+> I've started trying to test the Consensus Docker and I've ran into a few
+> difficulties. Some pertain the application itself and some I are questions
+> I have related to CWL or Docker.
+>
+> 1- Missing input dbs_dir: The documentation suggests that this is a
+> directory with resources that need to be set up beforehand using the same
+> docker container with different parameters. I'm not sure how to handle
+> this. To keep going I've just pointed to some arbitrary directory
+>
+> 2- Missing tbi files on input VCFs: The CWL explicitly asks for the input
+> VCF. In the documentation it seems like the inputs are in fact compressed
+> with gzip. Up to here is fine, though I wonder if there would not be a more
+> explicit way to indicate this in. The problem comes when I run it that I
+> get an error complaining about a missing tbi file:
+>
+>   Missing input file [Errno 2] No such file or directory:
+> '/mnt/1TB/work/DockerTest-Miguel/data/DO52621//broad.oxoG.annotated.vcf.gz
+> *.tbi*'
+>
+> It is not a problem to produce it using tabix but what is confusing to me
+> is that there is no mention of any tbi file in the Dockstore.json file. How
+> does this work?
+>
+> 3- After producing the tbi files I get this error, which I think is
+> related to (1)
+>
+>   Invalid filename: '' contains illegal characters
+>
+>
+> Best regards
+>
+> Miguel
+>
+> ----Dockstore.json-----
+>
+>
+> {
+>   "broad_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "dkfz_embl_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "variant_type": "fill me in",
+>   "consensus_vcf_index": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>
+>
+>
+> *  "dbs_dir": {     "path": "/tmp/fill_directory_in",     "class":
+> "Directory"   },*
+>   "muse_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "consensus_zipped_vcf": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   },
+>   "sanger_input_file": {
+>     "path": "/tmp/fill_me_in.txt",
+>     "class": "File"
+>   }
+> }
+>
+>
+>
+>
+> _______________________________________________
+> docktesters mailing listdocktesters at lists.icgc.orghttps://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+> *Solomon Shorser*
+> Software Developer
+>
+> *Ontario Institute for Cancer Research*
+> MaRS Centre
+> 661 University Avenue
+> Suite 510
+> Toronto, Ontario
+> Canada M5G 0A3
+>
+> Email: solomon.shorser at oicr.on.ca
+> Telephone: (647) 258-4319
+> Toll-free: 1-866-678-6427
+> Twitter: @OICR_news
+>
+> www.oicr.on.ca
+>
+> This message and any attachments may contain confidential and/or
+> privileged information for the sole use of the intended recipient. Any
+> review or distribution by anyone other than the person for whom it was
+> originally intended is strictly prohibited. If you have received this
+> message in error, please contact the sender and delete all copies.
+> Opinions, conclusions or other information contained in this message may
+> not be that of the organization.
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170511/e5fcd8da/attachment.html>
+
+From mikisvaz at gmail.com  Thu May 18 07:41:46 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Thu, 18 May 2017 13:41:46 +0200
+Subject: [DOCKTESTERS] [DOCKTERTERS] Update: Sanger also validated for
+ Merge-Annotate -- 'pretty good' validation of Merge-Annotate for donor
+ DO52621
+Message-ID: <CA+dx8mY+F2iVAtmNXuqJj=1w3WbsUmy6rFsER6c2tE_xU13hBQ@mail.gmail.com>
+
+Dear friends,
+
+This is just a small update for the Merge-Annotate workflow. Last time I
+skipped Sanger because I couldn't match some filenames. I've resolved that
+issue and it validates perfectly. Below are the results now featuring the
+Sanger workflow
+
+Best
+
+Miguel
+
+---
+
+
+Comparison of Merge-Annotate for DO52621 provider broad
+---
+Common: 2764
+Extra: 0
+Missing: 0
+
+
+Comparison of Merge-Annotate for DO52621 provider dkfz
+---
+Common: 1953
+Extra: 0
+Missing: 0
+
+
+Comparison of Merge-Annotate for DO52621 provider muse
+---
+Common: 5982
+Extra: 3
+    - Example:
+* GL000193.1    94864   .       C       G       .       Tier4
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=14;TumourAvgVarBaseQ=35.0;TumourAvgVarMapQ=28.8;TumourAvgVarPosn=0.6;TumourEvidenceReads=5,0;TumourReads=35
+GT:DP:AD:BQ:SS  0/1:35:30,5:28,30:2     0/0:14:14,0:29,0:.
+* GL000195.1    150483  .       A       G       .       PASS
+SOMATIC;NormalEvidenceReads=1,0;NormalReads=66;TumourAvgVarBaseQ=39.2;TumourAvgVarMapQ=10.8;TumourAvgVarPosn=0.56;TumourEvidenceReads=9,11;TumourReads=163
+GT:DP:AD:BQ:SS  0/1:163:143,20:30,30:2  0/0:66:65,1:29,32:.
+* GL000225.1    104343  .       C       A       .       Tier1
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=31;TumourAvgVarBaseQ=36.0;TumourAvgVarMapQ=44.17;TumourAvgVarPosn=0.38;TumourEvidenceReads=2,4;TumourReads=50
+GT:DP:AD:BQ:SS  0/1:50:44,6:30,30:2     0/0:31:31,0:28,0:.
+Missing: 3
+    - Example:
+* GL000193.1    94864   .       C       G       .       Tier4
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=14;TumourAvgVarBaseQ=35.0;TumourAvgVarMapQ=28.8;TumourAvgVarPosn=0.54;TumourEvidenceReads=5,0;TumourReads=35
+GT:DP:AD:BQ:SS  0/1:35:30,5:28,30:2     0/0:14:14,0:29,0:.
+* GL000195.1    150483  .       A       G       .       PASS
+SOMATIC;NormalEvidenceReads=1,0;NormalReads=66;TumourAvgVarBaseQ=39.2;TumourAvgVarMapQ=10.8;TumourAvgVarPosn=0.57;TumourEvidenceReads=9,11;TumourReads=163
+GT:DP:AD:BQ:SS  0/1:163:143,20:30,30:2  0/0:66:65,1:29,32:.
+* GL000225.1    104343  .       C       A       .       Tier1
+SOMATIC;NormalEvidenceReads=0,0;NormalReads=31;TumourAvgVarBaseQ=36.0;TumourAvgVarMapQ=44.17;TumourAvgVarPosn=0.42;TumourEvidenceReads=2,4;TumourReads=50
+GT:DP:AD:BQ:SS  0/1:50:44,6:30,30:2     0/0:31:31,0:28,0:.
+
+
+Comparison of Merge-Annotate for DO52621 provider sanger
+---
+Common: 1615
+Extra: 0
+Missing: 0
+
+
+On Fri, May 5, 2017 at 5:53 PM, Miguel Vazquez <mikisvaz at gmail.com> wrote:
+
+> Dear all,
+>
+> I've completed the validation for Merge-Annotate. The results for the SNV
+> providers Broad and DKFZ is a perfect match, and for Muse there are only 3
+> small discrepancies (see below).
+>
+> For Sanger there is something odd. There is a file for the annotated VCF
+> but not for the non-annotated, instead there is a file called SVCP. Are
+> these equivalent:
+>
+> fc876f51-0577-3b53-e040-11ac0d48515e_annotated_*sanger*_SNV.vcf.gz
+> fc876f51-0577-3b53-e040-11ac0d48515e.*svcp*_1-0-3.
+> 20150102.somatic.snv_mnv.pass-filtered.oxoG.vcf.gz
+>
+> Best regards
+>
+> Miguel
+>
+> ----RESULTS-----
+>
+>
+> Comparison of Merge-Annotate for DO52621 provider broad
+> ---
+> Common: 2764
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of Merge-Annotate for DO52621 provider dkfz
+> ---
+> Common: 1953
+> Extra: 0
+> Missing: 0
+>
+>
+> Comparison of Merge-Annotate for DO52621 provider muse
+> ---
+> Common: 5982
+> Extra: 3
+>     - Example:
+> * GL000193.1    94864   .       C       G       .       Tier4
+> SOMATIC;NormalEvidenceReads=0,0;NormalReads=14;TumourAvgVarBaseQ=35.0;
+> TumourAvgVarMapQ=28.8;TumourAvgVarPosn=*0.6*;TumourEvidenceReads=5,0;TumourReads=35
+> GT:DP:AD:BQ:SS  0/1:35:30,5:28,30:2     0/0:14:14,0:29,0:.
+> * GL000195.1    150483  .       A       G       .       PASS
+> SOMATIC;NormalEvidenceReads=1,0;NormalReads=66;TumourAvgVarBaseQ=39.2;
+> TumourAvgVarMapQ=10.8;TumourAvgVarPosn=*0.56*;TumourEvidenceReads=9,11;TumourReads=163
+> GT:DP:AD:BQ:SS  0/1:163:143,20:30,30:2  0/0:66:65,1:29,32:.
+> * GL000225.1    104343  .       C       A       .       Tier1
+> SOMATIC;NormalEvidenceReads=0,0;NormalReads=31;TumourAvgVarBaseQ=36.0;
+> TumourAvgVarMapQ=44.17;TumourAvgVarPosn=*0.38*;TumourEvidenceReads=2,4;TumourReads=50
+> GT:DP:AD:BQ:SS  0/1:50:44,6:30,30:2     0/0:31:31,0:28,0:.
+> Missing: 3
+>     - Example:
+> * GL000193.1    94864   .       C       G       .       Tier4
+> SOMATIC;NormalEvidenceReads=0,0;NormalReads=14;TumourAvgVarBaseQ=35.0;
+> TumourAvgVarMapQ=28.8;TumourAvgVarPosn=*0.54*;TumourEvidenceReads=5,0;TumourReads=35
+> GT:DP:AD:BQ:SS  0/1:35:30,5:28,30:2     0/0:14:14,0:29,0:.
+> * GL000195.1    150483  .       A       G       .       PASS
+> SOMATIC;NormalEvidenceReads=1,0;NormalReads=66;TumourAvgVarBaseQ=39.2;
+> TumourAvgVarMapQ=10.8;TumourAvgVarPosn=*0.57*;TumourEvidenceReads=9,11;TumourReads=163
+> GT:DP:AD:BQ:SS  0/1:163:143,20:30,30:2  0/0:66:65,1:29,32:.
+> * GL000225.1    104343  .       C       A       .       Tier1
+> SOMATIC;NormalEvidenceReads=0,0;NormalReads=31;TumourAvgVarBaseQ=36.0;
+> TumourAvgVarMapQ=44.17;TumourAvgVarPosn=*0.42*;TumourEvidenceReads=2,4;TumourReads=50
+> GT:DP:AD:BQ:SS  0/1:50:44,6:30,30:2     0/0:31:31,0:28,0:.
+>
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170518/ec6067f1/attachment-0001.html>
+
+From mikisvaz at gmail.com  Sun May 21 07:45:58 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Sun, 21 May 2017 13:45:58 +0200
+Subject: [DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+Message-ID: <CA+dx8mZzYnbuDnso04AqPmsEpwL9MTULpk2d-8xWJgi5p-JY2Q@mail.gmail.com>
+
+Dear all,
+
+I've ran into some more trouble with the Consensus workflow. In particular
+its two issues that I'm not sure if they are related.
+
+First of all is that I followed the advice to download the data necessary
+before hand:
+
+mkdir dbs
+docker run -it -v "${PWD}/dbs":/dbs consensus_call download reference /dbs
+docker run -it -v "${PWD}/dbs":/dbs consensus_call download annotations /dbs
+docker run -it -v "${PWD}/dbs":/dbs consensus_call download cosmic /dbs
+
+However the last part that download COSMIC give me an error. I tried using
+my login email address and password and I get 'Permission denied, please
+try again.' I've check COSMIC several times and reset my password. I have
+SFTP access enabled and everything. I'm not sure what is happening.
+
+Despite this I though that the workflow might be able to run, since the
+COSMIC data is optional, but I get the following error
+
+
+ubuntu at ip-10-42-6-176:~/DockerTest-Miguel$ cd
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/ && dockstore tool
+launch --script --entry quay.io/pancancer/pcawg-consensus-caller:latest
+ --json Dockstore.json
+Creating directories for run of Dockstore launcher at:
+./datastore//launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0
+Provisioning your input files to your local machine
+Calling out to cwltool to run your tool
+Executing: cwltool --enable-dev --non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/
+--tmp-outdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/
+/tmp/1495367250976-0/temp3097766058272663834.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+/usr/local/bin/cwltool 1.0.20161202203310
+Resolved '/tmp/1495367250976-0/temp3097766058272663834.cwl' to
+'file:///tmp/1495367250976-0/temp3097766058272663834.cwl'
+Got workflow error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/main.py", line 227,
+in single_job_executor
+    for r in jobiter:
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/draft2tool.py", line
+370, in job
+    j.command_line = flatten(map(builder.generate_arg, builder.bindings))
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line
+158, in generate_arg
+    value = self.do_eval(binding["valueFrom"], context=value)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line
+206, in do_eval
+    timeout=self.timeout)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line
+186, in do_eval
+    jslib=jslib)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line
+144, in interpolate
+    timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line
+127, in evaluator
+    return next_seg(m.group(0)[m.end(1) - m.start(0):-1], obj[m.group(1)])
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line
+113, in next_seg
+    return next_seg(remain[m.end(0):], obj[m.group(0)[1:]])
+*KeyError: 'output_file_name'*
+*Workflow error, try again with --debug for more information:*
+*  'output_file_name'*
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1
+(Exit value: 1)
+        at
+org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+        at
+org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+        at
+org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+        at java.lang.Thread.run(Thread.java:745)
+java.lang.RuntimeException: problems running command: cwltool --enable-dev
+--non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/
+--tmp-outdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/
+/tmp/1495367250976-0/temp3097766058272663834.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+
+Could this be related to the problem with COSMIC?
+
+Best regards
+
+Miguel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170521/c0c9f44f/attachment.html>
+
+From solomon.shorser at oicr.on.ca  Tue May 23 10:28:15 2017
+From: solomon.shorser at oicr.on.ca (Solomon Shorser)
+Date: Tue, 23 May 2017 10:28:15 -0400
+Subject: [DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+In-Reply-To: <CA+dx8mZzYnbuDnso04AqPmsEpwL9MTULpk2d-8xWJgi5p-JY2Q@mail.gmail.com>
+References: <CA+dx8mZzYnbuDnso04AqPmsEpwL9MTULpk2d-8xWJgi5p-JY2Q@mail.gmail.com>
+Message-ID: <16bd1f91-006c-3f98-250c-02c0c7776cf7@oicr.on.ca>
+
+Hi Miguel,
+
+I am not sure about the COSMIC error. Did it prompt you for your 
+username and password? Are you able to access the files with sftp 
+/outside/ of a docker-container context? I was not the author of this 
+docker image or the scripts within, but I can talk to the original 
+author if we cannot solve this ourselves.
+
+As for the CWLTool error:
+
+This error:
+
+||
+
+|*KeyError: 'output_file_name'*|
+|
+*Workflow error, try again with --debug for more information:*
+*'output_file_name'*
+|
+
+...suggests that the variable named "output_file_name" was missing, 
+probably from the input json "workflow_params.json".
+If your workflow_params.json file does not have an "output_file_name", 
+please try adding one (it should look like: 
+..."output_file_name":"myConsensus.vcf",... in JSON) to the 
+workflow_params.json file, and let me know how that works.
+
+Thanks,
+Solomon Shorser.
+
+On 2017-05-21 07:45 AM, Miguel Vazquez wrote:
+> Dear all,
+>
+> I've ran into some more trouble with the Consensus workflow. In 
+> particular its two issues that I'm not sure if they are related.
+>
+> First of all is that I followed the advice to download the data 
+> necessary before hand:
+>
+> |mkdir dbs docker run -it -v "${PWD}/dbs":/dbs consensus_call download 
+> reference /dbs docker run -it -v "${PWD}/dbs":/dbs consensus_call 
+> download annotations /dbs docker run -it -v "${PWD}/dbs":/dbs 
+> consensus_call download cosmic /dbs |
+> |However the last part that download COSMIC give me an error. I tried 
+> using my login email address and password and I get 'Permission 
+> denied, please try again.' I've check COSMIC several times and reset 
+> my password. I have SFTP access enabled and everything. I'm not sure 
+> what is happening. |
+> |
+> |
+> |Despite this I though that the workflow might be able to run, since 
+> the COSMIC data is optional, but I get the following error|
+> |
+> |
+> |
+> |
+> |
+> ubuntu at ip-10-42-6-176:~/DockerTest-Miguel$ cd 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/ && dockstore 
+> tool launch --script --entry 
+> quay.io/pancancer/pcawg-consensus-caller:latest 
+> <http://quay.io/pancancer/pcawg-consensus-caller:latest>  --json 
+> Dockstore.json
+> Creating directories for run of Dockstore launcher at: 
+> ./datastore//launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0
+> Provisioning your input files to your local machine
+> Calling out to cwltool to run your tool
+> Executing: cwltool --enable-dev --non-strict --outdir 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/ 
+> --tmpdir-prefix 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/ 
+> --tmp-outdir-prefix 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/ 
+> /tmp/1495367250976-0/temp3097766058272663834.cwl 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+> /usr/local/bin/cwltool 1.0.20161202203310
+> Resolved '/tmp/1495367250976-0/temp3097766058272663834.cwl' to 
+> 'file:///tmp/1495367250976-0/temp3097766058272663834.cwl'
+> Got workflow error
+> Traceback (most recent call last):
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/main.py", line 
+> 227, in single_job_executor
+>     for r in jobiter:
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/draft2tool.py", 
+> line 370, in job
+> j.command_line = flatten(map(builder.generate_arg, builder.bindings))
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", 
+> line 158, in generate_arg
+>     value = self.do_eval(binding["valueFrom"], context=value)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", 
+> line 206, in do_eval
+> timeout=self.timeout)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", 
+> line 186, in do_eval
+> jslib=jslib)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", 
+> line 144, in interpolate
+> timeout=timeout)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", 
+> line 127, in evaluator
+>     return next_seg(m.group(0)[m.end(1) - m.start(0):-1], obj[m.group(1)])
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", 
+> line 113, in next_seg
+>     return next_seg(remain[m.end(0):], obj[m.group(0)[1:]])
+> *KeyError: 'output_file_name'*
+> *Workflow error, try again with --debug for more information:*
+> *'output_file_name'*
+> org.apache.commons.exec.ExecuteException: Process exited with an 
+> error: 1 (Exit value: 1)
+>         at 
+> org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+>         at 
+> org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+>         at 
+> org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+>         at java.lang.Thread.run(Thread.java:745)
+> java.lang.RuntimeException: problems running command: cwltool 
+> --enable-dev --non-strict --outdir 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/ 
+> --tmpdir-prefix 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/ 
+> --tmp-outdir-prefix 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/ 
+> /tmp/1495367250976-0/temp3097766058272663834.cwl 
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+>
+> Could this be related to the problem with COSMIC?
+>
+> Best regards
+>
+> Miguel
+> |
+>
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+
+*Solomon Shorser*
+Software Developer
+
+*Ontario Institute for Cancer Research*
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Email: solomon.shorser at oicr.on.ca
+Telephone: (647) 258-4319
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+
+www.oicr.on.ca <http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or 
+privileged information for the sole use of the intended recipient. Any 
+review or distribution by anyone other than the person for whom it was 
+originally intended is strictly prohibited. If you have received this 
+message in error, please contact the sender and delete all copies. 
+Opinions, conclusions or other information contained in this message may 
+not be that of the organization.
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170523/6e37a1ce/attachment-0001.html>
+
+From mikisvaz at gmail.com  Fri May 26 04:29:14 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Fri, 26 May 2017 10:29:14 +0200
+Subject: [DOCKTESTERS] [DOCKTERTERS] Sucessful run for Consensus workflow.
+	Validation pending
+Message-ID: <CA+dx8mZyxOrZgcZh4OGHn--Q8XmaiN4Q571vW5-MvKkOWhQjyA@mail.gmail.com>
+
+Dear all,
+
+Following Solomons advice below I got the Consensus workflow to run and
+produce a result. I'll now see if I can validate the results, but at least
+its working.
+
+I had to add the following line (bold) to the Dockstore.json template (note
+that this undergoes some pattern replacement before its run, but you get
+the idea)
+
+  "consensus_zipped_vcf": {
+    "path": "[OUTPUT-DIR]/[DONOR].consensus.vcf.gz",
+    "class": "File"
+  },
+*  "output_file_name":"[DONOR].consensus",*
+  "consensus_vcf_index": {
+    "path": "[OUTPUT-DIR]/[DONOR].consensus.vcf.gz.tbi",
+    "class": "File"
+  }
+
+Please update dockstore accordingly, this was missing from the
+automatically generated template
+
+Best regards
+
+Miguel
+
+On Tue, May 23, 2017 at 4:28 PM, Solomon Shorser <solomon.shorser at oicr.on.ca
+> wrote:
+
+> Hi Miguel,
+>
+> I am not sure about the COSMIC error. Did it prompt you for your username
+> and password? Are you able to access the files with sftp *outside* of a
+> docker-container context? I was not the author of this docker image or the
+> scripts within, but I can talk to the original author if we cannot solve
+> this ourselves.
+>
+> As for the CWLTool error:
+>
+> This error:
+>
+> *KeyError: 'output_file_name'*
+> *Workflow error, try again with --debug for more information:*
+> *  'output_file_name'*
+>
+> ...suggests that the variable named "output_file_name" was missing,
+> probably from the input json "workflow_params.json".
+> If your workflow_params.json file does not have an "output_file_name",
+> please try adding one (it should look like:  ..."output_file_name":"myConsensus.vcf",...
+> in JSON) to the workflow_params.json file, and let me know how that works.
+>
+> Thanks,
+> Solomon Shorser.
+>
+>
+> On 2017-05-21 07:45 AM, Miguel Vazquez wrote:
+>
+> Dear all,
+>
+> I've ran into some more trouble with the Consensus workflow. In particular
+> its two issues that I'm not sure if they are related.
+>
+> First of all is that I followed the advice to download the data necessary
+> before hand:
+>
+> mkdir dbs
+> docker run -it -v "${PWD}/dbs":/dbs consensus_call download reference /dbs
+> docker run -it -v "${PWD}/dbs":/dbs consensus_call download annotations /dbs
+> docker run -it -v "${PWD}/dbs":/dbs consensus_call download cosmic /dbs
+>
+> However the last part that download COSMIC give me an error. I tried using
+> my login email address and password and I get 'Permission denied, please
+> try again.' I've check COSMIC several times and reset my password. I have
+> SFTP access enabled and everything. I'm not sure what is happening.
+>
+> Despite this I though that the workflow might be able to run, since the
+> COSMIC data is optional, but I get the following error
+>
+>
+> ubuntu at ip-10-42-6-176:~/DockerTest-Miguel$ cd /mnt/1TB/work/DockerTest-
+> Miguel/tests/Consensus/DO52621/ && dockstore tool launch --script --entry
+> quay.io/pancancer/pcawg-consensus-caller:latest  --json Dockstore.json
+> Creating directories for run of Dockstore launcher at:
+> ./datastore//launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0
+> Provisioning your input files to your local machine
+> Calling out to cwltool to run your tool
+> Executing: cwltool --enable-dev --non-strict --outdir
+> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/
+> DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/
+> --tmpdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/
+> DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/
+> --tmp-outdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/
+> DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/
+> /tmp/1495367250976-0/temp3097766058272663834.cwl /mnt/1TB/work/DockerTest-
+> Miguel/tests/Consensus/DO52621/./datastore/launcher-
+> 92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+> /usr/local/bin/cwltool 1.0.20161202203310
+> Resolved '/tmp/1495367250976-0/temp3097766058272663834.cwl' to '
+> file:///tmp/1495367250976-0/temp3097766058272663834.cwl'
+> Got workflow error
+> Traceback (most recent call last):
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/main.py", line
+> 227, in single_job_executor
+>     for r in jobiter:
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/draft2tool.py",
+> line 370, in job
+>     j.command_line = flatten(map(builder.generate_arg, builder.bindings))
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line
+> 158, in generate_arg
+>     value = self.do_eval(binding["valueFrom"], context=value)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line
+> 206, in do_eval
+>     timeout=self.timeout)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+> line 186, in do_eval
+>     jslib=jslib)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+> line 144, in interpolate
+>     timeout=timeout)
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+> line 127, in evaluator
+>     return next_seg(m.group(0)[m.end(1) - m.start(0):-1], obj[m.group(1)])
+>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+> line 113, in next_seg
+>     return next_seg(remain[m.end(0):], obj[m.group(0)[1:]])
+> *KeyError: 'output_file_name'*
+> *Workflow error, try again with --debug for more information:*
+> *  'output_file_name'*
+> org.apache.commons.exec.ExecuteException: Process exited with an error: 1
+> (Exit value: 1)
+>         at org.apache.commons.exec.DefaultExecutor.executeInternal(
+> DefaultExecutor.java:404)
+>         at org.apache.commons.exec.DefaultExecutor.access$200(
+> DefaultExecutor.java:48)
+>         at org.apache.commons.exec.DefaultExecutor$1.run(
+> DefaultExecutor.java:200)
+>         at java.lang.Thread.run(Thread.java:745)
+> java.lang.RuntimeException: problems running command: cwltool --enable-dev
+> --non-strict --outdir /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/
+> DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/
+> --tmpdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/
+> DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/
+> --tmp-outdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/
+> DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/
+> /tmp/1495367250976-0/temp3097766058272663834.cwl /mnt/1TB/work/DockerTest-
+> Miguel/tests/Consensus/DO52621/./datastore/launcher-
+> 92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+>
+> Could this be related to the problem with COSMIC?
+>
+> Best regards
+>
+> Miguel
+>
+>
+> _______________________________________________
+> docktesters mailing listdocktesters at lists.icgc.orghttps://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+> *Solomon Shorser*
+> Software Developer
+>
+> *Ontario Institute for Cancer Research*
+> MaRS Centre
+> 661 University Avenue
+> Suite 510
+> Toronto, Ontario
+> Canada M5G 0A3
+>
+> Email: solomon.shorser at oicr.on.ca
+> Telephone: (647) 258-4319
+> Toll-free: 1-866-678-6427
+> Twitter: @OICR_news
+>
+> www.oicr.on.ca
+>
+> This message and any attachments may contain confidential and/or
+> privileged information for the sole use of the intended recipient. Any
+> review or distribution by anyone other than the person for whom it was
+> originally intended is strictly prohibited. If you have received this
+> message in error, please contact the sender and delete all copies.
+> Opinions, conclusions or other information contained in this message may
+> not be that of the organization.
+>
+> _______________________________________________
+> docktesters mailing list
+> docktesters at lists.icgc.org
+> https://lists.icgc.org/mailman/listinfo/docktesters
+>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170526/de3542b9/attachment.html>
+
+From Denis.Yuen at oicr.on.ca  Fri May 26 10:53:55 2017
+From: Denis.Yuen at oicr.on.ca (Denis Yuen)
+Date: Fri, 26 May 2017 14:53:55 +0000
+Subject: [DOCKTESTERS] [DOCKTERTERS] Sucessful run for Consensus
+	workflow.	Validation pending
+In-Reply-To: <CA+dx8mZyxOrZgcZh4OGHn--Q8XmaiN4Q571vW5-MvKkOWhQjyA@mail.gmail.com>
+References: <CA+dx8mZyxOrZgcZh4OGHn--Q8XmaiN4Q571vW5-MvKkOWhQjyA@mail.gmail.com>
+Message-ID: <00ae869ebe3148629c2f332eda7eaa9d@oicr.on.ca>
+
+Hi,
+
+Thanks for the heads-up. It looks like output_file_name is a bit of an odd-ball case in our understanding of CWL, so we're going to have create an issue on Dockstore to investigate. Thanks for the heads-up.
+
+________________________________
+From: docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org <docktesters-bounces+denis.yuen=oicr.on.ca at lists.icgc.org> on behalf of Miguel Vazquez <mikisvaz at gmail.com>
+Sent: May 26, 2017 4:29:14 AM
+To: Solomon Shorser
+Cc: docktesters at lists.icgc.org
+Subject: [DOCKTESTERS] [DOCKTERTERS] Sucessful run for Consensus workflow. Validation pending
+
+Dear all,
+
+Following Solomons advice below I got the Consensus workflow to run and produce a result. I'll now see if I can validate the results, but at least its working.
+
+I had to add the following line (bold) to the Dockstore.json template (note that this undergoes some pattern replacement before its run, but you get the idea)
+
+  "consensus_zipped_vcf": {
+    "path": "[OUTPUT-DIR]/[DONOR].consensus.vcf.gz",
+    "class": "File"
+  },
+  "output_file_name":"[DONOR].consensus",
+  "consensus_vcf_index": {
+    "path": "[OUTPUT-DIR]/[DONOR].consensus.vcf.gz.tbi",
+    "class": "File"
+  }
+
+Please update dockstore accordingly, this was missing from the automatically generated template
+
+Best regards
+
+Miguel
+
+On Tue, May 23, 2017 at 4:28 PM, Solomon Shorser <solomon.shorser at oicr.on.ca<mailto:solomon.shorser at oicr.on.ca>> wrote:
+
+Hi Miguel,
+
+I am not sure about the COSMIC error. Did it prompt you for your username and password? Are you able to access the files with sftp outside of a docker-container context? I was not the author of this docker image or the scripts within, but I can talk to the original author if we cannot solve this ourselves.
+
+As for the CWLTool error:
+
+This error:
+
+KeyError: 'output_file_name'
+Workflow error, try again with --debug for more information:
+  'output_file_name'
+
+...suggests that the variable named "output_file_name" was missing, probably from the input json "workflow_params.json".
+If your workflow_params.json file does not have an "output_file_name", please try adding one (it should look like:  ..."output_file_name":"myConsensus.vcf",... in JSON) to the workflow_params.json file, and let me know how that works.
+
+Thanks,
+Solomon Shorser.
+
+
+On 2017-05-21 07:45 AM, Miguel Vazquez wrote:
+Dear all,
+
+I've ran into some more trouble with the Consensus workflow. In particular its two issues that I'm not sure if they are related.
+
+First of all is that I followed the advice to download the data necessary before hand:
+
+
+mkdir dbs
+docker run -it -v "${PWD}/dbs":/dbs consensus_call download reference /dbs
+docker run -it -v "${PWD}/dbs":/dbs consensus_call download annotations /dbs
+docker run -it -v "${PWD}/dbs":/dbs consensus_call download cosmic /dbs
+
+
+However the last part that download COSMIC give me an error. I tried using my login email address and password and I get 'Permission denied, please try again.' I've check COSMIC several times and reset my password. I have SFTP access enabled and everything. I'm not sure what is happening.
+
+Despite this I though that the workflow might be able to run, since the COSMIC data is optional, but I get the following error
+
+
+ubuntu at ip-10-42-6-176:~/DockerTest-Miguel$ cd /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/ && dockstore tool launch --script --entry quay.io/pancancer/pcawg-consensus-caller:latest<http://quay.io/pancancer/pcawg-consensus-caller:latest>  --json Dockstore.json
+Creating directories for run of Dockstore launcher at: ./datastore//launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0
+Provisioning your input files to your local machine
+Calling out to cwltool to run your tool
+Executing: cwltool --enable-dev --non-strict --outdir /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/ --tmpdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/ --tmp-outdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/ /tmp/1495367250976-0/temp3097766058272663834.cwl /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+/usr/local/bin/cwltool 1.0.20161202203310
+Resolved '/tmp/1495367250976-0/temp3097766058272663834.cwl' to 'file:///tmp/1495367250976-0/temp3097766058272663834.cwl'
+Got workflow error
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/main.py", line 227, in single_job_executor
+    for r in jobiter:
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/draft2tool.py", line 370, in job
+    j.command_line = flatten(map(builder.generate_arg, builder.bindings))
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line 158, in generate_arg
+    value = self.do_eval(binding["valueFrom"], context=value)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line 206, in do_eval
+    timeout=self.timeout)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line 186, in do_eval
+    jslib=jslib)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line 144, in interpolate
+    timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line 127, in evaluator
+    return next_seg(m.group(0)[m.end(1) - m.start(0):-1], obj[m.group(1)])
+  File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py", line 113, in next_seg
+    return next_seg(remain[m.end(0):], obj[m.group(0)[1:]])
+KeyError: 'output_file_name'
+Workflow error, try again with --debug for more information:
+  'output_file_name'
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1)
+        at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+        at org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+        at org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+        at java.lang.Thread.run(Thread.java:745)
+java.lang.RuntimeException: problems running command: cwltool --enable-dev --non-strict --outdir /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/ --tmpdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/ --tmp-outdir-prefix /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/ /tmp/1495367250976-0/temp3097766058272663834.cwl /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+
+Could this be related to the problem with COSMIC?
+
+Best regards
+
+Miguel
+
+
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+
+Solomon Shorser
+Software Developer
+
+Ontario Institute for Cancer Research
+MaRS Centre
+661 University Avenue
+Suite 510
+Toronto, Ontario
+Canada M5G 0A3
+
+Email: solomon.shorser at oicr.on.ca<mailto:solomon.shorser at oicr.on.ca>
+Telephone: (647) 258-4319
+Toll-free: 1-866-678-6427
+Twitter: @OICR_news
+
+www.oicr.on.ca<http://www.oicr.on.ca/>
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+_______________________________________________
+docktesters mailing list
+docktesters at lists.icgc.org<mailto:docktesters at lists.icgc.org>
+https://lists.icgc.org/mailman/listinfo/docktesters
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170526/4114e6d6/attachment-0001.html>
+
+From mikisvaz at gmail.com  Mon May 29 08:01:07 2017
+From: mikisvaz at gmail.com (Miguel Vazquez)
+Date: Mon, 29 May 2017 14:01:07 +0200
+Subject: [DOCKTESTERS] [DOCKTERTERS] Sucessful validation for Consensus
+	workflow for donors DO52621
+Message-ID: <CA+dx8mZBhNyuGcYwKeJjfDqTTBqOreNB7w7z1t2=MADuO43y7w@mail.gmail.com>
+
+Hi all,
+
+I've managed to validate the Consensus workflow for one donor, see result
+below. I haven't managed to validate it for other donors yet because I'm
+having trouble getting the files I need from GNOS, it doesn't seem to
+connect to the tracker or something.
+
+
+Comparison of  for DO52621 using Consensus
+---
+Common: 8197
+Extra: 0
+Missing: 0
+
+[Note that in the results above the counts are for pairs of
+mutation-caller, not individual mutations, because it was easier to compare
+this way.]
+
+Best regards
+
+Miguel
+
+
+On Fri, May 26, 2017 at 10:29 AM, Miguel Vazquez <mikisvaz at gmail.com> wrote:
+
+> Dear all,
+>
+> Following Solomons advice below I got the Consensus workflow to run and
+> produce a result. I'll now see if I can validate the results, but at least
+> its working.
+>
+> I had to add the following line (bold) to the Dockstore.json template
+> (note that this undergoes some pattern replacement before its run, but you
+> get the idea)
+>
+>   "consensus_zipped_vcf": {
+>     "path": "[OUTPUT-DIR]/[DONOR].consensus.vcf.gz",
+>     "class": "File"
+>   },
+> *  "output_file_name":"[DONOR].consensus",*
+>   "consensus_vcf_index": {
+>     "path": "[OUTPUT-DIR]/[DONOR].consensus.vcf.gz.tbi",
+>     "class": "File"
+>   }
+>
+> Please update dockstore accordingly, this was missing from the
+> automatically generated template
+>
+> Best regards
+>
+> Miguel
+>
+> On Tue, May 23, 2017 at 4:28 PM, Solomon Shorser <
+> solomon.shorser at oicr.on.ca> wrote:
+>
+>> Hi Miguel,
+>>
+>> I am not sure about the COSMIC error. Did it prompt you for your username
+>> and password? Are you able to access the files with sftp *outside* of a
+>> docker-container context? I was not the author of this docker image or the
+>> scripts within, but I can talk to the original author if we cannot solve
+>> this ourselves.
+>>
+>> As for the CWLTool error:
+>>
+>> This error:
+>>
+>> *KeyError: 'output_file_name'*
+>> *Workflow error, try again with --debug for more information:*
+>> *  'output_file_name'*
+>>
+>> ...suggests that the variable named "output_file_name" was missing,
+>> probably from the input json "workflow_params.json".
+>> If your workflow_params.json file does not have an "output_file_name",
+>> please try adding one (it should look like:  ..."output_file_name":"myConsensus.vcf",...
+>> in JSON) to the workflow_params.json file, and let me know how that works.
+>>
+>> Thanks,
+>> Solomon Shorser.
+>>
+>>
+>> On 2017-05-21 07:45 AM, Miguel Vazquez wrote:
+>>
+>> Dear all,
+>>
+>> I've ran into some more trouble with the Consensus workflow. In
+>> particular its two issues that I'm not sure if they are related.
+>>
+>> First of all is that I followed the advice to download the data necessary
+>> before hand:
+>>
+>> mkdir dbs
+>> docker run -it -v "${PWD}/dbs":/dbs consensus_call download reference /dbs
+>> docker run -it -v "${PWD}/dbs":/dbs consensus_call download annotations /dbs
+>> docker run -it -v "${PWD}/dbs":/dbs consensus_call download cosmic /dbs
+>>
+>> However the last part that download COSMIC give me an error. I tried
+>> using my login email address and password and I get 'Permission denied,
+>> please try again.' I've check COSMIC several times and reset my password. I
+>> have SFTP access enabled and everything. I'm not sure what is happening.
+>>
+>> Despite this I though that the workflow might be able to run, since the
+>> COSMIC data is optional, but I get the following error
+>>
+>>
+>> ubuntu at ip-10-42-6-176:~/DockerTest-Miguel$ cd
+>> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/ && dockstore
+>> tool launch --script --entry quay.io/pancancer/pcawg-consen
+>> sus-caller:latest  --json Dockstore.json
+>> Creating directories for run of Dockstore launcher at:
+>> ./datastore//launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0
+>> Provisioning your input files to your local machine
+>> Calling out to cwltool to run your tool
+>> Executing: cwltool --enable-dev --non-strict --outdir
+>> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./
+>> datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/
+>> --tmpdir-prefix /mnt/1TB/work/DockerTest-Migue
+>> l/tests/Consensus/DO52621/./datastore/launcher-92578913-
+>> cbbf-4c57-9d19-35b83c4b6fb0/tmp/ --tmp-outdir-prefix
+>> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./
+>> datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/
+>> /tmp/1495367250976-0/temp3097766058272663834.cwl
+>> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./
+>> datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/
+>> workflow_params.json
+>> /usr/local/bin/cwltool 1.0.20161202203310
+>> Resolved '/tmp/1495367250976-0/temp3097766058272663834.cwl' to '
+>> file:///tmp/1495367250976-0/temp3097766058272663834.cwl'
+>> Got workflow error
+>> Traceback (most recent call last):
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/main.py", line
+>> 227, in single_job_executor
+>>     for r in jobiter:
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/draft2tool.py",
+>> line 370, in job
+>>     j.command_line = flatten(map(builder.generate_arg, builder.bindings))
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line
+>> 158, in generate_arg
+>>     value = self.do_eval(binding["valueFrom"], context=value)
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/builder.py", line
+>> 206, in do_eval
+>>     timeout=self.timeout)
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+>> line 186, in do_eval
+>>     jslib=jslib)
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+>> line 144, in interpolate
+>>     timeout=timeout)
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+>> line 127, in evaluator
+>>     return next_seg(m.group(0)[m.end(1) - m.start(0):-1], obj[m.group(1)])
+>>   File "/usr/local/lib/python2.7/dist-packages/cwltool/expression.py",
+>> line 113, in next_seg
+>>     return next_seg(remain[m.end(0):], obj[m.group(0)[1:]])
+>> *KeyError: 'output_file_name'*
+>> *Workflow error, try again with --debug for more information:*
+>> *  'output_file_name'*
+>> org.apache.commons.exec.ExecuteException: Process exited with an error:
+>> 1 (Exit value: 1)
+>>         at org.apache.commons.exec.DefaultExecutor.executeInternal(Defa
+>> ultExecutor.java:404)
+>>         at org.apache.commons.exec.DefaultExecutor.access$200(DefaultEx
+>> ecutor.java:48)
+>>         at org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecuto
+>> r.java:200)
+>>         at java.lang.Thread.run(Thread.java:745)
+>> java.lang.RuntimeException: problems running command: cwltool
+>> --enable-dev --non-strict --outdir /mnt/1TB/work/DockerTest-Migue
+>> l/tests/Consensus/DO52621/./datastore/launcher-92578913-
+>> cbbf-4c57-9d19-35b83c4b6fb0/outputs/ --tmpdir-prefix
+>> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./
+>> datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/
+>> --tmp-outdir-prefix /mnt/1TB/work/DockerTest-Migue
+>> l/tests/Consensus/DO52621/./datastore/launcher-92578913-
+>> cbbf-4c57-9d19-35b83c4b6fb0/working/ /tmp/1495367250976-0/temp3097766058272663834.cwl
+>> /mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./
+>> datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/
+>> workflow_params.json
+>>
+>> Could this be related to the problem with COSMIC?
+>>
+>> Best regards
+>>
+>> Miguel
+>>
+>>
+>> _______________________________________________
+>> docktesters mailing listdocktesters at lists.icgc.orghttps://lists.icgc.org/mailman/listinfo/docktesters
+>>
+>>
+>> *Solomon Shorser*
+>> Software Developer
+>>
+>> *Ontario Institute for Cancer Research*
+>> MaRS Centre
+>> 661 University Avenue
+>> Suite 510
+>> Toronto, Ontario
+>> Canada M5G 0A3
+>>
+>> Email: solomon.shorser at oicr.on.ca
+>> Telephone: (647) 258-4319
+>> Toll-free: 1-866-678-6427
+>> Twitter: @OICR_news
+>>
+>> www.oicr.on.ca
+>>
+>> This message and any attachments may contain confidential and/or
+>> privileged information for the sole use of the intended recipient. Any
+>> review or distribution by anyone other than the person for whom it was
+>> originally intended is strictly prohibited. If you have received this
+>> message in error, please contact the sender and delete all copies.
+>> Opinions, conclusions or other information contained in this message may
+>> not be that of the organization.
+>>
+>> _______________________________________________
+>> docktesters mailing list
+>> docktesters at lists.icgc.org
+>> https://lists.icgc.org/mailman/listinfo/docktesters
+>>
+>>
+>
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.icgc.org/mailman/private/docktesters/attachments/20170529/590278aa/attachment-0001.html>
+

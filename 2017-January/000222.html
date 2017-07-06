@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Summary%20of%20validation%20of%20Dockers%20Sanger%20and%0A%20DKFZ%28%2BDelly%29&In-Reply-To=%3C4ECF19E9-FC99-46D3-87B9-1DF60DDA440A%40oicr.on.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000221.html">
+   <LINK REL="Next"  HREF="000223.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)</H1>
+    <B>Junjun Zhang</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Summary%20of%20validation%20of%20Dockers%20Sanger%20and%0A%20DKFZ%28%2BDelly%29&In-Reply-To=%3C4ECF19E9-FC99-46D3-87B9-1DF60DDA440A%40oicr.on.ca%3E"
+       TITLE="[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)">Junjun.Zhang at oicr.on.ca
+       </A><BR>
+    <I>Mon Jan 23 08:26:24 EST 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000221.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and	DKFZ(+Delly)
+</A></li>
+        <LI>Next message: <A HREF="000223.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#222">[ date ]</a>
+              <a href="thread.html#222">[ thread ]</a>
+              <a href="subject.html#222">[ subject ]</a>
+              <a href="author.html#222">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi Miguel,
+
+I will need to take a closer look on this. But what I know are important include (but not limited to) that input bams must be lane level, ie, bam with only one read group id; some part of the read group line in bam header must be properly formed, don't remember details here. But many of us should remember we had done some bam reheading to some larger number of bams because of header issue.
+
+Cheers
+Junjun
+
+On Jan 23, 2017, at 8:10 AM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;&gt; wrote:
+
+Junjun,
+
+The section to refer about preparing the unaligned version of the BAM seems the same as when I first went through it. The command-line featured there reads
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY resetheadertext=header.sam md5=1 md5filename=cleaned.bam.md5 &gt; cleaned.bam
+
+Since some of the options refer to setting the header and performing the md5 etc, I've stripped it down to:
+
+cat initial.bam | bamreset exclude=QCFAIL,SECONDARY,SUPPLEMENTARY &gt; cleaned.bam
+
+Do you think there is any reason that this might not work? I don't see how the header info would have any effect on the process. I would be good to rule this out as a source of the problem.
+
+Best
+
+Miguel
+
+
+
+On Mon, Jan 16, 2017 at 4:24 PM, Junjun Zhang &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&lt;mailto:<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">Junjun.Zhang at oicr.on.ca</A>&gt;&gt; wrote:
+Hi,
+
+I'd like to point out that this wiki page is obsolete: <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload.">https://wiki.oicr.on.ca/display/PANCANCER/Preparing+paired-end+data+for+upload.</A>
+
+It has been replaced by the FINAL SOP for preparing PCAWG sequences here: <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0.">https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0.</A> Many of us worked on it including Keiran.
+
+Regarding preparation of test input BAM from merged / aligned BAM, the first step (Your starting files must be for a single lane of sequencing in either BAM (unaligned BAM) or FASTQ) of this section is most relevant: <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG(a.k.a.PCAPorPAWG">https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG(a.k.a.PCAPorPAWG</A>)SequenceSubmissionSOP-v1.0-5.Prepareyoursequencefiles&lt;<A HREF="https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG%28a.k.a.PCAPorPAWG%29SequenceSubmissionSOP-v1.0-5.Prepareyoursequencefiles">https://wiki.oicr.on.ca/display/PANCANCER/PCAWG+%28a.k.a.+PCAP+or+PAWG%29+Sequence+Submission+SOP+-+v1.0#PCAWG%28a.k.a.PCAPorPAWG%29SequenceSubmissionSOP-v1.0-5.Prepareyoursequencefiles</A>&gt;
+
+Hope this helps,
+
+Junjun
+
+
+
+
+Junjun Zhang
+
+
+Lead bioinformatician
+
+
+Informatics and Bio-computing
+
+Ontario Institute for Cancer Research
+
+MaRS Centre
+
+661 University Avenue
+
+Suite 510
+
+Toronto, Ontario, Canada M5G 0A3
+
+
+Tel: 416-673-8517
+
+Mobile: 647-501-7511
+
+Toll-free: 1-866-678-6427
+
+Twitter:  @OICR_news
+
+
+www.oicr.on.ca&lt;<A HREF="http://www.oicr.on.ca/">http://www.oicr.on.ca/</A>&gt;
+
+
+This message and any attachments may contain confidential and/or privileged information for the sole use of the intended recipient. Any review or distribution by anyone other than the person for whom it was originally intended is strictly prohibited. If you have received this message in error, please contact the sender and delete all copies. Opinions, conclusions or other information contained in this message may not be that of the organization.
+
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170123/2135abfb/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170123/2135abfb/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000221.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and	DKFZ(+Delly)
+</A></li>
+	<LI>Next message: <A HREF="000223.html">[DOCKTESTERS] Summary of validation of Dockers Sanger and DKFZ(+Delly)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#222">[ date ]</a>
+              <a href="thread.html#222">[ thread ]</a>
+              <a href="subject.html#222">[ subject ]</a>
+              <a href="author.html#222">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

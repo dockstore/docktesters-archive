@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Help needed with DKFZ BiasFilter. Validation of DO52140. 100% match is wrong!
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20needed%20with%20DKFZ%20BiasFilter.%20Validation%20of%0A%20DO52140.%20100%25%20match%20is%20wrong%21&In-Reply-To=%3CCA%2Bdx8mY2_cQAEMP3YWwb6HhSQuvfPxCKBa4RDbcKEZqsMjTmNA%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000289.html">
+   <LINK REL="Next"  HREF="000252.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Help needed with DKFZ BiasFilter. Validation of DO52140. 100% match is wrong!</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20needed%20with%20DKFZ%20BiasFilter.%20Validation%20of%0A%20DO52140.%20100%25%20match%20is%20wrong%21&In-Reply-To=%3CCA%2Bdx8mY2_cQAEMP3YWwb6HhSQuvfPxCKBa4RDbcKEZqsMjTmNA%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Help needed with DKFZ BiasFilter. Validation of DO52140. 100% match is wrong!">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Mon Mar 13 11:22:23 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000289.html">[DOCKTESTERS] Thanks!
+</A></li>
+        <LI>Next message: <A HREF="000252.html">[DOCKTESTERS] Help needed with DKFZ BiasFilter. Validation of DO52140. 100% match is wrong!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#251">[ date ]</a>
+              <a href="thread.html#251">[ thread ]</a>
+              <a href="subject.html#251">[ subject ]</a>
+              <a href="author.html#251">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+I just learnt that the DKFZ BiasFilter is NOT the OXOG filter workflow,
+which means* I checked for the wrong thing in this validation!* I'm sorry
+for the confusion.
+
+Right now I pass the BAM files and the consensus.vcf (SNV_MNV) downloaded
+from GNOS to the BiasFilter and compare the resulting VCF with the
+consensus looking at the set of mutations containing the OXOGFAIL flag.
+This apparently is not the comparison to make. *What is it that I need to
+compare? is it the bPcr and bSeq flags?*
+
+One first look at those flags do show quite some discrepancies
+unfortunately on both donors (DO52140 and DO35937) for both flags. For
+instance for DO35937 we find 11 mutations flaged bPcr with in the new
+result, while the consensus.vcf only finds one, of them. Something similar
+happens with the bSeq.
+
+Can you please confirm this so I can come reply with a full report on this.
+
+Kind regards, and sorry again for the confusion.
+
+Miguel
+
+
+
+On Mon, Feb 27, 2017 at 7:30 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+wrote:
+
+&gt;<i> Dear friends,
+</I>&gt;<i>
+</I>&gt;<i> I've performed the first test with the DKFZ BiasFilter and got a perfect
+</I>&gt;<i> match. There are 55 variants annotated with OXOGFAIL and they are the same
+</I>&gt;<i> in the input VCF file (consensus SNV/MNV VCF for that donor) and the output
+</I>&gt;<i> of the BiasFilter. I'm running the test on a second donor.
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170313/316e2aa5/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170313/316e2aa5/attachment.html</A>&gt;
+</PRE>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000289.html">[DOCKTESTERS] Thanks!
+</A></li>
+	<LI>Next message: <A HREF="000252.html">[DOCKTESTERS] Help needed with DKFZ BiasFilter. Validation of DO52140. 100% match is wrong!
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#251">[ date ]</a>
+              <a href="thread.html#251">[ thread ]</a>
+              <a href="subject.html#251">[ subject ]</a>
+              <a href="author.html#251">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

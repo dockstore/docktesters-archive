@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3CCA%2Bdx8mZxRx9o_HKg%3DRRUVh_c%2BtHL%3DdSm7QcXaA_3wFnXKxXHAQ%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000186.html">
+   <LINK REL="Next"  HREF="000188.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20Help%20understand%20the%20small%20discrepancies%20in%20Sanger%0A%20pipeline%20with%20GNOS%20VCF%20%2899.9905%25%20accuracy%29&In-Reply-To=%3CCA%2Bdx8mZxRx9o_HKg%3DRRUVh_c%2BtHL%3DdSm7QcXaA_3wFnXKxXHAQ%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)">miguel.vazquez at cnio.es
+       </A><BR>
+    <I>Mon Dec 12 05:44:07 EST 2016</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000186.html">[DOCKTESTERS]  DKFZ 2&#186; validation (DO52140): 100% match!
+</A></li>
+        <LI>Next message: <A HREF="000188.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#187">[ date ]</a>
+              <a href="thread.html#187">[ thread ]</a>
+              <a href="subject.html#187">[ subject ]</a>
+              <a href="author.html#187">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+I was wondering if someone here was acquainted with the Sanger workflow and
+could help explain these discrepancies. I've skimmed through the code, and
+it seems like uses EM but I didn't find anything random in it, such as
+during initialization, which was my initial guess. The other thing I though
+is that when it splits the work for parallel processing it might choose a
+different number of splits to accommodate the number of CPUs, and that this
+might affect the calculations.
+
+Is there someone here that could help shed some light? As soon as some
+other tests finish I'll be running the process again, but since it takes so
+long perhaps a little insight would help.
+
+Best regards
+
+Miguel
+
+
+
+On Mon, Dec 5, 2016 at 1:41 PM, Miguel Vazquez &lt;<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">miguel.vazquez at cnio.es</A>&gt;
+wrote:
+
+&gt;<i> Dear all,
+</I>&gt;<i>
+</I>&gt;<i> The Sanger pipeline completed, after about 2 weeks of computing, for donor
+</I>&gt;<i> DO50311
+</I>&gt;<i>
+</I>&gt;<i> The results are the following:
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> *Comparison for DO50311 using Sanger---Common: 156299Extra: 1    -
+</I>&gt;<i> Example: Y:58885197:GMissing: 14    - Example:
+</I>&gt;<i> 1:102887902:T,1:143165228:G,16:87047601:C*
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> The donor results for DKFZ yielded
+</I>&gt;<i>
+</I>&gt;<i> Comparison for DO50311 using DKFZ
+</I>&gt;<i> ---
+</I>&gt;<i> Common: 51087
+</I>&gt;<i> Extra: 0
+</I>&gt;<i> Missing: 0
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> In both cases I'm comparing agains the VCF file downloaded from GNOS. I've
+</I>&gt;<i> updated the information here
+</I>&gt;<i>
+</I>&gt;<i> <A HREF="https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data">https://wiki.oicr.on.ca/display/PANCANCER/Workflow+Testing+Data</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> Best regards
+</I>&gt;<i>
+</I>&gt;<i> Miguel
+</I>&gt;<i>
+</I>&gt;<i>
+</I>-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20161212/a8645f92/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20161212/a8645f92/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000186.html">[DOCKTESTERS]  DKFZ 2&#186; validation (DO52140): 100% match!
+</A></li>
+	<LI>Next message: <A HREF="000188.html">[DOCKTESTERS] Help understand the small discrepancies in Sanger pipeline with GNOS VCF (99.9905% accuracy)
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#187">[ date ]</a>
+              <a href="thread.html#187">[ thread ]</a>
+              <a href="subject.html#187">[ subject ]</a>
+              <a href="author.html#187">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>

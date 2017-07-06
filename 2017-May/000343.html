@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BDOCKTERTERS%5D%20Issues%20with%20Consensus%20workflow&In-Reply-To=%3CCA%2Bdx8mZzYnbuDnso04AqPmsEpwL9MTULpk2d-8xWJgi5p-JY2Q%40mail.gmail.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000342.html">
+   <LINK REL="Next"  HREF="000344.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow</H1>
+    <B>Miguel Vazquez</B> 
+    <A HREF="mailto:docktesters%40lists.icgc.org?Subject=Re%3A%20%5BDOCKTESTERS%5D%20%5BDOCKTERTERS%5D%20Issues%20with%20Consensus%20workflow&In-Reply-To=%3CCA%2Bdx8mZzYnbuDnso04AqPmsEpwL9MTULpk2d-8xWJgi5p-JY2Q%40mail.gmail.com%3E"
+       TITLE="[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow">mikisvaz at gmail.com
+       </A><BR>
+    <I>Sun May 21 07:45:58 EDT 2017</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000342.html">[DOCKTESTERS] [DOCKTERTERS] Update: Sanger also validated for Merge-Annotate -- 'pretty good' validation of Merge-Annotate for donor DO52621
+</A></li>
+        <LI>Next message: <A HREF="000344.html">[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#343">[ date ]</a>
+              <a href="thread.html#343">[ thread ]</a>
+              <a href="subject.html#343">[ subject ]</a>
+              <a href="author.html#343">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Dear all,
+
+I've ran into some more trouble with the Consensus workflow. In particular
+its two issues that I'm not sure if they are related.
+
+First of all is that I followed the advice to download the data necessary
+before hand:
+
+mkdir dbs
+docker run -it -v &quot;${PWD}/dbs&quot;:/dbs consensus_call download reference /dbs
+docker run -it -v &quot;${PWD}/dbs&quot;:/dbs consensus_call download annotations /dbs
+docker run -it -v &quot;${PWD}/dbs&quot;:/dbs consensus_call download cosmic /dbs
+
+However the last part that download COSMIC give me an error. I tried using
+my login email address and password and I get 'Permission denied, please
+try again.' I've check COSMIC several times and reset my password. I have
+SFTP access enabled and everything. I'm not sure what is happening.
+
+Despite this I though that the workflow might be able to run, since the
+COSMIC data is optional, but I get the following error
+
+
+<A HREF="https://lists.icgc.org/mailman/listinfo/docktesters">ubuntu at ip-10-42-6-176</A>:~/DockerTest-Miguel$ cd
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/ &amp;&amp; dockstore tool
+launch --script --entry quay.io/pancancer/pcawg-consensus-caller:latest
+ --json Dockstore.json
+Creating directories for run of Dockstore launcher at:
+./datastore//launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0
+Provisioning your input files to your local machine
+Calling out to cwltool to run your tool
+Executing: cwltool --enable-dev --non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/
+--tmp-outdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/
+/tmp/1495367250976-0/temp3097766058272663834.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+/usr/local/bin/cwltool 1.0.20161202203310
+Resolved '/tmp/1495367250976-0/temp3097766058272663834.cwl' to
+'<A HREF="file:///tmp/1495367250976-0/temp3097766058272663834.cwl">file:///tmp/1495367250976-0/temp3097766058272663834.cwl</A>'
+Got workflow error
+Traceback (most recent call last):
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/main.py&quot;, line 227,
+in single_job_executor
+    for r in jobiter:
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/draft2tool.py&quot;, line
+370, in job
+    j.command_line = flatten(map(builder.generate_arg, builder.bindings))
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/builder.py&quot;, line
+158, in generate_arg
+    value = self.do_eval(binding[&quot;valueFrom&quot;], context=value)
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/builder.py&quot;, line
+206, in do_eval
+    timeout=self.timeout)
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, line
+186, in do_eval
+    jslib=jslib)
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, line
+144, in interpolate
+    timeout=timeout)
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, line
+127, in evaluator
+    return next_seg(m.group(0)[m.end(1) - m.start(0):-1], obj[m.group(1)])
+  File &quot;/usr/local/lib/python2.7/dist-packages/cwltool/expression.py&quot;, line
+113, in next_seg
+    return next_seg(remain[m.end(0):], obj[m.group(0)[1:]])
+*KeyError: 'output_file_name'*
+*Workflow error, try again with --debug for more information:*
+*  'output_file_name'*
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1
+(Exit value: 1)
+        at
+org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+        at
+org.apache.commons.exec.DefaultExecutor.access$200(DefaultExecutor.java:48)
+        at
+org.apache.commons.exec.DefaultExecutor$1.run(DefaultExecutor.java:200)
+        at java.lang.Thread.run(Thread.java:745)
+java.lang.RuntimeException: problems running command: cwltool --enable-dev
+--non-strict --outdir
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/outputs/
+--tmpdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/tmp/
+--tmp-outdir-prefix
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/working/
+/tmp/1495367250976-0/temp3097766058272663834.cwl
+/mnt/1TB/work/DockerTest-Miguel/tests/Consensus/DO52621/./datastore/launcher-92578913-cbbf-4c57-9d19-35b83c4b6fb0/workflow_params.json
+
+Could this be related to the problem with COSMIC?
+
+Best regards
+
+Miguel
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.icgc.org/mailman/private/docktesters/attachments/20170521/c0c9f44f/attachment.html">https://lists.icgc.org/mailman/private/docktesters/attachments/20170521/c0c9f44f/attachment.html</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000342.html">[DOCKTESTERS] [DOCKTERTERS] Update: Sanger also validated for Merge-Annotate -- 'pretty good' validation of Merge-Annotate for donor DO52621
+</A></li>
+	<LI>Next message: <A HREF="000344.html">[DOCKTESTERS] [DOCKTERTERS] Issues with Consensus workflow
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#343">[ date ]</a>
+              <a href="thread.html#343">[ thread ]</a>
+              <a href="subject.html#343">[ subject ]</a>
+              <a href="author.html#343">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.icgc.org/mailman/listinfo/docktesters">More information about the docktesters
+mailing list</a><br>
+</body></html>
